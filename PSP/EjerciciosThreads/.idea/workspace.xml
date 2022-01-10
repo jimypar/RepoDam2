@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="1f13a4c7-2737-4753-8449-31c9a3adca2a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../../AccesoDatos/CocheComboBoxXML/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../AccesoDatos/CocheComboBoxXML/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../AccesoDatos/CocheComboBoxXML/.idea/dbnavigator.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../AccesoDatos/CocheComboBoxXML/.idea/libraries/jgoodies_common_1_8_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../AccesoDatos/CocheComboBoxXML/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../AccesoDatos/CocheComboBoxXML/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../AccesoDatos/CocheComboBoxXML/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../AccesoDatos/CocheComboBoxXML/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../AccesoDatos/CocheComboBoxXML/CocheComboBoxXML.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../AccesoDatos/CocheComboBoxXML/Libs/jgoodies-common-1.8.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../AccesoDatos/CocheComboBoxXML/Libs/jgoodies-forms-1.8.0.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../AccesoDatos/CocheComboBoxXML/src/Vista.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../AccesoDatos/CocheComboBoxXML/src/Vista.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../AccesoDatos/CocheComboBoxXML/src/com/jaimepardo/cochecomboboxxml/base/Coche.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../AccesoDatos/EditorMVC/EditorMVC.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../AccesoDatos/EditorMVC/src/com/jaimepardo/editormvc/Controlador.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../AccesoDatos/EditorMVC/src/com/jaimepardo/editormvc/Modelo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../AccesoDatos/EditorMVC/src/com/jaimepardo/editormvc/Principal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../AccesoDatos/EditorMVC/src/com/jaimepardo/editormvc/Vista.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../AccesoDatos/EditorMVC/src/com/jaimepardo/editormvc/Vista.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../AccesoDatos/TreeMap/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../AccesoDatos/TreeMap/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../AccesoDatos/TreeMap/.idea/dbnavigator.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../AccesoDatos/TreeMap/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../AccesoDatos/TreeMap/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../AccesoDatos/TreeMap/TreeMap.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../AccesoDatos/VehiculosMVC/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../AccesoDatos/VehiculosMVC/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../AccesoDatos/VehiculosMVC/.idea/dbnavigator.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../AccesoDatos/VehiculosMVC/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../AccesoDatos/VehiculosMVC/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../AccesoDatos/VehiculosMVC/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../AccesoDatos/VehiculosMVC/VehiculosMVC.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../MM/ListaCompra/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../MM/ListaCompra/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../MM/ListaCompra/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../MM/ListaCompra/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../MM/ListaCompra/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../MM/ListaCompra/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../MM/ListaCompra/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../MM/ListaCompra/app/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../MM/ListaCompra/app/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../MM/ListaCompra/app/proguard-rules.pro" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../MM/ListaCompra/app/src/androidTest/java/com/example/infoamigos21/ExampleInstrumentedTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../MM/ListaCompra/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../MM/ListaCompra/app/src/main/java/com/example/infoamigos21/AddActivity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../MM/ListaCompra/app/src/main/java/com/example/infoamigos21/DetailActivity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../MM/ListaCompra/app/src/main/java/com/example/infoamigos21/ImageActivity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../MM/ListaCompra/app/src/main/java/com/example/infoamigos21/MainActivity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../MM/ListaCompra/app/src/main/java/com/example/infoamigos21/PreferencesActivity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../MM/ListaCompra/app/src/main/java/com/example/infoamigos21/bd/Constantes.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../MM/ListaCompra/app/src/main/java/com/example/infoamigos21/bd/DataBase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../MM/ListaCompra/app/src/main/java/com/example/infoamigos21/util/Producto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../MM/ListaCompra/app/src/main/java/com/example/infoamigos21/util/ProductoAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../MM/ListaCompra/app/src/main/java/com/example/infoamigos21/util/Util.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../MM/ListaCompra/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../MM/ListaCompra/app/src/main/res/drawable/ic_launcher_background.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../MM/ListaCompra/app/src/main/res/layout/activity_add.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../MM/ListaCompra/app/src/main/res/layout/activity_detail.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../MM/ListaCompra/app/src/main/res/layout/activity_image.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../MM/ListaCompra/app/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../MM/ListaCompra/app/src/main/res/layout/fila.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../MM/ListaCompra/app/src/main/res/menu/main_menu.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../MM/ListaCompra/app/src/main/res/menu/menu_contextual.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../MM/ListaCompra/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../MM/ListaCompra/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../MM/ListaCompra/app/src/main/res/mipmap-hdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../MM/ListaCompra/app/src/main/res/mipmap-hdpi/ic_launcher_round.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../MM/ListaCompra/app/src/main/res/mipmap-mdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../MM/ListaCompra/app/src/main/res/mipmap-mdpi/ic_launcher_round.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../MM/ListaCompra/app/src/main/res/mipmap-xhdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../MM/ListaCompra/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../MM/ListaCompra/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../MM/ListaCompra/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../MM/ListaCompra/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../MM/ListaCompra/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../MM/ListaCompra/app/src/main/res/values-night/themes.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../MM/ListaCompra/app/src/main/res/values/arrays.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../MM/ListaCompra/app/src/main/res/values/colors.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../MM/ListaCompra/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../MM/ListaCompra/app/src/main/res/values/themes.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../MM/ListaCompra/app/src/main/res/xml/preferencias.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../MM/ListaCompra/app/src/test/java/com/example/infoamigos21/ExampleUnitTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../MM/ListaCompra/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../MM/ListaCompra/gradle.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../MM/ListaCompra/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../MM/ListaCompra/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../MM/ListaCompra/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../MM/ListaCompra/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../MM/ListaCompra/settings.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../MM/UtilIdades/app/src/main/java/com/example/util_idades/PreferencesActivity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../MM/UtilIdades/app/src/main/res/menu/main_menu.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../MM/UtilIdades/app/src/main/res/xml/preferencias.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../MM/infoamigos/app/src/main/java/com/example/infoamigos/PreferencesActivity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../MM/infoamigos/app/src/main/java/com/example/infoamigos/util/DetailActivity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../MM/infoamigos/app/src/main/res/layout/activity_detail.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../MM/infoamigos/app/src/main/res/xml/preferencias.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/PSP.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../1.- Threads/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../1.- Threads/.idea/dbnavigator.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../1.- Threads/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../2.- Patrones de diseño/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../2.- Patrones de diseño/.idea/2.- Patrones de diseño.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../2.- Patrones de diseño/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../2.- Patrones de diseño/.idea/dbnavigator.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../2.- Patrones de diseño/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../2.- Patrones de diseño/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../2.- Patrones de diseño/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../2.- Patrones de diseño/1.- EjemploSingleton/EjemploSingleton.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../2.- Patrones de diseño/2.- Singleton/Singleton.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../2.- Patrones de diseño/3.- PruebaObserver/PruebaObserver.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../2.- Patrones de diseño/4.- PruebaObserver2/PruebaObserver2.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../2.- Patrones de diseño/5.- PruebaObserverSingleton/PruebaObserverSingleton.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Examen Jaime Pardo/Jaime Pardo.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Jaime_Pardo1_P1_PSP/Contitucion1812.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Jaime_Pardo1_P1_PSP/Jaime_Pardo1_P1_PSP.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Jaime_Pardo1_P1_PSP/src/Ejercicio1/ejercicio1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Jaime_Pardo1_P1_PSP/src/Ejercicio1/ejercicio1_2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Jaime_Pardo1_P1_PSP/src/Ejercicio2/ejercicio2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Jaime_Pardo1_P1_PSP/src/Ejercicio3/ejercicio3.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Jaime_Pardo1_P1_PSP/src/Ejercicio4/ContarLineas.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Jaime_Pardo1_P1_PSP/src/Ejercicio4/ContarPalabra.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Jaime_Pardo1_P1_PSP/src/Ejercicio4/ContarPalabras.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Jaime_Pardo1_P1_PSP/src/Ejercicio4/ContarTitulo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Jaime_Pardo1_P1_PSP/src/Ejercicio4/ejercicio4.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Jaime_Pardo1_P1_PSP/src/Ejercicio5/LanzarDado.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Jaime_Pardo1_P1_PSP/src/Ejercicio5/ejercicio5.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Jaime_Pardo1_P2_PSP/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Jaime_Pardo1_P2_PSP/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Jaime_Pardo1_P2_PSP/.idea/dbnavigator.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Jaime_Pardo1_P2_PSP/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Jaime_Pardo1_P2_PSP/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Jaime_Pardo1_P2_PSP/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Jaime_Pardo1_P2_PSP/Jaime_Pardo1_P2_PSP.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Jaime_Pardo1_P2_PSP/src/Ejercicio1/Cliente.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Jaime_Pardo1_P2_PSP/src/Ejercicio1/Ejercicio1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Jaime_Pardo1_P2_PSP/src/Ejercicio1/Observador.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Jaime_Pardo1_P2_PSP/src/Ejercicio1/RedSocial.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AccesoDatos/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../AccesoDatos/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AccesoDatos/EstructuraDatos/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../AccesoDatos/EstructuraDatos/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DI/Test1/bin/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DI/Ventana01/bin/ventana01/Ventana01.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../DI/Ventana01/bin/ventana01/Ventana01.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DI/Ventana01/src/ventana01/Ventana01.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../DI/Ventana01/src/ventana01/Ventana01.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MM/UtilIdades/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../../MM/UtilIdades/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MM/UtilIdades/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../MM/UtilIdades/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MM/UtilIdades/app/proguard-rules.pro" beforeDir="false" afterPath="$PROJECT_DIR$/../../MM/UtilIdades/app/proguard-rules.pro" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MM/UtilIdades/app/src/androidTest/java/com/example/util_idades/ExampleInstrumentedTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../MM/UtilIdades/app/src/androidTest/java/com/example/util_idades/ExampleInstrumentedTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MM/UtilIdades/app/src/main/java/com/example/util_idades/CalculadoraActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../MM/UtilIdades/app/src/main/java/com/example/util_idades/CalculadoraActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MM/UtilIdades/app/src/main/java/com/example/util_idades/Conecta4Activity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../MM/UtilIdades/app/src/main/java/com/example/util_idades/Conecta4Activity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MM/UtilIdades/app/src/main/java/com/example/util_idades/ConversorActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../MM/UtilIdades/app/src/main/java/com/example/util_idades/ConversorActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MM/UtilIdades/app/src/main/java/com/example/util_idades/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../MM/UtilIdades/app/src/main/java/com/example/util_idades/MainActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MM/UtilIdades/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../MM/UtilIdades/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MM/UtilIdades/app/src/main/res/drawable/backspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../MM/UtilIdades/app/src/main/res/drawable/backspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MM/UtilIdades/app/src/main/res/drawable/circle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../MM/UtilIdades/app/src/main/res/drawable/circle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MM/UtilIdades/app/src/main/res/drawable/ic_launcher_background.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../MM/UtilIdades/app/src/main/res/drawable/ic_launcher_background.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MM/UtilIdades/app/src/main/res/layout/activity_calculadora.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../MM/UtilIdades/app/src/main/res/layout/activity_calculadora.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MM/UtilIdades/app/src/main/res/layout/activity_calculadora2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../MM/UtilIdades/app/src/main/res/layout/activity_calculadora2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MM/UtilIdades/app/src/main/res/layout/activity_conecta4.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../MM/UtilIdades/app/src/main/res/layout/activity_conecta4.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MM/UtilIdades/app/src/main/res/layout/activity_conversor.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../MM/UtilIdades/app/src/main/res/layout/activity_conversor.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MM/UtilIdades/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../MM/UtilIdades/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MM/UtilIdades/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../MM/UtilIdades/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MM/UtilIdades/app/src/main/res/values-night/themes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../MM/UtilIdades/app/src/main/res/values-night/themes.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MM/UtilIdades/app/src/main/res/values/colors.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../MM/UtilIdades/app/src/main/res/values/colors.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MM/UtilIdades/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../MM/UtilIdades/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MM/UtilIdades/app/src/main/res/values/themes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../MM/UtilIdades/app/src/main/res/values/themes.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MM/UtilIdades/app/src/test/java/com/example/util_idades/ExampleUnitTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../MM/UtilIdades/app/src/test/java/com/example/util_idades/ExampleUnitTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MM/UtilIdades/gradle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../../MM/UtilIdades/gradle.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MM/UtilIdades/gradlew" beforeDir="false" afterPath="$PROJECT_DIR$/../../MM/UtilIdades/gradlew" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MM/UtilIdades/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../../MM/UtilIdades/settings.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MM/infoamigos/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../MM/infoamigos/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MM/infoamigos/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../MM/infoamigos/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MM/infoamigos/app/src/main/java/com/example/infoamigos/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../MM/infoamigos/app/src/main/java/com/example/infoamigos/MainActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MM/infoamigos/app/src/main/java/com/example/infoamigos/util/Amigo.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../MM/infoamigos/app/src/main/java/com/example/infoamigos/util/Amigo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MM/infoamigos/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../MM/infoamigos/app/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MM/infoamigos/app/src/main/res/menu/main_menu.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../MM/infoamigos/app/src/main/res/menu/main_menu.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MM/infoamigos/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../MM/infoamigos/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../1.- Threads/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../1.- Threads/.idea/workspace.xml" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="20MJZRd1on63Xfgk9NrK9Blz0OD" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Jaime_Pardo1_P1_PSP" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1f13a4c7-2737-4753-8449-31c9a3adca2a" name="Default Changelist" comment="" />
+      <created>1635848577389</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1635848577389</updated>
+      <workItem from="1635848580895" duration="12000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

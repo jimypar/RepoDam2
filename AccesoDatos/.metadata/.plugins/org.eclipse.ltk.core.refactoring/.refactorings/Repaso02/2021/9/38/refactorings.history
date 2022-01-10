@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename local variable &apos;responsable&apos; in &apos;clases.GestorTrabajos.buscarResponsable(...)&apos; to &apos;jefe&apos;&#x0D;&#x0A;- Original project: &apos;Repaso02&apos;&#x0D;&#x0A;- Original element: &apos;clases.GestorTrabajos.buscarResponsable(String).responsable&apos;&#x0D;&#x0A;- Renamed element: &apos;responsable&apos;&#x0D;&#x0A;- Update references to refactored element" description="Rename local variable &apos;responsable&apos;" id="org.eclipse.jdt.ui.rename.local.variable" input="/src&lt;clases{GestorTrabajos.java[GestorTrabajos~buscarResponsable~QString;@responsable!950!992!962!972!QResponsable;!0!false" name="jefe" references="true" stamp="1632379776764" version="1.0"/>
+</session>

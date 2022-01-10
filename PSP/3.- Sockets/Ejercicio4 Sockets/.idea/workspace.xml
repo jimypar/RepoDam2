@@ -1,0 +1,522 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="af1ca941-d168-4ced-9a3a-b920c6dca5ab" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../../../AccesoDatos/CocheComboBoxXML/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../AccesoDatos/CocheComboBoxXML/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../AccesoDatos/CocheComboBoxXML/.idea/dbnavigator.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../AccesoDatos/CocheComboBoxXML/.idea/libraries/jgoodies_common_1_8_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../AccesoDatos/CocheComboBoxXML/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../AccesoDatos/CocheComboBoxXML/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../AccesoDatos/CocheComboBoxXML/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../AccesoDatos/CocheComboBoxXML/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../AccesoDatos/CocheComboBoxXML/CocheComboBoxXML.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../AccesoDatos/CocheComboBoxXML/Libs/jgoodies-common-1.8.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../AccesoDatos/CocheComboBoxXML/Libs/jgoodies-forms-1.8.0.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../AccesoDatos/CocheComboBoxXML/src/Vista.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../AccesoDatos/CocheComboBoxXML/src/Vista.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../AccesoDatos/CocheComboBoxXML/src/com/jaimepardo/cochecomboboxxml/base/Coche.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../AccesoDatos/EditorMVC/EditorMVC.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../AccesoDatos/EditorMVC/src/com/jaimepardo/editormvc/Controlador.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../AccesoDatos/EditorMVC/src/com/jaimepardo/editormvc/Modelo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../AccesoDatos/EditorMVC/src/com/jaimepardo/editormvc/Principal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../AccesoDatos/EditorMVC/src/com/jaimepardo/editormvc/Vista.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../AccesoDatos/EditorMVC/src/com/jaimepardo/editormvc/Vista.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../AccesoDatos/TreeMap/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../AccesoDatos/TreeMap/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../AccesoDatos/TreeMap/.idea/dbnavigator.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../AccesoDatos/TreeMap/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../AccesoDatos/TreeMap/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../AccesoDatos/TreeMap/TreeMap.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../AccesoDatos/VehiculosMVC/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../AccesoDatos/VehiculosMVC/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../AccesoDatos/VehiculosMVC/.idea/dbnavigator.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../AccesoDatos/VehiculosMVC/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../AccesoDatos/VehiculosMVC/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../AccesoDatos/VehiculosMVC/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../AccesoDatos/VehiculosMVC/VehiculosMVC.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../MM/ListaCompra/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../MM/ListaCompra/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../MM/ListaCompra/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../MM/ListaCompra/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../MM/ListaCompra/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../MM/ListaCompra/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../MM/ListaCompra/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../MM/ListaCompra/app/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../MM/ListaCompra/app/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../MM/ListaCompra/app/proguard-rules.pro" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../MM/ListaCompra/app/src/androidTest/java/com/example/infoamigos21/ExampleInstrumentedTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../MM/ListaCompra/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../MM/ListaCompra/app/src/main/java/com/example/infoamigos21/AddActivity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../MM/ListaCompra/app/src/main/java/com/example/infoamigos21/DetailActivity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../MM/ListaCompra/app/src/main/java/com/example/infoamigos21/ImageActivity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../MM/ListaCompra/app/src/main/java/com/example/infoamigos21/MainActivity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../MM/ListaCompra/app/src/main/java/com/example/infoamigos21/PreferencesActivity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../MM/ListaCompra/app/src/main/java/com/example/infoamigos21/bd/Constantes.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../MM/ListaCompra/app/src/main/java/com/example/infoamigos21/bd/DataBase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../MM/ListaCompra/app/src/main/java/com/example/infoamigos21/util/Producto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../MM/ListaCompra/app/src/main/java/com/example/infoamigos21/util/ProductoAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../MM/ListaCompra/app/src/main/java/com/example/infoamigos21/util/Util.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../MM/ListaCompra/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../MM/ListaCompra/app/src/main/res/drawable/ic_launcher_background.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../MM/ListaCompra/app/src/main/res/layout/activity_add.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../MM/ListaCompra/app/src/main/res/layout/activity_detail.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../MM/ListaCompra/app/src/main/res/layout/activity_image.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../MM/ListaCompra/app/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../MM/ListaCompra/app/src/main/res/layout/fila.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../MM/ListaCompra/app/src/main/res/menu/main_menu.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../MM/ListaCompra/app/src/main/res/menu/menu_contextual.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../MM/ListaCompra/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../MM/ListaCompra/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../MM/ListaCompra/app/src/main/res/mipmap-hdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../MM/ListaCompra/app/src/main/res/mipmap-hdpi/ic_launcher_round.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../MM/ListaCompra/app/src/main/res/mipmap-mdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../MM/ListaCompra/app/src/main/res/mipmap-mdpi/ic_launcher_round.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../MM/ListaCompra/app/src/main/res/mipmap-xhdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../MM/ListaCompra/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../MM/ListaCompra/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../MM/ListaCompra/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../MM/ListaCompra/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../MM/ListaCompra/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../MM/ListaCompra/app/src/main/res/values-night/themes.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../MM/ListaCompra/app/src/main/res/values/arrays.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../MM/ListaCompra/app/src/main/res/values/colors.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../MM/ListaCompra/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../MM/ListaCompra/app/src/main/res/values/themes.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../MM/ListaCompra/app/src/main/res/xml/preferencias.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../MM/ListaCompra/app/src/test/java/com/example/infoamigos21/ExampleUnitTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../MM/ListaCompra/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../MM/ListaCompra/gradle.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../MM/ListaCompra/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../MM/ListaCompra/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../MM/ListaCompra/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../MM/ListaCompra/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../MM/ListaCompra/settings.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../MM/UtilIdades/app/src/main/java/com/example/util_idades/PreferencesActivity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../MM/UtilIdades/app/src/main/res/menu/main_menu.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../MM/UtilIdades/app/src/main/res/xml/preferencias.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../MM/infoamigos/app/src/main/java/com/example/infoamigos/PreferencesActivity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../MM/infoamigos/app/src/main/java/com/example/infoamigos/util/DetailActivity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../MM/infoamigos/app/src/main/res/layout/activity_detail.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../MM/infoamigos/app/src/main/res/xml/preferencias.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../.idea/PSP.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../1.- Threads/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../1.- Threads/.idea/dbnavigator.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../1.- Threads/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../2.- Patrones de diseño/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../2.- Patrones de diseño/.idea/2.- Patrones de diseño.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../2.- Patrones de diseño/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../2.- Patrones de diseño/.idea/dbnavigator.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../2.- Patrones de diseño/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../2.- Patrones de diseño/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../2.- Patrones de diseño/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../2.- Patrones de diseño/1.- EjemploSingleton/EjemploSingleton.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../2.- Patrones de diseño/2.- Singleton/Singleton.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../2.- Patrones de diseño/3.- PruebaObserver/PruebaObserver.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../2.- Patrones de diseño/4.- PruebaObserver2/PruebaObserver2.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../2.- Patrones de diseño/5.- PruebaObserverSingleton/PruebaObserverSingleton.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../1.- PruebaInfoSockets/PruebaInfoSockets.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../2.- PingPong Jaime Pardo/PingPong.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../2.- PingPong/.idea/2.- PingPong.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../3.- MenuSocket/MenuSocket.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../4.- MenuSocketMulti/MenuSocketMulti.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../5.- SocketObjetos/SocketObjetos.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Ejercicio1 Sockets/Ejercicio1 Sockets.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Ejercicio2 Sockets/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Ejercicio2 Sockets/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Ejercicio2 Sockets/.idea/dbnavigator.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Ejercicio2 Sockets/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Ejercicio2 Sockets/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Ejercicio2 Sockets/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Ejercicio2 Sockets/Ejercicio1 Sockets.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Ejercicio2 Sockets/out/production/Ejercicio1 Sockets/Cliente.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Ejercicio2 Sockets/out/production/Ejercicio1 Sockets/LaminaMarcoCliente.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Ejercicio2 Sockets/out/production/Ejercicio1 Sockets/MarcoCliente.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Ejercicio2 Sockets/out/production/Ejercicio1 Sockets/MarcoServidor.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Ejercicio2 Sockets/out/production/Ejercicio1 Sockets/Servidor.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Ejercicio2 Sockets/src/Cliente.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Ejercicio2 Sockets/src/Servidor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Ejercicio3 Sockets/Ejercicio1 Sockets.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../EjerciciosThreads/EjerciciosThreads.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Examen Jaime Pardo/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Examen Jaime Pardo/Jaime Pardo.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Examen Jaime Pardo/src/com/jaimepardo/ejercicio1/Hilo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Examen Jaime Pardo/src/com/jaimepardo/ejercicio2/Fuelarre.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Examen Jaime Pardo/src/com/jaimepardo/ejercicio2/MariMerche.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Examen Jaime Pardo/src/com/jaimepardo/ejercicio2/RedBulo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Jaime_Pardo1_P1_PSP/Contitucion1812.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Jaime_Pardo1_P1_PSP/Jaime_Pardo1_P1_PSP.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Jaime_Pardo1_P1_PSP/src/Ejercicio1/ejercicio1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Jaime_Pardo1_P1_PSP/src/Ejercicio1/ejercicio1_2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Jaime_Pardo1_P1_PSP/src/Ejercicio2/ejercicio2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Jaime_Pardo1_P1_PSP/src/Ejercicio3/ejercicio3.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Jaime_Pardo1_P1_PSP/src/Ejercicio4/ContarLineas.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Jaime_Pardo1_P1_PSP/src/Ejercicio4/ContarPalabra.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Jaime_Pardo1_P1_PSP/src/Ejercicio4/ContarPalabras.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Jaime_Pardo1_P1_PSP/src/Ejercicio4/ContarTitulo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Jaime_Pardo1_P1_PSP/src/Ejercicio4/ejercicio4.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Jaime_Pardo1_P1_PSP/src/Ejercicio5/LanzarDado.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Jaime_Pardo1_P1_PSP/src/Ejercicio5/ejercicio5.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Jaime_Pardo1_P2_PSP/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Jaime_Pardo1_P2_PSP/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Jaime_Pardo1_P2_PSP/.idea/dbnavigator.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Jaime_Pardo1_P2_PSP/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Jaime_Pardo1_P2_PSP/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Jaime_Pardo1_P2_PSP/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Jaime_Pardo1_P2_PSP/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Jaime_Pardo1_P2_PSP/Jaime_Pardo1_P2_PSP.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Jaime_Pardo1_P2_PSP/src/Ejercicio1/Cliente.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Jaime_Pardo1_P2_PSP/src/Ejercicio1/Ejercicio1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Jaime_Pardo1_P2_PSP/src/Ejercicio1/Observador.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Jaime_Pardo1_P2_PSP/src/Ejercicio1/RedSocial.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Jaime_Pardo1_P2_PSP/src/Ejercicio2/Ejercicio2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Jaime_Pardo1_P2_PSP/src/Ejercicio2/Observador.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Jaime_Pardo1_P2_PSP/src/Ejercicio2/Operacion.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Jaime_Pardo1_P2_PSP/src/Ejercicio3/AireAcondicionado.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Jaime_Pardo1_P2_PSP/src/Ejercicio3/Ejercicio3.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Jaime_Pardo1_P2_PSP/src/Ejercicio3/gui/Termostato.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Jaime_Pardo1_P2_PSP/src/Ejercicio3/gui/Termostato.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../AccesoDatos/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../AccesoDatos/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../AccesoDatos/EstructuraDatos/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../AccesoDatos/EstructuraDatos/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DI/.metadata/.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../../DI/.metadata/.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DI/.metadata/.mylyn/.taskListIndex/segments_1" beforeDir="false" afterPath="$PROJECT_DIR$/../../../DI/.metadata/.mylyn/.taskListIndex/segments_1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DI/.metadata/.mylyn/.tasks.xml.zip" beforeDir="false" afterPath="$PROJECT_DIR$/../../../DI/.metadata/.mylyn/.tasks.xml.zip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DI/.metadata/.mylyn/repositories.xml.zip" beforeDir="false" afterPath="$PROJECT_DIR$/../../../DI/.metadata/.mylyn/repositories.xml.zip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DI/.metadata/.mylyn/tasks.xml.zip" beforeDir="false" afterPath="$PROJECT_DIR$/../../../DI/.metadata/.mylyn/tasks.xml.zip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DI/.metadata/.plugins/com.genuitec.eclipse.devstyle/recent.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../../DI/.metadata/.plugins/com.genuitec.eclipse.devstyle/recent.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DI/.metadata/.plugins/com.genuitec.eclipse.monitor/myeclipse-usage.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../../../DI/.metadata/.plugins/com.genuitec.eclipse.monitor/myeclipse-usage.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DI/.metadata/.plugins/org.eclipse.core.resources/.history/1b/e026768e8026001c10df852beb955285" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DI/.metadata/.plugins/org.eclipse.core.resources/.history/1d/30e3748c8126001c10df852beb955285" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DI/.metadata/.plugins/org.eclipse.core.resources/.history/2/407a25b28126001c10df852beb955285" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DI/.metadata/.plugins/org.eclipse.core.resources/.history/2/5080908adf19001c11c9f675c27dce74" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DI/.metadata/.plugins/org.eclipse.core.resources/.history/2/d0e24ca18126001c10df852beb955285" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DI/.metadata/.plugins/org.eclipse.core.resources/.history/22/206b8ec48026001c10df852beb955285" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DI/.metadata/.plugins/org.eclipse.core.resources/.history/22/5084c0ec7d26001c10df852beb955285" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DI/.metadata/.plugins/org.eclipse.core.resources/.history/23/50d7eb6f7c26001c10df852beb955285" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DI/.metadata/.plugins/org.eclipse.core.resources/.history/30/002516bc8026001c10df852beb955285" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DI/.metadata/.plugins/org.eclipse.core.resources/.history/33/8073525be819001c11c9f675c27dce74" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DI/.metadata/.plugins/org.eclipse.core.resources/.history/39/5052cb2b7f26001c10df852beb955285" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DI/.metadata/.plugins/org.eclipse.core.resources/.history/39/a0178fcc7d26001c10df852beb955285" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DI/.metadata/.plugins/org.eclipse.core.resources/.history/3d/303a5187e719001c11c9f675c27dce74" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DI/.metadata/.plugins/org.eclipse.core.resources/.history/3d/30640639e819001c11c9f675c27dce74" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DI/.metadata/.plugins/org.eclipse.core.resources/.history/3d/70112622e819001c11c9f675c27dce74" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DI/.metadata/.plugins/org.eclipse.core.resources/.history/40/e0c663827c26001c10df852beb955285" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DI/.metadata/.plugins/org.eclipse.core.resources/.history/40/f092985de819001c11c9f675c27dce74" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DI/.metadata/.plugins/org.eclipse.core.resources/.history/42/300bd91f8026001c10df852beb955285" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DI/.metadata/.plugins/org.eclipse.core.resources/.history/4e/c0bee0f27f26001c10df852beb955285" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DI/.metadata/.plugins/org.eclipse.core.resources/.history/56/60b7a39a8126001c10df852beb955285" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DI/.metadata/.plugins/org.eclipse.core.resources/.history/59/80f706187d26001c10df852beb955285" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DI/.metadata/.plugins/org.eclipse.core.resources/.history/5b/e08dfec9e919001c11c9f675c27dce74" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DI/.metadata/.plugins/org.eclipse.core.resources/.history/5e/5043ff427f26001c10df852beb955285" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DI/.metadata/.plugins/org.eclipse.core.resources/.history/61/80b522acdf19001c11c9f675c27dce74" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DI/.metadata/.plugins/org.eclipse.core.resources/.history/63/5031d06e8026001c10df852beb955285" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DI/.metadata/.plugins/org.eclipse.core.resources/.history/67/d0d2d069de19001c11c9f675c27dce74" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DI/.metadata/.plugins/org.eclipse.core.resources/.history/6a/20dc448ee719001c11c9f675c27dce74" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DI/.metadata/.plugins/org.eclipse.core.resources/.history/6b/5051066d8126001c10df852beb955285" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DI/.metadata/.plugins/org.eclipse.core.resources/.history/6b/60cfbd2a7e26001c10df852beb955285" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DI/.metadata/.plugins/org.eclipse.core.resources/.history/71/20d1cf44e819001c11c9f675c27dce74" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DI/.metadata/.plugins/org.eclipse.core.resources/.history/79/b0c5dd0d8026001c10df852beb955285" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DI/.metadata/.plugins/org.eclipse.core.resources/.history/7a/c066a2dd8026001c10df852beb955285" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DI/.metadata/.plugins/org.eclipse.core.resources/.history/7e/c01109a38126001c10df852beb955285" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DI/.metadata/.plugins/org.eclipse.core.resources/.history/85/c02d39b68126001c10df852beb955285" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DI/.metadata/.plugins/org.eclipse.core.resources/.history/86/603928417f26001c10df852beb955285" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DI/.metadata/.plugins/org.eclipse.core.resources/.history/8a/803c19d97d26001c10df852beb955285" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DI/.metadata/.plugins/org.eclipse.core.resources/.history/8d/20eff0338026001c10df852beb955285" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DI/.metadata/.plugins/org.eclipse.core.resources/.history/8e/c02c7a0e8026001c10df852beb955285" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DI/.metadata/.plugins/org.eclipse.core.resources/.history/9/20fb8c797e26001c10df852beb955285" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DI/.metadata/.plugins/org.eclipse.core.resources/.history/9/50c274677f26001c10df852beb955285" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DI/.metadata/.plugins/org.eclipse.core.resources/.history/91/70aaccfedf19001c11c9f675c27dce74" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DI/.metadata/.plugins/org.eclipse.core.resources/.history/94/90a835c87d26001c10df852beb955285" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DI/.metadata/.plugins/org.eclipse.core.resources/.history/94/90c7cf79e819001c11c9f675c27dce74" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DI/.metadata/.plugins/org.eclipse.core.resources/.history/9d/9018d569de19001c11c9f675c27dce74" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DI/.metadata/.plugins/org.eclipse.core.resources/.history/9e/70f92ba67d26001c10df852beb955285" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DI/.metadata/.plugins/org.eclipse.core.resources/.history/a/20df95a77c26001c10df852beb955285" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DI/.metadata/.plugins/org.eclipse.core.resources/.history/a1/60164e5edf19001c11c9f675c27dce74" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DI/.metadata/.plugins/org.eclipse.core.resources/.history/a2/4024ff7ee819001c11c9f675c27dce74" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DI/.metadata/.plugins/org.eclipse.core.resources/.history/a2/d00a4c427d26001c10df852beb955285" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DI/.metadata/.plugins/org.eclipse.core.resources/.history/a3/e0c76007de19001c11c9f675c27dce74" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DI/.metadata/.plugins/org.eclipse.core.resources/.history/a7/90a43db17c26001c10df852beb955285" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DI/.metadata/.plugins/org.eclipse.core.resources/.history/ac/a0cf76557d26001c10df852beb955285" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DI/.metadata/.plugins/org.eclipse.core.resources/.history/ad/605f7129df19001c11c9f675c27dce74" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DI/.metadata/.plugins/org.eclipse.core.resources/.history/ae/0059ddc48126001c10df852beb955285" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DI/.metadata/.plugins/org.eclipse.core.resources/.history/b2/2053fc657f26001c10df852beb955285" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DI/.metadata/.plugins/org.eclipse.core.resources/.history/b9/d05075ba8126001c10df852beb955285" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DI/.metadata/.plugins/org.eclipse.core.resources/.history/bd/80f0b6aadf19001c11c9f675c27dce74" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DI/.metadata/.plugins/org.eclipse.core.resources/.history/c/805accd28026001c10df852beb955285" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DI/.metadata/.plugins/org.eclipse.core.resources/.history/c7/703cdabf8126001c10df852beb955285" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DI/.metadata/.plugins/org.eclipse.core.resources/.history/ca/a01fb5688126001c10df852beb955285" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DI/.metadata/.plugins/org.eclipse.core.resources/.history/cc/a00bead87c26001c10df852beb955285" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DI/.metadata/.plugins/org.eclipse.core.resources/.history/ce/a0e3ac7d7e26001c10df852beb955285" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DI/.metadata/.plugins/org.eclipse.core.resources/.history/d0/a075fb5f7f26001c10df852beb955285" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DI/.metadata/.plugins/org.eclipse.core.resources/.history/d4/60c5a9f17f26001c10df852beb955285" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DI/.metadata/.plugins/org.eclipse.core.resources/.history/d7/000338637f26001c10df852beb955285" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DI/.metadata/.plugins/org.eclipse.core.resources/.history/d7/b082a0d88026001c10df852beb955285" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DI/.metadata/.plugins/org.eclipse.core.resources/.history/dc/909c72d97c26001c10df852beb955285" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DI/.metadata/.plugins/org.eclipse.core.resources/.history/dd/80e580078026001c10df852beb955285" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DI/.metadata/.plugins/org.eclipse.core.resources/.history/dd/d0e6e4eb7c26001c10df852beb955285" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DI/.metadata/.plugins/org.eclipse.core.resources/.history/de/40fa19718026001c10df852beb955285" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DI/.metadata/.plugins/org.eclipse.core.resources/.history/e3/30b0c947e819001c11c9f675c27dce74" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DI/.metadata/.plugins/org.eclipse.core.resources/.history/e9/90a6c8727e26001c10df852beb955285" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DI/.metadata/.plugins/org.eclipse.core.resources/.history/ef/206dbf238026001c10df852beb955285" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DI/.metadata/.plugins/org.eclipse.core.resources/.history/ef/d057c4597d26001c10df852beb955285" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DI/.metadata/.plugins/org.eclipse.core.resources/.history/f7/5045f66f8126001c10df852beb955285" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DI/.metadata/.plugins/org.eclipse.core.resources/.history/f7/a0abcba3e219001c11c9f675c27dce74" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DI/.metadata/.plugins/org.eclipse.core.resources/.history/fb/90a8e4848026001c10df852beb955285" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DI/.metadata/.plugins/org.eclipse.core.resources/.history/fc/a0547c58de19001c11c9f675c27dce74" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DI/.metadata/.plugins/org.eclipse.core.resources/.projects/Test1/.indexes/af/history.index" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DI/.metadata/.plugins/org.eclipse.core.resources/.projects/Test1/.indexes/e4/3b/history.index" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DI/.metadata/.plugins/org.eclipse.core.resources/.projects/Test1/.indexes/e4/b9/history.index" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DI/.metadata/.plugins/org.eclipse.core.resources/.projects/Test1/.indexes/e4/df/history.index" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DI/.metadata/.plugins/org.eclipse.core.resources/.projects/Test1/.markers" beforeDir="false" afterPath="$PROJECT_DIR$/../../../DI/.metadata/.plugins/org.eclipse.core.resources/.projects/Test1/.markers" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DI/.metadata/.plugins/org.eclipse.core.resources/.projects/Test1/org.eclipse.jdt.core/state.dat" beforeDir="false" afterPath="$PROJECT_DIR$/../../../DI/.metadata/.plugins/org.eclipse.core.resources/.projects/Test1/org.eclipse.jdt.core/state.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DI/.metadata/.plugins/org.eclipse.core.resources/.projects/Ventana01/.indexes/af/history.index" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DI/.metadata/.plugins/org.eclipse.core.resources/.projects/Ventana01/.indexes/e4/c0/history.index" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DI/.metadata/.plugins/org.eclipse.core.resources/.projects/Ventana01/org.eclipse.jdt.core/state.dat" beforeDir="false" afterPath="$PROJECT_DIR$/../../../DI/.metadata/.plugins/org.eclipse.core.resources/.projects/Ventana01/org.eclipse.jdt.core/state.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DI/.metadata/.plugins/org.eclipse.core.resources/.root/.indexes/properties.index" beforeDir="false" afterPath="$PROJECT_DIR$/../../../DI/.metadata/.plugins/org.eclipse.core.resources/.root/.indexes/properties.index" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DI/.metadata/.plugins/org.eclipse.core.resources/.root/2.tree" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DI/.metadata/.plugins/org.eclipse.core.resources/.root/3.tree" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DI/.metadata/.plugins/org.eclipse.core.resources/.safetable/org.eclipse.core.resources" beforeDir="false" afterPath="$PROJECT_DIR$/../../../DI/.metadata/.plugins/org.eclipse.core.resources/.safetable/org.eclipse.core.resources" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DI/.metadata/.plugins/org.eclipse.core.runtime/.settings/com.genuitec.eclipse.codetogether.ui.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/../../../DI/.metadata/.plugins/org.eclipse.core.runtime/.settings/com.genuitec.eclipse.codetogether.ui.prefs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DI/.metadata/.plugins/org.eclipse.core.runtime/.settings/com.genuitec.eclipse.monitor.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/../../../DI/.metadata/.plugins/org.eclipse.core.runtime/.settings/com.genuitec.eclipse.monitor.prefs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DI/.metadata/.plugins/org.eclipse.core.runtime/.settings/com.genuitec.eclipse.theming.ui.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/../../../DI/.metadata/.plugins/org.eclipse.core.runtime/.settings/com.genuitec.eclipse.theming.ui.prefs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DI/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.debug.ui.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/../../../DI/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.debug.ui.prefs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DI/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.jdt.launching.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/../../../DI/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.jdt.launching.prefs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DI/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.jdt.ui.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/../../../DI/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.jdt.ui.prefs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DI/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.recommenders.completion.rcp.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/../../../DI/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.recommenders.completion.rcp.prefs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DI/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.ui.ide.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/../../../DI/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.ui.ide.prefs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DI/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.wst.jsdt.ui.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/../../../DI/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.wst.jsdt.ui.prefs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DI/.metadata/.plugins/org.eclipse.debug.ui/dialog_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../DI/.metadata/.plugins/org.eclipse.debug.ui/dialog_settings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DI/.metadata/.plugins/org.eclipse.debug.ui/launchConfigurationHistory.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../DI/.metadata/.plugins/org.eclipse.debug.ui/launchConfigurationHistory.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DI/.metadata/.plugins/org.eclipse.e4.workbench/workbench.xmi" beforeDir="false" afterPath="$PROJECT_DIR$/../../../DI/.metadata/.plugins/org.eclipse.e4.workbench/workbench.xmi" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DI/.metadata/.plugins/org.eclipse.jdt.core/1205824980.index" beforeDir="false" afterPath="$PROJECT_DIR$/../../../DI/.metadata/.plugins/org.eclipse.jdt.core/1205824980.index" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DI/.metadata/.plugins/org.eclipse.jdt.core/721267183.index" beforeDir="false" afterPath="$PROJECT_DIR$/../../../DI/.metadata/.plugins/org.eclipse.jdt.core/721267183.index" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DI/.metadata/.plugins/org.eclipse.jdt.core/savedIndexNames.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../DI/.metadata/.plugins/org.eclipse.jdt.core/savedIndexNames.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DI/.metadata/.plugins/org.eclipse.jdt.core/variablesAndContainers.dat" beforeDir="false" afterPath="$PROJECT_DIR$/../../../DI/.metadata/.plugins/org.eclipse.jdt.core/variablesAndContainers.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DI/.metadata/.plugins/org.eclipse.jdt.ui/QualifiedTypeNameHistory.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../DI/.metadata/.plugins/org.eclipse.jdt.ui/QualifiedTypeNameHistory.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DI/.metadata/.plugins/org.eclipse.jdt.ui/dialog_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../DI/.metadata/.plugins/org.eclipse.jdt.ui/dialog_settings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DI/.metadata/.plugins/org.eclipse.ltk.ui.refactoring/dialog_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../DI/.metadata/.plugins/org.eclipse.ltk.ui.refactoring/dialog_settings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DI/.metadata/.plugins/org.eclipse.m2e.logback.configuration/0.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../../DI/.metadata/.plugins/org.eclipse.m2e.logback.configuration/0.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DI/.metadata/.plugins/org.eclipse.pde.core/.cache/clean-cache.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../../../DI/.metadata/.plugins/org.eclipse.pde.core/.cache/clean-cache.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DI/.metadata/.plugins/org.eclipse.recommenders.news.impl/downloads/http%3A%2F%2Fwww.eclipse.org%2Frecommenders%2Ffeeds%2Fide.rss" beforeDir="false" afterPath="$PROJECT_DIR$/../../../DI/.metadata/.plugins/org.eclipse.recommenders.news.impl/downloads/http%3A%2F%2Fwww.eclipse.org%2Frecommenders%2Ffeeds%2Fide.rss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DI/.metadata/.plugins/org.eclipse.recommenders.news.impl/downloads/https%3A%2F%2Fwww.genuitec.com%2Ffeed%2F" beforeDir="false" afterPath="$PROJECT_DIR$/../../../DI/.metadata/.plugins/org.eclipse.recommenders.news.impl/downloads/https%3A%2F%2Fwww.genuitec.com%2Ffeed%2F" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DI/.metadata/.plugins/org.eclipse.ui.workbench/dialog_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../DI/.metadata/.plugins/org.eclipse.ui.workbench/dialog_settings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DI/.metadata/.plugins/org.eclipse.wst.jsdt.core/externalLibsTimeStamps" beforeDir="false" afterPath="$PROJECT_DIR$/../../../DI/.metadata/.plugins/org.eclipse.wst.jsdt.core/externalLibsTimeStamps" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DI/.metadata/version.ini" beforeDir="false" afterPath="$PROJECT_DIR$/../../../DI/.metadata/version.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DI/Test1/bin/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DI/Ventana01/bin/ventana01/Ventana01.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../DI/Ventana01/bin/ventana01/Ventana01.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DI/Ventana01/src/ventana01/Ventana01.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../DI/Ventana01/src/ventana01/Ventana01.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../MM/UtilIdades/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../../../MM/UtilIdades/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../MM/UtilIdades/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../MM/UtilIdades/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../MM/UtilIdades/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../MM/UtilIdades/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../MM/UtilIdades/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../../../MM/UtilIdades/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../MM/UtilIdades/app/proguard-rules.pro" beforeDir="false" afterPath="$PROJECT_DIR$/../../../MM/UtilIdades/app/proguard-rules.pro" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../MM/UtilIdades/app/src/androidTest/java/com/example/util_idades/ExampleInstrumentedTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../MM/UtilIdades/app/src/androidTest/java/com/example/util_idades/ExampleInstrumentedTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../MM/UtilIdades/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../MM/UtilIdades/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../MM/UtilIdades/app/src/main/java/com/example/util_idades/CalculadoraActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../MM/UtilIdades/app/src/main/java/com/example/util_idades/CalculadoraActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../MM/UtilIdades/app/src/main/java/com/example/util_idades/Conecta4Activity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../MM/UtilIdades/app/src/main/java/com/example/util_idades/Conecta4Activity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../MM/UtilIdades/app/src/main/java/com/example/util_idades/ConversorActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../MM/UtilIdades/app/src/main/java/com/example/util_idades/ConversorActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../MM/UtilIdades/app/src/main/java/com/example/util_idades/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../MM/UtilIdades/app/src/main/java/com/example/util_idades/MainActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../MM/UtilIdades/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../MM/UtilIdades/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../MM/UtilIdades/app/src/main/res/drawable/backspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../MM/UtilIdades/app/src/main/res/drawable/backspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../MM/UtilIdades/app/src/main/res/drawable/c4background.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../MM/UtilIdades/app/src/main/res/drawable/circle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../MM/UtilIdades/app/src/main/res/drawable/circle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../MM/UtilIdades/app/src/main/res/drawable/ic_launcher_background.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../MM/UtilIdades/app/src/main/res/drawable/ic_launcher_background.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../MM/UtilIdades/app/src/main/res/layout/activity_calculadora.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../MM/UtilIdades/app/src/main/res/layout/activity_calculadora.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../MM/UtilIdades/app/src/main/res/layout/activity_calculadora2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../MM/UtilIdades/app/src/main/res/layout/activity_calculadora2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../MM/UtilIdades/app/src/main/res/layout/activity_conecta4.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../MM/UtilIdades/app/src/main/res/layout/activity_conecta4.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../MM/UtilIdades/app/src/main/res/layout/activity_conversor.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../MM/UtilIdades/app/src/main/res/layout/activity_conversor.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../MM/UtilIdades/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../MM/UtilIdades/app/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../MM/UtilIdades/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../MM/UtilIdades/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../MM/UtilIdades/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../MM/UtilIdades/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../MM/UtilIdades/app/src/main/res/values-night/themes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../MM/UtilIdades/app/src/main/res/values-night/themes.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../MM/UtilIdades/app/src/main/res/values/colors.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../MM/UtilIdades/app/src/main/res/values/colors.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../MM/UtilIdades/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../MM/UtilIdades/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../MM/UtilIdades/app/src/main/res/values/themes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../MM/UtilIdades/app/src/main/res/values/themes.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../MM/UtilIdades/app/src/test/java/com/example/util_idades/ExampleUnitTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../MM/UtilIdades/app/src/test/java/com/example/util_idades/ExampleUnitTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../MM/UtilIdades/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../../../MM/UtilIdades/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../MM/UtilIdades/gradle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../../../MM/UtilIdades/gradle.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../MM/UtilIdades/gradlew" beforeDir="false" afterPath="$PROJECT_DIR$/../../../MM/UtilIdades/gradlew" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../MM/UtilIdades/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../../../MM/UtilIdades/settings.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../MM/calculatorApp-master/.gradle/6.8/executionHistory/executionHistory.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../MM/calculatorApp-master/.gradle/6.8/executionHistory/executionHistory.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../MM/calculatorApp-master/.gradle/6.8/fileChanges/last-build.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../MM/calculatorApp-master/.gradle/6.8/fileHashes/fileHashes.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../MM/calculatorApp-master/.gradle/6.8/fileHashes/fileHashes.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../MM/calculatorApp-master/.gradle/6.8/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../MM/calculatorApp-master/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../MM/calculatorApp-master/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../MM/calculatorApp-master/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../MM/calculatorApp-master/.gradle/checksums/checksums.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../MM/calculatorApp-master/.gradle/configuration-cache/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../MM/calculatorApp-master/.gradle/vcs-1/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../MM/calculatorApp-master/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../MM/calculatorApp-master/.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../MM/calculatorApp-master/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../MM/calculatorApp-master/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../MM/calculatorApp-master/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../MM/calculatorApp-master/calculatorApp-master/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../MM/calculatorApp-master/calculatorApp-master/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../MM/calculatorApp-master/calculatorApp-master/.idea/codeStyles/Project.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../MM/calculatorApp-master/calculatorApp-master/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../MM/calculatorApp-master/calculatorApp-master/.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../MM/calculatorApp-master/calculatorApp-master/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../MM/calculatorApp-master/calculatorApp-master/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../MM/calculatorApp-master/calculatorApp-master/.idea/runConfigurations.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../MM/calculatorApp-master/calculatorApp-master/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../MM/calculatorApp-master/calculatorApp-master/app/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../MM/calculatorApp-master/calculatorApp-master/app/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../MM/calculatorApp-master/calculatorApp-master/app/libs/MathParser.org-mXparser-v.4.4.0-jdk8.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../MM/calculatorApp-master/calculatorApp-master/app/proguard-rules.pro" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../MM/calculatorApp-master/calculatorApp-master/app/src/androidTest/java/com/example/calculator/ExampleInstrumentedTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../MM/calculatorApp-master/calculatorApp-master/app/src/main/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../MM/calculatorApp-master/calculatorApp-master/app/src/main/java/com/example/calculator/MainActivity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../MM/calculatorApp-master/calculatorApp-master/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../MM/calculatorApp-master/calculatorApp-master/app/src/main/res/drawable/ic_launcher_background.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../MM/calculatorApp-master/calculatorApp-master/app/src/main/res/layout/activity_main.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../MM/calculatorApp-master/calculatorApp-master/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../MM/calculatorApp-master/calculatorApp-master/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../MM/calculatorApp-master/calculatorApp-master/app/src/main/res/mipmap-hdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../MM/calculatorApp-master/calculatorApp-master/app/src/main/res/mipmap-hdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../MM/calculatorApp-master/calculatorApp-master/app/src/main/res/mipmap-mdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../MM/calculatorApp-master/calculatorApp-master/app/src/main/res/mipmap-mdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../MM/calculatorApp-master/calculatorApp-master/app/src/main/res/mipmap-xhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../MM/calculatorApp-master/calculatorApp-master/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../MM/calculatorApp-master/calculatorApp-master/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../MM/calculatorApp-master/calculatorApp-master/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../MM/calculatorApp-master/calculatorApp-master/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../MM/calculatorApp-master/calculatorApp-master/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../MM/calculatorApp-master/calculatorApp-master/app/src/main/res/values/colors.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../MM/calculatorApp-master/calculatorApp-master/app/src/main/res/values/strings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../MM/calculatorApp-master/calculatorApp-master/app/src/main/res/values/styles.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../MM/calculatorApp-master/calculatorApp-master/app/src/test/java/com/example/calculator/ExampleUnitTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../MM/calculatorApp-master/calculatorApp-master/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../MM/calculatorApp-master/calculatorApp-master/gradle.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../MM/calculatorApp-master/calculatorApp-master/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../MM/calculatorApp-master/calculatorApp-master/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../MM/calculatorApp-master/calculatorApp-master/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../MM/calculatorApp-master/calculatorApp-master/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../MM/calculatorApp-master/calculatorApp-master/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../MM/calculatorApp-master/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../MM/calculatorApp-master/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../MM/calculatorApp-master/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../MM/calculatorApp-master/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../MM/calculatorApp-master/local.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../MM/infoamigos/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../MM/infoamigos/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../MM/infoamigos/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../MM/infoamigos/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../MM/infoamigos/app/src/main/java/com/example/infoamigos/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../MM/infoamigos/app/src/main/java/com/example/infoamigos/MainActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../MM/infoamigos/app/src/main/java/com/example/infoamigos/util/Amigo.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../MM/infoamigos/app/src/main/java/com/example/infoamigos/util/Amigo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../MM/infoamigos/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../MM/infoamigos/app/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../MM/infoamigos/app/src/main/res/menu/main_menu.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../MM/infoamigos/app/src/main/res/menu/main_menu.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../MM/infoamigos/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../MM/infoamigos/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../1.- Threads/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../1.- Threads/.idea/workspace.xml" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="C:\Programacion\DAM2\PSP\3.- Sockets\2.- PingPong\.idea" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectId" id="20gEqga51nyEIBtL3DIiRlMzhBt" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552404538728" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../3.- MenuSocket" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.Cliente">
+    <configuration name="Cliente" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Cliente" />
+      <module name="PingPong" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Servidor" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Servidor" />
+      <module name="PingPong" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.Servidor" />
+      <item itemvalue="Application.Cliente" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Cliente" />
+        <item itemvalue="Application.Servidor" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="af1ca941-d168-4ced-9a3a-b920c6dca5ab" name="Default Changelist" comment="" />
+      <created>1552399238233</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1552399238233</updated>
+      <workItem from="1552399258633" duration="4258000" />
+      <workItem from="1636458024645" duration="2816000" />
+      <workItem from="1637060602813" duration="234000" />
+      <workItem from="1637061581622" duration="1180000" />
+      <workItem from="1637137354216" duration="2314000" />
+      <workItem from="1637140575776" duration="1953000" />
+      <workItem from="1637152774204" duration="105000" />
+      <workItem from="1637153158980" duration="555000" />
+      <workItem from="1637223337084" duration="75000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

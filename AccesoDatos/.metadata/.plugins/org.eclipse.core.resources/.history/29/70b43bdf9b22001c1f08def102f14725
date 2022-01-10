@@ -1,0 +1,107 @@
+package clases;
+
+import java.util.ArrayList;
+import java.util.Collections;
+
+import com.mysql.jdbc.Connection;
+
+public class Festival {
+
+	private ArrayList<Concierto> listaConciertos;
+	private ArrayList<Personal> listarPersonal;
+	private Connection conexion;
+
+	public Festival() {
+		super();
+	}
+
+	public Festival(ArrayList<Concierto> listaConciertos, ArrayList<Personal> listarPersonal, Connection conexion) {
+		super();
+		this.listaConciertos = listaConciertos;
+		this.listarPersonal = listarPersonal;
+		this.conexion = conexion;
+	}
+
+	public ArrayList<Concierto> getListaConciertos() {
+		return listaConciertos;
+	}
+
+	public void setListaConciertos(ArrayList<Concierto> listaConciertos) {
+		this.listaConciertos = listaConciertos;
+	}
+
+	public ArrayList<Personal> getListarPersonal() {
+		return listarPersonal;
+	}
+
+	public void setListarPersonal(ArrayList<Personal> listarPersonal) {
+		this.listarPersonal = listarPersonal;
+	}
+
+	public void setConexion(Connection conexion) {
+		this.conexion = conexion;
+	}
+
+	// alta artista
+	public void altaArtista(String dni, String nombre, String estiloMusica, String cache) {
+
+		if (!compruebaArtista(dni)) {
+
+			Artista artista = new Artista(dni, nombre, estiloMusica, Float.valueOf(cache));
+			Collections.sort(listarPersonal);
+			listarPersonal.add(artista);
+		}
+
+	}
+
+	// alta asistente
+	public void altaAsistente(String dni, String nombre, String fechaNacimiento, String nacionalidad) {
+
+		listarPersonal.add(new Asistente(dni, nombre, fechaNacimiento, nacionalidad));
+		Collections.sort(listarPersonal);
+
+	}
+
+	// alta concierto
+	public void altaConcierto(String codigo, String nombre, String horaInicio, String dniArtista) {
+
+		if (compruebaConcierto(codigo) && compruebaArtista(dniArtista)) {
+
+			Concierto concierto = new Concierto(codigo, nombre, horaInicio);
+
+		}
+
+	}
+
+	// Comprueba concierto
+	public boolean compruebaConcierto(String codigo) {
+
+		for (Concierto concierto : listaConciertos) {
+			if (concierto.getCodigo().equals(codigo)) {
+				return true;
+			}
+		}
+		return false;
+
+	}
+
+	// Comprueba artista
+	public boolean compruebaArtista(String dni) {
+
+		for (Personal artista : listarPersonal) {
+			if (artista instanceof Artista) {
+				if (artista.getDni().equals(dni)) {
+					return true;
+				}
+			}
+
+		}
+		return false;
+	}
+	
+	public Artista buscarArtista() {
+		
+		
+	}
+
+}

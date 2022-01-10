@@ -1,0 +1,10 @@
+package clases;
+
+public class Artista extends Personal{
+
+	private String estiloMusica;
+	private Float cache;
+	
+	
+	
+}

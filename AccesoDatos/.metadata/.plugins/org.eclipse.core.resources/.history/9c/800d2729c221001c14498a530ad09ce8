@@ -1,0 +1,14 @@
+package clases;
+
+import java.time.LocalDate;
+
+public class Asistente extends Personal{
+
+	private LocalDate fechaNacimiento;
+	private String nacionalidad;
+	
+	
+	
+	
+
+}

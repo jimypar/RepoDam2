@@ -1,0 +1,51 @@
+package main;
+
+import clases.Festival;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		Festival festival = new Festival();
+		
+		System.out.println("Alta artistas");
+		festival.altaArtista("1", "a", "a", "1");
+		
+		System.out.println("Alta asistentes");
+		
+		
+		System.out.println("Alta conciertos");
+		
+		
+		System.out.println("Registrar asistente en concierto");
+		
+		
+		System.out.println("Listar artistas");
+		
+		
+		System.out.println("Listar asistentes");
+		
+		
+		System.out.println("Cargar datos");
+		
+		
+		System.out.println("Guardar datos");
+		
+		
+		System.out.println("Contectamos BBDD");
+		
+		
+		System.out.println("Guardamos artista");
+		
+		
+		System.out.println("Cargamos asistentes de BBDD");
+		
+		
+		System.out.println("Listar artistas");
+		
+		
+		System.out.println("Llistar asistentes");
+
+	}
+
+}

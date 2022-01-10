@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Test</string>
+    <string name="strEtiqueta">Hola, soy el texto inicial.Cámbiame</string>
+    <string name="strBotonPrimero">BOTÓN PRIMERO</string>
+    <string name="strEmail">soyunmailfalso@falso.com</string>
+    <string name="strMail">EMAIL</string>
+    <string name="strSalir">Salir</string>
+    <string name="strSiguiente">Siguiente</string>
+    <string name="strAceptar">Aceptar</string>
+</resources>

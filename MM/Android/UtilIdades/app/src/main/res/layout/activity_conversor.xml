@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ConversorActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="10dp"
+            app:srcCompat="@drawable/logoconversor"
+            tools:srcCompat="@drawable/logoconversor" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="30dp">
+
+        <EditText
+            android:id="@+id/tInput1"
+            android:layout_width="56dp"
+            android:layout_height="108dp"
+            android:layout_weight="1"
+            android:inputType="number"
+            android:textAlignment="center"
+            android:textColor="?attr/colorSecondary"
+            android:textColorHint="?attr/colorSecondary"
+            android:textSize="30dp" />
+
+        <Button
+            android:id="@+id/bCash1"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/euros"
+            android:textSize="25dp"
+            app:cornerRadius="?attr/dialogPreferredPadding"
+            tools:ignore="DuplicateSpeakableTextCheck" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="30dp">
+
+        <TextView
+            android:id="@+id/tOutput1"
+            android:layout_width="56dp"
+            android:layout_height="108dp"
+            android:layout_weight="1"
+            android:clickable="false"
+            android:gravity="center"
+            android:hint="@string/resultado"
+            android:inputType="number"
+            android:longClickable="false"
+            android:textAlignment="center"
+            android:textColor="?attr/colorSecondary"
+            android:textColorHint="?attr/colorSecondary"
+            android:textSize="30dp" />
+
+
+        <Button
+            android:id="@+id/bCash2"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/euros"
+            android:textSize="25dp"
+            app:cornerRadius="?attr/dialogPreferredPadding" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="30dp">
+
+        <Button
+            android:id="@+id/bConvertir"
+            android:layout_width="wrap_content"
+            android:layout_height="72dp"
+            android:layout_weight="1"
+            android:text="@string/convertir"
+            android:textSize="20dp"
+            app:cornerRadius="?attr/dialogPreferredPadding" />
+
+    </LinearLayout>
+</LinearLayout>

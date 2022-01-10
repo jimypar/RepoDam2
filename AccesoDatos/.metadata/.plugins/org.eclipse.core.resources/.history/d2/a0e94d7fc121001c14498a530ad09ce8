@@ -1,0 +1,14 @@
+package clases;
+
+public class Artista extends Personal{
+
+	public Artista(String dni, String nombre) {
+		super(dni, nombre);
+		// TODO Auto-generated constructor stub
+	}
+	private String estiloMusica;
+	private Float cache;
+	
+	
+	
+}

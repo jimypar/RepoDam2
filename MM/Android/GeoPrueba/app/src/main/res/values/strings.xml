@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">GeoPrueba</string>
+    <string name="str_map">Mapa</string>
+    <string name="str_latitud">Latitud:</string>
+    <string name="str_longitud">Longitud:</string>
+    <string name="str_camera">Camara</string>
+</resources>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/menu_borrar"
+        android:title="@string/strBorrar"
+        />
+    <item
+        android:id="@+id/add1m"
+        android:title="@string/tAdd1m" />
+    <item
+        android:id="@+id/add3m"
+        android:title="@string/tAdd3m" />
+    <item
+        android:id="@+id/add1a"
+        android:title="@string/add1a" />
+
+</menu>

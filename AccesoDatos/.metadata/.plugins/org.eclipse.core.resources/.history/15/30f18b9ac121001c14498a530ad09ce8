@@ -1,0 +1,26 @@
+package clases;
+
+public class Artista extends Personal{
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	
+	private String estiloMusica;
+	private Float cache;
+	
+	public Artista(String dni, String nombre) {
+		super(dni, nombre);
+		
+	}
+	
+	@Override
+	public int compareTo(Personal o) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+	
+	
+	
+}

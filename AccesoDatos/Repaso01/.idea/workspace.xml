@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="08eebf77-5dfb-4e56-8860-3b608c4c01e9" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../elenajif-accesoadatos-21-22-d5cb6c996c63/MVC Varias Tablas/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Practica2-ud2-JaimePardo/.idea/uiDesigner.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Practica2-ud2-JaimePardo/.idea/uiDesigner.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Practica2-ud2-JaimePardo/out/production/MVC Varias Tablas/base/enums/GenerosLibros.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Practica2-ud2-JaimePardo/out/production/MVC Varias Tablas/base/enums/TiposEditoriales.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Practica2-ud2-JaimePardo/out/production/MVC Varias Tablas/gui/Controlador.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Practica2-ud2-JaimePardo/out/production/MVC Varias Tablas/gui/Controlador.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Practica2-ud2-JaimePardo/out/production/MVC Varias Tablas/gui/Vista.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Practica2-ud2-JaimePardo/out/production/MVC Varias Tablas/gui/Vista.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Practica2-ud2-JaimePardo/src/base/enums/GenerosLibros.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Practica2-ud2-JaimePardo/src/base/enums/Recambios.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Practica2-ud2-JaimePardo/src/base/enums/TiposEditoriales.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Practica2-ud2-JaimePardo/src/gui/Controlador.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Practica2-ud2-JaimePardo/src/gui/Controlador.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Practica2-ud2-JaimePardo/src/gui/Vista.form" beforeDir="false" afterPath="$PROJECT_DIR$/../Practica2-ud2-JaimePardo/src/gui/Vista.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Practica2-ud2-JaimePardo/src/gui/Vista.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Practica2-ud2-JaimePardo/src/gui/Vista.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../elenajif-accesoadatos-21-22-d5cb6c996c63/MVC Varias Tablas/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../elenajif-accesoadatos-21-22-d5cb6c996c63/MVC Varias Tablas/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../elenajif-accesoadatos-21-22-d5cb6c996c63/MVC Varias Tablas/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../elenajif-accesoadatos-21-22-d5cb6c996c63/MVC Varias Tablas/.idea/workspace.xml" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="2331O4wzvMITrJlpMibvLFJLn0x" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="08eebf77-5dfb-4e56-8860-3b608c4c01e9" name="Default Changelist" comment="" />
+      <created>1640947920117</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1640947920117</updated>
+      <workItem from="1640947925637" duration="102000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

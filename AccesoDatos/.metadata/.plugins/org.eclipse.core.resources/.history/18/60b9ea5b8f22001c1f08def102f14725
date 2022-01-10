@@ -1,0 +1,15 @@
+package clases;
+
+import java.io.Serializable;
+
+public class Concierto implements Comparable, Serializable {
+
+	
+
+	Override
+	public int compareTo(Object arg0) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}

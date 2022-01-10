@@ -1,0 +1,25 @@
+package main;
+
+import clases.GestorCuentas;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		System.out.println("Creamos un banco");
+		GestorCuentas banco = new GestorCuentas();
+		System.out.println("Creamos dos clientes y listamos");
+		banco.altaCliente("11111", "Maria", "1981-04-02");
+		banco.altaCliente("22222", "Carlos", "1980-09-03");
+		banco.listarClientes();
+		
+		System.out.println("");
+		System.out.println("2.- Buscar cliente 11111");
+		System.out.println(banco.buscarCliente("11111"));
+		
+		System.out.println("");
+		System.out.println("3.- Creamos tres cuentas y listamos");
+
+	}
+
+}

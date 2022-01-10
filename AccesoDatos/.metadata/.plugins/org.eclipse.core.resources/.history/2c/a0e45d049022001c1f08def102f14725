@@ -1,0 +1,29 @@
+package clases;
+
+import java.io.Serializable;
+import java.sql.Time;
+import java.util.ArrayList;
+
+public class Concierto implements Comparable, Serializable {
+
+	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	
+	private String codigo;
+	private String nombre;
+	private Time horaInicio;
+	private Artista artista;
+	private ArrayList<Asistente> listaAsistentes;
+	
+	
+
+	@Override
+	public int compareTo(Object arg0) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}

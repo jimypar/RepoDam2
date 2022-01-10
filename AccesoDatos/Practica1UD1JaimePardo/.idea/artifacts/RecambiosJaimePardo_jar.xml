@@ -1,0 +1,12 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="RecambiosJaimePardo:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/RecambiosJaimePardo_jar</output-path>
+    <root id="archive" name="VehiculosMVC.jar">
+      <element id="module-output" name="Practica1UD1JaimePardo" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/Libs/jgoodies-common-1.8.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/Libs/jgoodies-forms-1.8.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/Libs/LGoodDatePicker-10.3.1.jar" path-in-jar="/" />
+      <element id="file-copy" path="$PROJECT_DIR$/recambios.conf" />
+    </root>
+  </artifact>
+</component>

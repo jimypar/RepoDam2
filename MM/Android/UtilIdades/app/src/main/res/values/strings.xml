@@ -1,0 +1,79 @@
+<resources>
+    <string name="app_name">Util-Idades</string>
+    <string name="tMainCalculadora">Calculadora</string>
+    <string name="tMainConversor">Conversor</string>
+
+
+    <string name="display">Introduce un valor</string>
+    <string name="fakeHint"> </string>
+
+    <string name="backspace"> </string>
+
+    <string name="one">1</string>
+    <string name="two">2</string>
+    <string name="three">3</string>
+    <string name="four">4</string>
+    <string name="five">5</string>
+    <string name="six">6</string>
+    <string name="seven">7</string>
+    <string name="eight">8</string>
+    <string name="nine">9</string>
+    <string name="zero">0</string>
+
+    <string name="clear">C</string>
+    <string name="percent">^</string>
+    <string name="parentheses">( )</string>
+    <string name="divide">÷</string>
+    <string name="multiply">×</string>
+    <string name="add">+</string>
+    <string name="subtract">-</string>
+    <string name="plusMinus">+/-</string>
+    <string name="point">.</string>
+    <string name="equals">=</string>
+    <string name="resultado">Resultado</string>
+    <string name="convertir">Convertir</string>
+    <string name="euros">€(EUR)</string>
+    <string name="dolares">$(USD)</string>
+    <string name="libra">£(GBP)</string>
+    <string name="tMainConecta4">Conecta 4</string>
+    <string name="blueWins">El jugador azul ha ganado</string>
+    <string name="redWins">El jugador rojo ha ganado</string>
+    <string name="tied">Empate</string>
+    <string name="strConfiguracion">Configuracion</string>
+    <string name="strAbout">Acerca de</string>
+    <string name="mNocturno">Modo Claro</string>
+    <string name="tListaCompra">Lista Compra</string>
+    <string name="strDeuda">Cantidad:</string>
+    <string name="strBAnyadir">AÑADIR</string>
+    <string name="strBDetalle">DETALLE</string>
+    <string name="strBDeuda">PRECIO</string>
+    <string name="strNombre">Nombre:</string>
+    <string name="strBorrar">Borrar</string>
+    <string name="strDetalle">Detalle</string>
+    <string name="title_activity_settings">SettingsActivity</string>
+    <string name="title_activity_addsus">AddsusActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="tMain5">Suscripciones</string>
+    <string name="strSuscripcion">Suscripción:</string>
+    <string name="strTiempo">Tiempo:</string>
+    <string name="unmes">1 MES</string>
+    <string name="tresmeses">3 MESES</string>
+    <string name="unanno">1 AÑO</string>
+    <string name="tTiempoRestante">Elige una suscripcion</string>
+    <string name="tAdd1m">Renovar 1 mes</string>
+    <string name="add1a">Renovar 1 año</string>
+    <string name="tAdd3m">Renovar 3 meses</string>
+    <string name="tMain6">Wifi Zaragoza</string>
+    <string name="txtIntroducirUsuario">Introducir nombre de usuario</string>
+    <string name="txtMostrarUsuario">Mostrar nombre de usuario</string>
+    <string name="strComprar">COMPRAR</string>
+
+
+</resources>

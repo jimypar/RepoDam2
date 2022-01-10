@@ -1,0 +1,19 @@
+package clases;
+
+public class Artista extends Personal{
+
+	public Artista(String dni, String nombre) {
+		super(dni, nombre);
+		
+	}
+	private String estiloMusica;
+	private Float cache;
+	@Override
+	public int compareTo(Personal o) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+	
+	
+	
+}

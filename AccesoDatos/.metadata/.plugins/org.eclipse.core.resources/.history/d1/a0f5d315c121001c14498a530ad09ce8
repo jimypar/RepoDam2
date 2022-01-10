@@ -1,0 +1,21 @@
+package clases;
+
+import java.io.Serializable;
+
+public abstract class Personal implements Comparable<Personal>, Serializable {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	private String dni;
+	private String nombre;
+
+	public Personal(String dni, String nombre) {
+		super();
+		this.dni = dni;
+		this.nombre = nombre;
+	}
+
+}

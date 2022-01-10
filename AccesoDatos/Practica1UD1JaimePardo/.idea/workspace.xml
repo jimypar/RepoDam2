@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="RecambiosJaimePardo:jar" />
+    </artifacts-to-build>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="9267211f-35e8-407b-b7f3-9fc30de07f76" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/../../MM/VideoJuegos/.recommenders/caches/identified-project-coordinates.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../MM/VideoJuegos/.recommenders/caches/identified-project-coordinates.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MM/VideoJuegos/Demo/src/elements/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../MM/VideoJuegos/Demo/src/elements/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MM/VideoJuegos/Demo/src/screens/GameScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../MM/VideoJuegos/Demo/src/screens/GameScreen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MM/VideoJuegos/VideoJuego Jaime Pardo/assets/Cuphead/Run/Shooting/Diagonal Up/shootDiagonalRunL.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../MM/VideoJuegos/VideoJuego Jaime Pardo/assets/Cuphead/Run/Shooting/Diagonal Up/shootDiagonalRunL.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MM/VideoJuegos/VideoJuego Jaime Pardo/src/elements/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../MM/VideoJuegos/VideoJuego Jaime Pardo/src/elements/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MM/VideoJuegos/VideoJuego Jaime Pardo/src/game/Parametros.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../MM/VideoJuegos/VideoJuego Jaime Pardo/src/game/Parametros.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MM/VideoJuegos/VideoJuego Jaime Pardo/src/managers/ResourceManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../MM/VideoJuegos/VideoJuego Jaime Pardo/src/managers/ResourceManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MM/VideoJuegos/VideoJuego Jaime Pardo/src/screens/BScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../MM/VideoJuegos/VideoJuego Jaime Pardo/src/screens/BScreen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MM/VideoJuegos/VideoJuego Jaime Pardo/src/screens/GameScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../MM/VideoJuegos/VideoJuego Jaime Pardo/src/screens/GameScreen.java" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="Practica Jaime Pardo" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="Enum" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>configuracionvehiculos.conf</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="20SXbShIeD50BBNQL9HsuwdRNyc" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="UI_DESIGNER_EDITOR_MODE.PaletteManager.SHOW" value="true" />
+    <property name="UI_DESIGNER_EDITOR_MODE.PaletteManager.WIDTH" value="2" />
+    <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.SHOW" value="true" />
+    <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH" value="436" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Practica2-ud2-JaimePardo" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.tools" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.jaimepardo.recambiosJaimeMVC.gui" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\DAM\Desktop\accesoadatos-21-22\VehiculosMVC\Libs" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.jaimepardo.recambiosJaimeMVC.base" />
+      <recent name="com.jaimepardo.recambiosJaimeMVC.gui" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\DAM\Desktop\accesoadatos-21-22\VehiculosMVC" />
+      <recent name="C:\Users\DAM\Desktop\accesoadatos-21-22\VehiculosMVC\src\com\elenajif\vehiculosmvc\gui" />
+      <recent name="C:\Users\DAM\Desktop\accesoadatos-21-22\VehiculosMVC\src\com\elenajif\vehiculosmvc" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.Principal (1)">
+    <configuration default="true" type="Applet">
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Principal (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.jaimepardo.recambiosJaimeMVC.Principal" />
+      <module name="Practica1UD1JaimePardo" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.jaimepardo.recambiosJaimeMVC.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Principal" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.elenajif.vehiculosmvc.Principal" />
+      <module name="Practica1UD1JaimePardo" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.elenajif.vehiculosmvc.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="ArquillianTestNG" factoryName="">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="GrailsRunConfigurationType" factoryName="Grails">
+      <setting name="vmparams" value="" />
+      <setting name="cmdLine" value="run-app" />
+      <setting name="passParentEnv" value="true" />
+      <setting name="launchBrowser" value="true" />
+      <setting name="launchBrowserUrl" value="" />
+      <setting name="depsClasspath" value="false" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <option name="TEST_OBJECT" value="class" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType" factoryName="Kotlin script">
+      <option name="filePath" />
+      <option name="vmParameters" />
+      <option name="alternativeJrePath" />
+      <option name="programParameters" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" />
+      <option name="isAlternativeJrePathEnabled" value="false" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <module name="" />
+      <option name="filePath" />
+      <option name="vmParameters" />
+      <option name="alternativeJrePath" />
+      <option name="programParameters" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" />
+      <option name="isAlternativeJrePathEnabled" value="false" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="TestNG">
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
+      <option name="PROGRAM_PARAMETERS" />
+      <predefined_log_file enabled="true" id="idea.log" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Application.Principal" />
+      <item itemvalue="Application.Principal (1)" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Principal (1)" />
+        <item itemvalue="Application.Principal" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9267211f-35e8-407b-b7f3-9fc30de07f76" name="Default" comment="" />
+      <created>1635403653041</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1635403653041</updated>
+      <workItem from="1635403655991" duration="689000" />
+      <workItem from="1635404348024" duration="3206000" />
+      <workItem from="1635494514162" duration="5306000" />
+      <workItem from="1635840102645" duration="2928000" />
+      <workItem from="1636010158534" duration="3493000" />
+      <workItem from="1636039036397" duration="11875000" />
+      <workItem from="1636103216213" duration="9082000" />
+      <workItem from="1636114014518" duration="2409000" />
+      <workItem from="1636147337718" duration="1942000" />
+      <workItem from="1636200124780" duration="6365000" />
+      <workItem from="1636212396720" duration="2630000" />
+      <workItem from="1636217345327" duration="11000" />
+      <workItem from="1636297179262" duration="5162000" />
+      <workItem from="1636455516416" duration="1864000" />
+      <workItem from="1636457553786" duration="99000" />
+      <workItem from="1636528372266" duration="2167000" />
+      <workItem from="1636530980643" duration="1331000" />
+      <workItem from="1636539220638" duration="105000" />
+      <workItem from="1641305413052" duration="1252000" />
+      <workItem from="1641497004912" duration="384000" />
+      <workItem from="1641841892336" duration="1114000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

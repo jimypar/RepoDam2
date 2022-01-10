@@ -1,0 +1,56 @@
+package clases;
+
+import java.sql.Connection;
+import java.util.ArrayList;
+
+public class Festival {
+	
+	private ArrayList<Conciertos> listaConciertos;
+	private ArrayList<Personal> listaPersonal;
+	private Connection conexion;
+	
+	public Festival() {
+		this.listaConciertos=new ArrayList<Conciertos>();
+		this.listaPersonal=new ArrayList<Personal>();
+	}
+	
+	public ArrayList<Conciertos> getListaConciertos() {
+		return listaConciertos;
+	}
+	public void setListaConciertos(ArrayList<Conciertos> listaConciertos) {
+		this.listaConciertos = listaConciertos;
+	}
+	public ArrayList<Personal> getListaPersonal() {
+		return listaPersonal;
+	}
+	public void setListaPersonal(ArrayList<Personal> listaPersonal) {
+		this.listaPersonal = listaPersonal;
+	}
+	
+	//alta artista
+	public void altaArtista(String dni, String nombre,String estiloMusica,String cache) {
+		
+	}
+	
+	//alta asistente
+	public void altaAsistente(String dni, String nombre, String fechaNacimiento, String nacionalidad) {
+		
+	}
+	
+	//alta concierto (llama a compruebaConcierto y compruebaArtista)
+	public void altaConcierto(String codigo, String nombre, String horaInicio, String dniArtista) {
+		
+	}
+	
+	//comprueba concierto
+	public boolean compruebaConcierto(String codigo) {
+		return true;
+	}
+	
+	//comprueba artista
+	public boolean compruebaArtista(String dni) {
+		return true;
+	}
+
+	
+}

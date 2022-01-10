@@ -1,0 +1,15 @@
+package main;
+
+import clases.Festival;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		Festival festival = new Festival();
+		
+		System.out.println("Alta artistas");
+
+	}
+
+}
