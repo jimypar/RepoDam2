@@ -1,44 +1,81 @@
-CREATE DATABASE if not exists libreria;
+CREATE DATABASE tallerJaimePardo;
 --
-USE libreria;
+USE tallerJaimePardo;
 --
-create table if not exists autores(
-idautor int auto_increment primary key,
-nombre varchar(50) not null,
-apellidos varchar(150) not null,
-fechanacimiento date,
-pais varchar(50));
+create table if not exists cliente (
+id int auto_increment primary key,
+dni VARCHAR(30) not null,
+nombre VARCHAR(30) not null,
+apellidos VARCHAR(30) not null,
+email VARCHAR(30) not null,
+telefono int
+);
 --
-create table if not exists editoriales (
-ideditorial int auto_increment primary key,
-editorial varchar(50) not null,
-email varchar(100) not null,
-telefono varchar(9),
-tipoeditorial varchar(50),
-web varchar(500));
+create table if not exists coche (
+id int auto_increment primary key,
+tipo VARCHAR(20) not null,
+matricula VARCHAR(20) not null UNIQUE,
+marca VARCHAR(40) not null,
+fecha_alta TIMESTAMP,
+id_cliente int,
+FOREIGN KEY (id) REFERENCES cliente(id)
+);
 --
-create table if not exists libros(
-idlibro int auto_increment primary key,
-titulo varchar(50) not null,
-isbn varchar(40) not null UNIQUE,
-ideditorial int not null,
-genero varchar(30),
-idautor int not null,
-precio float not null,
-fechalanzamiento date);
+create table if not exists mecanico(
+id int auto_increment primary key,
+nombre VARCHAR(30) not null,
+apellidos VARCHAR(30) not null,
+telefono VARCHAR(30) not null
+);
 --
-alter table libros
-	add foreign key (ideditorial) references editoriales(ideditorial),
-    add foreign key (idautor) references autores(idautor);
+create table if not exists mecanico_coche(
+id int AUTO_INCREMENT PRIMARY KEY,
+id_coche int,
+id_mecanico int,
+FOREIGN KEY (id_coche) REFERENCES coche(id),
+FOREIGN KEY (id_mecanico) REFERENCES mecanico(id)
+);
+--
+create table if not exists recambio(
+id int primary key
+);
+--
+create table if not exists recambio_coche(
+id int AUTO_INCREMENT PRIMARY KEY,
+id_coche int,
+id_recambio int,
+FOREIGN KEY (id_coche) REFERENCES coche(id),
+FOREIGN KEY (id_recambio) REFERENCES recambio(id)
+);
+--
+create table if not exists recambiosCombustion(
+id int primary key,
+nombre VARCHAR(30) not null UNIQUE,
+precio FLOAT not null,
+FOREIGN KEY (id) REFERENCES recambio(id)
+);
+--
+create table if not exists recambiosElectrico(
+id int primary key,
+nombre VARCHAR(30) not null UNIQUE,
+FOREIGN KEY (id) REFERENCES recambio(id)
+);
+--
+create table if not exists recambiosHibrido(
+id int primary key,
+nombre VARCHAR(30) not null UNIQUE,
+precio FLOAT not null,
+FOREIGN KEY (id) REFERENCES recambio(id)
+);
 --
 delimiter ||
-create function existeIsbn(f_isbn varchar(40))
+create function existeMatricula(f_matricula varchar(40))
 returns bit
 begin
 	declare i int;
     set i = 0;
-    while ( i < (select max(idlibro) from libros)) do
-    if  ((select isbn from libros where idlibro = (i + 1)) like f_isbn) then return 1;
+    while ( i < (select max(id) from coche)) do
+    if  ((select matricula from coche where id = (i + 1)) like f_matricula) then return 1;
     end if;
     set i = i + 1;
     end while;
@@ -47,28 +84,13 @@ end; ||
 delimiter ;
 --
 delimiter ||
-create function existeNombreEditorial(f_name varchar(50))
+create function existeDniCliente(f_dni varchar(50))
 returns bit
 begin
 	declare i int;
     set i = 0;
-    while ( i < (select max(ideditorial) from editoriales)) do
-    if  ((select editorial from editoriales where ideditorial = (i + 1)) like f_name) then return 1;
-    end if;
-    set i = i + 1;
-    end while;
-    return 0;
-end; ||
-delimiter ;
---
-delimiter ||
-create function existeNombreAutor(f_name varchar(202))
-returns bit
-begin
-	declare i int;
-    set i = 0;
-    while ( i < (select max(idautor) from autores)) do
-    if  ((select concat(apellidos, ', ', nombre) from autores where idautor = (i + 1)) like f_name) then return 1;
+    while ( i < (select max(id) from cliente)) do
+    if  ((select dni from cliente where id = (i + 1)) like f_dni) then return 1;
     end if;
     set i = i + 1;
     end while;

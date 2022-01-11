@@ -151,7 +151,6 @@ public class Modelo {
             sentencia.setString(3, marca);
             sentencia.setDate(4, Date.valueOf(fechaAlta));
             sentencia.setInt(5, idCliente);
-
             sentencia.executeUpdate();
         } catch (SQLException sqle) {
             sqle.printStackTrace();
@@ -215,14 +214,12 @@ public class Modelo {
         }
     }
 
-    void modificarCoche(String tipo, String matricula, String marca, LocalDate fechaAlta, String cliente, String mecanico, String recambio, int idCoche) {
+    void modificarCoche(String tipo, String matricula, String marca, LocalDate fechaAlta, String cliente, int idCoche) {
 
         String sentenciaSql = "UPDATE coche SET tipo = ?, matricula = ?, marca = ?, fecha_alta = ?, cliente = ? WHERE id = ?";
         PreparedStatement sentencia = null;
 
-        int idCliente = Integer.valueOf(cliente.split(" ")[0]);
-        int idMecanico = Integer.valueOf(mecanico.split(" ")[0]);//TODO: Asignar IDs a mecanico y recambio
-        int idRecambio = Integer.valueOf(recambio.split(" ")[0]);
+        int idCliente = Integer.valueOf(cliente.split(" ")[0]);//TODO: Asignar IDs a mecanico y recambio
 
         try {
             sentencia = conexion.prepareStatement(sentenciaSql);
@@ -265,7 +262,7 @@ public class Modelo {
     }
 
     void borrarCliente(int idCliente) {
-        String sentenciaSql = "DELETE FROM autores WHERE id = ?";
+        String sentenciaSql = "DELETE FROM cliente WHERE id = ?";
         PreparedStatement sentencia = null;
 
         try {

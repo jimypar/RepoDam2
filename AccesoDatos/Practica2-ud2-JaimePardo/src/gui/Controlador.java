@@ -37,22 +37,31 @@ public class Controlador implements ActionListener, ItemListener, ListSelectionL
     }
 
     private void refrescarTodo() {
-        refrescarAutores();
-        refrescarEditorial();
-        refrescarLibros();
+        refrescarMecanico();
+        refrescarCliente();
+        refrescarCoche();
         refrescar = false;
     }
 
     private void addActionListeners(ActionListener listener) {
         vista.btnCocheAnadir.addActionListener(listener);
+        vista.btnCocheAnadir.setActionCommand("btnCocheAnadir");
         vista.btnClienteAnadir.addActionListener(listener);
+        vista.btnClienteAnadir.setActionCommand("btnClienteAnadir");
         vista.btnMecanicoAnadir.addActionListener(listener);
+        vista.btnMecanicoAnadir.setActionCommand("btnMecanicoAnadir");
         vista.btnCocheEliminar.addActionListener(listener);
+        vista.btnCocheEliminar.setActionCommand("btnCocheEliminar");
         vista.btnClienteEliminar.addActionListener(listener);
+        vista.btnClienteEliminar.setActionCommand("btnClienteEliminar");
         vista.btnMecanicoEliminar.addActionListener(listener);
+        vista.btnMecanicoEliminar.setActionCommand("btnMecanicoEliminar");
         vista.btnCocheModificar.addActionListener(listener);
+        vista.btnCocheModificar.setActionCommand("btnCocheModificar");
         vista.btnClienteModificar.addActionListener(listener);
+        vista.btnClienteModificar.setActionCommand("btnClienteModificar");
         vista.btnMecanicoModificar.addActionListener(listener);
+        vista.btnMecanicoModificar.setActionCommand("btnMecanicoModificar");
         vista.optionDialog.btnOpcionesGuardar.addActionListener(listener);
         vista.itemOpciones.addActionListener(listener);
         vista.itemSalir.addActionListener(listener);
@@ -109,11 +118,11 @@ public class Controlador implements ActionListener, ItemListener, ListSelectionL
             } else if (e.getValueIsAdjusting()
                     && ((ListSelectionModel) e.getSource()).isSelectionEmpty() && !refrescar) {
                 if (e.getSource().equals(vista.mecanicoTabla.getSelectionModel())) {
-                    borrarCamposEditoriales();
+                    borrarCamposMecanico();
                 } else if (e.getSource().equals(vista.clienteTabla.getSelectionModel())) {
-                    borrarCamposAutores();
+                    borrarCamposCliente();
                 } else if (e.getSource().equals(vista.cochesTabla.getSelectionModel())) {
-                    borrarCamposLibros();
+                    borrarcamposCoche();
                 }
             }
         }
@@ -150,7 +159,7 @@ public class Controlador implements ActionListener, ItemListener, ListSelectionL
                 vista.dispose();
                 new Controlador(new Vista(),new Modelo());
                 break;
-            case "anadirLibro":
+            case "btnCocheAnadir":
                 try {
                     if (comprobarCocheVacio()) {
                         Util.showErrorAlert("Rellena todos los campos");
@@ -170,24 +179,121 @@ public class Controlador implements ActionListener, ItemListener, ListSelectionL
                     Util.showErrorAlert("Introduce numeros en los campos que lo requieran");
                     vista.cochesTabla.clearSelection();
                 }
-                borrarCamposLibros();
-                refrescarLibros();
+                borrarcamposCoche();
+                refrescarCoche();
                 break;
-            case "modificarLibro":
+            case "btnCocheModificar":
+                try {
+                    if (comprobarCocheVacio()) {
+                        Util.showErrorAlert("Rellena todos los campos");
+                        vista.cochesTabla.clearSelection();
+                    } else {
+                        modelo.modificarCoche(
+                                tipoCoche(),
+                                vista.txtMatricula.getText(),
+                                String.valueOf(vista.comboMarca.getSelectedItem()),
+                                vista.fecha.getDate(),
+                                String.valueOf(vista.comboCliente.getSelectedItem()),
+                                Integer.parseInt((String) vista.cochesTabla.getValueAt(vista.cochesTabla.getSelectedRow(), 0))
+                        );
+                    }
+                } catch (NumberFormatException nfe) {
+                    Util.showErrorAlert("Introduce numeros en los campos que lo requieran");
+                    vista.cochesTabla.clearSelection();
+                }
+                borrarcamposCoche();
+                refrescarCoche();
                 break;
-            case "eliminarLibro":
+            case "btnCocheEliminar":
+                modelo.borrarCoche(Integer.parseInt((String) vista.cochesTabla.getValueAt(vista.cochesTabla.getSelectedRow(), 0)));
+                borrarcamposCoche();
+                refrescarCoche();
                 break;
-            case "anadirAutor":
+            case "btnMecanicoAnadir":
+                System.out.println("add");
+                try {
+                    if (comprobarMecanicoVacio()) {
+                        Util.showErrorAlert("Rellena todos los campos");
+                        vista.mecanicoTabla.clearSelection();
+                    } else {
+                        modelo.insertarMecanico(vista.txtNombreMecanico.getText(),
+                                vista.txtApellidoMecanico.getText(),
+                                vista.txtTelefonoMecanico.getText());
+                        refrescarMecanico();
+                    }
+                } catch (NumberFormatException nfe) {
+                    Util.showErrorAlert("Introduce números en los campos que lo requieren");
+                    vista.mecanicoTabla.clearSelection();
+                }
+                borrarCamposMecanico();
                 break;
-            case "modificarAutor":
+            case "btnMecanicoModificar":
+                try {
+                    if (comprobarMecanicoVacio()) {
+                        Util.showErrorAlert("Rellena todos los campos");
+                        vista.mecanicoTabla.clearSelection();
+                    } else {
+                        modelo.modificarMecanico(vista.txtNombre.getText(),
+                                vista.txtApellidos.getText(),
+                                vista.txtTelefonoMecanico.getText(),
+                                Integer.parseInt((String) vista.mecanicoTabla.getValueAt(vista.mecanicoTabla.getSelectedRow(), 0)));
+                        refrescarMecanico();
+                    }
+                } catch (NumberFormatException nfe) {
+                    Util.showErrorAlert("Introduce números en los campos que lo requieren");
+                    vista.mecanicoTabla.clearSelection();
+                }
+                borrarCamposMecanico();
                 break;
-            case "eliminarAutor":
+            case "btnMecanicoEliminar":
+                modelo.borrarMecanico(Integer.parseInt((String) vista.mecanicoTabla.getValueAt(vista.mecanicoTabla.getSelectedRow(), 0)));
+                borrarCamposMecanico();
+                refrescarMecanico();
                 break;
-            case "anadirEditorial":
+            case "btnClienteAnadir":
+                try {
+                    if (comprobarClienteVacio()) {
+                        Util.showErrorAlert("Rellena todos los campos");
+                        vista.clienteTabla.clearSelection();
+                    } else if (modelo.dniClienteYaExiste(vista.txtDni.getText())) {
+                        Util.showErrorAlert("Ese nombre ya existe.\nIntroduce una editorial diferente.");
+                        vista.clienteTabla.clearSelection();
+                    } else {
+                        modelo.insertarCliente(vista.txtDni.getText(), vista.txtNombre.getText(),
+                                vista.txtApellidos.getText(),
+                                vista.txtEmail.getText(),
+                                vista.txtTelefono.getText());
+                        refrescarCliente();
+                    }
+                } catch (NumberFormatException nfe) {
+                    Util.showErrorAlert("Introduce números en los campos que lo requieren");
+                    vista.clienteTabla.clearSelection();
+                }
+                borrarCamposCliente();
                 break;
-            case "modificarEditorial":
+            case "btnClienteModificar":
+                try {
+                    if (comprobarClienteVacio()) {
+                        Util.showErrorAlert("Rellena todos los campos");
+                        vista.clienteTabla.clearSelection();
+                    } else {
+                        modelo.modificarCliente(vista.txtDni.getText(), vista.txtNombre.getText(),
+                                vista.txtApellidos.getText(),
+                                vista.txtEmail.getText(),
+                                vista.txtTelefono.getText(),
+                                Integer.parseInt((String) vista.clienteTabla.getValueAt(vista.clienteTabla.getSelectedRow(), 0)));
+                        refrescarCliente();
+                    }
+                } catch (NumberFormatException nfe) {
+                    Util.showErrorAlert("Introduce números en los campos que lo requieren");
+                    vista.clienteTabla.clearSelection();
+                }
+                borrarCamposCliente();
                 break;
-            case "eliminarEditorial":
+            case "btnClienteEliminar":
+                modelo.borrarCliente(Integer.parseInt((String) vista.clienteTabla.getValueAt(vista.clienteTabla.getSelectedRow(), 0)));
+                borrarCamposCliente();
+                refrescarCliente();
                 break;
             case "addRecambio":
                 addRecambio();
@@ -229,20 +335,20 @@ public class Controlador implements ActionListener, ItemListener, ListSelectionL
 
     }
 
-    private void refrescarEditorial() {
+    private void refrescarCliente() {
         try {
-            vista.mecanicoTabla.setModel(construirTableModelEditoriales(modelo.consultarMecanico()));
+            vista.clienteTabla.setModel(construirTableModelCliente(modelo.consultarCliente()));
             vista.comboCliente.removeAllItems();
-            for(int i = 0; i < vista.dtmMecanicos.getRowCount(); i++) {
-                vista.comboCliente.addItem(vista.dtmMecanicos.getValueAt(i, 0)+" - "+
-                        vista.dtmMecanicos.getValueAt(i, 1));
+            for(int i = 0; i < vista.dtmClientes.getRowCount(); i++) {
+                vista.comboCliente.addItem(vista.dtmClientes.getValueAt(i, 0)+" - "+
+                        vista.dtmClientes.getValueAt(i, 1));
             }
         } catch (SQLException e) {
             e.printStackTrace();
         }
     }
 
-    private DefaultTableModel construirTableModelEditoriales(ResultSet rs)
+    private DefaultTableModel construirTableModelMecanico(ResultSet rs)
             throws SQLException {
         ResultSetMetaData metaData = rs.getMetaData();
         // names of columns
@@ -258,20 +364,24 @@ public class Controlador implements ActionListener, ItemListener, ListSelectionL
         return vista.dtmMecanicos;
     }
 
-    private void refrescarAutores() {
+    private void refrescarMecanico() {
         try {
-            vista.clienteTabla.setModel(construirTableModeloAutores(modelo.consultarCliente()));
-            vista.comboMecanico1.removeAllItems();
-            for(int i = 0; i < vista.dtmClientes.getRowCount(); i++) {
-                vista.comboMecanico1.addItem(vista.dtmClientes.getValueAt(i, 0)+" - "+
-                        vista.dtmClientes.getValueAt(i, 2)+", "+vista.dtmClientes.getValueAt(i, 1));
-            }
+            vista.mecanicoTabla.setModel(construirTableModelMecanico(modelo.consultarMecanico()));
+
+           for (int i = 0; i < vista.cbMecanico.size();i++ ){
+               vista.cbMecanico.get(i).removeAllItems();
+               for(int x = 0; x < vista.dtmMecanicos.getRowCount(); x++) {
+                   vista.cbMecanico.get(i).addItem(vista.dtmMecanicos.getValueAt(x, 0)+" - "+
+                           vista.dtmMecanicos.getValueAt(x, 2)+", "+vista.dtmMecanicos.getValueAt(x, 1));
+               }
+           }
+
         } catch (SQLException e) {
             e.printStackTrace();
         }
     }
 
-    private DefaultTableModel construirTableModeloAutores(ResultSet rs)
+    private DefaultTableModel construirTableModelCliente(ResultSet rs)
             throws SQLException {
         ResultSetMetaData metaData = rs.getMetaData();
         // names of columns
@@ -290,7 +400,7 @@ public class Controlador implements ActionListener, ItemListener, ListSelectionL
     /**
      * Actualiza los libros que se ven en la lista y los comboboxes
      */
-    private void refrescarLibros() {
+    private void refrescarCoche() {
         try {
             vista.cochesTabla.setModel(construirTableModelLibros(modelo.consultarCoche()));
         } catch (SQLException e) {
@@ -328,7 +438,7 @@ public class Controlador implements ActionListener, ItemListener, ListSelectionL
     private void setOptions() {
      }
 
-    private void borrarCamposLibros() {
+    private void borrarcamposCoche() {
         vista.comboCliente.setSelectedIndex(-1);
         vista.comboMecanico1.setSelectedIndex(-1);
         vista.comboRecambio1.setSelectedIndex(-1);
@@ -337,7 +447,7 @@ public class Controlador implements ActionListener, ItemListener, ListSelectionL
         vista.fecha.setText("");
     }
 
-    private void borrarCamposAutores() {
+    private void borrarCamposCliente() {
         vista.txtNombre.setText("");
         vista.txtDni.setText("");
         vista.txtApellidos.setText("");
@@ -345,7 +455,7 @@ public class Controlador implements ActionListener, ItemListener, ListSelectionL
         vista.txtTelefono.setText("");
     }
 
-    private void borrarCamposEditoriales() {
+    private void borrarCamposMecanico() {
         vista.txtNombreMecanico.setText("");
         vista.txtApellidoMecanico.setText("");
         vista.txtTelefonoMecanico.setText("");

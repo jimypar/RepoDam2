@@ -39,11 +39,11 @@ public class Modelo {
     void conectar() {
         try {
             conexion = DriverManager.getConnection("jdbc:mysql://"
-                    + ip + ":3308/libreria", user, password);
+                    + ip + ":3306/libreria", user, password);
         } catch (SQLException e) {
             try {
                 conexion = DriverManager.getConnection("jdbc:mysql://"
-                        + ip + ":3308/", user, password);
+                        + ip + ":3306/", user, password);
                 PreparedStatement statement = null;
 
                 String code = leerFichero();
