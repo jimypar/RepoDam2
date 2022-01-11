@@ -33,13 +33,12 @@ public class Player extends Element {
 	public boolean tocoSuelo;
 	public boolean direccion = true;
 
-	private float walkingSpeed = 400;
+	private float walkingSpeed = 500;
 	private float jumpSpeed = 500000;
 
 	public Player(float x, float y, Stage s) {
 		super(x, y, s);
 		this.maxSpeed = 500;
-		this.deceleration = 0;
 		tocoSuelo = false;
 
 		cargarAnimaciones();
@@ -71,7 +70,7 @@ public class Player extends Element {
 		if (Gdx.input.isKeyPressed(Keys.A) && !tocoSuelo) {
 			direccion = false;
 			this.setAnimation(jumpL);
-			this.acceleration.add(-walkingSpeed, Parametros.gravedad);
+			this.acceleration.add(-walkingSpeed, 0);
 		}
 
 		if (Gdx.input.isKeyPressed(Keys.A) && tocoSuelo) {
@@ -83,7 +82,7 @@ public class Player extends Element {
 		if (Gdx.input.isKeyPressed(Keys.D) && !tocoSuelo) {
 			direccion = true;
 			this.setAnimation(jumpR);
-			this.acceleration.add(walkingSpeed, Parametros.gravedad);
+			this.acceleration.add(walkingSpeed, 0);
 		}
 
 		if (Gdx.input.isKeyPressed(Keys.D) && tocoSuelo) {
@@ -94,6 +93,7 @@ public class Player extends Element {
 
 //		SALTO
 
+			
 		if (Gdx.input.isKeyPressed(Keys.SPACE) && tocoSuelo) {
 			salta();
 		}
@@ -113,7 +113,7 @@ public class Player extends Element {
 
 //	AGACHARSE
 
-		if (Gdx.input.isKeyPressed(Keys.S) && !Gdx.input.isKeyPressed(Keys.D) && !Gdx.input.isKeyPressed(Keys.A)
+		if (Gdx.input.isKeyPressed(Keys.S)
 				&& tocoSuelo) {
 			if (direccion) {
 				this.setAnimation(duckIdleR);
@@ -123,6 +123,23 @@ public class Player extends Element {
 				this.velocity.set(0,0);
 			}
 		}
+		
+		if (Gdx.input.isKeyPressed(Keys.S) && Gdx.input.isKeyPressed(Keys.D)
+				&& tocoSuelo) {
+			
+				this.setAnimation(duckIdleR);
+				this.velocity.set(0,0);
+			
+		}
+		
+		if (Gdx.input.isKeyPressed(Keys.S) && Gdx.input.isKeyPressed(Keys.A)
+				&& tocoSuelo) {
+				this.setAnimation(duckIdleL);
+				this.velocity.set(0,0);
+			
+		}
+		
+		
 
 //	DISPAROS MOVIMIENTO
 		
@@ -175,7 +192,7 @@ public class Player extends Element {
 				
 		//DISPARO AGACHADO
 				
-		if (Gdx.input.isKeyPressed(Keys.ENTER) && Gdx.input.isKeyPressed(Keys.S) && !Gdx.input.isKeyPressed(Keys.D) && !Gdx.input.isKeyPressed(Keys.A)
+		if (Gdx.input.isKeyPressed(Keys.ENTER) && Gdx.input.isKeyPressed(Keys.S)
 				&& tocoSuelo) {
 			if (direccion) {
 				this.setAnimation(shootDuckR);
@@ -184,6 +201,21 @@ public class Player extends Element {
 				this.setAnimation(shootDuckL);
 				this.velocity.set(0,0);
 			}
+		}
+		
+		if (Gdx.input.isKeyPressed(Keys.ENTER) && Gdx.input.isKeyPressed(Keys.S) && Gdx.input.isKeyPressed(Keys.D)
+				&& tocoSuelo) {
+			
+				this.setAnimation(shootDuckR);
+				this.velocity.set(0,0);
+			
+		}
+		
+		if (Gdx.input.isKeyPressed(Keys.ENTER) && Gdx.input.isKeyPressed(Keys.S) && Gdx.input.isKeyPressed(Keys.A)
+				&& tocoSuelo) {
+				this.setAnimation(shootDuckL);
+				this.velocity.set(0,0);
+			
 		}
 
 	
@@ -198,19 +230,6 @@ public class Player extends Element {
 
 	
 	private void salta() {
-		if (direccion) {
-			this.setAnimation(jumpR);
-			this.acceleration.add(walkingSpeed, jumpSpeed);
-		} else {
-			this.setAnimation(jumpL);
-			this.acceleration.add(-walkingSpeed, jumpSpeed);
-		}
-
-		this.tocoSuelo = false;
-
-	}
-	
-	private void saltaMovimiento() {
 		if (direccion) {
 			this.setAnimation(jumpR);
 			this.acceleration.add(walkingSpeed, jumpSpeed);

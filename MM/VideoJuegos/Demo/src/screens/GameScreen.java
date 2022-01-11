@@ -31,7 +31,7 @@ OrthographicCamera camara;
 		
 		barriles = new Array<>();
 		for (int i = 0; i < 20; i++) {
-			barriles.add(new Barril(i*70+20,100,mainStage));
+			barriles.add(new Barril(i*70,0,mainStage));
 		}
 		
 	}

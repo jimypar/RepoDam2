@@ -17,10 +17,10 @@ public class Parametros {
  
  
 // public static float zoom=0.24f;
- public static float zoom=0.16f;
+ public static float zoom=1f;
 
  
- public static float gravedad=-300;
+ public static float gravedad=-500;
  
  
  

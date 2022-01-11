@@ -9,7 +9,7 @@ public class Parametros {
  private static int anchoPantalla=1920;
  private static int altoPantalla=1080;
  
- public static boolean debug=false;
+ public static boolean debug=true;
  
  //Audio;
  public static float musicVolume=1;
@@ -20,7 +20,7 @@ public class Parametros {
  public static float zoom=1f;
  
  //variables de juego
- public static int gravedad= -700;
+ public static int gravedad= -1000;
 
  
  
