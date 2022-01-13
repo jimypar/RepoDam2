@@ -6,17 +6,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9267211f-35e8-407b-b7f3-9fc30de07f76" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/../../MM/VideoJuegos/.recommenders/caches/identified-project-coordinates.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../MM/VideoJuegos/.recommenders/caches/identified-project-coordinates.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../MM/VideoJuegos/Demo/src/elements/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../MM/VideoJuegos/Demo/src/elements/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../MM/VideoJuegos/Demo/src/screens/GameScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../MM/VideoJuegos/Demo/src/screens/GameScreen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../MM/VideoJuegos/VideoJuego Jaime Pardo/assets/Cuphead/Run/Shooting/Diagonal Up/shootDiagonalRunL.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../MM/VideoJuegos/VideoJuego Jaime Pardo/assets/Cuphead/Run/Shooting/Diagonal Up/shootDiagonalRunL.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../MM/VideoJuegos/VideoJuego Jaime Pardo/src/elements/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../MM/VideoJuegos/VideoJuego Jaime Pardo/src/elements/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../MM/VideoJuegos/VideoJuego Jaime Pardo/src/game/Parametros.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../MM/VideoJuegos/VideoJuego Jaime Pardo/src/game/Parametros.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../MM/VideoJuegos/VideoJuego Jaime Pardo/src/managers/ResourceManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../MM/VideoJuegos/VideoJuego Jaime Pardo/src/managers/ResourceManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../MM/VideoJuegos/VideoJuego Jaime Pardo/src/screens/BScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../MM/VideoJuegos/VideoJuego Jaime Pardo/src/screens/BScreen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../MM/VideoJuegos/VideoJuego Jaime Pardo/src/screens/GameScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../MM/VideoJuegos/VideoJuego Jaime Pardo/src/screens/GameScreen.java" afterDir="false" />
-    </list>
+    <list default="true" id="9267211f-35e8-407b-b7f3-9fc30de07f76" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,7 +56,7 @@
     <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH" value="436" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Practica2-ud2-JaimePardo" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -296,6 +286,7 @@
       <workItem from="1641305413052" duration="1252000" />
       <workItem from="1641497004912" duration="384000" />
       <workItem from="1641841892336" duration="1114000" />
+      <workItem from="1642088966381" duration="823000" />
     </task>
     <servers />
   </component>
