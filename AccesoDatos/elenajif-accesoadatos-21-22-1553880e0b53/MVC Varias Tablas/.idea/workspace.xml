@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="15edc63f-33ef-4d04-95c3-70b63e36af6e" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/Modelo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/Modelo.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -37,7 +38,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="com.mysql.cj.jdbc.Driver" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/Practica2-UD2-JaimePardo/Practica2-ud2-JaimePardo" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -228,6 +229,7 @@
       <workItem from="1641917038937" duration="4326000" />
       <workItem from="1641922053260" duration="2790000" />
       <workItem from="1642000212604" duration="1328000" />
+      <workItem from="1642064306715" duration="317000" />
     </task>
     <servers />
   </component>

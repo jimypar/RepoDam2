@@ -48,7 +48,7 @@ public class GameScreen extends BScreen {
 		mainStage.act();
 		colide();
 
-		// centrarCamara();
+		centrarCamara();
 
 		
 		mainStage.getBatch().begin();
@@ -77,9 +77,7 @@ public class GameScreen extends BScreen {
 
 	public void centrarCamara() {
 		this.camara.position.x = player.getX();
-		this.camara.position.y = player.getY();
 		camara.update();
-
 	}
 
 }
