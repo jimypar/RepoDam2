@@ -2,9 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="15edc63f-33ef-4d04-95c3-70b63e36af6e" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/../../Practica1UD1JaimePardo/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Practica1UD1JaimePardo/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Practica1UD1JaimePardo/recambios.conf" beforeDir="false" afterPath="$PROJECT_DIR$/../../Practica1UD1JaimePardo/recambios.conf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DI/2_Carrito_JaimePardo/bin/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../../../DI/2_Carrito_JaimePardo/bin/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DI/3_Carrito_JaimePardo/bin/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../../../DI/3_Carrito_JaimePardo/bin/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DI/Practica 01 GridBagLayout.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DI/Practica 02 BotonSuma.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DI/Practica 02 BotonSuma/bin/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../../../DI/Practica 02 BotonSuma/bin/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DI/Practica 03 Scroll.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DI/PracticaHipoteca/src/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../DI/PracticaHipoteca/src/main/Main.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -233,6 +237,7 @@
       <workItem from="1642064306715" duration="317000" />
       <workItem from="1642086663440" duration="200000" />
       <workItem from="1642091682110" duration="214000" />
+      <workItem from="1642244545295" duration="77000" />
     </task>
     <servers />
   </component>

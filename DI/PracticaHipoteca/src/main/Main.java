@@ -69,6 +69,7 @@ public class Main extends JFrame{
 			public void stateChanged(ChangeEvent e) {
 				calculoCapital.setText(String.valueOf(jslCapital.getValue()));
 				calcularMensualidad();
+				calcularTotal();
 			}
 		});	
 		panel.add(jslCapital,config);
@@ -98,6 +99,7 @@ public class Main extends JFrame{
 			public void stateChanged(ChangeEvent e) {
 				calculoInteres.setText(String.valueOf(Float.parseFloat(String.valueOf(jslInteres.getValue()))/1000));
 				calcularMensualidad();
+				calcularTotal();
 			}
 		});	
 		panel.add(jslInteres,config);
@@ -126,6 +128,7 @@ public class Main extends JFrame{
 			public void stateChanged(ChangeEvent e) {
 				calculoPlazo.setText(String.valueOf(jslPlazo.getValue()));
 				calcularMensualidad();
+				calcularTotal();
 			}
 		});	
 		panel.add(jslPlazo,config);
@@ -145,10 +148,7 @@ public class Main extends JFrame{
 		calculoMensualidad.setEditable(false);
 		calculoMensualidad.setHorizontalAlignment(JTextField.CENTER);
 		panel.add(calculoMensualidad,config);
-		
-		calcularMensualidad();
-		calcularTotal();
-		
+				
 		//TOTAL------------
 		
 		config.gridx = 0;			
@@ -169,6 +169,9 @@ public class Main extends JFrame{
 		panel.add(calculoInteresesTot,config);
 				
 			
+		calcularMensualidad();
+		calcularTotal();
+		
 		panel.setBounds(10, 10, 600, 200);
 		this.add(panel);
 		
@@ -184,8 +187,8 @@ public class Main extends JFrame{
 		float interes =Float.parseFloat(calculoInteres.getText());
 		float plazo = Float.parseFloat(calculoPlazo.getText());
 		
-		float cuota = ((capital*(interes/12))/(100*(1-(1+(interes/(12*100))-(plazo*12)))));
-		
+		float cuota = (float) ((capital*(interes/12))/(100*(1-Math.pow((1+(interes/(12*100))), (-plazo*12)))));
+				
 		calculoMensualidad.setText(df.format(cuota)+"");
 		
 	}
@@ -198,8 +201,7 @@ public class Main extends JFrame{
 		
 		float total = (capital-(plazo*interes));
 		
-		System.out.println(total);
-//		calculoInteresesTot.setText(df.format(total)+"");
+		calculoInteresesTot.setText(df.format(total)+"");
 		
 	}
 

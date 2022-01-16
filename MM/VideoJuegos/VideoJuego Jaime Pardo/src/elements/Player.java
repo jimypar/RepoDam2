@@ -26,8 +26,6 @@ public class Player extends Element {
 	private Animation<TextureRegion> shootRunL;
 	private Animation<TextureRegion> shootDiagonalRunR;
 	private Animation<TextureRegion> shootDiagonalRunL;
-	private Animation<TextureRegion> shootJumpR;
-	private Animation<TextureRegion> shootJumpL;
 
 	public Element pies;
 	public boolean tocoSuelo;
@@ -93,10 +91,19 @@ public class Player extends Element {
 
 //		SALTO
 
-			
+	
 		if (Gdx.input.isKeyPressed(Keys.SPACE) && tocoSuelo) {
 			salta();
 		}
+		
+		if (Gdx.input.isKeyPressed(Keys.SPACE) && Gdx.input.isKeyPressed(Keys.A) && tocoSuelo) {
+			saltaL();
+		}
+
+		if (Gdx.input.isKeyPressed(Keys.SPACE) && Gdx.input.isKeyPressed(Keys.D)  && tocoSuelo) {
+			saltaR();
+		}
+		
 
 //		ESTATICO
 
@@ -242,18 +249,25 @@ public class Player extends Element {
 
 	}
 	
-	private void saltaDisparo() {
-		if (direccion) {
-			this.setAnimation(shootJumpR);
-			this.acceleration.add(walkingSpeed, jumpSpeed);
-		} else {
-			this.setAnimation(shootJumpL);
-			this.acceleration.add(-walkingSpeed, jumpSpeed);
-		}
+	private void saltaL() {
+			this.setAnimation(jumpL);
+			this.acceleration.add(-walkingSpeed*10, jumpSpeed);
 
 		this.tocoSuelo = false;
 
 	}
+	
+
+	
+	private void saltaR() {
+			this.setAnimation(jumpR);
+			this.acceleration.add(walkingSpeed*10, jumpSpeed);
+
+		this.tocoSuelo = false;
+
+	}
+	
+	
 
 	private void cargarAnimaciones() {
 
@@ -278,5 +292,6 @@ public class Player extends Element {
 		
 
 	}
-
+	
+	
 }
