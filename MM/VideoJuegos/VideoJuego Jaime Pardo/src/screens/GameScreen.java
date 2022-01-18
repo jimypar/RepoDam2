@@ -38,6 +38,8 @@ public class GameScreen extends BScreen {
 			suelos.add(new Suelo(i * 80, 150, mainStage));
 			suelos.get(i).setVisible(false);
 		}
+		
+		
 
 	}
 
@@ -48,8 +50,10 @@ public class GameScreen extends BScreen {
 		mainStage.act();
 		colide();
 
+		Parametros.playerX = player.getX();
+	    Parametros.playerY = player.getY();
+		
 		centrarCamara();
-
 		
 		mainStage.getBatch().begin();
 		mainStage.getBatch().draw(backgroundTexture, 0, 0,Parametros.getAnchoPantalla(), Parametros.getAltoPantalla());

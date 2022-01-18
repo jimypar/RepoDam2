@@ -27,7 +27,6 @@ Stage mainStage;
 Array<Barril> barriles;
 Array<Solid> suelo;
 
-
 OrthographicCamera camara;
 private TiledMap map;
 private int tileWidth, tileHeight, mapWidthInTiles, mapHeightInTiles,
