@@ -13,6 +13,7 @@ import com.badlogic.gdx.scenes.scene2d.Stage;
 import com.badlogic.gdx.utils.Array;
 
 import elements.Barril;
+import elements.Element;
 import elements.Player;
 import elements.Solid;
 import game.Demo;
@@ -23,120 +24,164 @@ import managers.ResourceManager;
 public class GameScreen extends BScreen{
 	
 Stage mainStage;
-private Player player;
 Array<Barril> barriles;
-ArrayList<Solid> suelo;
+Array<Solid> suelo;
+
+
 OrthographicCamera camara;
 private TiledMap map;
-private int tiledWidth, tiledHeight, mapWidthInTiles, mapHeightInTiles, mapWidthInPixels, mapHeightInPixels;
+private int tileWidth, tileHeight, mapWidthInTiles, mapHeightInTiles,
+mapWidthInPixels, mapHeightInPixels;
+
+
 
 private OrthogonalTiledMapRenderer renderer;
-
+	   
+private Player player;
 
 	public GameScreen(Demo game) {
-		
+	
 		super(game);
+		mainStage=new Stage();
 		float inicioX;
 		float inicioY;
+		map= ResourceManager.getMap("maps/mapa0.tmx");
 		
-		mainStage=new Stage();
 		
-		map= ResourceManager.getMap("maps/mapa.tmx");
 		
-		MapProperties properties = map.getProperties();
+		MapProperties properties=map.getProperties();
 		
-		tiledWidth = properties.get("tilewidth", Integer.class);
-		tiledHeight = properties.get("tileheight", Integer.class);
-		mapWidthInTiles = properties.get("width", Integer.class);
-		mapHeightInTiles = properties.get("height", Integer.class);
-		mapWidthInPixels = tiledWidth*mapWidthInTiles;
-		mapHeightInPixels = tiledHeight*mapHeightInTiles;
+		tileWidth=properties.get("tilewidth", Integer.class);
+		tileHeight=properties.get("tileheight", Integer.class);
+		mapWidthInTiles=properties.get("width", Integer.class);
+		mapHeightInTiles=properties.get("height", Integer.class);
+		mapWidthInPixels=tileWidth*mapWidthInTiles;
+		mapHeightInPixels=tileHeight*mapHeightInTiles;
 		
-		renderer = new OrthogonalTiledMapRenderer(map,mainStage.getBatch());
 		
-		camara = (OrthographicCamera) mainStage.getCamera();
-		camara.setToOrtho(false, Parametros.getAnchoPantalla()*Parametros.zoom,Parametros.getAltoPantalla()*Parametros.zoom);
+		renderer=new OrthogonalTiledMapRenderer(map,mainStage.getBatch());
 		
-		ArrayList<MapObject> elementos = getRectangleList("Inicio");
+		
+		camara=(OrthographicCamera) mainStage.getCamera();
+		camara.setToOrtho(false, Parametros.getAnchoPantalla()*Parametros.zoom, Parametros.getAltoPantalla()*Parametros.zoom);
+		
+		
+		ArrayList<MapObject> elementos=getRectangleList("Inicio");
 		MapProperties props;
-		props= elementos.get(0).getProperties();
-		inicioX=(float) props.get("x");
-		inicioX=(float) props.get("y");
-
+		props=elementos.get(0).getProperties();
+		inicioX=(float)props.get("x");
+		inicioY=(float)props.get("y");
 		
 		
 		elementos=getRectangleList("Solid");
+		
 		Solid solido;
-		suelo = new ArrayList<>();
-		for (MapObject solid : elementos) {
+		suelo=new Array<Solid>();
+		for(MapObject solid:elementos) {
 			props=solid.getProperties();
-			solido= new Solid((float) props.get("w"),(float) props.get("y"),mainStage, (float) props.get("width"),(float) props.get("height"));
+			solido=new Solid((float)props.get("x"),(float)props.get("y"), mainStage,
+					(float)props.get("width"),(float)props.get("height"));
+			
 			suelo.add(solido);
+			
 		}
 		
-		player = new Player(100,500,mainStage);
 		
-		barriles = new Array<>();
-		for (int i = 0; i < 20; i++) {
-			barriles.add(new Barril(i*70,0,mainStage));
+		
+		player=new Player(inicioX,inicioY,mainStage);
+	barriles= new Array<Barril>();
+		for(int i=0; i<10; i++) {
+			barriles.add(new Barril(i*14,30,mainStage));
 		}
+		
+		
+		
+		
+		
 		
 	}
 	@Override
 	public void render(float delta) {
-		
+		// TODO Auto-generated method stub
 		super.render(delta);
-	    mainStage.act();
+	     mainStage.act();
 	    colide();
+	    
+	    Parametros.playerX = player.getX();
+	    Parametros.playerY = player.getY();
+	    
 	    centrarCamara();
 	    renderer.setView(camara);
 	    renderer.render();
-	    mainStage.draw();
 	    
+	    mainStage.draw();
 	    
 
 	}
 	
-	private void centrarCamara() {
-		
-		this.camara.position.x = player.getX();
-		this.camara.position.y = player.getY();
-		this.camara.update();
-		
-	}
 	public void colide() {
-	
-		for (Barril barril : barriles) {
-			if (barril.getEnabled() && barril.overlaps(player)) {
-				player.preventOverlap(barril);
+		player.tocoSuelo=false;
+		for(Barril b:barriles) {
+			
+			
+			if(b.getEnabled() && b.overlaps(player)) {
+				player.preventOverlap(b);
+				
+				//b.preventOverlap(player);
+				
 			}
 			
-			if (player.pies.overlaps(barril)) {
-				player.tocoSuelo = true;
+			
+			if(player.pies.overlaps(b)) {
+				player.tocoSuelo=true;
 			}
 			
 		}
 		
+for(Solid b:suelo) {
+			
+			
+			if(b.getEnabled() && b.overlaps(player)) {
+				player.preventOverlap(b);
+				
+				//b.preventOverlap(player);
+				
+			}
+			
+			
+			if(player.pies.overlaps(b)) {
+				player.tocoSuelo=true;
+			}
+			
+		}
 		
+	}
+	
+	public void centrarCamara() {
+		this.camara.position.x=player.getX();
+		this.camara.position.y=player.getY();
+		camara.update();
 		
 	}
 	
 	
 	public ArrayList<MapObject> getRectangleList(String propertyName){
-		ArrayList<MapObject> list = new ArrayList<>();
-		
+		ArrayList<MapObject> list =new ArrayList<MapObject>();
 		for(MapLayer layer: map.getLayers()) {
-			for (MapObject obj : layer.getObjects()) {
-				if (obj instanceof RectangleMapObject)
+			for(MapObject obj: layer.getObjects()) {
+				if(!(obj instanceof RectangleMapObject))
 					continue;
-				MapProperties prop = obj.getProperties();
-				if (prop.containsKey("name") && prop.get("name").equals(propertyName)) {
+				MapProperties props= obj.getProperties();
+				if(props.containsKey("name") &&  props.get("name").equals(propertyName))
+				{
 					list.add(obj);
 				}
+				
 			}
+			
 		}
-		return list;
 		
+		return list;
 	}
 	
 }
