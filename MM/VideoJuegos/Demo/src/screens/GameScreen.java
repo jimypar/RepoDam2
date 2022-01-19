@@ -27,6 +27,7 @@ Stage mainStage;
 Array<Barril> barriles;
 Array<Solid> suelo;
 
+
 OrthographicCamera camara;
 private TiledMap map;
 private int tileWidth, tileHeight, mapWidthInTiles, mapHeightInTiles,
@@ -106,14 +107,11 @@ private Player player;
 	     mainStage.act();
 	    colide();
 	    
-	    Parametros.playerX = player.getX();
-	    Parametros.playerY = player.getY();
-	    
 	    centrarCamara();
 	    renderer.setView(camara);
 	    renderer.render();
 	    
-	    mainStage.draw();
+	        mainStage.draw();
 	    
 
 	}

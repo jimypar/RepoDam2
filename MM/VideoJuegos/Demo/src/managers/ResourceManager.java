@@ -19,10 +19,7 @@ public final class ResourceManager {
 		//mapas
 		assets.setLoader(TiledMap.class, new TmxMapLoader());
 		assets.load("maps/mapa0.tmx", TiledMap.class);
-		assets.load("Bullets/bulletsL.png", Texture.class);
-		assets.load("Bullets/bulletsR.png", Texture.class);
-
-
+	
         //elementos de mapa
         //assets.load("maps/Images/arbol.png", Texture.class);
         assets.load("maps/images/barrel.png", Texture.class);

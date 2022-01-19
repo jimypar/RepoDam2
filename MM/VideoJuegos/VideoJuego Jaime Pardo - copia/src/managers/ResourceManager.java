@@ -17,6 +17,10 @@ public final class ResourceManager {
 	public static void loadAllResources(){
 
 		
+		//mapas
+		assets.setLoader(TiledMap.class, new TmxMapLoader());
+		assets.load("maps/tutorial/mapatuto.tmx", TiledMap.class);
+		
 		
 		assets.load("Cuphead/Idle/spriteIdleL.png", Texture.class);
 		assets.load("Cuphead/Idle/spriteIdleR.png", Texture.class);
@@ -36,10 +40,19 @@ public final class ResourceManager {
 		assets.load("Cuphead/Run/Shooting/Straight/shootRunR.png", Texture.class);
 		assets.load("Cuphead/Run/Shooting/Diagonal Up/shootDiagonalRunL.png", Texture.class);
 		assets.load("Cuphead/Run/Shooting/Diagonal Up/shootDiagonalRunR.png", Texture.class);
+		assets.load("Cuphead/Dash/Ground/dashGR.png", Texture.class);
+		assets.load("Cuphead/Dash/Ground/dashGL.png", Texture.class);
 		
+		
+		assets.load("Bullets/bulletsL.png", Texture.class);
+		assets.load("Bullets/bulletsR.png", Texture.class);
+		assets.load("Bullets/bulletsUP.png", Texture.class);
+		assets.load("Bullets/buleltsLUP.png", Texture.class);
+		assets.load("Bullets/buleltsRUP.png", Texture.class);
 
 		
-
+		
+		
 		
 		//mapas
 		//assets.setLoader(TiledMap.class, new TmxMapLoader());
