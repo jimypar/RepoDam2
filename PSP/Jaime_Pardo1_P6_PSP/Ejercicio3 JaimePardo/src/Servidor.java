@@ -1,3 +1,5 @@
+import com.google.gson.Gson;
+
 import java.io.*;
 import java.net.*;
 import java.util.*;
@@ -92,7 +94,7 @@ public class Servidor {
         //Si NO esta conectado:
         //  -Comprueba el mensaje si es el usuario y contraseña correctos
         //  -Le devuelve los permisos que tiene es usuario.
-        //Si esta conectado:
+        //  Si esta conectado:
         //  -Recibe un mensaje y realiza la consulta el la base de datos.
         public void run() {
 
@@ -139,41 +141,48 @@ public class Servidor {
 
     }
 
+
+
     //Divide el mensaje recibido y comprueba que tipo de consulta es y devuelve el resultado.
     private String consulta(String mensaje) {
 
-        String[] partes = mensaje.split(":");
+        //Se instancia el objeto GSON
+        Gson gson = new Gson();
+
+        Mensaje m = gson.fromJson(mensaje, Mensaje.class);
+
+
 
         try {
-            switch (partes[0]){
-                case "1":
-                    switch (partes[1]){
-                        case "1":
-                            return bd.consultarEntrenador(partes[2]);
-                        case "2":
-                            return bd.consultarJugador(partes[2]);
-                        case "3":
-                            return bd.consultarEstadio(partes[2]);
+            switch (m.getTipoconsulta()){
+                case 1:
+                    switch (m.getTipoObjeto()){
+                        case 1:
+                            return m.getTipoObjeto()+"_"+bd.consultarEntrenador(m.getConsulta());
+                        case 2:
+                            return m.getTipoObjeto()+"_"+bd.consultarJugador(m.getConsulta());
+                        case 3:
+                            return m.getTipoObjeto()+"_"+bd.consultarEstadio(m.getConsulta());
                     }
                     break;
-                case "2":
-                    switch (partes[1]){
-                        case "1":
-                            bd.modificarEntrenador(partes[2],partes[3],partes[4],partes[5]);
-                        case "2":
-                            bd.modificarJugador(partes[2],partes[3],partes[4],partes[5],partes[6]);
-                        case "3":
-                            bd.modificarEstadio(partes[2],partes[3],partes[4]);
+                case 2:
+                    switch (m.getTipoObjeto()){
+                        case 1:
+                            bd.modificarEntrenador(m.getBusqueda(),m.getConsulta());
+                        case 2:
+                            bd.modificarJugador(m.getBusqueda(),m.getConsulta());
+                        case 3:
+                            bd.modificarEstadio(m.getBusqueda(),m.getConsulta());
                     }
                     break;
-                case "3":
-                    switch (partes[1]){
-                        case "1":
-                            bd.eliminarEntrenador(partes[2]);
-                        case "2":
-                            bd.eliminarJugador(partes[2]);
-                        case "3":
-                            bd.eliminarEstadio(partes[2]);
+                case 3:
+                    switch (m.getTipoObjeto()){
+                        case 1:
+                            bd.eliminarEntrenador(m.getConsulta());
+                        case 2:
+                            bd.eliminarJugador(m.getConsulta());
+                        case 3:
+                            bd.eliminarEstadio(m.getConsulta());
                     }
                     break;
             }

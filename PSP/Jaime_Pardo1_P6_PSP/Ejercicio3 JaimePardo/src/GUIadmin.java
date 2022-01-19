@@ -1,3 +1,5 @@
+import com.google.gson.Gson;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -142,6 +144,11 @@ public class GUIadmin extends JFrame implements ActionListener, WindowListener {
     @Override
     public void actionPerformed(ActionEvent e) {
 
+        //Se instancia el objeto GSON
+        Gson gson = new Gson();
+        String json;
+        Mensaje m;
+
         switch (e.getActionCommand()){
             case "Consultar":
                 entrenador.setText("Buscar entrenador");
@@ -159,39 +166,51 @@ public class GUIadmin extends JFrame implements ActionListener, WindowListener {
                 estadio.setText("Eliminar estadio");
                 break;
             case "Buscar entrenador":
-                cliente.enviarMensaje("1:1:"+busqueda.getText());
+                m = new Mensaje(1,1,busqueda.getText());
+                cliente.enviarMensaje(gson.toJson(m));
                 System.out.println("Consulta: "+busqueda.getText());
                 break;
             case "Buscar jugador":
-                cliente.enviarMensaje("1:2:"+busqueda.getText());
+                m = new Mensaje(1,2,busqueda.getText());
+                cliente.enviarMensaje(gson.toJson(m));
                 System.out.println("Consulta: "+busqueda.getText());
                 break;
             case "Buscar estadio":
-                cliente.enviarMensaje("1:3:"+busqueda.getText());
+                m = new Mensaje(1,3,busqueda.getText());
+                cliente.enviarMensaje(gson.toJson(m));
                 System.out.println("Consulta: "+busqueda.getText());
                 break;
             case "Modificar entrenador":
-                cliente.enviarMensaje("2:1:"+busqueda.getText()+":"+res1.getText()+":"+res2.getText()+":"+res3.getText());
+                Entrenador en = new Entrenador(res1.getText(),res2.getText(),res3.getText());
+                json = gson.toJson(en);
+                m = new Mensaje(2,1,busqueda.getText(),json);
+                cliente.enviarMensaje(gson.toJson(m));
                 System.out.println("Consulta: "+busqueda.getText());
                 break;
             case "Modificar jugador":
-                cliente.enviarMensaje("2:2:"+busqueda.getText()+":"+res1.getText()+":"+res2.getText()+":"+res3.getText()+":"+res4.getText());
+                Jugador j = new Jugador(res1.getText(),res2.getText(),res3.getText(),res4.getText());
+                json = gson.toJson(j);
+                m = new Mensaje(2,2,busqueda.getText(),json);
+                cliente.enviarMensaje(gson.toJson(m));
                 System.out.println("Consulta: "+busqueda.getText());
                 break;
             case "Modificar estadio":
-                cliente.enviarMensaje("2:3:"+busqueda.getText()+":"+res1.getText()+":"+res2.getText());
+                Estadio es = new Estadio(res1.getText(),res2.getText());
+                json = gson.toJson(es);
+                m = new Mensaje(2,3,busqueda.getText(),json);
+                cliente.enviarMensaje(gson.toJson(m));
                 System.out.println("Consulta: "+busqueda.getText());
                 break;
             case "Eliminar entrenador":
-                cliente.enviarMensaje("3:1:"+busqueda.getText());
+                cliente.enviarMensaje("3_1_"+busqueda.getText());
                 System.out.println("Consulta: "+busqueda.getText());
                 break;
             case "Eliminar jugador":
-                cliente.enviarMensaje("3:2:"+busqueda.getText());
+                cliente.enviarMensaje("3_2_"+busqueda.getText());
                 System.out.println("Consulta: "+busqueda.getText());
                 break;
             case "Eliminar estadio":
-                cliente.enviarMensaje("3:3:"+busqueda.getText());
+                cliente.enviarMensaje("3_3_"+busqueda.getText());
                 System.out.println("Consulta: "+busqueda.getText());
                 break;
         }
@@ -201,12 +220,15 @@ public class GUIadmin extends JFrame implements ActionListener, WindowListener {
     //Metodo que recibe los resultados de las consultas.
     public void recibir(String str) {
 
+        Gson gson = new Gson();
 
-        String[] partes = str.split(":");
+        String[] partes = str.split("_");
 
         System.out.println("longitud "+ partes.length);
 
-        if (partes.length==8){
+        if (partes[0].equals("2")){
+
+            Jugador j = gson.fromJson(partes[1], Jugador.class);
 
             vaciarCampos();
             resultado1.setVisible(true);
@@ -217,16 +239,18 @@ public class GUIadmin extends JFrame implements ActionListener, WindowListener {
             res2.setVisible(true);
             res3.setVisible(true);
             res4.setVisible(true);
-            resultado1.setText(partes[0]+":");
-            resultado2.setText(partes[2]+":");
-            resultado3.setText(partes[4]+":");
-            resultado4.setText(partes[6]+":");
-            res1.setText(partes[1]);
-            res2.setText(partes[3]);
-            res3.setText(partes[5]);
-            res4.setText(partes[7]);
+            resultado1.setText("Nombre:");
+            resultado2.setText("Nacionalidad:");
+            resultado3.setText("Equipo:");
+            resultado4.setText("Posicion:");
+            res1.setText(j.getNombre());
+            res2.setText(j.getNacionalidad());
+            res3.setText(j.getEquipo());
+            res4.setText(j.getPosicion());
 
-        }else if (partes.length==6){
+        }else if (partes[0].equals("1")){
+
+            Entrenador e = gson.fromJson(partes[1], Entrenador.class);
 
             vaciarCampos();
             resultado1.setVisible(true);
@@ -235,24 +259,26 @@ public class GUIadmin extends JFrame implements ActionListener, WindowListener {
             res1.setVisible(true);
             res2.setVisible(true);
             res3.setVisible(true);
-            resultado1.setText(partes[0]+":");
-            resultado2.setText(partes[2]+":");
-            resultado3.setText(partes[4]+":");
-            res1.setText(partes[1]);
-            res2.setText(partes[3]);
-            res3.setText(partes[5]);
+            resultado1.setText("Nombre:");
+            resultado2.setText("Nacionalidad:");
+            resultado3.setText("Equipo:");
+            res1.setText(e.getNombre());
+            res2.setText(e.getNacionalidad());
+            res3.setText(e.getEquipo());
 
-        }else if (partes.length==4){
+        }else if (partes[0].equals("3")){
+
+            Estadio e = gson.fromJson(partes[1], Estadio.class);
 
             vaciarCampos();
             resultado1.setVisible(true);
             resultado2.setVisible(true);
             res1.setVisible(true);
             res2.setVisible(true);
-            resultado1.setText(partes[0]+":");
-            resultado2.setText(partes[2]+":");
-            res1.setText(partes[1]);
-            res2.setText(partes[3]);
+            resultado1.setText("Nombre:");
+            resultado2.setText("Ciudad:");
+            res1.setText(e.getNombre());
+            res2.setText(e.getCiudad());
 
         }else {
             vaciarCampos();

@@ -1,3 +1,5 @@
+import com.google.gson.Gson;
+
 import javax.swing.*;
 import java.sql.*;
 import java.time.LocalDateTime;
@@ -49,7 +51,9 @@ public class BaseDatos {
     //Metodo que consulta los entrenadores segun su nombre.
     public String consultarEntrenador(String nombre) {
 
-        String resultado = "";
+        Gson gson = new Gson();
+
+        Entrenador o = new Entrenador();
 
         try {
             String SQL = "SELECT * FROM entrenador WHERE nombre=?";
@@ -58,9 +62,9 @@ public class BaseDatos {
             ResultSet rs = stmt.executeQuery();
 
             while (rs.next()) {
-                resultado += "Nombre:"+rs.getString("nombre");
-                resultado += ":Nacionalidad:"+rs.getString("nacionalidad");
-                resultado += ":ID Equipo:"+rs.getString("idEquipo");
+                o.setNombre(rs.getString("nombre"));
+                o.setNacionalidad(rs.getString("nacionalidad"));
+                o.setEquipo(rs.getString("idEquipo"));
             }
 
             rs.close();
@@ -70,13 +74,17 @@ public class BaseDatos {
             e.printStackTrace();
         }
 
-        return resultado;
+        String json = gson.toJson(o);
+
+        return json;
     }
 
     //Metodo que consulta los jugadores segun su nombre.
     public String consultarJugador(String nombre) {
 
-        String resultado = "";
+        Gson gson = new Gson();
+
+        Jugador o = new Jugador();
 
         try {
             String SQL = "SELECT * FROM jugador WHERE nombre=?";
@@ -85,10 +93,10 @@ public class BaseDatos {
             ResultSet rs = stmt.executeQuery();
 
             while (rs.next()) {
-                resultado += "Nombre:"+rs.getString("nombre");
-                resultado += ":Nacionalidad:"+rs.getString("nacionalidad");
-                resultado += ":ID Equipo:"+rs.getString("idEquipo");
-                resultado += ":Posicion:"+rs.getString("posicion");
+                o.setNombre(rs.getString("nombre"));
+                o.setNacionalidad(rs.getString("nacionalidad"));
+                o.setEquipo(rs.getString("idEquipo"));
+                o.setPosicion(rs.getString("posicion"));
             }
 
             rs.close();
@@ -98,13 +106,17 @@ public class BaseDatos {
             e.printStackTrace();
         }
 
-        return resultado;
+        String json = gson.toJson(o);
+
+        return json;
     }
 
     //Metodo que consulta los estadios segun su nombre.
     public String consultarEstadio(String nombre) {
 
-        String resultado = "";
+        Gson gson = new Gson();
+
+        Estadio o = new Estadio();
 
         try {
             String SQL = "SELECT * FROM estadio WHERE nombre=?";
@@ -113,8 +125,8 @@ public class BaseDatos {
             ResultSet rs = stmt.executeQuery();
 
             while (rs.next()) {
-                resultado += "Nombre:"+rs.getString("nombre");
-                resultado += ":Ciudad:"+rs.getString("ciudad");
+                o.setNombre(rs.getString("nombre"));
+                o.setCiudad(rs.getString("ciudad"));
             }
 
             rs.close();
@@ -124,18 +136,23 @@ public class BaseDatos {
             e.printStackTrace();
         }
 
-        return resultado;
+        String json = gson.toJson(o);
+
+        return json;
     }
 
     //Metodo para modificar los datos de un entrenador.
-    public void modificarEntrenador(String nombre, String nuevoNombre, String nuevaNacionalidad, String nuevoEquipo) {
+    public void modificarEntrenador(String nombre, String json) {
+
+        Gson gson = new Gson();
+        Entrenador en = gson.fromJson(json, Entrenador.class);
 
         try {
             PreparedStatement st = conexion.prepareStatement("UPDATE entrenador SET nombre = ?, nacionalidad = ?, idEquipo = ? WHERE nombre = ?");
             st.setString(4, nombre);
-            st.setString(1, nuevoNombre);
-            st.setString(2, nuevaNacionalidad);
-            st.setString(3, nuevoEquipo);
+            st.setString(1, en.getNombre());
+            st.setString(2, en.getNacionalidad());
+            st.setString(3, en.getEquipo());
             st.executeUpdate();
             st.close();
         }
@@ -145,13 +162,16 @@ public class BaseDatos {
     }
 
     //Metodo para modificar los datos de un estadio.
-    public void modificarEstadio(String nombre, String nuevoNombre, String nuevaCiudad) {
+    public void modificarEstadio(String nombre, String json) {
+
+        Gson gson = new Gson();
+        Estadio es = gson.fromJson(json, Estadio.class);
 
         try {
             PreparedStatement st = conexion.prepareStatement("UPDATE estadio SET nombre = ?, ciudad = ? WHERE nombre = ?");
 
-            st.setString(1, nuevoNombre);
-            st.setString(2, nuevaCiudad);
+            st.setString(1, es.getNombre());
+            st.setString(2, es.getCiudad());
             st.setString(3, nombre);
             st.executeUpdate();
             st.close();
@@ -162,15 +182,18 @@ public class BaseDatos {
     }
 
     //Metodo para modificar los datos de un jugador.
-    public void modificarJugador(String nombre, String nuevoNombre, String nuevaNacionalidad, String nuevoIdEquipo, String nuevaPosicion) {
+    public void modificarJugador(String nombre, String json) {
+
+        Gson gson = new Gson();
+        Jugador j = gson.fromJson(json, Jugador.class);
 
         try {
             PreparedStatement st = conexion.prepareStatement("UPDATE jugador SET nombre = ?, nacionalidad = ?, idEquipo = ?, posicion = ? WHERE nombre = ?");
             st.setString(5, nombre);
-            st.setString(1, nuevoNombre);
-            st.setString(2, nuevaNacionalidad);
-            st.setString(3, nuevoIdEquipo);
-            st.setString(4, nuevaPosicion);
+            st.setString(1, j.getNombre());
+            st.setString(2, j.getNacionalidad());
+            st.setString(3, j.getEquipo());
+            st.setString(4, j.getPosicion());
             st.executeUpdate();
             st.close();
         }

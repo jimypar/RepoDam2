@@ -1,8 +1,13 @@
+
+
 import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
+import java.lang.reflect.Type;
+import java.util.ArrayList;
 
 public class ClienteGUI extends JFrame implements ActionListener,WindowListener {
 
@@ -55,10 +60,17 @@ public class ClienteGUI extends JFrame implements ActionListener,WindowListener 
 
     private String leerJSON(String str) {
 
-        Gson gson = new Gson();
-        Temperatura t = gson.fromJson(str, Temperatura.class);
+        if (str.equalsIgnoreCase("Introduce un año\n")){
+            return str;
+        }else {
+            Gson gson = new Gson();
 
-        return t.getIncremento();
+            Temperatura t = gson.fromJson(str, Temperatura.class);
+
+            return t.getIncremento();
+        }
+
+
 
     }
 

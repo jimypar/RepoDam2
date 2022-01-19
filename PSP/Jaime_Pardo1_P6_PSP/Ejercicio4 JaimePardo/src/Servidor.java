@@ -1,3 +1,5 @@
+import com.google.gson.Gson;
+
 import java.io.*;
 import java.net.*;
 import java.util.*;
@@ -133,6 +135,11 @@ public class Servidor {
     //Metodo que comprueba que el movimiento es valido y cambia el turno
     private String calcularTabla(String mensaje, int id) {
 
+        //Se instancia el objeto GSON
+        Gson gson = new Gson();
+
+        Mensaje m = gson.fromJson(mensaje, Mensaje.class);
+
         if (turno==id){
             if (estaVacio(mensaje)){
                     if (turno == 1){
@@ -142,13 +149,16 @@ public class Servidor {
                     }
                 pintarMatriz(mensaje,id);
                 if (calcularVictoria(id)){
-                    enviarTodos(id+":"+mensaje);
-                    return id+":victoria";
+                    enviarTodos(gson.toJson(m));
+                    m = new Mensaje(id,true,false);
+                    return gson.toJson(m);
                 }else if(calcularEmpate()){
-                    enviarTodos(id+":"+mensaje);
-                    return id+":empate";
+                    enviarTodos(gson.toJson(m));
+                    m = new Mensaje(id,false,true);
+                    return gson.toJson(m);
                 }else {
-                    return id+":"+mensaje;
+                    m.setId(id);
+                    return gson.toJson(m);
                 }
             }
         }
@@ -175,55 +185,16 @@ public class Servidor {
     //Metodo que calcula si una celda esta vacia
     private boolean estaVacio(String mensaje) {
 
-        switch (mensaje) {
-            case "00":
-                if (tablero[0][0]==0){
-                    return true;
-                }
-                break;
-            case "01":
-                if (tablero[0][1]==0){
-                    return true;
-                }
-                break;
-            case "02":
-                if (tablero[0][2]==0){
-                    return true;
-                }
-                break;
-            case "10":
-                if (tablero[1][0]==0){
-                    return true;
-                }
-                break;
-            case "11":
-                if (tablero[1][1]==0){
-                    return true;
-                }
-                break;
-            case "12":
-                if (tablero[1][2]==0){
-                    return true;
-                }
-                break;
-            case "20":
-                if (tablero[2][0]==0){
-                    return true;
-                }
-                break;
-            case "21":
-                if (tablero[2][1]==0){
-                    return true;
-                }
-                break;
-            case "22":
-                if (tablero[2][2]==0){
-                    return true;
-                }
-                break;
-        }
+        //Se instancia el objeto GSON
+        Gson gson = new Gson();
 
-        return false;
+        Mensaje m = gson.fromJson(mensaje, Mensaje.class);
+
+       if (tablero[m.getPosX()][m.getPosY()]==0){
+           return true;
+       }else {
+           return false;
+       }
 
     }
 
@@ -254,35 +225,12 @@ public class Servidor {
     //Metodo que rellena la matriz
     private void pintarMatriz(String mensaje, int id) {
 
-        switch (mensaje) {
-            case "00":
-                tablero[0][0] = id;
-                break;
-            case "01":
-                tablero[0][1] = id;
-                break;
-            case "02":
-                tablero[0][2] = id;
-                break;
-            case "10":
-                tablero[1][0] = id;
-                break;
-            case "11":
-                tablero[1][1] = id;
-                break;
-            case "12":
-                tablero[1][2] = id;
-                break;
-            case "20":
-                tablero[2][0] = id;
-                break;
-            case "21":
-                tablero[2][1] = id;
-                break;
-            case "22":
-                tablero[2][2] = id;
-                break;
-        }
+        //Se instancia el objeto GSON
+        Gson gson = new Gson();
+
+        Mensaje m = gson.fromJson(mensaje, Mensaje.class);
+
+        tablero[m.getPosX()][m.getPosY()] = id;
 
     }
 }

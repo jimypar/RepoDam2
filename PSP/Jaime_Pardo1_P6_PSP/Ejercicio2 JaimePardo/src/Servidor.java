@@ -1,3 +1,5 @@
+import com.google.gson.Gson;
+
 import java.io.*;
 import java.net.*;
 import java.util.*;
@@ -95,8 +97,8 @@ public class Servidor {
                 }
                 //Calcula el incremento y lo devuelve.
                 String resultado = calcularIncremento(mensaje);
-                salida.println(resultado);
-
+                String json = crearJSON(mensaje,resultado);
+                salida.println(json);
 
             }
             cerrar();
@@ -123,6 +125,20 @@ public class Servidor {
             }
         }
         return "No se ha encontrado datos del: "+mensaje;
+    }
+
+    private String crearJSON(String year, String temp) {
+
+        Temperatura t = new Temperatura(year,temp);
+
+        //Se instancia el objeto GSON
+        Gson gson = new Gson();
+
+        //Se convierte el objeto a JSON
+        String json = gson.toJson(t);
+
+        return json;
+
     }
 }
 

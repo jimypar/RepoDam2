@@ -106,7 +106,6 @@ public class Servidor {
                 String json = crearJSON(mensaje,resultado);
                 salida.println(json);
 
-
             }
             cerrar();
         }

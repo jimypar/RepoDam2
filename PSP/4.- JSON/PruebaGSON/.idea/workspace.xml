@@ -2,37 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="45ab8d0f-e789-4a08-8609-397be8ad810b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../LeeHTML/.idea/libraries/gson_2_8_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../LeeHTML/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../LeeHTML/libs/gson-2.8.2.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/gson_2_8_21.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../PruebaGson2/.idea/libraries/gson_2_8_21.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../PruebaGson2/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Jaime_Pardo1_P6_PSP/Ejercicio0 JaimePardo/Ejercicio1 Sockets2.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Jaime_Pardo1_P6_PSP/Ejercicio1 JaimePardo/Ejercicio1 Sockets2.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Jaime_Pardo1_P6_PSP/Ejercicio2 JaimePardo/Ejercicio2 Sockets2.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Jaime_Pardo1_P6_PSP/Ejercicio3 JaimePardo/Ejercicio3 Sockets2.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Jaime_Pardo1_P6_PSP/Ejercicio4 JaimePardo/Ejercicio4 Sockets2.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../MM/VideoJuegos/Demo/.classpath" beforeDir="false" afterPath="$PROJECT_DIR$/../../../MM/VideoJuegos/Demo/.classpath" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../MM/VideoJuegos/Demo/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../../../MM/VideoJuegos/Demo/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../MM/VideoJuegos/Demo/assets/maps/Terreno.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../MM/VideoJuegos/Demo/assets/maps/mapa.tmx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../MM/VideoJuegos/Demo/src/elements/Barril.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../MM/VideoJuegos/Demo/src/elements/Barril.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../MM/VideoJuegos/Demo/src/elements/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../MM/VideoJuegos/Demo/src/elements/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../MM/VideoJuegos/Demo/src/elements/Solid.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../MM/VideoJuegos/Demo/src/elements/Solid.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../MM/VideoJuegos/Demo/src/game/Launcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../MM/VideoJuegos/Demo/src/game/Launcher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../MM/VideoJuegos/Demo/src/game/Parametros.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../MM/VideoJuegos/Demo/src/game/Parametros.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../MM/VideoJuegos/Demo/src/managers/ResourceManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../MM/VideoJuegos/Demo/src/managers/ResourceManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../MM/VideoJuegos/Demo/src/screens/GameScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../MM/VideoJuegos/Demo/src/screens/GameScreen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../LeeHTML/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../LeeHTML/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../LeeHTML/LeeHTML.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../LeeHTML/LeeHTML.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../LeeHTML/out/production/LeeHTML/LeeHTML.class" beforeDir="false" afterPath="$PROJECT_DIR$/../LeeHTML/out/production/LeeHTML/LeeHTML.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../LeeHTML/src/LeeHTML.java" beforeDir="false" afterPath="$PROJECT_DIR$/../LeeHTML/src/LeeHTML.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PruebaGSON.iml" beforeDir="false" afterPath="$PROJECT_DIR$/PruebaGSON.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PruebaGson2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../PruebaGson2/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PruebaGson2/PruebaGson2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../PruebaGson2/PruebaGson2.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PruebaGSON/PruebaGson.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PruebaGSON/PruebaGson.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Jaime_Pardo1_P6_PSP/Ejercicio0 JaimePardo/out/production/Ejercicio1 Sockets2/LeeHTML$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Jaime_Pardo1_P6_PSP/Ejercicio0 JaimePardo/out/production/Ejercicio1 Sockets2/LeeHTML.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Jaime_Pardo1_P6_PSP/Ejercicio1 JaimePardo/out/production/Ejercicio1 Sockets2/ClienteGUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../Jaime_Pardo1_P6_PSP/Ejercicio1 JaimePardo/out/production/Ejercicio1 Sockets2/ClienteGUI.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Jaime_Pardo1_P6_PSP/Ejercicio1 JaimePardo/src/ClienteGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Jaime_Pardo1_P6_PSP/Ejercicio1 JaimePardo/src/ClienteGUI.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -57,7 +32,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552938508588" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Jaime_Pardo1_P6_PSP/Ejercicio1 JaimePardo" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Libraries" />
@@ -109,6 +84,7 @@
       <workItem from="1552987081654" duration="24000" />
       <workItem from="1642504036378" duration="1584000" />
       <workItem from="1642506832626" duration="1046000" />
+      <workItem from="1642577927807" duration="584000" />
     </task>
     <servers />
   </component>

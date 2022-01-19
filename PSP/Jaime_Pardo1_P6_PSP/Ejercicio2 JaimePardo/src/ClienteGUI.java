@@ -1,3 +1,5 @@
+import com.google.gson.Gson;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
@@ -48,7 +50,21 @@ public class ClienteGUI extends JFrame implements ActionListener,WindowListener 
 
     //Muestra el mensaje
     void append(String str) {
-        txtResult.setText(str);
+        txtResult.setText(leerJSON(str));
+    }
+
+    private String leerJSON(String str) {
+
+        if (str.equalsIgnoreCase("Introduce un año\n")){
+            return str;
+        }else {
+            Gson gson = new Gson();
+
+            Temperatura t = gson.fromJson(str, Temperatura.class);
+
+            return t.getConcentracion();
+        }
+
     }
 
     void falloConexion() {

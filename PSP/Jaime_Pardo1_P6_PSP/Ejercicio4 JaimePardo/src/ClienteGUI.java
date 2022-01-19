@@ -1,4 +1,6 @@
 
+import com.google.gson.Gson;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
@@ -7,6 +9,7 @@ public class ClienteGUI extends JFrame implements ActionListener,WindowListener 
 
     private Cliente cliente;
     JButton b00,b01,b02,b10,b11,b12,b20,b21,b22;
+    JButton[][] botones = new JButton[3][3];
 
     //Constructor del GUI del cliente con los parametros de la posicion de la pestaña
     ClienteGUI(int x,int y, String nombre) {
@@ -15,24 +18,34 @@ public class ClienteGUI extends JFrame implements ActionListener,WindowListener 
 
         JPanel panel = new JPanel(new GridLayout(3,3));
 
+
         b00 = new JButton();
         b00.setActionCommand("00");
+        botones[0][0] = b00;
         b01 = new JButton();
         b01.setActionCommand("01");
+        botones[0][1] = b01;
         b02 = new JButton();
         b02.setActionCommand("02");
+        botones[0][2] = b02;
         b10 = new JButton();
         b10.setActionCommand("10");
+        botones[1][0] = b10;
         b11 = new JButton();
         b11.setActionCommand("11");
+        botones[1][1] = b11;
         b12 = new JButton();
         b12.setActionCommand("12");
+        botones[1][2] = b12;
         b20 = new JButton();
         b20.setActionCommand("20");
+        botones[2][0] = b20;
         b21 = new JButton();
         b21.setActionCommand("21");
+        botones[2][1] = b21;
         b22 = new JButton();
         b22.setActionCommand("22");
+        botones[2][2] = b22;
         panel.add(b00);
         panel.add(b01);
         panel.add(b02);
@@ -75,35 +88,38 @@ public class ClienteGUI extends JFrame implements ActionListener,WindowListener 
     //Metodo del actionListener que recibe el boton presionado y se lo envia al servidor
     public void actionPerformed(ActionEvent e) {
 
+        Gson gson = new Gson();
+
+
         String comando = e.getActionCommand();
 
         switch (comando){
             case "00":
-                cliente.enviarMensaje("00");
+                cliente.enviarMensaje(gson.toJson(new Mensaje(0,0)));
                 break;
             case "01":
-                cliente.enviarMensaje("01");
+                cliente.enviarMensaje(gson.toJson(new Mensaje(0,1)));
                 break;
             case "02":
-                cliente.enviarMensaje("02");
+                cliente.enviarMensaje(gson.toJson(new Mensaje(0,2)));
                 break;
             case "10":
-                cliente.enviarMensaje("10");
+                cliente.enviarMensaje(gson.toJson(new Mensaje(1,0)));
                 break;
             case "11":
-                cliente.enviarMensaje("11");
+                cliente.enviarMensaje(gson.toJson(new Mensaje(1,1)));
                 break;
             case "12":
-                cliente.enviarMensaje("12");
+                cliente.enviarMensaje(gson.toJson(new Mensaje(1,2)));
                 break;
             case "20":
-                cliente.enviarMensaje("20");
+                cliente.enviarMensaje(gson.toJson(new Mensaje(2,0)));
                 break;
             case "21":
-                cliente.enviarMensaje("21");
+                cliente.enviarMensaje(gson.toJson(new Mensaje(2,1)));
                 break;
             case "22":
-                cliente.enviarMensaje("22");
+                cliente.enviarMensaje(gson.toJson(new Mensaje(2,2)));
                 break;
         }
 
@@ -121,50 +137,25 @@ public class ClienteGUI extends JFrame implements ActionListener,WindowListener 
     //Metodo que rellena la tabla segun el mensaje recibido
     private void rellenarTabla(String str) {
 
-        String[] separador = str.split(":");
+        Gson gson = new Gson();
 
-        System.out.println(separador[0]);
-        System.out.println(separador[1]);
+        Mensaje m = gson.fromJson(str, Mensaje.class);
 
         String ficha = "";
-        if (separador[0].equals("1")) {
+        if (m.getId()==1) {
             ficha = "X";
         }else {
             ficha = "O";
         }
 
-        switch (separador[1]) {
-            case "00":
-                b00.setText(ficha);
-                break;
-            case "01":
-                b01.setText(ficha);
-                break;
-            case "02":
-                b02.setText(ficha);
-                break;
-            case "10":
-                b10.setText(ficha);
-                break;
-            case "11":
-                b11.setText(ficha);
-                break;
-            case "12":
-                b12.setText(ficha);
-                break;
-            case "20":
-                b20.setText(ficha);
-                break;
-            case "21":
-                b21.setText(ficha);
-                break;
-            case "22":
-                b22.setText(ficha);
-                break;
-            case "victoria":
-                JOptionPane.showMessageDialog(null,"EL JUGADOR "+separador[0]+" HA GANADO");
+        botones[m.getPosX()][m.getPosY()].setText(ficha);
+
+        if (m.isVictoria()){
+                JOptionPane.showMessageDialog(null,"EL JUGADOR "+m.getId()+" HA GANADO");
                 System.exit(0);
-            case "empate":
+        }
+
+        if (m.isEmpate()){
                 JOptionPane.showMessageDialog(null,"EMPATE");
                 System.exit(0);
         }
