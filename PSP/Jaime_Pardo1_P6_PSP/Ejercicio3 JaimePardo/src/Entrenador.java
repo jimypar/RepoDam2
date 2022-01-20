@@ -13,6 +13,10 @@ public class Entrenador {
     public Entrenador() {
     }
 
+    public Entrenador(String nombre) {
+        this.nombre = nombre;
+    }
+
     public String getNombre() {
         return nombre;
     }

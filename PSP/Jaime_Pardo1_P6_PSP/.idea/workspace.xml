@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="387abd99-36ba-4386-9a03-3dae2e4d8b38" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../../DI/VehiculosMVC/.idea/libraries/jgoodies_common_1_8_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DI/VehiculosMVC/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DI/VehiculosMVC/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DI/VehiculosMVC/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DI/VehiculosMVC/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DI/VehiculosMVC/Libs/LGoodDatePicker-10.3.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DI/VehiculosMVC/Libs/jgoodies-common-1.8.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DI/VehiculosMVC/Libs/jgoodies-forms-1.8.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DI/VehiculosMVC/VehiculosMVC.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DI/VehiculosMVC/out/production/VehiculosMVC/com/elenajif/vehiculosmvc/Principal.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DI/VehiculosMVC/out/production/VehiculosMVC/com/elenajif/vehiculosmvc/base/Coche.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DI/VehiculosMVC/out/production/VehiculosMVC/com/elenajif/vehiculosmvc/base/Moto.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DI/VehiculosMVC/out/production/VehiculosMVC/com/elenajif/vehiculosmvc/base/Vehiculo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DI/VehiculosMVC/out/production/VehiculosMVC/com/elenajif/vehiculosmvc/gui/VehiculosControlador.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DI/VehiculosMVC/out/production/VehiculosMVC/com/elenajif/vehiculosmvc/gui/VehiculosModelo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DI/VehiculosMVC/out/production/VehiculosMVC/com/elenajif/vehiculosmvc/gui/Ventana.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DI/VehiculosMVC/out/production/VehiculosMVC/com/elenajif/vehiculosmvc/util/Util.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DI/VehiculosMVC/out/production/VehiculosMVC/com/intellij/uiDesigner/core/AbstractLayout.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DI/VehiculosMVC/out/production/VehiculosMVC/com/intellij/uiDesigner/core/DimensionInfo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DI/VehiculosMVC/out/production/VehiculosMVC/com/intellij/uiDesigner/core/GridConstraints.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DI/VehiculosMVC/out/production/VehiculosMVC/com/intellij/uiDesigner/core/GridLayoutManager.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DI/VehiculosMVC/out/production/VehiculosMVC/com/intellij/uiDesigner/core/HorizontalInfo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DI/VehiculosMVC/out/production/VehiculosMVC/com/intellij/uiDesigner/core/LayoutState.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DI/VehiculosMVC/out/production/VehiculosMVC/com/intellij/uiDesigner/core/Spacer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DI/VehiculosMVC/out/production/VehiculosMVC/com/intellij/uiDesigner/core/SupportCode$TextWithMnemonic.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DI/VehiculosMVC/out/production/VehiculosMVC/com/intellij/uiDesigner/core/SupportCode.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DI/VehiculosMVC/out/production/VehiculosMVC/com/intellij/uiDesigner/core/Util.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DI/VehiculosMVC/out/production/VehiculosMVC/com/intellij/uiDesigner/core/VerticalInfo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DI/VehiculosMVC/src/com/elenajif/vehiculosmvc/Principal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DI/VehiculosMVC/src/com/elenajif/vehiculosmvc/base/Coche.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DI/VehiculosMVC/src/com/elenajif/vehiculosmvc/base/Moto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DI/VehiculosMVC/src/com/elenajif/vehiculosmvc/base/Vehiculo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DI/VehiculosMVC/src/com/elenajif/vehiculosmvc/gui/VehiculosControlador.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DI/VehiculosMVC/src/com/elenajif/vehiculosmvc/gui/VehiculosModelo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DI/VehiculosMVC/src/com/elenajif/vehiculosmvc/gui/Ventana.form" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DI/VehiculosMVC/src/com/elenajif/vehiculosmvc/gui/Ventana.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DI/VehiculosMVC/src/com/elenajif/vehiculosmvc/util/Util.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DI/VehiculosMVC/vehiculos.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DI/jasperPrueba/libs/com.lowagie.text-2.1.7.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DI/jasperPrueba/libs/commons-beanutils-1.9.3.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DI/jasperPrueba/libs/commons-collections-3.2.1-1.0.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DI/jasperPrueba/libs/commons-collections-3.2.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DI/jasperPrueba/libs/commons-collections4-4.4-javadoc.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DI/jasperPrueba/libs/commons-collections4-4.4-sources.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DI/jasperPrueba/libs/commons-collections4-4.4-test-sources.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DI/jasperPrueba/libs/commons-collections4-4.4-tests.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DI/jasperPrueba/libs/commons-collections4-4.4.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DI/jasperPrueba/libs/commons-digester-2.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DI/jasperPrueba/libs/commons-logging-1.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DI/jasperPrueba/libs/jasperreports-6.16.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DI/jasperPrueba/libs/jasperreports-fonts-6.3.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DI/jasperPrueba/libs/jasperreports-functions-6.3.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DI/jasperPrueba/libs/jcommon-1.0.23.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DI/jasperPrueba/libs/jcommon-xml-1.0.23.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DI/jasperPrueba/libs/jfreechart-1.0.19.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DI/jasperPrueba/libs/joda-time-2.9.9.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MM/VideoJuegos/Demo/assets/maps/mapa0.tmx" beforeDir="false" afterPath="$PROJECT_DIR$/../../MM/VideoJuegos/Demo/assets/maps/mapa0.tmx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MM/VideoJuegos/VideoJuego Jaime Pardo/assets/maps/tutorial/mapaTutorial.tmx" beforeDir="false" afterPath="$PROJECT_DIR$/../../MM/VideoJuegos/VideoJuego Jaime Pardo/assets/maps/tutorial/mapaTutorial.tmx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MM/VideoJuegos/VideoJuego Jaime Pardo/src/elements/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../MM/VideoJuegos/VideoJuego Jaime Pardo/src/elements/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MM/VideoJuegos/VideoJuego Jaime Pardo/src/game/Launcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../MM/VideoJuegos/VideoJuego Jaime Pardo/src/game/Launcher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MM/VideoJuegos/VideoJuego Jaime Pardo/src/game/Parametros.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../MM/VideoJuegos/VideoJuego Jaime Pardo/src/game/Parametros.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MM/VideoJuegos/VideoJuego Jaime Pardo/src/managers/ResourceManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../MM/VideoJuegos/VideoJuego Jaime Pardo/src/managers/ResourceManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MM/VideoJuegos/VideoJuego Jaime Pardo/src/screens/GameScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../MM/VideoJuegos/VideoJuego Jaime Pardo/src/screens/GameScreen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ejercicio3 JaimePardo/out/production/Ejercicio3 Sockets2/Entrenador.class" beforeDir="false" afterPath="$PROJECT_DIR$/Ejercicio3 JaimePardo/out/production/Ejercicio3 Sockets2/Entrenador.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ejercicio3 JaimePardo/out/production/Ejercicio3 Sockets2/GUIadmin.class" beforeDir="false" afterPath="$PROJECT_DIR$/Ejercicio3 JaimePardo/out/production/Ejercicio3 Sockets2/GUIadmin.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ejercicio3 JaimePardo/out/production/Ejercicio3 Sockets2/Servidor.class" beforeDir="false" afterPath="$PROJECT_DIR$/Ejercicio3 JaimePardo/out/production/Ejercicio3 Sockets2/Servidor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ejercicio3 JaimePardo/src/Entrenador.java" beforeDir="false" afterPath="$PROJECT_DIR$/Ejercicio3 JaimePardo/src/Entrenador.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ejercicio3 JaimePardo/src/GUIadmin.java" beforeDir="false" afterPath="$PROJECT_DIR$/Ejercicio3 JaimePardo/src/GUIadmin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ejercicio3 JaimePardo/src/Servidor.java" beforeDir="false" afterPath="$PROJECT_DIR$/Ejercicio3 JaimePardo/src/Servidor.java" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="23xijBJ9KAmHaZeBn3Q3v66cd4v" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Ejercicio3 JaimePardo" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="387abd99-36ba-4386-9a03-3dae2e4d8b38" name="Default Changelist" comment="" />
+      <created>1642682271562</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1642682271562</updated>
+      <workItem from="1642682273348" duration="20000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

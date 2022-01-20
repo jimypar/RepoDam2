@@ -183,34 +183,37 @@ public class GUIadmin extends JFrame implements ActionListener, WindowListener {
             case "Modificar entrenador":
                 Entrenador en = new Entrenador(res1.getText(),res2.getText(),res3.getText());
                 json = gson.toJson(en);
-                m = new Mensaje(2,1,busqueda.getText(),json);
+                m = new Mensaje(2,1,json,busqueda.getText());
                 cliente.enviarMensaje(gson.toJson(m));
                 System.out.println("Consulta: "+busqueda.getText());
                 break;
             case "Modificar jugador":
                 Jugador j = new Jugador(res1.getText(),res2.getText(),res3.getText(),res4.getText());
                 json = gson.toJson(j);
-                m = new Mensaje(2,2,busqueda.getText(),json);
+                m = new Mensaje(2,2,json,busqueda.getText());
                 cliente.enviarMensaje(gson.toJson(m));
                 System.out.println("Consulta: "+busqueda.getText());
                 break;
             case "Modificar estadio":
                 Estadio es = new Estadio(res1.getText(),res2.getText());
                 json = gson.toJson(es);
-                m = new Mensaje(2,3,busqueda.getText(),json);
+                m = new Mensaje(2,3,json,busqueda.getText());
                 cliente.enviarMensaje(gson.toJson(m));
                 System.out.println("Consulta: "+busqueda.getText());
                 break;
             case "Eliminar entrenador":
-                cliente.enviarMensaje("3_1_"+busqueda.getText());
+                m = new Mensaje(3,1,busqueda.getText());
+                cliente.enviarMensaje(gson.toJson(m));
                 System.out.println("Consulta: "+busqueda.getText());
                 break;
             case "Eliminar jugador":
-                cliente.enviarMensaje("3_2_"+busqueda.getText());
+                m = new Mensaje(3,2,busqueda.getText());
+                cliente.enviarMensaje(gson.toJson(m));
                 System.out.println("Consulta: "+busqueda.getText());
                 break;
             case "Eliminar estadio":
-                cliente.enviarMensaje("3_3_"+busqueda.getText());
+                m = new Mensaje(3,3,busqueda.getText());
+                cliente.enviarMensaje(gson.toJson(m));
                 System.out.println("Consulta: "+busqueda.getText());
                 break;
         }

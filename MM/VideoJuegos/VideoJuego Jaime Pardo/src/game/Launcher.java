@@ -8,6 +8,6 @@ public class Launcher
     public static void main (String[] args)
     {
         Game myGame = new Demo(); 
-        LwjglApplication launcher = new LwjglApplication( myGame, "2021", Parametros.getAnchoPantalla(), Parametros.getAltoPantalla());
+        LwjglApplication launcher = new LwjglApplication( myGame, "Cuphead", Parametros.getAnchoPantalla(), Parametros.getAltoPantalla());
     }
 }

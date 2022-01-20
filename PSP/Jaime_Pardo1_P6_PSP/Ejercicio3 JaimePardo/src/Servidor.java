@@ -186,7 +186,7 @@ public class Servidor {
                     }
                     break;
             }
-        }catch (ArrayIndexOutOfBoundsException e){}
+        }catch (Exception e){}
 
 
         return "No se ha encontrado la peticion";
