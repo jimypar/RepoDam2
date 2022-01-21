@@ -151,18 +151,16 @@ public class Servidor {
 
         Mensaje m = gson.fromJson(mensaje, Mensaje.class);
 
-
-
         try {
             switch (m.getTipoconsulta()){
                 case 1:
                     switch (m.getTipoObjeto()){
                         case 1:
-                            return m.getTipoObjeto()+"_"+bd.consultarEntrenador(m.getConsulta());
+                            return gson.toJson(new Mensaje(m.getTipoObjeto(),bd.consultarEntrenador(m.getConsulta())));
                         case 2:
-                            return m.getTipoObjeto()+"_"+bd.consultarJugador(m.getConsulta());
+                            return gson.toJson(new Mensaje(m.getTipoObjeto(),bd.consultarJugador(m.getConsulta())));
                         case 3:
-                            return m.getTipoObjeto()+"_"+bd.consultarEstadio(m.getConsulta());
+                            return gson.toJson(new Mensaje(m.getTipoObjeto(),bd.consultarEstadio(m.getConsulta())));
                     }
                     break;
                 case 2:

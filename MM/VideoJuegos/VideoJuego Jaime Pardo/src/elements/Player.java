@@ -35,9 +35,9 @@ public class Player extends Element {
 
 	// Balas
 	private Array<Bala> balas;
-	private int totalBalas = 15;
+	private int totalBalas = 25;
 	private int balaActual = 0;
-	private float cooldownDisparo = 0.25f;
+	private float cooldownDisparo = 0.12f;
 	private float tiempoDisparo = cooldownDisparo * 2;
 
 	public Element pies;

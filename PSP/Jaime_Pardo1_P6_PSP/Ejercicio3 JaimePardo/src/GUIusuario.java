@@ -1,3 +1,5 @@
+import com.google.gson.Gson;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -9,9 +11,9 @@ public class GUIusuario extends JFrame implements ActionListener, WindowListener
 
     private JPanel panel;
     private JLabel usuario;
-    private JButton consulta,modificar,eliminar,buscarEntrenador, buscarJugador, buscarEstadio;
-    private JTextField busqueda;
-    private JLabel resultado1,resultado2,resultado3;
+    private JButton consulta,modificar,eliminar,entrenador, jugador, estadio;
+    private JTextField busqueda, res1,res2,res3,res4;
+    private JLabel resultado1,resultado2,resultado3,resultado4;
     private Cliente cliente;
 
     //Constructor de la clase GUI de un cliente.
@@ -64,31 +66,38 @@ public class GUIusuario extends JFrame implements ActionListener, WindowListener
         config.gridy = 3;
         config.gridwidth = 1;
 
-        buscarEntrenador = new JButton("Buscar entrenador");
-        buscarEntrenador.addActionListener(this);
-        panel.add(buscarEntrenador,config);
+        config.gridx = 0;
+        config.gridy = 3;
+        config.gridwidth = 1;
+
+        entrenador = new JButton("Buscar entrenador");
+        entrenador.addActionListener(this);
+        panel.add(entrenador,config);
 
         config.gridx = 1;
         config.gridy = 3;
 
-        buscarJugador = new JButton("Buscar jugador");
-        buscarJugador.addActionListener(this);
-        panel.add(buscarJugador,config);
+        jugador = new JButton("Buscar jugador");
+        jugador.addActionListener(this);
+        panel.add(jugador,config);
 
         config.gridx = 2;
         config.gridy = 3;
 
-        buscarEstadio = new JButton("Buscar estadio");
-        buscarEstadio.addActionListener(this);
-        panel.add(buscarEstadio,config);
+        estadio = new JButton("Buscar estadio");
+        estadio.addActionListener(this);
+        panel.add(estadio,config);
 
         config.gridx = 0;
         config.gridy = 4;
-        config.gridwidth = 3;
-        config.fill = GridBagConstraints.BOTH;
 
         resultado1 = new JLabel();
         panel.add(resultado1,config);
+
+        config.gridx = 1;
+
+        res1 = new JTextField();
+        panel.add(res1,config);
 
         config.gridx = 0;
         config.gridy = 5;
@@ -96,11 +105,32 @@ public class GUIusuario extends JFrame implements ActionListener, WindowListener
         resultado2 = new JLabel();
         panel.add(resultado2,config);
 
+        config.gridx = 1;
+
+        res2 = new JTextField();
+        panel.add(res2,config);
+
         config.gridx = 0;
         config.gridy = 6;
 
         resultado3 = new JLabel();
         panel.add(resultado3,config);
+
+        config.gridx = 1;
+
+        res3 = new JTextField();
+        panel.add(res3,config);
+
+        config.gridx = 0;
+        config.gridy = 7;
+
+        resultado4 = new JLabel();
+        panel.add(resultado4,config);
+
+        config.gridx = 1;
+
+        res4 = new JTextField();
+        panel.add(res4,config);
 
         add(panel);
 
@@ -115,17 +145,24 @@ public class GUIusuario extends JFrame implements ActionListener, WindowListener
     @Override
     public void actionPerformed(ActionEvent e) {
 
+        Gson gson = new Gson();
+        String json;
+        Mensaje m;
+
         switch (e.getActionCommand()){
             case "Buscar entrenador":
-                cliente.enviarMensaje("1:1:"+busqueda.getText());
+                m = new Mensaje(1,1,busqueda.getText());
+                cliente.enviarMensaje(gson.toJson(m));
                 System.out.println("Consulta: "+busqueda.getText());
                 break;
             case "Buscar jugador":
-                cliente.enviarMensaje("1:2:"+busqueda.getText());
+                m = new Mensaje(1,2,busqueda.getText());
+                cliente.enviarMensaje(gson.toJson(m));
                 System.out.println("Consulta: "+busqueda.getText());
                 break;
             case "Buscar estadio":
-                cliente.enviarMensaje("1:3:"+busqueda.getText());
+                m = new Mensaje(1,3,busqueda.getText());
+                cliente.enviarMensaje(gson.toJson(m));
                 System.out.println("Consulta: "+busqueda.getText());
                 break;
         }
@@ -135,14 +172,84 @@ public class GUIusuario extends JFrame implements ActionListener, WindowListener
     //Metodo que recibe los resultados de las consultas.
     public void recibir(String str) {
 
-        String[] partes = str.split(":");
+        Gson gson = new Gson();
+
+        Mensaje m = gson.fromJson(str, Mensaje.class);
+
+        if (m.getTipoObjeto()==2){
+
+            Jugador j = gson.fromJson(m.getConsulta(), Jugador.class);
+
+            vaciarCampos();
+            resultado1.setVisible(true);
+            resultado2.setVisible(true);
+            resultado3.setVisible(true);
+            resultado4.setVisible(true);
+            res1.setVisible(true);
+            res2.setVisible(true);
+            res3.setVisible(true);
+            res4.setVisible(true);
+            resultado1.setText("Nombre:");
+            resultado2.setText("Nacionalidad:");
+            resultado3.setText("Equipo:");
+            resultado4.setText("Posicion:");
+            res1.setText(j.getNombre());
+            res2.setText(j.getNacionalidad());
+            res3.setText(j.getEquipo());
+            res4.setText(j.getPosicion());
+
+        }else if (m.getTipoObjeto()==1){
+
+            Entrenador e = gson.fromJson(m.getConsulta(), Entrenador.class);
+
+            vaciarCampos();
+            resultado1.setVisible(true);
+            resultado2.setVisible(true);
+            resultado3.setVisible(true);
+            res1.setVisible(true);
+            res2.setVisible(true);
+            res3.setVisible(true);
+            resultado1.setText("Nombre:");
+            resultado2.setText("Nacionalidad:");
+            resultado3.setText("Equipo:");
+            res1.setText(e.getNombre());
+            res2.setText(e.getNacionalidad());
+            res3.setText(e.getEquipo());
+
+        }else if (m.getTipoObjeto()==3){
+
+            Estadio e = gson.fromJson(m.getConsulta(), Estadio.class);
+
+            vaciarCampos();
+            resultado1.setVisible(true);
+            resultado2.setVisible(true);
+            res1.setVisible(true);
+            res2.setVisible(true);
+            resultado1.setText("Nombre:");
+            resultado2.setText("Ciudad:");
+            res1.setText(e.getNombre());
+            res2.setText(e.getCiudad());
+
+        }else {
+            vaciarCampos();
+            resultado1.setVisible(true);
+            resultado1.setText("No se ha encontrado");
+        }
+
+
+
+    }
+
+    private void vaciarCampos() {
 
         resultado1.setText("");
         resultado2.setText("");
         resultado3.setText("");
-        resultado1.setText(partes[0]+":"+partes[1]);
-        resultado2.setText(partes[2]+":"+partes[3]);
-        resultado3.setText(partes[4]+":"+partes[5]);
+        resultado4.setText("");
+        res1.setText("");
+        res2.setText("");
+        res3.setText("");
+        res4.setText("");
 
     }
 

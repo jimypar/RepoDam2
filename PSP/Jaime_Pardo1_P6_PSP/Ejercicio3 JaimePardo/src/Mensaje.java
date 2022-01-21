@@ -18,6 +18,11 @@ public class Mensaje {
         this.consulta = consulta;
     }
 
+    public Mensaje(int tipoObjeto, String consulta) {
+        this.tipoObjeto = tipoObjeto;
+        this.consulta = consulta;
+    }
+
     public String getBusqueda() {
         return busqueda;
     }

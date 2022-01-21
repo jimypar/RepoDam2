@@ -225,13 +225,11 @@ public class GUIadmin extends JFrame implements ActionListener, WindowListener {
 
         Gson gson = new Gson();
 
-        String[] partes = str.split("_");
+        Mensaje m = gson.fromJson(str, Mensaje.class);
 
-        System.out.println("longitud "+ partes.length);
+        if (m.getTipoObjeto()==2){
 
-        if (partes[0].equals("2")){
-
-            Jugador j = gson.fromJson(partes[1], Jugador.class);
+            Jugador j = gson.fromJson(m.getConsulta(), Jugador.class);
 
             vaciarCampos();
             resultado1.setVisible(true);
@@ -251,9 +249,9 @@ public class GUIadmin extends JFrame implements ActionListener, WindowListener {
             res3.setText(j.getEquipo());
             res4.setText(j.getPosicion());
 
-        }else if (partes[0].equals("1")){
+        }else if (m.getTipoObjeto()==1){
 
-            Entrenador e = gson.fromJson(partes[1], Entrenador.class);
+            Entrenador e = gson.fromJson(m.getConsulta(), Entrenador.class);
 
             vaciarCampos();
             resultado1.setVisible(true);
@@ -269,9 +267,9 @@ public class GUIadmin extends JFrame implements ActionListener, WindowListener {
             res2.setText(e.getNacionalidad());
             res3.setText(e.getEquipo());
 
-        }else if (partes[0].equals("3")){
+        }else if (m.getTipoObjeto()==3){
 
-            Estadio e = gson.fromJson(partes[1], Estadio.class);
+            Estadio e = gson.fromJson(m.getConsulta(), Estadio.class);
 
             vaciarCampos();
             resultado1.setVisible(true);

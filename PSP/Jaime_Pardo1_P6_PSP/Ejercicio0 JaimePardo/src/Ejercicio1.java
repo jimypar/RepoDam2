@@ -32,11 +32,11 @@ public class Ejercicio1 {
 
         Gson gson = new Gson();
 
-        Type userListType = new TypeToken<ArrayList<Circuito>>(){}.getType();
+        Type listaTipoCircuitos = new TypeToken<ArrayList<Circuito>>(){}.getType();
 
-        ArrayList<Circuito> userArray = gson.fromJson(contenido, userListType);
+        ArrayList<Circuito> circuitosArray = gson.fromJson(contenido, listaTipoCircuitos);
 
-        for(Circuito c : userArray) {
+        for(Circuito c : circuitosArray) {
             System.out.println("ID Circuito: "+c.getId());
             System.out.println("Nombre: "+c.getName());
             System.out.println("Ciudad: "+c.getLocation());
