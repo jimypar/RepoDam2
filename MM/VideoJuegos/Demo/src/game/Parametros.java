@@ -22,7 +22,8 @@ public class Parametros {
  //variables de juego
  public static int gravedad=-130;
 
- 
+ public static float playerX = 0;
+ public static float playerY = 0;
  
  
  

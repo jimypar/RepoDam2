@@ -20,7 +20,6 @@ public class LoadScreen extends BScreen{
 
 	@Override
 	public void render(float delta) {
-		// TODO Auto-generated method stub
 		super.render(delta);
 		if(ResourceManager.update()) {
 		

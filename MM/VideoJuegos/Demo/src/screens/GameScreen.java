@@ -18,6 +18,7 @@ import elements.Player;
 import elements.Solid;
 import game.Demo;
 import game.Parametros;
+import managers.OrthogonalTiledMapRendererWithSprites;
 import managers.ResourceManager;
 
 
@@ -59,7 +60,7 @@ private Player player;
 		mapHeightInPixels=tileHeight*mapHeightInTiles;
 		
 		
-		renderer=new OrthogonalTiledMapRenderer(map,mainStage.getBatch());
+		renderer=new OrthogonalTiledMapRendererWithSprites(map);
 		
 		
 		camara=(OrthographicCamera) mainStage.getCamera();
@@ -77,6 +78,7 @@ private Player player;
 		
 		Solid solido;
 		suelo=new Array<Solid>();
+		
 		for(MapObject solid:elementos) {
 			props=solid.getProperties();
 			solido=new Solid((float)props.get("x"),(float)props.get("y"), mainStage,
@@ -89,7 +91,7 @@ private Player player;
 		
 		
 		player=new Player(inicioX,inicioY,mainStage);
-	barriles= new Array<Barril>();
+		barriles= new Array<Barril>();
 		for(int i=0; i<10; i++) {
 			barriles.add(new Barril(i*14,30,mainStage));
 		}
@@ -107,11 +109,15 @@ private Player player;
 	     mainStage.act();
 	    colide();
 	    
+	    Parametros.playerX = player.getX();
+		Parametros.playerY = player.getY();
+
+	    
 	    centrarCamara();
 	    renderer.setView(camara);
 	    renderer.render();
 	    
-	        mainStage.draw();
+	    mainStage.draw();
 	    
 
 	}

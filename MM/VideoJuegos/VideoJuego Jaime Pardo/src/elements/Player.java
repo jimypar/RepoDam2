@@ -3,6 +3,7 @@ package elements;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input.Keys;
 import com.badlogic.gdx.graphics.g2d.*;
+import com.badlogic.gdx.graphics.g2d.Animation.PlayMode;
 import com.badlogic.gdx.scenes.scene2d.Stage;
 import com.badlogic.gdx.scenes.scene2d.actions.Actions;
 import com.badlogic.gdx.utils.Array;
@@ -40,6 +41,9 @@ public class Player extends Element {
 	private float cooldownDisparo = 0.12f;
 	private float tiempoDisparo = cooldownDisparo * 2;
 
+	private float cooldownDash = 0.8f;
+	private float tiempoDash = cooldownDash * 3;
+
 	public Element pies;
 	public boolean tocoSuelo;
 	public boolean direccion = true;
@@ -50,13 +54,12 @@ public class Player extends Element {
 
 	public Player(float x, float y, Stage s) {
 		super(x, y, s);
-		this.maxSpeed = 500;
 		tocoSuelo = false;
 		controles = true;
 
 		cargarAnimaciones();
 
-		pies = new Element(0, 0, s, this.getWidth(), this.getHeight() / 20);
+		pies = new Element(0, 0, s, this.getWidth() / 2, this.getHeight() / 20);
 		pies.setRectangle();
 
 		balas = new Array<Bala>();
@@ -66,27 +69,36 @@ public class Player extends Element {
 
 	}
 
+	public Array<Bala> getBalas() {
+		return balas;
+	}
+
 	@Override
 	public void act(float delta) {
 		super.act(delta);
+
+		if (tiempoDash >= cooldownDash) {
+			controles = true;
+		}
 
 		if (controles) {
 			controles();
 		}
 
+		colocarPies();
+
+		this.setPolygon(10, this.getWidth(), this.getHeight(), 0, 0);
+
 		// aplico graviedad
 		this.acceleration.add(0, Parametros.gravedad);
 		this.applyPhysics(delta);
-		colocarPies();
 
 		this.tiempoDisparo += delta;
+		this.tiempoDash += delta;
 
 	}
 
 	private void controles() {
-		
-
-
 
 //		MOVIMIENTO IZQUIERDA DERECHA
 
@@ -99,7 +111,7 @@ public class Player extends Element {
 		if (Gdx.input.isKeyPressed(Keys.A) && tocoSuelo) {
 			direccion = false;
 			this.setAnimation(runR);
-			this.velocity.set(-walkingSpeed, 0);
+			this.velocity.x = -walkingSpeed;
 		}
 
 		if (Gdx.input.isKeyPressed(Keys.D) && !tocoSuelo) {
@@ -111,14 +123,22 @@ public class Player extends Element {
 		if (Gdx.input.isKeyPressed(Keys.D) && tocoSuelo) {
 			direccion = true;
 			this.setAnimation(runL);
-			this.velocity.set(walkingSpeed, 0);
+			this.velocity.x = walkingSpeed;
 		}
-
-
 
 //		DASH
 
-		if (Gdx.input.isKeyJustPressed(Keys.SHIFT_LEFT) && tocoSuelo) {
+		if (Gdx.input.isKeyJustPressed(Keys.SHIFT_LEFT) && !Gdx.input.isKeyPressed(Keys.S) && this.velocity.x != 0
+				&& tocoSuelo) {
+			if (direccion) {
+				dashR();
+			} else {
+				dashL();
+			}
+		}
+
+		if (Gdx.input.isKeyJustPressed(Keys.SHIFT_LEFT) && !Gdx.input.isKeyPressed(Keys.S) && this.velocity.x != 0
+				&& !tocoSuelo) {
 			if (direccion) {
 				dashR();
 			} else {
@@ -131,10 +151,10 @@ public class Player extends Element {
 		if (!Gdx.input.isKeyPressed(Keys.D) && !Gdx.input.isKeyPressed(Keys.A) && tocoSuelo) {
 			if (direccion) {
 				this.setAnimation(stayR);
-				this.velocity.set(0, 0);
+				this.velocity.x = 0;
 			} else {
 				this.setAnimation(stayL);
-				this.velocity.set(0, 0);
+				this.velocity.x = 0;
 			}
 
 		}
@@ -144,23 +164,24 @@ public class Player extends Element {
 		if (Gdx.input.isKeyPressed(Keys.S) && tocoSuelo) {
 			if (direccion) {
 				this.setAnimation(duckIdleR);
-				this.velocity.set(0, 0);
+				this.velocity.x = 0;
 			} else {
 				this.setAnimation(duckIdleL);
-				this.velocity.set(0, 0);
+				this.velocity.x = 0;
 			}
+
 		}
 
 		if (Gdx.input.isKeyPressed(Keys.S) && Gdx.input.isKeyPressed(Keys.D) && tocoSuelo) {
 
 			this.setAnimation(duckIdleR);
-			this.velocity.set(0, 0);
+			this.velocity.x = 0;
 
 		}
 
 		if (Gdx.input.isKeyPressed(Keys.S) && Gdx.input.isKeyPressed(Keys.A) && tocoSuelo) {
 			this.setAnimation(duckIdleL);
-			this.velocity.set(0, 0);
+			this.velocity.x = 0;
 
 		}
 
@@ -171,7 +192,6 @@ public class Player extends Element {
 			this.setAnimation(shootRunL);
 			this.acceleration.add(-walkingSpeed, 0);
 		}
-
 
 		if (Gdx.input.isKeyPressed(Keys.ENTER) && Gdx.input.isKeyPressed(Keys.D) && tocoSuelo) {
 			direccion = true;
@@ -192,8 +212,6 @@ public class Player extends Element {
 			this.setAnimation(shootDiagonalRunR);
 			this.acceleration.add(walkingSpeed, 0);
 		}
-		
-	
 
 //	DISPAROS ESTATICO
 
@@ -201,10 +219,10 @@ public class Player extends Element {
 				&& tocoSuelo) {
 			if (direccion) {
 				this.setAnimation(shootIdleR);
-				this.velocity.set(0, 0);
+				this.velocity.x=0;
 			} else {
 				this.setAnimation(shootIdleL);
-				this.velocity.set(0, 0);
+				this.velocity.x=0;
 			}
 		}
 
@@ -212,10 +230,10 @@ public class Player extends Element {
 				&& !Gdx.input.isKeyPressed(Keys.A) && tocoSuelo) {
 			if (direccion) {
 				this.setAnimation(shootUpIdleR);
-				this.velocity.set(0, 0);
+				this.velocity.x=0;
 			} else {
 				this.setAnimation(shootUpIdleL);
-				this.velocity.set(0, 0);
+				this.velocity.x=0;
 			}
 		}
 
@@ -224,44 +242,41 @@ public class Player extends Element {
 		if (Gdx.input.isKeyPressed(Keys.ENTER) && Gdx.input.isKeyPressed(Keys.S) && tocoSuelo) {
 			if (direccion) {
 				this.setAnimation(shootDuckR);
-				this.velocity.set(0, 0);
+				this.velocity.x=0;
 			} else {
 				this.setAnimation(shootDuckL);
-				this.velocity.set(0, 0);
+				this.velocity.x=0;
 			}
 		}
 
 		if (Gdx.input.isKeyPressed(Keys.ENTER) && Gdx.input.isKeyPressed(Keys.S) && Gdx.input.isKeyPressed(Keys.D)
 				&& tocoSuelo) {
 			this.setAnimation(shootDuckR);
-			this.velocity.set(0, 0);
+			this.velocity.x=0;
 		}
 
 		if (Gdx.input.isKeyPressed(Keys.ENTER) && Gdx.input.isKeyPressed(Keys.S) && Gdx.input.isKeyPressed(Keys.A)
 				&& tocoSuelo) {
 			this.setAnimation(shootDuckL);
-			this.velocity.set(0, 0);
+			this.velocity.x=0;
 		}
-		
-		//DISPARO
-		
+
+		// DISPARO
+
 		if (Gdx.input.isKeyPressed(Keys.ENTER) && tiempoDisparo >= cooldownDisparo) {
 			dispara();
 		}
-		
+
 //		SALTO
 
 		if (Gdx.input.isKeyPressed(Keys.SPACE) && tocoSuelo) {
 			salta();
 		}
-		
-		
-		
 
 	}
 
 	private void colocarPies() {
-		this.pies.setPosition(this.getX(), this.getY());
+		this.pies.setPosition(this.getX() + 20, this.getY());
 	}
 
 	private void salta() {
@@ -278,18 +293,21 @@ public class Player extends Element {
 	}
 
 	private void dashR() {
-				
+
 		this.setAnimation(dashR);
-		this.addAction(Actions.moveTo(Parametros.playerX+300, Parametros.playerY, 0.5f));
-		controles=false;
-		
+		this.setPosition(this.getX()-100, this.getY());
+		this.addAction(Actions.moveTo(Parametros.playerX + 400, Parametros.playerY, 0.8f));
+		controles = false;
+		tiempoDash = 0;
+
 	}
 
 	private void dashL() {
 
 		this.setAnimation(dashL);
-		this.addAction(Actions.moveTo(Parametros.playerX - 300, Parametros.playerY, 0.5f));
+		this.addAction(Actions.moveTo(Parametros.playerX - 400, Parametros.playerY, 0.8f));
 		controles = false;
+		tiempoDash = 0;
 
 	}
 
@@ -349,8 +367,8 @@ public class Player extends Element {
 		shootDiagonalRunL = this.loadFullAnimation("Cuphead/Run/Shooting/Diagonal Up/shootDiagonalRunL.png", 16, 1,
 				0.1f, true);
 
-		dashL = this.loadFullAnimation("Cuphead/Dash/Ground/dashGL.png", 8, 1, 0.1f, false);
-		dashR = this.loadFullAnimation("Cuphead/Dash/Ground/dashGR.png", 8, 1, 0.1f, false);
+		dashL = this.loadFullAnimation("Cuphead/Dash/Ground/dashGL.png", 8, 1, 0.1f, true);
+		dashR = this.loadFullAnimation("Cuphead/Dash/Ground/dashGR.png", 8, 1, 0.1f, true);
 
 	}
 

@@ -18,10 +18,9 @@ public final class ResourceManager {
 
 		
 		//mapas
-		assets.setLoader(TiledMap.class, new TmxMapLoader());
-		assets.load("maps/tutorial/mapatuto.tmx", TiledMap.class);
-		
-		
+		//assets.setLoader(TiledMap.class, new TmxMapLoader());
+		//assets.load("maps/tutorial/mapaTutorial.tmx", TiledMap.class);
+				
 		assets.load("Cuphead/Idle/spriteIdleL.png", Texture.class);
 		assets.load("Cuphead/Idle/spriteIdleR.png", Texture.class);
 		assets.load("Cuphead/Run/Normal/spriteRunL.png", Texture.class);

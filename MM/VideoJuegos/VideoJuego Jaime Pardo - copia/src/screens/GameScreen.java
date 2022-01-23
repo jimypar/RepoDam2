@@ -40,37 +40,37 @@ public class GameScreen extends BScreen {
 		super(game);
 		mainStage = new Stage();
 
-		float inicioX;
-		float inicioY;
-		map = ResourceManager.getMap("maps/mapa0.tmx");
-
-		MapProperties properties = map.getProperties();
-
-		tileWidth = properties.get("tilewidth", Integer.class);
-		tileHeight = properties.get("tileheight", Integer.class);
-		mapWidthInTiles = properties.get("width", Integer.class);
-		mapHeightInTiles = properties.get("height", Integer.class);
-		mapWidthInPixels = tileWidth * mapWidthInTiles;
-		mapHeightInPixels = tileHeight * mapHeightInTiles;
-
-		renderer = new OrthogonalTiledMapRenderer(map, mainStage.getBatch());
-
-		ArrayList<MapObject> elementos = getRectangleList("Inicio");
-		MapProperties props;
-		props = elementos.get(0).getProperties();
-		inicioX = (float) props.get("x");
-		inicioY = (float) props.get("y");
-
-		elementos = getRectangleList("Solid");
-
-		Solid solido;
-		suelo = new Array<Solid>();
-		for (MapObject solid : elementos) {
-			props = solid.getProperties();
-			solido = new Solid((float) props.get("x"), (float) props.get("y"), mainStage, (float) props.get("width"),
-					(float) props.get("height"));
-			suelo.add(solido);
-		}
+//		float inicioX;
+//		float inicioY;
+//		map = ResourceManager.getMap("maps/tutorial/mapaTutorial.tmx");
+//
+//		MapProperties properties = map.getProperties();
+//
+//		tileWidth = properties.get("tilewidth", Integer.class);
+//		tileHeight = properties.get("tileheight", Integer.class);
+//		mapWidthInTiles = properties.get("width", Integer.class);
+//		mapHeightInTiles = properties.get("height", Integer.class);
+//		mapWidthInPixels = tileWidth * mapWidthInTiles;
+//		mapHeightInPixels = tileHeight * mapHeightInTiles;
+//
+//		renderer = new OrthogonalTiledMapRenderer(map, mainStage.getBatch());
+//
+//		ArrayList<MapObject> elementos = getRectangleList("Inicio");
+//		MapProperties props;
+//		props = elementos.get(0).getProperties();
+//		inicioX = (float) props.get("x");
+//		inicioY = (float) props.get("y");
+//
+//		elementos = getRectangleList("Solid");
+//
+//		Solid solido;
+//		suelo = new Array<Solid>();
+//		for (MapObject solid : elementos) {
+//			props = solid.getProperties();
+//			solido = new Solid((float) props.get("x"), (float) props.get("y"), mainStage, (float) props.get("width"),
+//					(float) props.get("height"));
+//			suelo.add(solido);
+//		}
 
 		backgroundTexture = new Texture(Gdx.files.internal("maps/background1.png"));
 
@@ -123,20 +123,20 @@ public class GameScreen extends BScreen {
 		}
 		
 		
-		for (Solid b : suelo) {
-
-			if (b.getEnabled() && b.overlaps(player)) {
-				player.preventOverlap(b);
-
-				// b.preventOverlap(player);
-
-			}
-
-			if (player.pies.overlaps(b)) {
-				player.tocoSuelo = true;
-			}
-
-		}
+//		for (Solid b : suelo) {
+//
+//			if (b.getEnabled() && b.overlaps(player)) {
+//				player.preventOverlap(b);
+//
+//				// b.preventOverlap(player);
+//
+//			}
+//
+//			if (player.pies.overlaps(b)) {
+//				player.tocoSuelo = true;
+//			}
+//
+//		}
 
 	}
 

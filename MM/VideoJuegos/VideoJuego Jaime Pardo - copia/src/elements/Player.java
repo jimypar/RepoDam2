@@ -35,9 +35,9 @@ public class Player extends Element {
 
 	// Balas
 	private Array<Bala> balas;
-	private int totalBalas = 15;
+	private int totalBalas = 25;
 	private int balaActual = 0;
-	private float cooldownDisparo = 0.25f;
+	private float cooldownDisparo = 0.12f;
 	private float tiempoDisparo = cooldownDisparo * 2;
 
 	public Element pies;
@@ -84,6 +84,9 @@ public class Player extends Element {
 	}
 
 	private void controles() {
+		
+
+
 
 //		MOVIMIENTO IZQUIERDA DERECHA
 
@@ -111,11 +114,7 @@ public class Player extends Element {
 			this.velocity.set(walkingSpeed, 0);
 		}
 
-//		SALTO
 
-		if (Gdx.input.isKeyPressed(Keys.SPACE) && tocoSuelo) {
-			salta();
-		}
 
 //		DASH
 
@@ -173,9 +172,6 @@ public class Player extends Element {
 			this.acceleration.add(-walkingSpeed, 0);
 		}
 
-		if (Gdx.input.isKeyPressed(Keys.ENTER) && tiempoDisparo >= cooldownDisparo) {
-			dispara();
-		}
 
 		if (Gdx.input.isKeyPressed(Keys.ENTER) && Gdx.input.isKeyPressed(Keys.D) && tocoSuelo) {
 			direccion = true;
@@ -196,6 +192,8 @@ public class Player extends Element {
 			this.setAnimation(shootDiagonalRunR);
 			this.acceleration.add(walkingSpeed, 0);
 		}
+		
+	
 
 //	DISPAROS ESTATICO
 
@@ -235,7 +233,6 @@ public class Player extends Element {
 
 		if (Gdx.input.isKeyPressed(Keys.ENTER) && Gdx.input.isKeyPressed(Keys.S) && Gdx.input.isKeyPressed(Keys.D)
 				&& tocoSuelo) {
-
 			this.setAnimation(shootDuckR);
 			this.velocity.set(0, 0);
 		}
@@ -245,6 +242,21 @@ public class Player extends Element {
 			this.setAnimation(shootDuckL);
 			this.velocity.set(0, 0);
 		}
+		
+		//DISPARO
+		
+		if (Gdx.input.isKeyPressed(Keys.ENTER) && tiempoDisparo >= cooldownDisparo) {
+			dispara();
+		}
+		
+//		SALTO
+
+		if (Gdx.input.isKeyPressed(Keys.SPACE) && tocoSuelo) {
+			salta();
+		}
+		
+		
+		
 
 	}
 

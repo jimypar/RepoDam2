@@ -17,10 +17,10 @@ public class Parametros {
  
  
  //public static float zoom=0.24f;
- public static float zoom=0.75f;
+ public static float zoom=0.85f;
  
  //variables de juego
- public static int gravedad= -1000;
+ public static int gravedad= -3000;
 
  public static float playerX = 0;
  public static float playerY = 0;
