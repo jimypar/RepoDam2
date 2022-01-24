@@ -19,6 +19,7 @@ import com.badlogic.gdx.utils.Array;
 
 import elements.Bala;
 import elements.Coin;
+import elements.Element;
 import elements.ImagenCapa;
 import elements.Marker;
 import elements.Player;
@@ -48,6 +49,7 @@ public class GameScreen extends BScreen {
 	private float inicioY;
 	
 	private Coin coin;
+	public Element door;
 
 	public GameScreen(Demo game) {
 
@@ -155,6 +157,10 @@ public class GameScreen extends BScreen {
 			}
 		}
 		
+		if (player.overlaps(door)) {
+			player.door=true;
+		}
+		
 
 	}
 
@@ -209,6 +215,11 @@ public class GameScreen extends BScreen {
 		elementos = getRectangleList("Coin");
 		props = elementos.get(0).getProperties();
 		coin = new Coin((float) props.get("x"), (float) props.get("y"), mainStage);
+		
+		elementos = getRectangleList("Door");
+		props = elementos.get(0).getProperties();
+		door = new Element((float) props.get("x"),(float) props.get("y"), mainStage,(float) props.get("width"),(float) props.get("height"));
+		door.setRectangle();
 
 		elementos = getRectangleList("Solid");
 

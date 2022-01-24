@@ -24,8 +24,8 @@ public final class ResourceManager {
         //assets.load("maps/Images/arbol.png", Texture.class);
         assets.load("maps/images/barrel.png", Texture.class);
         //enemigos
-        //assets.load("enemys/blob.png",Texture.class);
-        //assets.load("enemys/blob_jump.png",Texture.class);
+        assets.load("enemy/blob.png",Texture.class);
+        assets.load("enemy/blob_jump.png",Texture.class);
         //jugador
         assets.load("player/espaldaWalk.png",Texture.class);
         assets.load("player/grande.png",Texture.class);
@@ -33,6 +33,7 @@ public final class ResourceManager {
         assets.load("player/frenteGrande.png",Texture.class);
         assets.load("player/izquieredawalk.png",Texture.class);
         assets.load("player/derechawalk.png",Texture.class);
+        assets.load("player/Bola.png",Texture.class);
         
         //objetos
         //assets.load("objects/bomb.png",Texture.class);

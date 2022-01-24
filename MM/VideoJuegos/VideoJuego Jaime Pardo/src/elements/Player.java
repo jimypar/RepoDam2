@@ -1,5 +1,7 @@
 package elements;
 
+
+
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input.Keys;
 import com.badlogic.gdx.graphics.g2d.*;
@@ -51,6 +53,7 @@ public class Player extends Element {
 
 	private float walkingSpeed = 500;
 	private float jumpSpeed = 500000;
+	public boolean door;
 
 	public Player(float x, float y, Stage s) {
 		super(x, y, s);
@@ -271,6 +274,14 @@ public class Player extends Element {
 
 		if (Gdx.input.isKeyPressed(Keys.SPACE) && tocoSuelo) {
 			salta();
+		}
+		
+//		ENTRAR
+		
+		if (Gdx.input.isKeyJustPressed(Keys.E)) {
+			if (door) {
+				System.exit(0);
+			}
 		}
 
 	}

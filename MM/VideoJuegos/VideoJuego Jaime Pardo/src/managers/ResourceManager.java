@@ -17,10 +17,13 @@ public final class ResourceManager {
 	public static void loadAllResources(){
 
 		
+		
 		//mapas
 		assets.setLoader(TiledMap.class, new TmxMapLoader());
 		assets.load("maps/tutorial/tutorial.tmx", TiledMap.class);
-				
+		
+		assets.load("Reloj/loadingClock.png", Texture.class);
+		
 		assets.load("Cuphead/Idle/spriteIdleL.png", Texture.class);
 		assets.load("Cuphead/Idle/spriteIdleR.png", Texture.class);
 		assets.load("Cuphead/Run/Normal/spriteRunL.png", Texture.class);

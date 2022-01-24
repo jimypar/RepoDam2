@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.5" tiledversion="1.7.2" orientation="orthogonal" renderorder="right-down" width="80" height="15" tilewidth="100" tileheight="100" infinite="0" nextlayerid="11" nextobjectid="100">
+<map version="1.5" tiledversion="1.7.2" orientation="orthogonal" renderorder="right-down" width="80" height="15" tilewidth="100" tileheight="100" infinite="0" nextlayerid="12" nextobjectid="102">
  <tileset firstgid="1" source="tutorial_cube.tsx"/>
  <tileset firstgid="2" source="tutorial_room_back_layer_0001.tsx"/>
  <tileset firstgid="52" name="tutorial_arrow_jump" tilewidth="115" tileheight="79" tilecount="1" columns="0">
@@ -274,6 +274,13 @@
   <object id="92" x="5993.3" y="1167.39" width="72" height="144">
    <properties>
     <property name="name" value="Coin"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup id="11" name="Puerta">
+  <object id="100" x="6596.97" y="1196.97" width="154.545" height="221.212">
+   <properties>
+    <property name="name" value="Door"/>
    </properties>
   </object>
  </objectgroup>

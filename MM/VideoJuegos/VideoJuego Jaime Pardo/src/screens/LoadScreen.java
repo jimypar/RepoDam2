@@ -21,8 +21,11 @@ public class LoadScreen extends BScreen{
 	@Override
 	public void render(float delta) {
 		super.render(delta);
-		if(ResourceManager.update()) {
 		
+		
+		
+		if(ResourceManager.update()) {
+			
 			game.setScreen(new GameScreen(game));
 			
 		}

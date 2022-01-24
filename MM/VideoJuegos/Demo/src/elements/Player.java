@@ -5,6 +5,7 @@ import com.badlogic.gdx.Input.Keys;
 import com.badlogic.gdx.graphics.g2d.Animation;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.badlogic.gdx.scenes.scene2d.Stage;
+import com.badlogic.gdx.utils.Array;
 
 import game.Parametros;
 
@@ -13,6 +14,18 @@ private Animation<TextureRegion> frente;
 private Animation<TextureRegion> espalda;
 private Animation<TextureRegion> drcha;
 private Animation<TextureRegion> izqda;
+private Array<Bala> balas;
+
+//gestión de vectores
+private int totalBalas=10;
+private int balaActual=0;
+
+
+
+//gestión de tiempos
+private float cooldownDisparo=0.5f;
+private float tiempoDisparo=cooldownDisparo*2;
+
 public Element pies;
 public boolean tocoSuelo;
 
@@ -35,6 +48,17 @@ private float walkingSpeed=150;
 		
 		pies=new Element(0, 0, s,this.getWidth() ,this.getHeight()/10 );
 		pies.setRectangle();
+		
+		
+		
+		
+		balas=new Array<Bala>();
+		for(int i=0;i<this.totalBalas;i++) {
+			balas.add(new Bala(0, 0, s));
+			
+			
+		}
+		
 	}
 
 
@@ -50,6 +74,8 @@ private float walkingSpeed=150;
 		this.acceleration.add(0,Parametros.gravedad);
 		this.applyPhysics(delta);
 		colocarPies();
+		System.out.println(this.velocity.y);
+		this.tiempoDisparo+=delta;
 		
 	}
 	
@@ -77,12 +103,18 @@ private float walkingSpeed=150;
 		
 	}
 	
+	
+	if(Gdx.input.isKeyPressed(Keys.Z) && tiempoDisparo>=cooldownDisparo ) {
+		dispara();
+		
+	}
+	
 		
 	}
 	
 	
 	
-	private void colocarPies() {
+	public void colocarPies() {
 		this.pies.setPosition(this.getX(), this.getY());
 		
 		
@@ -91,6 +123,14 @@ private float walkingSpeed=150;
 	private void salta() {
 		this.acceleration.add(0,20000);
 		this.tocoSuelo=false;
+		
+		
+	}
+	
+	private void dispara() {
+		balas.get(this.balaActual).disparar();
+		balaActual=(balaActual+1)%this.totalBalas;
+		tiempoDisparo=0;
 		
 		
 	}

@@ -1,0 +1,9 @@
+usuarios (#id, login, password, nif, email, nombre, direccion,
+          telefono)
+secciones (#id, codigo, nombre, descripcion, fecha_creacion)
+carritos (#id, fecha_creacion, precio_total, finalizado, 
+          -id_usuario)
+productos (#id, codigo, nombre, descripcion, precio)
+usuario_seccion (#(-id_usuario, -id_seccion), fecha)
+seccion_producto (#(-id_seccion, -id_producto))
+carrito_producto (#(-id_carrito, -id_producto), cantidad, precio)
