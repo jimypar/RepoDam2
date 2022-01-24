@@ -21,7 +21,7 @@ import com.badlogic.gdx.utils.Array;
 
 import game.Parametros;
 import managers.ResourceManager;
-import screens.GameScreen;
+import screens.TutorialScreen;
 
 public class Element extends Actor{
 	protected Animation<TextureRegion> animation;

@@ -1,154 +1,158 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.5" tiledversion="1.7.2" orientation="orthogonal" renderorder="right-down" width="80" height="15" tilewidth="100" tileheight="100" infinite="0" nextlayerid="12" nextobjectid="102">
- <tileset firstgid="1" source="tutorial_cube.tsx"/>
- <tileset firstgid="2" source="tutorial_room_back_layer_0001.tsx"/>
- <tileset firstgid="52" name="tutorial_arrow_jump" tilewidth="115" tileheight="79" tilecount="1" columns="0">
+<map version="1.5" tiledversion="1.7.2" orientation="orthogonal" renderorder="right-down" width="80" height="15" tilewidth="100" tileheight="100" infinite="0" nextlayerid="12" nextobjectid="107">
+ <tileset firstgid="1" source="tutorial_room_back_layer_0001.tsx"/>
+ <tileset firstgid="51" name="tutorial_arrow_jump" tilewidth="115" tileheight="79" tilecount="1" columns="0">
   <grid orientation="orthogonal" width="1" height="1"/>
   <tile id="0">
    <image width="115" height="79" source="assets/Arrows/tutorial_arrow_jump.png"/>
   </tile>
  </tileset>
- <tileset firstgid="53" name="tutorial_arrow_duck" tilewidth="275" tileheight="163" tilecount="1" columns="0">
+ <tileset firstgid="52" name="tutorial_arrow_duck" tilewidth="275" tileheight="163" tilecount="1" columns="0">
   <grid orientation="orthogonal" width="1" height="1"/>
   <tile id="0">
    <image width="275" height="163" source="assets/Arrows/tutorial_arrow_duck.png"/>
   </tile>
  </tileset>
- <tileset firstgid="54" name="tutorial_cylinder_1" tilewidth="224" tileheight="393" tilecount="1" columns="0">
+ <tileset firstgid="53" name="tutorial_cylinder_1" tilewidth="224" tileheight="393" tilecount="1" columns="0">
   <grid orientation="orthogonal" width="1" height="1"/>
   <tile id="0">
-   <image width="224" height="393" source="../Tutorial (First)/Shapes and Exit Door/tutorial_cylinder_1.png"/>
+   <image width="224" height="393" source="assets/Shapes and Exit Door/tutorial_cylinder_1.png"/>
   </tile>
  </tileset>
- <tileset firstgid="55" name="tutorial_arrow_dash" tilewidth="158" tileheight="33" tilecount="1" columns="0">
+ <tileset firstgid="54" name="tutorial_arrow_dash" tilewidth="158" tileheight="33" tilecount="1" columns="0">
   <grid orientation="orthogonal" width="1" height="1"/>
   <tile id="0">
-   <image width="158" height="33" source="../Tutorial (First)/Arrows/tutorial_arrow_dash.png"/>
+   <image width="158" height="33" source="assets/Arrows/tutorial_arrow_dash.png"/>
   </tile>
  </tileset>
- <tileset firstgid="56" name="tutorial_plynth_after_pyramid_is_destroyed" tilewidth="288" tileheight="321" tilecount="1" columns="0">
+ <tileset firstgid="55" name="tutorial_plynth_after_pyramid_is_destroyed" tilewidth="288" tileheight="321" tilecount="1" columns="0">
   <grid orientation="orthogonal" width="1" height="1"/>
   <tile id="0">
    <image width="288" height="321" source="assets/Shapes and Exit Door/tutorial_plynth_after_pyramid_is_destroyed.png"/>
   </tile>
  </tileset>
- <tileset firstgid="57" name="tutorial_plynth_before_pyramid_is_destroyed" tilewidth="288" tileheight="294" tilecount="1" columns="0">
+ <tileset firstgid="56" name="tutorial_plynth_before_pyramid_is_destroyed" tilewidth="288" tileheight="294" tilecount="1" columns="0">
   <grid orientation="orthogonal" width="1" height="1"/>
   <tile id="0">
    <image width="288" height="294" source="assets/Shapes and Exit Door/tutorial_plynth_before_pyramid_is_destroyed.png"/>
   </tile>
  </tileset>
- <tileset firstgid="58" name="tutorial_pyramid_topper" tilewidth="226" tileheight="190" tilecount="1" columns="0">
+ <tileset firstgid="57" name="tutorial_pyramid_topper" tilewidth="226" tileheight="190" tilecount="1" columns="0">
   <grid orientation="orthogonal" width="1" height="1"/>
   <tile id="0">
    <image width="226" height="190" source="assets/Shapes and Exit Door/tutorial_pyramid_topper.png"/>
   </tile>
  </tileset>
- <tileset firstgid="59" name="tutorial_exit_door" tilewidth="320" tileheight="273" tilecount="1" columns="0">
+ <tileset firstgid="58" name="tutorial_exit_door" tilewidth="320" tileheight="273" tilecount="1" columns="0">
   <grid orientation="orthogonal" width="1" height="1"/>
   <tile id="0">
    <image width="320" height="273" source="assets/Shapes and Exit Door/tutorial_exit_door.png"/>
   </tile>
  </tileset>
- <tileset firstgid="60" name="tutorial_descend_arrow" tilewidth="19" tileheight="24" tilecount="1" columns="0">
+ <tileset firstgid="59" name="tutorial_descend_arrow" tilewidth="19" tileheight="24" tilecount="1" columns="0">
   <grid orientation="orthogonal" width="1" height="1"/>
   <tile id="0">
    <image width="19" height="24" source="assets/Arrows/tutorial_descend_arrow.png"/>
   </tile>
  </tileset>
- <tileset firstgid="61" name="tutorial_target_0001" tilewidth="76" tileheight="87" tilecount="1" columns="0">
+ <tileset firstgid="60" name="tutorial_target_0001" tilewidth="76" tileheight="87" tilecount="1" columns="0">
   <grid orientation="orthogonal" width="1" height="1"/>
   <tile id="0">
    <image width="76" height="87" source="assets/Signs/tutorial_target_0001.png"/>
   </tile>
  </tileset>
- <tileset firstgid="62" source="../tutorial_cube.tsx"/>
- <tileset firstgid="63" name="tutorial_arrow_lock" tilewidth="263" tileheight="294" tilecount="1" columns="0">
+ <tileset firstgid="61" name="tutorial_arrow_lock" tilewidth="263" tileheight="294" tilecount="1" columns="0">
   <grid orientation="orthogonal" width="1" height="1"/>
   <tile id="0">
    <image width="263" height="294" source="assets/Arrows/tutorial_arrow_lock.png"/>
   </tile>
  </tileset>
- <tileset firstgid="64" name="TUTORIAL" tilewidth="566" tileheight="159" tilecount="1" columns="0">
+ <tileset firstgid="62" name="TUTORIAL" tilewidth="566" tileheight="159" tilecount="1" columns="0">
   <grid orientation="orthogonal" width="1" height="1"/>
   <tile id="0">
    <image width="566" height="159" source="assets/Text/TUTORIAL.png"/>
   </tile>
  </tileset>
- <tileset firstgid="65" name="agachar" tilewidth="564" tileheight="225" tilecount="1" columns="0">
+ <tileset firstgid="63" name="agachar" tilewidth="564" tileheight="225" tilecount="1" columns="0">
   <grid orientation="orthogonal" width="1" height="1"/>
   <tile id="0">
    <image width="564" height="225" source="assets/Text/agachar.png"/>
   </tile>
  </tileset>
- <tileset firstgid="66" name="cointxt" tilewidth="662" tileheight="278" tilecount="1" columns="0">
+ <tileset firstgid="64" name="cointxt" tilewidth="662" tileheight="278" tilecount="1" columns="0">
   <grid orientation="orthogonal" width="1" height="1"/>
   <tile id="0">
    <image width="662" height="278" source="assets/Text/cointxt.png"/>
   </tile>
  </tileset>
- <tileset firstgid="67" name="dash" tilewidth="610" tileheight="206" tilecount="1" columns="0">
+ <tileset firstgid="65" name="dash" tilewidth="610" tileheight="206" tilecount="1" columns="0">
   <grid orientation="orthogonal" width="1" height="1"/>
   <tile id="0">
    <image width="610" height="206" source="assets/Text/dash.png"/>
   </tile>
  </tileset>
- <tileset firstgid="68" name="saltar" tilewidth="606" tileheight="216" tilecount="1" columns="0">
+ <tileset firstgid="66" name="saltar" tilewidth="606" tileheight="216" tilecount="1" columns="0">
   <grid orientation="orthogonal" width="1" height="1"/>
   <tile id="0">
    <image width="606" height="216" source="assets/Text/saltar.png"/>
   </tile>
  </tileset>
- <tileset firstgid="69" name="shoot" tilewidth="720" tileheight="275" tilecount="1" columns="0">
+ <tileset firstgid="67" name="shoot" tilewidth="720" tileheight="275" tilecount="1" columns="0">
   <grid orientation="orthogonal" width="1" height="1"/>
   <tile id="0">
    <image width="720" height="275" source="assets/Text/shoot.png"/>
   </tile>
  </tileset>
- <tileset firstgid="70" name="shoot2" tilewidth="593" tileheight="262" tilecount="1" columns="0">
+ <tileset firstgid="68" name="shoot2" tilewidth="593" tileheight="262" tilecount="1" columns="0">
   <grid orientation="orthogonal" width="1" height="1"/>
   <tile id="0">
    <image width="593" height="262" source="assets/Text/shoot2.png"/>
   </tile>
  </tileset>
+ <tileset firstgid="69" name="tutorial_cube" tilewidth="224" tileheight="192" tilecount="1" columns="0">
+  <grid orientation="orthogonal" width="1" height="1"/>
+  <tile id="0">
+   <image width="224" height="192" source="assets/Shapes and Exit Door/tutorial_cube.png"/>
+  </tile>
+ </tileset>
  <layer id="1" name="Fondo" width="80" height="15">
   <data encoding="csv">
-29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,
-29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,
-29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,
-29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,
-29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,
-29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,
-29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,
-29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,
-29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,
-29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,
-29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,
-29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,
-29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,
-29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,
-29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29
+28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,
+28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,
+28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,
+28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,
+28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,
+28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,
+28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,
+28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,
+28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,
+28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,
+28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,
+28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,
+28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,
+28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,
+28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28
 </data>
  </layer>
  <objectgroup id="3" name="Imagenes">
-  <object id="15" gid="1" x="2658" y="1435" width="188" height="160"/>
-  <object id="18" gid="52" x="2544" y="1283" width="122" height="113"/>
-  <object id="19" gid="53" x="2018" y="1358" width="275" height="163"/>
-  <object id="24" gid="54" x="3043" y="1460" width="224" height="353"/>
-  <object id="25" gid="55" x="2942" y="1091" width="158" height="33"/>
-  <object id="40" gid="1" x="5943.79" y="1448.64" width="188" height="160"/>
-  <object id="44" gid="56" x="5334.57" y="1463" width="214.43" height="239"/>
-  <object id="73" gid="62" x="4461.24" y="1461.82" width="270" height="224"/>
-  <object id="75" gid="59" x="6519" y="1455.5" width="320" height="273"/>
-  <object id="80" gid="63" x="5201" y="1327" width="183" height="189"/>
+  <object id="18" gid="51" x="2590.67" y="1284.33" width="122" height="113"/>
+  <object id="19" gid="52" x="2018" y="1358" width="275" height="163"/>
+  <object id="24" gid="53" x="3043" y="1460" width="224" height="353"/>
+  <object id="25" gid="54" x="2942" y="1091" width="158" height="33"/>
+  <object id="44" gid="55" x="5334.57" y="1463" width="214.43" height="239"/>
+  <object id="75" gid="58" x="6519" y="1455.5" width="320" height="273"/>
+  <object id="80" gid="61" x="5201" y="1327" width="183" height="189"/>
+  <object id="104" gid="69" x="2684" y="1470.67" width="224" height="192"/>
+  <object id="105" gid="69" x="4482.67" y="1444" width="224" height="192"/>
+  <object id="106" gid="69" x="5929.33" y="1489.33" width="224" height="192"/>
  </objectgroup>
  <objectgroup id="7" name="Imagen Borrable">
-  <object id="51" name="imagen2" gid="57" x="5335" y="1462.33" width="214" height="218.458"/>
-  <object id="52" name="imagen2" gid="58" x="5344" y="1284.33" width="161.768" height="136"/>
-  <object id="54" name="imagen2" gid="60" x="5396.66" y="1060" width="49" height="53.3333"/>
-  <object id="55" name="imagen2" gid="61" x="5388.33" y="1160" width="76" height="87"/>
-  <object id="68" name="imagen1" gid="61" x="4547.24" y="1276.82" width="76" height="87"/>
-  <object id="72" name="imagen1" gid="54" x="4269.24" y="1471.15" width="224" height="393"/>
+  <object id="51" name="imagen2" gid="56" x="5335" y="1462.33" width="214" height="218.458"/>
+  <object id="52" name="imagen2" gid="57" x="5344" y="1284.33" width="161.768" height="136"/>
+  <object id="54" name="imagen2" gid="59" x="5396.66" y="1060" width="49" height="53.3333"/>
+  <object id="55" name="imagen2" gid="60" x="5388.33" y="1160" width="76" height="87"/>
+  <object id="68" name="imagen1" gid="60" x="4547.24" y="1276.82" width="76" height="87"/>
+  <object id="72" name="imagen1" gid="53" x="4269.24" y="1471.15" width="224" height="393"/>
  </objectgroup>
  <objectgroup id="8" name="Marker" offsetx="-8" offsety="-12">
   <object id="58" x="5415" y="1092" width="26" height="74">
@@ -163,12 +167,12 @@
   </object>
  </objectgroup>
  <objectgroup id="2" name="Solid">
-  <object id="10" x="1003" y="1420" width="5997.09" height="80">
+  <object id="10" x="578.758" y="1420" width="6724.36" height="80">
    <properties>
     <property name="name" value="Solid"/>
    </properties>
   </object>
-  <object id="16" x="2675" y="1304" width="128" height="222">
+  <object id="16" x="2721.67" y="1305.33" width="128" height="222">
    <properties>
     <property name="name" value="Solid"/>
    </properties>
@@ -178,22 +182,22 @@
     <property name="name" value="Solid"/>
    </properties>
   </object>
-  <object id="38" x="6916" y="10" width="88" height="1468">
+  <object id="38" x="7234.18" y="0.909091" width="88" height="1468">
    <properties>
     <property name="name" value="Solid"/>
    </properties>
   </object>
-  <object id="39" x="1000" y="30" width="88" height="1396">
+  <object id="39" x="533.494" y="12.0433" width="92.9524" height="1474.56">
    <properties>
     <property name="name" value="Solid"/>
    </properties>
   </object>
-  <object id="47" x="5971.12" y="1324.91" width="118" height="88">
+  <object id="47" x="5971.12" y="1324.91" width="118" height="162.667">
    <properties>
     <property name="name" value="Solid"/>
    </properties>
   </object>
-  <object id="48" x="5362" y="1262" width="118" height="144">
+  <object id="48" x="5362" y="1262" width="118" height="216">
    <properties>
     <property name="name" value="Solid"/>
    </properties>
@@ -222,27 +226,27 @@
     <property name="name" value="Wall"/>
    </properties>
   </object>
-  <object id="35" x="2664.69" y="1305.42" width="150.617" height="234.16">
+  <object id="35" x="2711.36" y="1306.75" width="150.617" height="234.16">
    <properties>
     <property name="name" value="Wall"/>
    </properties>
   </object>
-  <object id="36" x="6899" y="0" width="28" height="1474">
+  <object id="36" x="7217.18" y="-9.09091" width="28" height="1474">
    <properties>
     <property name="name" value="Wall"/>
    </properties>
   </object>
-  <object id="37" x="1082" y="26" width="20" height="1396">
+  <object id="37" x="620.108" y="7.81818" width="21.1255" height="1474.56">
    <properties>
     <property name="name" value="Wall"/>
    </properties>
   </object>
-  <object id="45" x="6077.81" y="1333.33" width="26.6173" height="79.16">
+  <object id="45" x="6077.81" y="1333.33" width="26.6173" height="112.493">
    <properties>
     <property name="name" value="Wall"/>
    </properties>
   </object>
-  <object id="46" x="5953.81" y="1333.33" width="26.6173" height="79.16">
+  <object id="46" x="5953.81" y="1333.33" width="26.6173" height="132.493">
    <properties>
     <property name="name" value="Wall"/>
    </properties>
@@ -252,19 +256,19 @@
     <property name="name" value="Wall"/>
    </properties>
   </object>
-  <object id="50" x="5465.69" y="1264.42" width="26.6173" height="143.16">
+  <object id="50" x="5465.69" y="1264.42" width="26.6173" height="208.493">
    <properties>
     <property name="name" value="Wall"/>
    </properties>
   </object>
-  <object id="79" x="5354.69" y="1259.75" width="26.6173" height="145.827">
+  <object id="79" x="5350.69" y="1266.42" width="26.6173" height="204.494">
    <properties>
     <property name="name" value="Wall"/>
    </properties>
   </object>
  </objectgroup>
  <objectgroup id="4" name="Inicio">
-  <object id="93" x="1354.88" y="1291.52" width="64" height="120">
+  <object id="93" x="1388.21" y="1297.58" width="64" height="120">
    <properties>
     <property name="name" value="Inicio"/>
    </properties>
@@ -285,12 +289,12 @@
   </object>
  </objectgroup>
  <objectgroup id="10" name="Texto">
-  <object id="91" gid="64" x="1122.61" y="1142.97" width="539.667" height="143.333"/>
-  <object id="94" gid="65" x="1987" y="1209" width="322" height="128.457"/>
-  <object id="95" gid="68" x="2433" y="1362" width="218.833" height="78"/>
-  <object id="96" gid="67" x="2726" y="1143" width="304" height="102.662"/>
-  <object id="97" gid="69" x="3475" y="1246" width="494.836" height="189"/>
-  <object id="98" gid="70" x="4831" y="1199" width="366.664" height="162"/>
-  <object id="99" gid="66" x="5816" y="1131" width="409.583" height="172"/>
+  <object id="91" gid="62" x="1100.14" y="1152.06" width="665.171" height="176.666"/>
+  <object id="94" gid="63" x="1987" y="1209" width="322" height="128.457"/>
+  <object id="95" gid="66" x="2479.67" y="1363.33" width="218.833" height="78"/>
+  <object id="96" gid="65" x="2726" y="1143" width="304" height="102.662"/>
+  <object id="97" gid="67" x="3475" y="1246" width="494.836" height="189"/>
+  <object id="98" gid="68" x="4831" y="1199" width="366.664" height="162"/>
+  <object id="99" gid="64" x="5816" y="1131" width="409.583" height="172"/>
  </objectgroup>
 </map>

@@ -1,15 +1,21 @@
 package screens;
 
+import com.badlogic.gdx.scenes.scene2d.Stage;
+
+import elements.Clock;
 import game.Demo;
 import managers.ResourceManager;
 
 public class LoadScreen extends BScreen{
 	private float loadDelay=5;
 	private float loadCount=0;
+	private Clock clock;
 	
 	public LoadScreen(Demo game){
 		
 	super(game);
+		
+	//	clock = new Clock(100,100, loadingStage);
 	//this.resourceManager=new ResourceManager();
 	//game.resourceManager=this.resourceManager;
 	ResourceManager.loadAllResources();
@@ -26,10 +32,9 @@ public class LoadScreen extends BScreen{
 		
 		if(ResourceManager.update()) {
 			
-			game.setScreen(new GameScreen(game));
+			game.setScreen(new TutorialScreen(game));
 			
 		}
-		
 		
 		
 	}

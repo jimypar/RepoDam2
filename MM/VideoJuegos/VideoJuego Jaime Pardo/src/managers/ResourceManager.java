@@ -22,7 +22,7 @@ public final class ResourceManager {
 		assets.setLoader(TiledMap.class, new TmxMapLoader());
 		assets.load("maps/tutorial/tutorial.tmx", TiledMap.class);
 		
-		assets.load("Reloj/loadingClock.png", Texture.class);
+		assets.load("maps/tutorial/assets/Drawing/tutorial_room_front_layer_0001.png", Texture.class);
 		
 		assets.load("Cuphead/Idle/spriteIdleL.png", Texture.class);
 		assets.load("Cuphead/Idle/spriteIdleR.png", Texture.class);
@@ -44,8 +44,7 @@ public final class ResourceManager {
 		assets.load("Cuphead/Run/Shooting/Diagonal Up/shootDiagonalRunR.png", Texture.class);
 		assets.load("Cuphead/Dash/Ground/dashGR.png", Texture.class);
 		assets.load("Cuphead/Dash/Ground/dashGL.png", Texture.class);
-		
-		
+				
 		assets.load("Bullets/bulletsL.png", Texture.class);
 		assets.load("Bullets/bulletsR.png", Texture.class);
 		assets.load("Bullets/bulletsUP.png", Texture.class);
@@ -63,19 +62,12 @@ public final class ResourceManager {
 		//assets.load("maps/00.tmx", TiledMap.class);
 	
         //elementos de mapa
-		assets.load("maps/background1.png", Texture.class);
-		assets.load("maps/images/grass.png", Texture.class);
         //assets.load("maps/Images/arbol.png", Texture.class);
         //assets.load("maps/images/barrel.png", Texture.class);
         //enemigos
         //assets.load("enemys/blob.png",Texture.class);
         //assets.load("enemys/blob_jump.png",Texture.class);
         //jugador
-        assets.load("player/grande.png",Texture.class);
-        assets.load("player/frenteGrande.png",Texture.class);
-        assets.load("player/izquieredawalk.png",Texture.class);
-        assets.load("player/derechawalk.png",Texture.class);
-        
         //objetos
         //assets.load("objects/bomb.png",Texture.class);
         //assets.load("objects/hookl.png",Texture.class);
