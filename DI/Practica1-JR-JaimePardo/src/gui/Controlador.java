@@ -38,6 +38,10 @@ public class Controlador implements ActionListener, ItemListener, WindowListener
         vista.anadirCliente.setActionCommand("anadir");
         vista.btnInforme.addActionListener(listener);
         vista.btnInforme.setActionCommand("informe");
+        vista.btnInformeCiudad.addActionListener(listener);
+        vista.btnInformeCiudad.setActionCommand("informeCiudad");
+        vista.btnInformeOrdenado.addActionListener(listener);
+        vista.btnInformeOrdenado.setActionCommand("informeOrdenado");
     }
 
     private void addWindowListeners(WindowListener listener) {
@@ -68,6 +72,7 @@ public class Controlador implements ActionListener, ItemListener, WindowListener
                                 vista.txtNombre.getText(),
                                 vista.txtApellidos.getText(),
                                 vista.txtDireccion.getText(),
+                                vista.txtCiudad.getText(),
                                 Integer.parseInt(vista.txtTelefono.getText()));
                         refrescarAutores();
                     }
@@ -79,7 +84,13 @@ public class Controlador implements ActionListener, ItemListener, WindowListener
             }
             break;
             case "informe":
-                JasperReport.start();
+                JasperReport.generar("Clientes_Pardo");
+                break;
+            case "informeCiudad":
+                JasperReport.generar("Clientes_PardoCiudad");
+                break;
+            case "informeOrdenado":
+                JasperReport.generar("Clientes_PardoOrdenados");
                 break;
         }
     }
@@ -129,6 +140,7 @@ public class Controlador implements ActionListener, ItemListener, WindowListener
         vista.txtNombre.setText("");
         vista.txtApellidos.setText("");
         vista.txtDireccion.setText("");
+        vista.txtCiudad.setText("");
         vista.txtTelefono.setText("");
     }
 
@@ -137,6 +149,7 @@ public class Controlador implements ActionListener, ItemListener, WindowListener
                 vista.txtNombre.getText().isEmpty() ||
                 vista.txtDireccion.getText().isEmpty() ||
                 vista.txtTelefono.getText().isEmpty()||
+                vista.txtCiudad.getText().isEmpty()||
                 vista.txtDni.getText().isEmpty();
     }
 

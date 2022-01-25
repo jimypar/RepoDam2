@@ -23,7 +23,8 @@
             <rowspec value="center:max(d;4px):noGrow"/>
             <rowspec value="center:34px:noGrow"/>
             <rowspec value="center:35px:noGrow"/>
-            <rowspec value="center:28px:noGrow"/>
+            <rowspec value="center:31px:noGrow"/>
+            <rowspec value="center:max(d;4px):noGrow"/>
             <rowspec value="center:max(d;4px):noGrow"/>
             <rowspec value="top:4dlu:noGrow"/>
             <rowspec value="center:124px:noGrow"/>
@@ -106,7 +107,7 @@
               </component>
               <scrollpane id="23bc7">
                 <constraints>
-                  <grid row="6" column="2" row-span="2" col-span="1" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                  <grid row="7" column="2" row-span="2" col-span="1" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
                   <forms defaultalign-horz="false" defaultalign-vert="false"/>
                 </constraints>
                 <properties/>
@@ -120,7 +121,7 @@
               </scrollpane>
               <component id="b5606" class="javax.swing.JButton" binding="anadirCliente">
                 <constraints>
-                  <grid row="6" column="0" row-span="2" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                  <grid row="7" column="0" row-span="2" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
                   <forms defaultalign-horz="false" defaultalign-vert="false"/>
                 </constraints>
                 <properties>
@@ -129,7 +130,7 @@
               </component>
               <component id="4d290" class="javax.swing.JLabel">
                 <constraints>
-                  <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                  <grid row="5" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                   <forms/>
                 </constraints>
                 <properties>
@@ -138,7 +139,7 @@
               </component>
               <component id="9896a" class="javax.swing.JTextField" binding="txtTelefono">
                 <constraints>
-                  <grid row="4" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                  <grid row="5" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
                     <preferred-size width="150" height="-1"/>
                   </grid>
                   <forms defaultalign-horz="false"/>
@@ -163,10 +164,32 @@
                 </constraints>
                 <properties/>
               </component>
+              <component id="86e6f" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                  <forms/>
+                </constraints>
+                <properties>
+                  <text value="Ciudad"/>
+                </properties>
+              </component>
+              <component id="74636" class="javax.swing.JTextField" binding="txtCiudad">
+                <constraints>
+                  <grid row="4" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                    <preferred-size width="150" height="-1"/>
+                  </grid>
+                  <forms defaultalign-horz="false"/>
+                </constraints>
+                <properties/>
+              </component>
             </children>
           </grid>
           <grid id="2fb85" default-binding="true" layout-manager="FormLayout">
             <rowspec value="center:93px:noGrow"/>
+            <rowspec value="top:4dlu:noGrow"/>
+            <rowspec value="center:94px:noGrow"/>
+            <rowspec value="top:4dlu:noGrow"/>
+            <rowspec value="center:92px:noGrow"/>
             <colspec value="fill:498px:noGrow"/>
             <constraints>
               <tabbedpane title="Informes"/>
@@ -184,8 +207,36 @@
                   <horizontalAlignment value="0"/>
                   <horizontalTextPosition value="10"/>
                   <minimumSize width="300" height="30"/>
-                  <preferredSize width="200" height="50"/>
-                  <text value="Generar Informe"/>
+                  <preferredSize width="300" height="50"/>
+                  <text value="Informe Clientes"/>
+                </properties>
+              </component>
+              <component id="e9e39" class="javax.swing.JButton" binding="btnInformeOrdenado">
+                <constraints>
+                  <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                  <forms defaultalign-horz="false" defaultalign-vert="false"/>
+                </constraints>
+                <properties>
+                  <font size="20"/>
+                  <horizontalAlignment value="0"/>
+                  <horizontalTextPosition value="10"/>
+                  <minimumSize width="300" height="30"/>
+                  <preferredSize width="300" height="50"/>
+                  <text value="Informe Clientes Ordenados"/>
+                </properties>
+              </component>
+              <component id="d7767" class="javax.swing.JButton" binding="btnInformeCiudad">
+                <constraints>
+                  <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                  <forms defaultalign-horz="false" defaultalign-vert="false"/>
+                </constraints>
+                <properties>
+                  <font size="20"/>
+                  <horizontalAlignment value="0"/>
+                  <horizontalTextPosition value="10"/>
+                  <minimumSize width="300" height="30"/>
+                  <preferredSize width="300" height="50"/>
+                  <text value="Informe Clientes Por Ciudad"/>
                 </properties>
               </component>
             </children>

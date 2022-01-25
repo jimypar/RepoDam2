@@ -18,16 +18,14 @@ import javax.swing.*;
 
 public class JasperReport {
 
-    public static void start(){
-        // TODO Auto-generated method stub
-        JasperPrint informeLleno = ReporGenerator.generarInformeClientes();
+    public static void generar(String nombre){
+        JasperPrint informeLleno = ReporGenerator.generarInformeClientes(nombre);
 
         JasperViewer viewer = new JasperViewer(informeLleno,false);
         viewer.setVisible(true);
         try {
-            JasperExportManager.exportReportToPdfFile(informeLleno, "Clientes_Pardo.pdf");
+            JasperExportManager.exportReportToPdfFile(informeLleno, nombre+".pdf");
         } catch (JRException e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
         }
     }
@@ -58,9 +56,11 @@ public class JasperReport {
 
     }
     public static class ReporGenerator {
-        public static final String I_P = "Clientes_Pardo.jasper";
+        public static String I_P;
 
-        public static JasperPrint generarInformeClientes() {
+        public static JasperPrint generarInformeClientes(String nombre) {
+
+            I_P = nombre+".jasper";
 
             try {
                 JasperPrint informeLleno = JasperFillManager.fillReport

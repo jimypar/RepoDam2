@@ -33,7 +33,6 @@ public class Modelo {
             } catch (SQLException | IOException e1) {
                 e1.printStackTrace();
             }
-            e.printStackTrace();
         }
     }
 
@@ -52,9 +51,9 @@ public class Modelo {
     }
 
 
-    void insertarAutor(String dni, String nombre, String apellidos, String direccion, Integer telefono) {
-        String sentenciaSql = "INSERT INTO cliente (dni, nombre, apellidos, direccion, telefono)" +
-                "VALUES (?,?,?,?,?)";
+    void insertarAutor(String dni, String nombre, String apellidos, String direccion, String ciudad, Integer telefono) {
+        String sentenciaSql = "INSERT INTO cliente (dni, nombre, apellidos, direccion, ciudad, telefono)" +
+                "VALUES (?,?,?,?,?,?)";
 
         PreparedStatement sentencia = null;
         try {
@@ -63,7 +62,8 @@ public class Modelo {
             sentencia.setString(2, nombre);
             sentencia.setString(3, apellidos);
             sentencia.setString(4, direccion);
-            sentencia.setInt(5, telefono);
+            sentencia.setString(5, ciudad);
+            sentencia.setInt(6, telefono);
             sentencia.executeUpdate();
         } catch (SQLException e) {
             e.printStackTrace();
@@ -82,7 +82,7 @@ public class Modelo {
 
     ResultSet consultarAutor() throws SQLException {
         String sentenciaSql = "SELECT concat(id_cliente) AS 'ID', concat(dni) AS 'DNI', concat(nombre) AS 'Nombre', concat(apellidos) AS 'Apellidos', " +
-                "concat(direccion) AS 'Direccion', concat(telefono) AS 'Telefono' FROM cliente";
+                "concat(direccion) AS 'Direccion',concat(ciudad) AS 'Ciudad', concat(telefono) AS 'Telefono' FROM cliente";
         PreparedStatement sentencia = null;
         ResultSet resultado = null;
         sentencia = conexion.prepareStatement(sentenciaSql);

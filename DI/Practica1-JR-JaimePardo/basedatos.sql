@@ -8,5 +8,6 @@ dni varchar (50) not null,
 nombre varchar(50) not null,
 apellidos varchar(150) not null,
 direccion varchar (150) not null,
+ciudad varchar (150) not null,
 telefono int not null);
 

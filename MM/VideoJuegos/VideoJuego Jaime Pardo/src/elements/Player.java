@@ -43,7 +43,7 @@ public class Player extends Element {
 	private float cooldownDisparo = 0.12f;
 	private float tiempoDisparo = cooldownDisparo * 2;
 
-	private float cooldownDash = 0.8f;
+	private float cooldownDash = 0.5f;
 	private float tiempoDash = cooldownDash * 3;
 
 	public Element pies;
@@ -216,7 +216,7 @@ public class Player extends Element {
 			this.acceleration.add(walkingSpeed, 0);
 		}
 
-//	DISPAROS ESTATICO
+		//	DISPAROS ESTATICO
 
 		if (Gdx.input.isKeyPressed(Keys.ENTER) && !Gdx.input.isKeyPressed(Keys.D) && !Gdx.input.isKeyPressed(Keys.A)
 				&& tocoSuelo) {
@@ -282,7 +282,7 @@ public class Player extends Element {
 			if (door) {
 				System.exit(0);
 			}
-		}
+		} 
 
 	}
 
@@ -306,7 +306,7 @@ public class Player extends Element {
 	private void dashR() {
 
 		this.setAnimation(dashR);
-		this.setPosition(this.getX()-100, this.getY());
+		this.setPosition(this.getX(), this.getY());
 		this.addAction(Actions.moveTo(Parametros.playerX + 400, Parametros.playerY, 0.8f));
 		controles = false;
 		tiempoDash = 0;
