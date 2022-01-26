@@ -172,10 +172,13 @@ public class GUIusuario extends JFrame implements ActionListener, WindowListener
     //Metodo que recibe los resultados de las consultas.
     public void recibir(String str) {
 
+        //Se crea el GSON
         Gson gson = new Gson();
 
+        //Se crea el mensaje del json
         Mensaje m = gson.fromJson(str, Mensaje.class);
 
+        //Segun el tipo de mensaje se muestran los datos
         if (m.getTipoObjeto()==2){
 
             Jugador j = gson.fromJson(m.getConsulta(), Jugador.class);

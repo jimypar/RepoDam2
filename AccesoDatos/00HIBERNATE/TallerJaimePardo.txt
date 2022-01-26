@@ -1,0 +1,19 @@
+1
+-una factura tiene un cliente
+-un cliente tiene varias facturas
+
+2
+-un cliente tiene un coche
+-un coche tiene un cliente
+
+3
+-un coche tiene varios recambios
+-un recambio tiene un coche
+
+4
+-un coche tiene varios mecanico
+-un mecanico tiene varios coches
+
+5
+-un recambio tiene un distribuidor
+-un distribuidor tiene varios recambios

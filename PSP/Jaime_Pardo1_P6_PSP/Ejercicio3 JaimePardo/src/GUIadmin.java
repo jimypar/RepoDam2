@@ -166,21 +166,25 @@ public class GUIadmin extends JFrame implements ActionListener, WindowListener {
                 estadio.setText("Eliminar estadio");
                 break;
             case "Buscar entrenador":
+                //Se crea un mensaje json que contiene el json de busqueda
                 m = new Mensaje(1,1,busqueda.getText());
                 cliente.enviarMensaje(gson.toJson(m));
                 System.out.println("Consulta: "+busqueda.getText());
                 break;
             case "Buscar jugador":
+                //Se crea un mensaje json que contiene el json de busqueda
                 m = new Mensaje(1,2,busqueda.getText());
                 cliente.enviarMensaje(gson.toJson(m));
                 System.out.println("Consulta: "+busqueda.getText());
                 break;
             case "Buscar estadio":
+                //Se crea un mensaje json que contiene el json de busqueda
                 m = new Mensaje(1,3,busqueda.getText());
                 cliente.enviarMensaje(gson.toJson(m));
                 System.out.println("Consulta: "+busqueda.getText());
                 break;
             case "Modificar entrenador":
+                //Se crea un mensaje json que contiene el json de busqueda
                 Entrenador en = new Entrenador(res1.getText(),res2.getText(),res3.getText());
                 json = gson.toJson(en);
                 m = new Mensaje(2,1,json,busqueda.getText());
@@ -188,6 +192,7 @@ public class GUIadmin extends JFrame implements ActionListener, WindowListener {
                 System.out.println("Consulta: "+busqueda.getText());
                 break;
             case "Modificar jugador":
+                //Se crea un mensaje json que contiene el json de busqueda
                 Jugador j = new Jugador(res1.getText(),res2.getText(),res3.getText(),res4.getText());
                 json = gson.toJson(j);
                 m = new Mensaje(2,2,json,busqueda.getText());
@@ -195,6 +200,7 @@ public class GUIadmin extends JFrame implements ActionListener, WindowListener {
                 System.out.println("Consulta: "+busqueda.getText());
                 break;
             case "Modificar estadio":
+                //Se crea un mensaje json que contiene el json de busqueda
                 Estadio es = new Estadio(res1.getText(),res2.getText());
                 json = gson.toJson(es);
                 m = new Mensaje(2,3,json,busqueda.getText());
@@ -202,16 +208,19 @@ public class GUIadmin extends JFrame implements ActionListener, WindowListener {
                 System.out.println("Consulta: "+busqueda.getText());
                 break;
             case "Eliminar entrenador":
+                //Se crea un mensaje json que contiene el json de busqueda
                 m = new Mensaje(3,1,busqueda.getText());
                 cliente.enviarMensaje(gson.toJson(m));
                 System.out.println("Consulta: "+busqueda.getText());
                 break;
             case "Eliminar jugador":
+                //Se crea un mensaje json que contiene el json de busqueda
                 m = new Mensaje(3,2,busqueda.getText());
                 cliente.enviarMensaje(gson.toJson(m));
                 System.out.println("Consulta: "+busqueda.getText());
                 break;
             case "Eliminar estadio":
+                //Se crea un mensaje json que contiene el json de busqueda
                 m = new Mensaje(3,3,busqueda.getText());
                 cliente.enviarMensaje(gson.toJson(m));
                 System.out.println("Consulta: "+busqueda.getText());
@@ -223,10 +232,13 @@ public class GUIadmin extends JFrame implements ActionListener, WindowListener {
     //Metodo que recibe los resultados de las consultas.
     public void recibir(String str) {
 
+        //Se crea el GSON
         Gson gson = new Gson();
 
+        //Se crea un mensaje con el json recibido
         Mensaje m = gson.fromJson(str, Mensaje.class);
 
+        //Segun los datos del mensaje se muestra los datos
         if (m.getTipoObjeto()==2){
 
             Jugador j = gson.fromJson(m.getConsulta(), Jugador.class);

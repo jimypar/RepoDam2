@@ -3,6 +3,7 @@ package elements;
 
 
 import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.Input;
 import com.badlogic.gdx.Input.Keys;
 import com.badlogic.gdx.graphics.g2d.*;
 import com.badlogic.gdx.graphics.g2d.Animation.PlayMode;
@@ -283,7 +284,6 @@ public class Player extends Element {
 				System.exit(0);
 			}
 		} 
-
 	}
 
 	private void colocarPies() {

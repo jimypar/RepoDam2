@@ -149,8 +149,10 @@ public class Servidor {
         //Se instancia el objeto GSON
         Gson gson = new Gson();
 
+        //Se crea el mensaje segun el json recibido
         Mensaje m = gson.fromJson(mensaje, Mensaje.class);
 
+        //Segun el mensaje que se recibe se realiza una consulta y se devuelve el JSON
         try {
             switch (m.getTipoconsulta()){
                 case 1:
