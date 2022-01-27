@@ -306,6 +306,7 @@ public class Player extends Element {
 	private void dashR() {
 
 		this.setAnimation(dashR);
+		
 		this.setPosition(this.getX(), this.getY());
 		this.addAction(Actions.moveTo(Parametros.playerX + 400, Parametros.playerY, 0.8f));
 		controles = false;

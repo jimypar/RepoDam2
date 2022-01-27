@@ -65,11 +65,11 @@ public class TutorialScreen extends BScreen {
 		super(game);
 		mainStage = new Stage();
 		
-		try {
-			Display.setDisplayModeAndFullscreen(Display.getDesktopDisplayMode());
-		} catch (LWJGLException e) {
-			e.printStackTrace();
-		}
+//		try {
+//			Display.setDisplayModeAndFullscreen(Display.getDesktopDisplayMode());
+//		} catch (LWJGLException e) {
+//			e.printStackTrace();
+//		}
 		
 		vigneteTexture = new Texture("maps/tutorial/assets/Drawing/tutorial_room_front_layer_0001.png");
 		

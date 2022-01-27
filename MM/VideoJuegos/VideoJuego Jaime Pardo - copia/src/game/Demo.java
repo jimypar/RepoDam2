@@ -12,8 +12,6 @@ public class Demo extends Game
 	public ResourceManager resourceManager;
 	
 	
-	
-	
 	@Override
 	public void create () {
 		batch = new SpriteBatch();

@@ -21,6 +21,8 @@ public final class ResourceManager {
 		//mapas
 		assets.setLoader(TiledMap.class, new TmxMapLoader());
 		assets.load("maps/tutorial/tutorial.tmx", TiledMap.class);
+		assets.load("maps/Level1/Level1.tmx", TiledMap.class);
+
 		
 		assets.load("maps/tutorial/assets/Drawing/tutorial_room_front_layer_0001.png", Texture.class);
 		

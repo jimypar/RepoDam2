@@ -35,6 +35,8 @@ public class Bala extends Element{
 	public void act(float delta) {
 		super.act(delta);
 		
+		this.setPolygon(4,this.getWidth(),this.getHeight(),0,0);
+		
 		if(getEnabled()) {
 			this.moveBy(this.velocity.x*delta, this.velocity.y*delta);			
 		}

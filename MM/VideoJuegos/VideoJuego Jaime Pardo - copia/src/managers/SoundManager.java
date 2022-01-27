@@ -17,8 +17,7 @@ static public void playMusic(String path) {
 		currentMusic=ResourceManager.getMusic(path);
 		currentMusic.setVolume(Parametros.musicVolume);
 		currentMusic.setLooping(true);
-		currentMusic.play();
-		
+		currentMusic.play();		
 	}
 	
 }

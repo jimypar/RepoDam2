@@ -25,7 +25,7 @@ public class BScreen implements Screen{
 		
 		this.game=game;
 		this.resourceManager=game.resourceManager;
-		
+	
 		
 	}
 	@Override
