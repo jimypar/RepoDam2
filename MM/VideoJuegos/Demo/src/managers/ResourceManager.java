@@ -24,8 +24,8 @@ public final class ResourceManager {
         //assets.load("maps/Images/arbol.png", Texture.class);
         assets.load("maps/images/barrel.png", Texture.class);
         //enemigos
-        assets.load("enemy/blob.png",Texture.class);
-        assets.load("enemy/blob_jump.png",Texture.class);
+        assets.load("enemies/blob.png",Texture.class);
+        assets.load("enemies/blob_jump.png",Texture.class);
         //jugador
         assets.load("player/espaldaWalk.png",Texture.class);
         assets.load("player/grande.png",Texture.class);

@@ -1,62 +1,57 @@
 public class Mensaje {
 
-    private int id;
-    private int posX;
-    private int posY;
-    private boolean victoria;
-    private boolean empate;
+    private int tipoconsulta;
+    private int tipoObjeto;
+    private String consulta;
+    private String busqueda;
 
-
-    public Mensaje(int posX, int posY) {
-        this.posX = posX;
-        this.posY = posY;
+    public Mensaje(int tipoconsulta, int tipoObjeto, String consulta, String busqueda) {
+        this.tipoconsulta = tipoconsulta;
+        this.tipoObjeto = tipoObjeto;
+        this.consulta = consulta;
+        this.busqueda = busqueda;
     }
 
-    public Mensaje(int id, boolean victoria, boolean empate) {
-        this.id = id;
-        this.victoria = victoria;
-        this.empate = empate;
+    public Mensaje(int tipoconsulta, int tipoObjeto, String consulta) {
+        this.tipoconsulta = tipoconsulta;
+        this.tipoObjeto = tipoObjeto;
+        this.consulta = consulta;
     }
 
-    public boolean isEmpate() {
-        return empate;
+    public Mensaje(int tipoObjeto, String consulta) {
+        this.tipoObjeto = tipoObjeto;
+        this.consulta = consulta;
     }
 
-    public void setEmpate(boolean empate) {
-        this.empate = empate;
+    public String getBusqueda() {
+        return busqueda;
     }
 
-    public boolean isVictoria() {
-        return victoria;
+    public void setBusqueda(String busqueda) {
+        this.busqueda = busqueda;
     }
 
-
-
-    public void setVictoria(boolean victoria) {
-        this.victoria = victoria;
+    public int getTipoconsulta() {
+        return tipoconsulta;
     }
 
-    public int getId() {
-        return id;
+    public void setTipoconsulta(int tipoconsulta) {
+        this.tipoconsulta = tipoconsulta;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public int getTipoObjeto() {
+        return tipoObjeto;
     }
 
-    public int getPosX() {
-        return posX;
+    public void setTipoObjeto(int tipoObjeto) {
+        this.tipoObjeto = tipoObjeto;
     }
 
-    public void setPosX(int posX) {
-        this.posX = posX;
+    public String getConsulta() {
+        return consulta;
     }
 
-    public int getPosY() {
-        return posY;
-    }
-
-    public void setPosY(int posY) {
-        this.posY = posY;
+    public void setConsulta(String consulta) {
+        this.consulta = consulta;
     }
 }

@@ -14,20 +14,13 @@ public class CargarCSV {
         this.incremento = new ArrayList<>();
     }
 
+    //Getters
     public ArrayList<String> getYears() {
         return years;
     }
 
-    public void setYears(ArrayList<String> years) {
-        this.years = years;
-    }
-
     public ArrayList<String> getIncremento() {
         return incremento;
-    }
-
-    public void setIncremento(ArrayList<String> incremento) {
-        this.incremento = incremento;
     }
 
     public void cargarCSV() {
@@ -38,7 +31,7 @@ public class CargarCSV {
         BufferedReader bufferLectura = null;
         try {
             // Abrir el .csv en buffer de lectura
-            bufferLectura = new BufferedReader(new FileReader("src/csv/evolucion_anual_de_la_concentracion_de_dioxido_de_carbono_(co2)_en_la_atmosferaNOAA.csv"));
+            bufferLectura = new BufferedReader(new FileReader("src/csv/incremento_de_la_temperatura_global2.csv"));
 
             // Leer una linea del archivo
             String linea = bufferLectura.readLine();

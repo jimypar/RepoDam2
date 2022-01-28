@@ -7,19 +7,24 @@ public class Cliente {
     private PrintStream salida;
     private Socket socket;
 
-    private ClienteGUI gui;
-
+    private IniciarSesionGUI gui;
     private String server;
     private int port;
 
-    //Constructor del cliente con el puerto y la GUI.
-    Cliente(String server, int port, ClienteGUI gui) {
+    private boolean conectado;
+
+    public void setConectado(boolean conectado) {
+        this.conectado = conectado;
+    }
+
+    //Constructor del cliente con el nombre del host,el puerto y la interfaz grafica.
+    Cliente(String server, int port, IniciarSesionGUI gui) {
         this.server = server;
         this.port = port;
         this.gui = gui;
     }
 
-    //Metodo que inicia el cliente con el socket, la entrada, la salida y inicia el hilo de escucha.
+    //Metodo que crea el socket del cliente,la entrada, la salida y llama al hilo de escucha.
     public boolean iniciar() {
         try {
             socket = new Socket(server, port);
@@ -28,8 +33,7 @@ public class Cliente {
             return false;
         }
 
-        try
-        {
+        try{
             entrada = new DataInputStream(socket.getInputStream());
             salida = new PrintStream(socket.getOutputStream());
         }
@@ -42,24 +46,24 @@ public class Cliente {
         return true;
     }
 
-    //Metodo que envia un mensaje al servidor
+    //Metodo que envia un mensaje al servidor.
     void enviarMensaje(String msg) {
         salida.println(msg);
     }
 
-
-    //Hilo que recibe mensaje y se los envia al GUI.
+    //Hilo que esta escuchando la entrada de un mensaje y lo manda a la GUI
     class Escuchar extends Thread {
 
         public void run() {
             while(true) {
                 try {
                     String msg = entrada.readLine();
-                        gui.append(msg);
+                    gui.recibir(msg);
                 }
                 catch(IOException e) {
                 }
             }
         }
     }
+
 }

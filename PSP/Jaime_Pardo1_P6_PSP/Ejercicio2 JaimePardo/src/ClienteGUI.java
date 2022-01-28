@@ -1,8 +1,13 @@
+
+
 import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
+import java.lang.reflect.Type;
+import java.util.ArrayList;
 
 public class ClienteGUI extends JFrame implements ActionListener,WindowListener {
 
@@ -28,7 +33,7 @@ public class ClienteGUI extends JFrame implements ActionListener,WindowListener 
         panel.add(txtMensaje);
 
         lresult = new JLabel();
-        lresult.setText("Evolucion anual CO2: ");
+        lresult.setText("Incremento temperatura : ");
         panel.add(lresult);
 
 
@@ -55,15 +60,21 @@ public class ClienteGUI extends JFrame implements ActionListener,WindowListener 
 
     private String leerJSON(String str) {
 
+        //Comprueba que el mensaje es valido
         if (str.equalsIgnoreCase("Introduce un año\n")){
             return str;
         }else {
+            //Crea el GSON
             Gson gson = new Gson();
 
+            //Instancia el objeto Temperatura del JSON
             Temperatura t = gson.fromJson(str, Temperatura.class);
 
-            return t.getConcentracion();
+            //Devuelve el parametro de incremento
+            return t.getIncremento();
         }
+
+
 
     }
 

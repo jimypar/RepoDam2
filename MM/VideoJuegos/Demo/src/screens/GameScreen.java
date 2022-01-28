@@ -1,6 +1,7 @@
 package screens;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.maps.MapLayer;
@@ -8,12 +9,16 @@ import com.badlogic.gdx.maps.MapObject;
 import com.badlogic.gdx.maps.MapProperties;
 import com.badlogic.gdx.maps.objects.RectangleMapObject;
 import com.badlogic.gdx.maps.tiled.TiledMap;
+import com.badlogic.gdx.maps.tiled.TiledMapTile;
+import com.badlogic.gdx.maps.tiled.objects.TiledMapTileMapObject;
 import com.badlogic.gdx.maps.tiled.renderers.OrthogonalTiledMapRenderer;
 import com.badlogic.gdx.scenes.scene2d.Stage;
 import com.badlogic.gdx.utils.Array;
 
 import elements.Barril;
+import elements.Blob;
 import elements.Element;
+import elements.Enemigo;
 import elements.Player;
 import elements.Solid;
 import game.Demo;
@@ -24,8 +29,9 @@ import managers.ResourceManager;
 public class GameScreen extends BScreen{
 	
 Stage mainStage;
-public Array<Barril> barriles;
+Array<Barril> barriles;
 public Array<Solid> suelo;
+public Array<Enemigo> enemigos;
 
 
 OrthographicCamera camara;
@@ -83,6 +89,25 @@ private Player player;
 					(float)props.get("width"),(float)props.get("height"));
 			
 			suelo.add(solido);
+			
+		}
+		
+		
+		enemigos=new Array<Enemigo>();
+		for(MapObject obj:getEnemyList()) {
+			props=obj.getProperties();
+			switch(props.get("Enemy").toString()) {
+			case "Blob":
+				Blob blob=new Blob((float)props.get("x"), (float)props.get("y"), mainStage, this);
+				enemigos.add(blob);
+				break;
+			
+			
+			}
+			
+			
+			
+			
 			
 		}
 		
@@ -184,5 +209,45 @@ for(Solid b:suelo) {
 		
 		return list;
 	}
+	
+	public ArrayList<MapObject> getEnemyList(){
+		ArrayList<MapObject> list =new ArrayList<MapObject>();
+		for(MapLayer layer: map.getLayers()) {
+			for(MapObject obj: layer.getObjects()) {
+				if(!(obj instanceof TiledMapTileMapObject))
+					continue;
+				MapProperties props= obj.getProperties();
+				
+				
+				TiledMapTileMapObject tmtmo=(TiledMapTileMapObject) obj;
+				TiledMapTile t=tmtmo.getTile();
+				MapProperties defaultProps=t.getProperties();
+				if(defaultProps.containsKey("Enemy")) {
+					list.add(obj);
+					
+					
+				}
+				
+				
+				Iterator<String> propertyKeys=defaultProps.getKeys();
+				while(propertyKeys.hasNext()) {
+					String key =propertyKeys.next();
+					
+					if(props.containsKey(key))
+						continue;
+					else {
+						Object value=defaultProps.get(key);
+						props.put(key, value);
+					}
+						
+				}
+				
+			}
+			
+		}
+		
+		return list;
+	}
+	
 	
 }

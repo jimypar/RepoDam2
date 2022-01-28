@@ -23,7 +23,7 @@ private int balaActual=0;
 
 
 //gestión de tiempos
-private float cooldownDisparo=0.5f;
+private float cooldownDisparo=0.01f;
 private float tiempoDisparo=cooldownDisparo*2;
 
 public Element pies;
@@ -104,7 +104,7 @@ private float walkingSpeed=150;
 	}
 	
 	
-	if(Gdx.input.isKeyPressed(Keys.Z) && tiempoDisparo>=cooldownDisparo ) {
+	if(Gdx.input.isKeyJustPressed(Keys.Z) && tiempoDisparo>=cooldownDisparo ) {
 		dispara();
 		
 	}

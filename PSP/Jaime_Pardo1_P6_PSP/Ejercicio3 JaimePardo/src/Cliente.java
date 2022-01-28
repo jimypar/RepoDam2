@@ -7,25 +7,21 @@ public class Cliente {
     private PrintStream salida;
     private Socket socket;
 
-    private IniciarSesionGUI gui;
+    private ClienteGUI gui;
+
     private String server;
     private int port;
 
-    private boolean conectado;
-
-    public void setConectado(boolean conectado) {
-        this.conectado = conectado;
-    }
-
-    //Constructor del cliente con el nombre del host,el puerto y la interfaz grafica.
-    Cliente(String server, int port, IniciarSesionGUI gui) {
+    //Constructor cliente
+    Cliente(String server, int port, ClienteGUI gui) {
         this.server = server;
         this.port = port;
         this.gui = gui;
     }
 
-    //Metodo que crea el socket del cliente,la entrada, la salida y llama al hilo de escucha.
+
     public boolean iniciar() {
+        //Crear socket cliente
         try {
             socket = new Socket(server, port);
         }
@@ -33,37 +29,48 @@ public class Cliente {
             return false;
         }
 
-        try{
+        String msg = "Introduce un año";
+        mostrar(msg);
+
+        //Se crea el socket, el PrintStream y el DataInputStream
+        try
+        {
             entrada = new DataInputStream(socket.getInputStream());
             salida = new PrintStream(socket.getOutputStream());
         }
         catch (IOException eIO) {
         }
-
+        //Crear metodo que escucha los mensajes
         Escuchar escuchar = new Escuchar();
         escuchar.start();
 
         return true;
     }
 
-    //Metodo que envia un mensaje al servidor.
+    //Muestra el mensaje en la pantalla
+    private void mostrar(String msg) {
+        gui.append(msg + "\n");
+    }
+
+    //Envia mensaje al servidor
     void enviarMensaje(String msg) {
         salida.println(msg);
     }
 
-    //Hilo que esta escuchando la entrada de un mensaje y lo manda a la GUI
+    //Hilo que lee constantemente del servidor
     class Escuchar extends Thread {
 
         public void run() {
             while(true) {
                 try {
                     String msg = entrada.readLine();
-                    gui.recibir(msg);
+                        gui.append(msg+"\n");
                 }
                 catch(IOException e) {
+                    gui.falloConexion();
+                    break;
                 }
             }
         }
     }
-
 }

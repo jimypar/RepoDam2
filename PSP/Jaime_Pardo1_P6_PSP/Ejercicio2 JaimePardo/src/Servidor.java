@@ -6,19 +6,20 @@ import java.util.*;
 
 public class Servidor {
 
-    public static void main(String[] args) {
-        //Crea servidor mandando el parametro del puerto
-        Servidor servidor = new Servidor(4444);
-        //Iniciar servidor
-        servidor.start();
-    }
-
     private static int idUsuario;
     private ArrayList<HiloCliente> clientes;
     private ArrayList<String> years;
     private ArrayList<String> incremento;
     private int puerto;
     private boolean continuar;
+
+
+    public static void main(String[] args) {
+        //Crea servidor mandando el parametro del puerto
+        Servidor servidor = new Servidor(4444);
+        //Iniciar servidor
+        servidor.start();
+    }
 
     //Constructor de la clase
     public Servidor(int puerto) {
@@ -27,11 +28,13 @@ public class Servidor {
     }
 
     public void start() {
+
         //Llamo a la clase para cargar el csv y guardarlo en arrays
         CargarCSV csv = new CargarCSV();
         csv.cargarCSV();
         this.years = csv.getYears();
         this.incremento = csv.getIncremento();
+
         //Crea el socket del servidor y recibe conexiones y mete los cliente en el arraylist
         continuar = true;
         try
@@ -48,6 +51,7 @@ public class Servidor {
                 clientes.add(hiloCliente);
                 hiloCliente.start();
             }
+
             //Una vez terminada la conexion se cierra el serversocket y todos los clientes
             serverSocket.close();
             for(int i = 0; i < clientes.size(); ++i) {
@@ -68,6 +72,7 @@ public class Servidor {
         PrintStream salida;
 
         int id;
+
         //Constructor del cliente
         HiloCliente(Socket socket) {
             //Se asigna una id de usuario
@@ -85,6 +90,7 @@ public class Servidor {
 
         public void run() {
             boolean continuar = true;
+
             //Bucle de leer mensajes
             while(continuar) {
                 String mensaje = "";
@@ -97,6 +103,7 @@ public class Servidor {
                 }
                 //Calcula el incremento y lo devuelve.
                 String resultado = calcularIncremento(mensaje);
+                //Se pasa el mensaje a JSON
                 String json = crearJSON(mensaje,resultado);
                 salida.println(json);
 
@@ -104,6 +111,7 @@ public class Servidor {
             cerrar();
         }
 
+        
         //Metodo para cerrar las conexiones del cliente
         private void cerrar() {
             try {
@@ -115,6 +123,8 @@ public class Servidor {
         }
 
     }
+
+
 
     //Metodo que busca el incremento en los arrays
     private String calcularIncremento(String mensaje) {
@@ -129,6 +139,7 @@ public class Servidor {
 
     private String crearJSON(String year, String temp) {
 
+        //Se crea el objeto de Temperatura
         Temperatura t = new Temperatura(year,temp);
 
         //Se instancia el objeto GSON
@@ -137,6 +148,7 @@ public class Servidor {
         //Se convierte el objeto a JSON
         String json = gson.toJson(t);
 
+        //Devuelve el JSON
         return json;
 
     }

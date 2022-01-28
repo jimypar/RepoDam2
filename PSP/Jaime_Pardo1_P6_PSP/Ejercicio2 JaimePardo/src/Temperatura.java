@@ -1,11 +1,11 @@
 public class Temperatura {
 
     private String year;
-    private String concentracion;
+    private String incremento;
 
-    public Temperatura(String year, String concentracion) {
+    public Temperatura(String year, String incremento) {
         this.year = year;
-        this.concentracion = concentracion;
+        this.incremento = incremento;
     }
 
     public String getYear() {
@@ -16,12 +16,11 @@ public class Temperatura {
         this.year = year;
     }
 
-    public String getConcentracion() {
-        return concentracion;
+    public String getIncremento() {
+        return incremento;
     }
 
-    public void setConcentracion(String concentracion) {
-        this.concentracion = concentracion;
+    public void setIncremento(String incremento) {
+        this.incremento = incremento;
     }
 }
-
