@@ -22,8 +22,7 @@ public final class ResourceManager {
 		assets.setLoader(TiledMap.class, new TmxMapLoader());
 		assets.load("maps/tutorial/tutorial.tmx", TiledMap.class);
 		assets.load("maps/Level1/Level1.tmx", TiledMap.class);
-
-		
+	
 		assets.load("maps/tutorial/assets/Drawing/tutorial_room_front_layer_0001.png", Texture.class);
 		
 		assets.load("Cuphead/Idle/spriteIdleL.png", Texture.class);
@@ -46,6 +45,8 @@ public final class ResourceManager {
 		assets.load("Cuphead/Run/Shooting/Diagonal Up/shootDiagonalRunR.png", Texture.class);
 		assets.load("Cuphead/Dash/Ground/dashGR.png", Texture.class);
 		assets.load("Cuphead/Dash/Ground/dashGL.png", Texture.class);
+		assets.load("Cuphead/Hit/Ground/hitR.png", Texture.class);
+		assets.load("Cuphead/Hit/Ground/hitL.png", Texture.class);
 				
 		assets.load("Bullets/bulletsL.png", Texture.class);
 		assets.load("Bullets/bulletsR.png", Texture.class);
@@ -55,6 +56,17 @@ public final class ResourceManager {
 
 		assets.load("Coin/CoinStages.png", Texture.class);
 		assets.load("Coin/CoinExplode.png", Texture.class);
+		
+		//Enemies
+		assets.load("Enemies/Die/dieDust.png", Texture.class);
+		
+		assets.load("Enemies/Flower/flowerR.png", Texture.class);
+		assets.load("Enemies/Flower/flowerL.png", Texture.class);
+		
+		assets.load("Enemies/Blueball/bolaR.png", Texture.class);
+		assets.load("Enemies/Blueball/bolaL.png", Texture.class);
+		
+		assets.load("Enemies/Planta/flyingPlant.png", Texture.class);
 
 		
 		
@@ -78,8 +90,15 @@ public final class ResourceManager {
         
         
         //Audio
-        //assets.load("Audio/Sound/knifeSlice.ogg", Sound.class);
-      //assets.load("Audio/Sound/knifeSlice.ogg", Music.class);
+        assets.load("Cuphead/Sound/sfx_player_shoot_hit_01.wav", Sound.class);
+        assets.load("Cuphead/Sound/sfx_coin_pickup_01.wav", Sound.class);
+        assets.load("Cuphead/Sound/sfx_platforming_flowergrunt_death_01.wav", Sound.class);
+        assets.load("Cuphead/Sound/sfx_player_jump_01.wav", Sound.class);
+        assets.load("Cuphead/Sound/sfx_player_weapon_charge_fire_small_001.wav", Sound.class);
+        assets.load("Cuphead/Sound/sfx_player_hit_02.wav", Sound.class);
+        assets.load("Cuphead/Sound/sfx_player_dash_01.wav", Sound.class);
+
+        assets.load("maps/Level1/music/MUS_ForestFollies.wav", Music.class);
         
         //UI
         //assets.load("ui/barraVida/Sprite 1.png", Texture.class);

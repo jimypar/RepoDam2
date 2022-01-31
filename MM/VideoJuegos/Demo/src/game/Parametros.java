@@ -23,6 +23,8 @@ public class Parametros {
  public static int gravedad=-130;
  public static float jugadorx=0;
  public static float jugadory=0;
+ public static int vida=50;
+ public static int maxVida=50;
  
  
 

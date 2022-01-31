@@ -12,6 +12,7 @@ import com.badlogic.gdx.maps.tiled.TiledMap;
 import com.badlogic.gdx.maps.tiled.TiledMapTile;
 import com.badlogic.gdx.maps.tiled.objects.TiledMapTileMapObject;
 import com.badlogic.gdx.maps.tiled.renderers.OrthogonalTiledMapRenderer;
+import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.scenes.scene2d.Stage;
 import com.badlogic.gdx.utils.Array;
 
@@ -24,11 +25,13 @@ import elements.Solid;
 import game.Demo;
 import game.Parametros;
 import managers.ResourceManager;
+import ui.BarraVida;
 
 
 public class GameScreen extends BScreen{
 	
 Stage mainStage;
+Stage uiStage;
 Array<Barril> barriles;
 public Array<Solid> suelo;
 public Array<Enemigo> enemigos;
@@ -38,6 +41,7 @@ OrthographicCamera camara;
 private TiledMap map;
 private int tileWidth, tileHeight, mapWidthInTiles, mapHeightInTiles,
 mapWidthInPixels, mapHeightInPixels;
+private BarraVida barra;
 
 
 
@@ -51,7 +55,8 @@ private Player player;
 		mainStage=new Stage();
 		float inicioX;
 		float inicioY;
-		map= ResourceManager.getMap("maps/mapa0.tmx");
+		//map= ResourceManager.getMap("maps/mapa0.tmx");
+		map= ResourceManager.getMap("maps/mapa2.tmx");
 		
 		
 		
@@ -119,8 +124,8 @@ private Player player;
 			barriles.add(new Barril(i*14,30,mainStage));
 		}
 		
-		
-		
+		uiStage=new Stage();
+		barra= new BarraVida(Parametros.getAnchoPantalla()/50,Parametros.getAltoPantalla()*9/10,this.uiStage);
 		
 		
 		
@@ -130,6 +135,7 @@ private Player player;
 		// TODO Auto-generated method stub
 		super.render(delta);
 	     mainStage.act();
+	     uiStage.act();
 	    colide();
 	    
 	    Parametros.jugadorx=player.getX();
@@ -141,6 +147,7 @@ private Player player;
 	    renderer.render();
 	    
 	        mainStage.draw();
+	        uiStage.draw();
 	    
 
 	}
@@ -160,6 +167,7 @@ private Player player;
 			
 			if(player.pies.overlaps(b)) {
 				player.tocoSuelo=true;
+				
 			}
 			
 		}

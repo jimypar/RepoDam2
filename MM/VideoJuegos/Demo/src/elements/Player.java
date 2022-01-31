@@ -4,6 +4,8 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input.Keys;
 import com.badlogic.gdx.graphics.g2d.Animation;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
+import com.badlogic.gdx.math.MathUtils;
+import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.scenes.scene2d.Stage;
 import com.badlogic.gdx.utils.Array;
 
@@ -80,14 +82,12 @@ private float walkingSpeed=150;
 	}
 	
 	private void controles() {
-		/*if(Gdx.input.isKeyPressed(Keys.UP)) {
-			this.setAnimation(espalda);
-			this.acceleration.add(0,walkingSpeed);
+		if(Gdx.input.isKeyJustPressed(Keys.UP)) {
+			Parametros.vida+=5;
 		}
-	if(Gdx.input.isKeyPressed(Keys.DOWN)) {
-			this.setAnimation(frente);
-			this.acceleration.add(0,-walkingSpeed);
-		}*/
+	if(Gdx.input.isKeyJustPressed(Keys.DOWN)) {
+		Parametros.vida-=5;
+		}
 		
 	if(Gdx.input.isKeyPressed(Keys.LEFT)) {
 		this.setAnimation(izqda);
@@ -114,6 +114,58 @@ private float walkingSpeed=150;
 	
 	
 	
+	@Override
+	public void applyPhysics(float dt) {
+		// TODO Auto-generated method stub
+		// apply acceleration
+       
+		  if(tocoSuelo & this.getVelocity().y<0) {
+				
+				this.acceleration.y=0;
+	        }
+		
+		
+		velocity.add( acceleration.x * dt, acceleration.y * dt );
+      
+        float speed = velocity.len();
+
+        
+        
+      
+        
+        // decrease speed (decelerate) when not accelerating
+      
+        
+        if (acceleration.len() == 0)
+            speed -= deceleration * dt;
+       
+
+        // keep speed within set bounds
+        speed = MathUtils.clamp(speed, 0, maxSpeed);
+
+        // update velocity
+        if (velocity.len() == 0)
+            velocity.set(speed, 0);
+        else
+            velocity.setLength(speed);
+    
+
+        // update position according to value stored in velocity vector
+        moveBy( velocity.x * dt, velocity.y * dt );
+
+        // reset acceleration
+        acceleration.set(0,0);  
+		
+		
+		
+		
+		
+			
+			
+		
+	}
+
+
 	public void colocarPies() {
 		this.pies.setPosition(this.getX(), this.getY());
 		

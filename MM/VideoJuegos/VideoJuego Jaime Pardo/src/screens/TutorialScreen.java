@@ -7,6 +7,7 @@ import org.lwjgl.LWJGLException;
 import org.lwjgl.opengl.Display;
 
 import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.audio.Music;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.Batch;
@@ -45,7 +46,8 @@ public class TutorialScreen extends BScreen {
 	OrthographicCamera camara;
 	Texture vigneteTexture;
 	Sprite vigneteSprite;
-
+	Music music_background;
+	
 	private TiledMap map;
 	private int tileWidth, tileHeight, mapWidthInTiles, mapHeightInTiles, mapWidthInPixels, mapHeightInPixels;
 	private OrthogonalTiledMapRenderer renderer;
@@ -56,6 +58,7 @@ public class TutorialScreen extends BScreen {
 	
 	private Coin coin;
 	public Element door;
+	
 	
 	
 
@@ -87,8 +90,11 @@ public class TutorialScreen extends BScreen {
 		player = new Player(inicioX, inicioY, mainStage);
 		player.setPolygon(10);
 		
-
-
+		
+		music_background = Gdx.audio.newMusic(Gdx.files.internal("maps/tutorial/music/MUS_Tutorial.wav"));
+		music_background.setVolume(Parametros.musicVolume);
+		music_background.setLooping(true);
+		music_background.play();
 	}
 
 

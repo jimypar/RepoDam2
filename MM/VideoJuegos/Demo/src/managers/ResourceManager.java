@@ -19,7 +19,7 @@ public final class ResourceManager {
 		//mapas
 		assets.setLoader(TiledMap.class, new TmxMapLoader());
 		assets.load("maps/mapa0.tmx", TiledMap.class);
-	
+		assets.load("maps/mapa2.tmx", TiledMap.class);
         //elementos de mapa
         //assets.load("maps/Images/arbol.png", Texture.class);
         assets.load("maps/images/barrel.png", Texture.class);
@@ -47,7 +47,8 @@ public final class ResourceManager {
       //assets.load("Audio/Sound/knifeSlice.ogg", Music.class);
         
         //UI
-        //assets.load("ui/barraVida/Sprite 1.png", Texture.class);
+        assets.load("ui/rojo.jpg", Texture.class);
+        assets.load("ui/morado.jpg", Texture.class);
  
 	//añadir más elementos
 	

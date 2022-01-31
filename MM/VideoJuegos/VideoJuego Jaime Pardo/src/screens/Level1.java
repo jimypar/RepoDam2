@@ -7,10 +7,12 @@ import org.lwjgl.LWJGLException;
 import org.lwjgl.opengl.Display;
 
 import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.audio.Music;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.Batch;
 import com.badlogic.gdx.graphics.g2d.Sprite;
+import com.badlogic.gdx.graphics.g2d.Animation.PlayMode;
 import com.badlogic.gdx.maps.MapLayer;
 import com.badlogic.gdx.maps.MapObject;
 import com.badlogic.gdx.maps.MapProperties;
@@ -22,9 +24,14 @@ import com.badlogic.gdx.scenes.scene2d.Stage;
 import com.badlogic.gdx.utils.Array;
 
 import elements.Bala;
+import elements.Blueball;
+import elements.Bramble;
 import elements.Clock;
 import elements.Coin;
 import elements.Element;
+import elements.Enemigo;
+import elements.Flower;
+import elements.FlyingPlant;
 import elements.ImagenCapa;
 import elements.Marker;
 import elements.Player;
@@ -34,15 +41,19 @@ import game.Demo;
 import game.Parametros;
 import managers.OrthogonalTiledMapRendererWithSprites;
 import managers.ResourceManager;
+import managers.SoundManager;
 
 public class Level1 extends BScreen {
 
 	Stage mainStage;
-	Array<Solid> suelo;
-	Array<Wall> muros;
+	public Array<Solid> suelo;
+	public Array<Wall> muros;
+	public Array<Bramble> brambles;
+	public Array<Enemigo> enemigos;
 	Array<ImagenCapa> imagenes;
-	Array<Marker> markers;	
+	Array<Marker> markers;
 	OrthographicCamera camara;
+	Music music_background;
 
 	private TiledMap map;
 	private int tileWidth, tileHeight, mapWidthInTiles, mapHeightInTiles, mapWidthInPixels, mapHeightInPixels;
@@ -51,26 +62,24 @@ public class Level1 extends BScreen {
 	private Player player;
 	private float inicioX;
 	private float inicioY;
-	
+
 	private Coin coin;
 	public Element door;
-	
-	
 
 	public Level1(Demo game) {
-		
 
 		super(game);
 		mainStage = new Stage();
-		
+
 //		try {
 //			Display.setDisplayModeAndFullscreen(Display.getDesktopDisplayMode());
 //		} catch (LWJGLException e) {
 //			e.printStackTrace();
 //		}
-		
+
 		cargarMapaTiled();
-		
+
+		cargarMusica();		
 		renderer = new OrthogonalTiledMapRendererWithSprites(map);
 
 		camara = (OrthographicCamera) mainStage.getCamera();
@@ -79,14 +88,18 @@ public class Level1 extends BScreen {
 		camara.position.x = inicioX;
 		camara.position.y = 400;
 
-	
 		player = new Player(inicioX, inicioY, mainStage);
 		player.setPolygon(10);
 		
 
+		
+		
 
 	}
 
+	private void cargarMusica() {
+		SoundManager.playMusic("maps/Level1/music/MUS_ForestFollies.wav");
+	}
 
 	@Override
 	public void render(float delta) {
@@ -97,7 +110,6 @@ public class Level1 extends BScreen {
 		Parametros.playerX = player.getX();
 		Parametros.playerY = player.getY();
 
-		
 		colide();
 
 		centrarCamara();
@@ -121,57 +133,64 @@ public class Level1 extends BScreen {
 				player.tocoSuelo = true;
 			}
 		}
-		
+
 		for (Wall w : muros) {
-			
+
 			if (w.getEnabled() && w.overlaps(player)) {
 				player.getActions().clear();
 			}
-			
-			
+
 		}
-		
-//		for (Bala bala : player.getBalas()) {
-//			if (bala.getEnabled() && bala.overlaps(markers.get(0))) {
-//				renderer = new OrthogonalTiledMapRendererWithSprites(map,2);
-//				for (Solid s : suelo) {
-//					if (s.getName()!=null && s.getName().equals("Solid2")) {
-//						s.setBounds(1,1,0,0);
-//					}
-//				}
-//				
-//				bala.setEnabled(false);
-//			} 
-//			if (bala.getEnabled() && bala.overlaps(markers.get(1))) {
-//				renderer = new OrthogonalTiledMapRendererWithSprites(map,1);
-//				for (Solid s : suelo) {
-//					if (s.getName()!=null && s.getName().equals("Solid1")) {
-//						s.setBounds(1, 1,0,0);
-//					}
-//				}
-//				bala.setEnabled(false);
-//			}
-//			
-//			for (Wall w : muros) {
-//				if (bala.getEnabled() && bala.overlaps(w)) {
-//					bala.setEnabled(false);
-//				}
-//			}
-//
-//		}
-		
+
+		if (!Parametros.nohit) {
+			for (Enemigo e : enemigos) {
+				if (!e.dying) {
+					if (player.overlaps(e)) {
+						player.getHit();						
+					}
+				}
+
+			}
+		}
+
+		for (Bala bala : player.getBalas()) {
+
+			for (Enemigo e : enemigos) {
+				if (!e.dying) {
+					if (bala.overlaps(e)) {
+						bala.setEnabled(false);
+						SoundManager.playSound("Cuphead/Sound/sfx_platforming_flowergrunt_death_01.wav");
+						e.getHit();
+					}
+				}
+			}
+
+			for (Wall w : muros) {
+				if (bala.getEnabled() && bala.overlaps(w)) {
+					bala.setEnabled(false);
+					SoundManager.playSound("Cuphead/Sound/sfx_player_shoot_hit_01.wav");
+				}
+			}
+
+		}
+
+		for (Bramble bramble : brambles) {
+			if (player.overlaps(bramble)) {
+				player.setPosition(Parametros.playerX - 200, Parametros.playerY + 500);
+			}
+		}
+
 		if (player.overlaps(door)) {
-			player.door=true;
+			player.door = true;
 		}
-		
 
 	}
 
 	public void centrarCamara() {
-		if (this.player.getX()>inicioX && this.player.getX()<10000 )  {
+		if (this.player.getX() > inicioX && this.player.getX() < 11500) {
 			this.camara.position.x = player.getX();
 			camara.update();
-		}		
+		}
 	}
 
 	public ArrayList<MapObject> getRectangleList(String propertyName) {
@@ -190,13 +209,26 @@ public class Level1 extends BScreen {
 
 		return list;
 	}
-	
-	
-	
+
+	public ArrayList<MapObject> getEnemyList() {
+		ArrayList<MapObject> list = new ArrayList<MapObject>();
+		for (MapLayer layer : map.getLayers()) {
+			for (MapObject obj : layer.getObjects()) {
+				if (!(obj instanceof RectangleMapObject))
+					continue;
+				MapProperties props = obj.getProperties();
+				if (props.containsKey("enemy")) {
+					list.add(obj);
+				}
+			}
+
+		}
+
+		return list;
+	}
 
 	private void cargarMapaTiled() {
 
-		
 		map = ResourceManager.getMap("maps/Level1/Level1.tmx");
 
 		MapProperties properties = map.getProperties();
@@ -208,22 +240,20 @@ public class Level1 extends BScreen {
 		mapWidthInPixels = tileWidth * mapWidthInTiles;
 		mapHeightInPixels = tileHeight * mapHeightInTiles;
 
-		
-
 		ArrayList<MapObject> elementos = getRectangleList("Inicio");
 		MapProperties props;
 		props = elementos.get(0).getProperties();
 		inicioX = (float) props.get("x");
 		inicioY = (float) props.get("y");
 
-
 //		elementos = getRectangleList("Coin");
 //		props = elementos.get(0).getProperties();
 //		coin = new Coin((float) props.get("x"), (float) props.get("y"), mainStage);
-		
+
 		elementos = getRectangleList("Door");
 		props = elementos.get(0).getProperties();
-		door = new Element((float) props.get("x"),(float) props.get("y"), mainStage,(float) props.get("width"),(float) props.get("height"));
+		door = new Element((float) props.get("x"), (float) props.get("y"), mainStage, (float) props.get("width"),
+				(float) props.get("height"));
 		door.setRectangle();
 
 		elementos = getRectangleList("Solid");
@@ -234,12 +264,12 @@ public class Level1 extends BScreen {
 			props = solid.getProperties();
 			solido = new Solid((float) props.get("x"), (float) props.get("y"), mainStage, (float) props.get("width"),
 					(float) props.get("height"));
-			if (solid.getName()!=null) {
+			if (solid.getName() != null) {
 				solido.setName(solid.getName());
 			}
 			suelo.add(solido);
 		}
-		
+
 		elementos = getRectangleList("Wall");
 
 		Wall wall;
@@ -250,10 +280,42 @@ public class Level1 extends BScreen {
 					(float) props.get("height"));
 			muros.add(wall);
 		}
-						
-		
+
+		elementos = getRectangleList("Bramble");
+
+		Bramble b;
+		brambles = new Array<Bramble>();
+		for (MapObject bramble : elementos) {
+			props = bramble.getProperties();
+			b = new Bramble((float) props.get("x"), (float) props.get("y"), mainStage, (float) props.get("width"),
+					(float) props.get("height"));
+			brambles.add(b);
+		}
+
+		elementos = getEnemyList();
+
+		enemigos = new Array<Enemigo>();
+		for (MapObject enemy : elementos) {
+			props = enemy.getProperties();
+			switch (props.get("enemy").toString()) {
+			case "Flower":
+				Flower flower = new Flower((float) props.get("x"), (float) props.get("y"), mainStage, this);
+				enemigos.add(flower);
+				break;
+			case "Blueball":
+				Blueball blueball = new Blueball((float) props.get("x"), (float) props.get("y"), mainStage, this);
+				enemigos.add(blueball);
+				break;
+			case "FlyingPlant":
+				FlyingPlant flyingPlant = new FlyingPlant((float) props.get("x"), (float) props.get("y"), mainStage,
+						this);
+				enemigos.add(flyingPlant);
+				break;
+			default:
+				break;
+			}
+		}
+
 	}
-
-
 
 }
