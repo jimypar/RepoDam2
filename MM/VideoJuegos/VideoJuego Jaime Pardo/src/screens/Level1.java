@@ -42,10 +42,12 @@ import game.Parametros;
 import managers.OrthogonalTiledMapRendererWithSprites;
 import managers.ResourceManager;
 import managers.SoundManager;
+import ui.BarraVida;
 
 public class Level1 extends BScreen {
 
 	Stage mainStage;
+	Stage uiStage;
 	public Array<Solid> suelo;
 	public Array<Wall> muros;
 	public Array<Bramble> brambles;
@@ -53,6 +55,7 @@ public class Level1 extends BScreen {
 	Array<ImagenCapa> imagenes;
 	Array<Marker> markers;
 	OrthographicCamera camara;
+	private BarraVida barra;
 	Music music_background;
 
 	private TiledMap map;
@@ -86,13 +89,15 @@ public class Level1 extends BScreen {
 		camara.setToOrtho(false, Parametros.getAnchoPantalla() * Parametros.zoom,
 				Parametros.getAltoPantalla() * Parametros.zoom);
 		camara.position.x = inicioX;
-		camara.position.y = 400;
+		camara.position.y = 430;
 
 		player = new Player(inicioX, inicioY, mainStage);
 		player.setPolygon(10);
 		
+		Parametros.vida = 3;		
 
-		
+		uiStage=new Stage();
+		barra= new BarraVida(Parametros.getAnchoPantalla()/50,Parametros.getAltoPantalla()/10,this.uiStage);
 		
 
 	}
@@ -106,7 +111,8 @@ public class Level1 extends BScreen {
 
 		super.render(delta);
 		mainStage.act();
-
+		uiStage.act();
+		
 		Parametros.playerX = player.getX();
 		Parametros.playerY = player.getY();
 
@@ -118,6 +124,8 @@ public class Level1 extends BScreen {
 		renderer.render();
 
 		mainStage.draw();
+		uiStage.draw();
+		
 
 	}
 
@@ -146,7 +154,7 @@ public class Level1 extends BScreen {
 			for (Enemigo e : enemigos) {
 				if (!e.dying) {
 					if (player.overlaps(e)) {
-						player.getHit();						
+						player.getHit();	
 					}
 				}
 

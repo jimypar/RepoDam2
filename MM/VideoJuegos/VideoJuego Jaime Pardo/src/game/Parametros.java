@@ -27,6 +27,7 @@ public class Parametros {
  public static float playerX = 0;
  public static float playerY = 0;
  
+ public static int vida = 0;
  
 
 

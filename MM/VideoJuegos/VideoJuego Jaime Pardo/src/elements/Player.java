@@ -413,6 +413,7 @@ public class Player extends Element {
 			}
 			this.addAction(Actions.moveTo(Parametros.playerX, Parametros.playerY+100, 0.5f));
 			SoundManager.playSound("Cuphead/Sound/sfx_player_hit_02.wav");
+			Parametros.vida-=1;	
 			tiempoHit = 0;			
 		}
 		

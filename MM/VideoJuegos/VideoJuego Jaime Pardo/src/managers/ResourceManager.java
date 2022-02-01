@@ -101,7 +101,13 @@ public final class ResourceManager {
         assets.load("maps/Level1/music/MUS_ForestFollies.wav", Music.class);
         
         //UI
-        //assets.load("ui/barraVida/Sprite 1.png", Texture.class);
+        assets.load("Lives/hp3.png", Texture.class);
+        assets.load("Lives/hp2.png", Texture.class);
+        assets.load("Lives/hp1.png", Texture.class);
+        assets.load("Lives/hp0.png", Texture.class);
+
+        
+        
  
 	//añadir más elementos
 	
