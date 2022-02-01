@@ -311,7 +311,7 @@ public class Player extends Element {
 
 		if (Gdx.input.isKeyJustPressed(Keys.E)) {
 			if (door) {
-				System.exit(0);
+				
 			}
 		}
 	}

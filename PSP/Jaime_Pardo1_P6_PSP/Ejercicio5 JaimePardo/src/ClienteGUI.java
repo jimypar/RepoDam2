@@ -88,9 +88,10 @@ public class ClienteGUI extends JFrame implements ActionListener,WindowListener 
     //Metodo del actionListener que recibe el boton presionado y se lo envia al servidor
     public void actionPerformed(ActionEvent e) {
 
+        //Crea el GSON
         Gson gson = new Gson();
 
-
+        //Segun el boton pulsado se envia un mensaje u otro con la posicion de la matriz
         String comando = e.getActionCommand();
 
         switch (comando){

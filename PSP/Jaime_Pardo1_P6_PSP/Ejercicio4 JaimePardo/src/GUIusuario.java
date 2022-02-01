@@ -145,10 +145,13 @@ public class GUIusuario extends JFrame implements ActionListener, WindowListener
     @Override
     public void actionPerformed(ActionEvent e) {
 
+        //Crea el GSON
         Gson gson = new Gson();
         String json;
         Mensaje m;
 
+
+        //Segun el boton pulsado crea un mensaje en formato JSON
         switch (e.getActionCommand()){
             case "Buscar entrenador":
                 m = new Mensaje(1,1,busqueda.getText());

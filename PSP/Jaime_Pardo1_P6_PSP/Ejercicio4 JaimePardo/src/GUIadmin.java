@@ -149,6 +149,7 @@ public class GUIadmin extends JFrame implements ActionListener, WindowListener {
         String json;
         Mensaje m;
 
+        //Segun el boton pulsado crea un mensaje en formato JSON
         switch (e.getActionCommand()){
             case "Consultar":
                 entrenador.setText("Buscar entrenador");

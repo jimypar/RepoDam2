@@ -182,6 +182,7 @@ public class TutorialScreen extends BScreen {
 		
 		if (player.overlaps(door)) {
 			player.door=true;
+			game.setScreen(new Level1(game));
 		}
 		
 

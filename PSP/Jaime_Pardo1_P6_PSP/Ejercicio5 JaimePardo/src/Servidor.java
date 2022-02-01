@@ -138,6 +138,7 @@ public class Servidor {
         //Se instancia el objeto GSON
         Gson gson = new Gson();
 
+        //Crea el mensaje desde el JSON recibido
         Mensaje m = gson.fromJson(mensaje, Mensaje.class);
 
         if (turno==id){
@@ -188,8 +189,10 @@ public class Servidor {
         //Se instancia el objeto GSON
         Gson gson = new Gson();
 
+        //Crea el objeto de mensaje desde el JSON recibido
         Mensaje m = gson.fromJson(mensaje, Mensaje.class);
 
+        //Segun las cordenadas del mensaje comprueba si esta vacio
        if (tablero[m.getPosX()][m.getPosY()]==0){
            return true;
        }else {
@@ -200,6 +203,7 @@ public class Servidor {
 
     //Metodo que comprueba si una id ha ganado.
     private boolean calcularVictoria(int id) {
+
 
             for (int i = 0;i<3;i++){
                 if (tablero[i][0]==id && tablero[i][1]==id && tablero[i][2]==id){
@@ -228,8 +232,10 @@ public class Servidor {
         //Se instancia el objeto GSON
         Gson gson = new Gson();
 
+        //Se crea el mensaje segun el JSON recibido
         Mensaje m = gson.fromJson(mensaje, Mensaje.class);
 
+        //Rellena el tablero segun el mensaje
         tablero[m.getPosX()][m.getPosY()] = id;
 
     }

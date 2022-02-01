@@ -51,8 +51,10 @@ public class BaseDatos {
     //Metodo que consulta los entrenadores segun su nombre.
     public String consultarEntrenador(String nombre) {
 
+        //Crea el GSON
         Gson gson = new Gson();
 
+        //Crea un objeto del tipo de la consulta
         Entrenador o = new Entrenador();
 
         try {
@@ -84,6 +86,7 @@ public class BaseDatos {
 
         Gson gson = new Gson();
 
+        //Crea un objeto del tipo de la consulta
         Jugador o = new Jugador();
 
         try {
@@ -114,8 +117,10 @@ public class BaseDatos {
     //Metodo que consulta los estadios segun su nombre.
     public String consultarEstadio(String nombre) {
 
+        //Crea el GSON
         Gson gson = new Gson();
 
+        //Crea un objeto del tipo de la consulta
         Estadio o = new Estadio();
 
         try {
@@ -144,7 +149,10 @@ public class BaseDatos {
     //Metodo para modificar los datos de un entrenador.
     public void modificarEntrenador(String nombre, String json) {
 
+        //Crea el  GSON
         Gson gson = new Gson();
+
+        //Crea un objeto del tipo de consulta y le inserta los datos del JSON.
         Entrenador en = gson.fromJson(json, Entrenador.class);
 
         try {
@@ -164,7 +172,9 @@ public class BaseDatos {
     //Metodo para modificar los datos de un estadio.
     public void modificarEstadio(String nombre, String json) {
 
+        //Crea el GSON
         Gson gson = new Gson();
+        //Crea un objeto del tipo de consulta y le inserta los datos del JSON.
         Estadio es = gson.fromJson(json, Estadio.class);
 
         try {
@@ -184,7 +194,9 @@ public class BaseDatos {
     //Metodo para modificar los datos de un jugador.
     public void modificarJugador(String nombre, String json) {
 
+        //Crea el GSON
         Gson gson = new Gson();
+        //Crea un objeto del tipo de consulta y le inserta los datos del JSON.
         Jugador j = gson.fromJson(json, Jugador.class);
 
         try {
