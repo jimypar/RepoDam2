@@ -42,6 +42,8 @@ public class Controlador implements ActionListener, ItemListener, WindowListener
         vista.btnInformeCiudad.setActionCommand("informeCiudad");
         vista.btnInformeOrdenado.addActionListener(listener);
         vista.btnInformeOrdenado.setActionCommand("informeOrdenado");
+        vista.btnInformeBuscar.addActionListener(listener);
+        vista.btnInformeBuscar.setActionCommand("informeBuscar");
     }
 
     private void addWindowListeners(WindowListener listener) {
@@ -91,6 +93,9 @@ public class Controlador implements ActionListener, ItemListener, WindowListener
                 break;
             case "informeOrdenado":
                 JasperReport.generar("Clientes_PardoOrdenados");
+                break;
+            case "informeBuscar":
+                JasperReport.generarBusquedaNombre(vista.txtCiuda.getText());
                 break;
         }
     }

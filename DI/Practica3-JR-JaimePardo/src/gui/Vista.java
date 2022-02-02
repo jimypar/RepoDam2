@@ -19,12 +19,15 @@ public class Vista extends JFrame {
     JTextField txtDireccion;
     JTable autoresTabla;
     JButton anadirCliente;
+    JTextField txtCiudad;
     JTextField txtTelefono;
     JTextField txtDni;
     JButton btnInforme;
-    JTextField txtCiudad;
     JButton btnInformeOrdenado;
     JButton btnInformeCiudad;
+    JButton btnInformeBuscar;
+    private JPanel JPanelInformes;
+    JTextField txtCiuda;
 
     //BUSQUEDA
     JLabel etiquetaEstado;
