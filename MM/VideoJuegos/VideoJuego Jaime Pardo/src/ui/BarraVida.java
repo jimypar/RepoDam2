@@ -14,6 +14,7 @@ public class BarraVida extends Element {
 	private Animation<TextureRegion> hp2;	
 	private Animation<TextureRegion> hp1;	
 	private Animation<TextureRegion> hp0;	
+	private Animation<TextureRegion> death1;	
 
 
 	public BarraVida(float x, float y, Stage s) {
@@ -25,6 +26,8 @@ public class BarraVida extends Element {
 		hp2=this.loadFullAnimation("Lives/hp2.png", 1, 1, 200, true);
 		hp1=this.loadFullAnimation("Lives/hp1.png", 1, 1, 200, true);
 		hp0=this.loadFullAnimation("Lives/hp0.png", 1, 1, 200, true);
+		death1=this.loadFullAnimation("Lives/cuphead_death.png", 20, 1, 0.001f, true);
+
 
 
 		this.setScale(1.5f);
@@ -59,10 +62,19 @@ public class BarraVida extends Element {
 			break;
 		case 0:
 			this.setAnimation(hp0);
+			die();
 			break;
 		default:
+			die();
 			break;
 		}
+		
+	}
+
+	private void die() {
+		
+		Element death = new Element(Parametros.getAnchoPantalla()/4, Parametros.getAltoPantalla()/2, this.getStage());
+		death.setAnimation(death1);
 		
 	}
 

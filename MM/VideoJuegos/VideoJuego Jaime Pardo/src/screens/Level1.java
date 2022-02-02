@@ -91,10 +91,11 @@ public class Level1 extends BScreen {
 		camara.position.x = inicioX;
 		camara.position.y = 430;
 
+		Parametros.vida = 3;	
+		
 		player = new Player(inicioX, inicioY, mainStage);
 		player.setPolygon(10);
-		
-		Parametros.vida = 3;		
+				
 
 		uiStage=new Stage();
 		barra= new BarraVida(Parametros.getAnchoPantalla()/50,Parametros.getAltoPantalla()/10,this.uiStage);
@@ -112,6 +113,10 @@ public class Level1 extends BScreen {
 		super.render(delta);
 		mainStage.act();
 		uiStage.act();
+		
+		if (player.muerto) {
+			game.setScreen(new Level1(game));
+		}
 		
 		Parametros.playerX = player.getX();
 		Parametros.playerY = player.getY();
@@ -167,7 +172,7 @@ public class Level1 extends BScreen {
 				if (!e.dying) {
 					if (bala.overlaps(e)) {
 						bala.setEnabled(false);
-						SoundManager.playSound("Cuphead/Sound/sfx_platforming_flowergrunt_death_01.wav");
+						SoundManager.playSound("Sound/sfx_platforming_flowergrunt_death_01.wav");
 						e.getHit();
 					}
 				}
@@ -176,7 +181,7 @@ public class Level1 extends BScreen {
 			for (Wall w : muros) {
 				if (bala.getEnabled() && bala.overlaps(w)) {
 					bala.setEnabled(false);
-					SoundManager.playSound("Cuphead/Sound/sfx_player_shoot_hit_01.wav");
+					SoundManager.playSound("Sound/sfx_player_shoot_hit_01.wav");
 				}
 			}
 

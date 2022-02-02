@@ -1,7 +1,5 @@
 package elements;
 
-
-
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input;
 import com.badlogic.gdx.Input.Keys;
@@ -13,6 +11,7 @@ import com.badlogic.gdx.utils.Array;
 import com.badlogic.gdx.utils.TimeUtils;
 
 import game.Parametros;
+import managers.SoundManager;
 
 public class Player extends Element {
 	// Animaciones Player
@@ -36,6 +35,8 @@ public class Player extends Element {
 	private Animation<TextureRegion> shootDiagonalRunL;
 	private Animation<TextureRegion> dashL;
 	private Animation<TextureRegion> dashR;
+	private Animation<TextureRegion> hitL;	
+	private Animation<TextureRegion> hitR;	
 
 	// Balas
 	private Array<Bala> balas;
@@ -46,11 +47,16 @@ public class Player extends Element {
 
 	private float cooldownDash = 0.5f;
 	private float tiempoDash = cooldownDash * 3;
+	
+	private float cooldownHit = 2f;
+	private float tiempoHit = cooldownHit * 3;
 
 	public Element pies;
 	public boolean tocoSuelo;
 	public boolean direccion = true;
 	private boolean controles;
+	private boolean controlesHit;
+
 
 	private float walkingSpeed = 500;
 	private float jumpSpeed = 500000;
@@ -60,8 +66,11 @@ public class Player extends Element {
 		super(x, y, s);
 		tocoSuelo = false;
 		controles = true;
+		
+		this.maxSpeed = 1000;
 
 		cargarAnimaciones();
+		cargarSonido();
 
 		pies = new Element(0, 0, s, this.getWidth() / 2, this.getHeight() / 20);
 		pies.setRectangle();
@@ -71,6 +80,10 @@ public class Player extends Element {
 			balas.add(new Bala(0, 0, s));
 		}
 
+	}
+
+	private void cargarSonido() {
+				
 	}
 
 	public Array<Bala> getBalas() {
@@ -84,8 +97,8 @@ public class Player extends Element {
 		if (tiempoDash >= cooldownDash) {
 			controles = true;
 		}
-
-		if (controles) {
+				
+		if (controles && tiempoHit >= cooldownHit/2) {
 			controles();
 		}
 
@@ -99,6 +112,7 @@ public class Player extends Element {
 
 		this.tiempoDisparo += delta;
 		this.tiempoDash += delta;
+		this.tiempoHit += delta;
 
 	}
 
@@ -109,7 +123,7 @@ public class Player extends Element {
 		if (Gdx.input.isKeyPressed(Keys.A) && !tocoSuelo) {
 			direccion = false;
 			this.setAnimation(jumpL);
-			this.acceleration.add(-walkingSpeed, 0);
+			this.velocity.x = -walkingSpeed/2;
 		}
 
 		if (Gdx.input.isKeyPressed(Keys.A) && tocoSuelo) {
@@ -121,7 +135,7 @@ public class Player extends Element {
 		if (Gdx.input.isKeyPressed(Keys.D) && !tocoSuelo) {
 			direccion = true;
 			this.setAnimation(jumpR);
-			this.acceleration.add(walkingSpeed, 0);
+			this.velocity.x = walkingSpeed/2;
 		}
 
 		if (Gdx.input.isKeyPressed(Keys.D) && tocoSuelo) {
@@ -139,6 +153,8 @@ public class Player extends Element {
 			} else {
 				dashL();
 			}
+			
+			SoundManager.playSound("Sound/sfx_player_dash_01.wav");
 		}
 
 		if (Gdx.input.isKeyJustPressed(Keys.SHIFT_LEFT) && !Gdx.input.isKeyPressed(Keys.S) && this.velocity.x != 0
@@ -148,6 +164,9 @@ public class Player extends Element {
 			} else {
 				dashL();
 			}
+			
+			
+			SoundManager.playSound("Sound/sfx_player_dash_01.wav");
 		}
 
 //		ESTATICO
@@ -217,16 +236,16 @@ public class Player extends Element {
 			this.acceleration.add(walkingSpeed, 0);
 		}
 
-		//	DISPAROS ESTATICO
+		// DISPAROS ESTATICO
 
 		if (Gdx.input.isKeyPressed(Keys.ENTER) && !Gdx.input.isKeyPressed(Keys.D) && !Gdx.input.isKeyPressed(Keys.A)
 				&& tocoSuelo) {
 			if (direccion) {
 				this.setAnimation(shootIdleR);
-				this.velocity.x=0;
+				this.velocity.x = 0;
 			} else {
 				this.setAnimation(shootIdleL);
-				this.velocity.x=0;
+				this.velocity.x = 0;
 			}
 		}
 
@@ -234,10 +253,10 @@ public class Player extends Element {
 				&& !Gdx.input.isKeyPressed(Keys.A) && tocoSuelo) {
 			if (direccion) {
 				this.setAnimation(shootUpIdleR);
-				this.velocity.x=0;
+				this.velocity.x = 0;
 			} else {
 				this.setAnimation(shootUpIdleL);
-				this.velocity.x=0;
+				this.velocity.x = 0;
 			}
 		}
 
@@ -246,23 +265,23 @@ public class Player extends Element {
 		if (Gdx.input.isKeyPressed(Keys.ENTER) && Gdx.input.isKeyPressed(Keys.S) && tocoSuelo) {
 			if (direccion) {
 				this.setAnimation(shootDuckR);
-				this.velocity.x=0;
+				this.velocity.x = 0;
 			} else {
 				this.setAnimation(shootDuckL);
-				this.velocity.x=0;
+				this.velocity.x = 0;
 			}
 		}
 
 		if (Gdx.input.isKeyPressed(Keys.ENTER) && Gdx.input.isKeyPressed(Keys.S) && Gdx.input.isKeyPressed(Keys.D)
 				&& tocoSuelo) {
 			this.setAnimation(shootDuckR);
-			this.velocity.x=0;
+			this.velocity.x = 0;
 		}
 
 		if (Gdx.input.isKeyPressed(Keys.ENTER) && Gdx.input.isKeyPressed(Keys.S) && Gdx.input.isKeyPressed(Keys.A)
 				&& tocoSuelo) {
 			this.setAnimation(shootDuckL);
-			this.velocity.x=0;
+			this.velocity.x = 0;
 		}
 
 		// DISPARO
@@ -273,17 +292,28 @@ public class Player extends Element {
 
 //		SALTO
 
+		
+		
+		if (Gdx.input.isKeyPressed(Keys.SPACE) && Gdx.input.isKeyPressed(Keys.A) && tocoSuelo) {
+			saltaL();
+			
+		}
+		
+		if (Gdx.input.isKeyPressed(Keys.SPACE) && Gdx.input.isKeyPressed(Keys.D) && tocoSuelo) {
+			saltaR();
+		}
+		
 		if (Gdx.input.isKeyPressed(Keys.SPACE) && tocoSuelo) {
 			salta();
 		}
-		
+
 //		ENTRAR
-		
+
 		if (Gdx.input.isKeyJustPressed(Keys.E)) {
 			if (door) {
-				System.exit(0);
+				
 			}
-		} 
+		}
 	}
 
 	private void colocarPies() {
@@ -293,14 +323,31 @@ public class Player extends Element {
 	private void salta() {
 		if (direccion) {
 			this.setAnimation(jumpR);
-			this.acceleration.add(walkingSpeed, jumpSpeed);
+			this.acceleration.add(0, jumpSpeed);
 		} else {
 			this.setAnimation(jumpL);
-			this.acceleration.add(-walkingSpeed, jumpSpeed);
+			this.acceleration.add(0, jumpSpeed);
 		}
 
+		SoundManager.playSound("Sound/sfx_player_jump_01.wav");
 		this.tocoSuelo = false;
 
+	}
+
+	private void saltaL() {
+		this.setAnimation(jumpL);
+		this.acceleration.add(0, jumpSpeed);
+		this.velocity.x=-2000;
+		SoundManager.playSound("Sound/sfx_player_jump_01.wav");
+		this.tocoSuelo = false;
+	}
+	
+	private void saltaR() {
+		this.setAnimation(jumpL);
+		this.acceleration.add(0, jumpSpeed);
+		this.velocity.x=2000;
+		SoundManager.playSound("Sound/sfx_player_jump_01.wav");
+		this.tocoSuelo = false;
 	}
 
 	private void dashR() {
@@ -350,9 +397,35 @@ public class Player extends Element {
 			}
 
 		}
-
+		SoundManager.playSoundLoop("Sound/sfx_player_weapon_charge_fire_small_001.wav");
 		balaActual = (balaActual + 1) % this.totalBalas;
 		tiempoDisparo = 0;
+	}
+	
+	public void getHit() {
+		
+		controles = false;
+		if (tiempoHit >= cooldownHit) {
+			if (direccion) {
+				this.setAnimation(hitR);
+			}else {
+				this.setAnimation(hitL);
+			}
+			this.addAction(Actions.moveTo(Parametros.playerX, Parametros.playerY+100, 0.5f));
+			SoundManager.playSound("Sound/sfx_player_hit_02.wav");
+			Parametros.vida-=1;	
+			if (Parametros.vida==0) {
+				die();
+			}
+			tiempoHit = 0;			
+		}
+		
+	}
+
+	private void die() {
+		
+		
+		
 	}
 
 	private void cargarAnimaciones() {
@@ -381,6 +454,13 @@ public class Player extends Element {
 		dashL = this.loadFullAnimation("Cuphead/Dash/Ground/dashGL.png", 8, 1, 0.1f, true);
 		dashR = this.loadFullAnimation("Cuphead/Dash/Ground/dashGR.png", 8, 1, 0.1f, true);
 
+		hitL = this.loadFullAnimation("Cuphead/Hit/Ground/hitL.png", 6, 1, 0.1f, true);
+		hitR = this.loadFullAnimation("Cuphead/Hit/Ground/hitR.png", 6, 1, 0.1f, true);
+
+		
+		
 	}
+
+	
 
 }

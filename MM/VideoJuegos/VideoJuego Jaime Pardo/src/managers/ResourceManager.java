@@ -22,6 +22,8 @@ public final class ResourceManager {
 		assets.setLoader(TiledMap.class, new TmxMapLoader());
 		assets.load("maps/tutorial/tutorial.tmx", TiledMap.class);
 		assets.load("maps/Level1/Level1.tmx", TiledMap.class);
+		assets.load("maps/Boss1/Boss1.tmx", TiledMap.class);
+
 	
 		assets.load("maps/tutorial/assets/Drawing/tutorial_room_front_layer_0001.png", Texture.class);
 		
@@ -70,7 +72,10 @@ public final class ResourceManager {
 
 		
 		
+		//BOSSES
 		
+		assets.load("Bosses/BossBola/Phase2/idleL.png", Texture.class);
+				
 		//mapas
 		//assets.setLoader(TiledMap.class, new TmxMapLoader());
 		//assets.load("maps/00.tmx", TiledMap.class);
@@ -90,21 +95,24 @@ public final class ResourceManager {
         
         
         //Audio
-        assets.load("Cuphead/Sound/sfx_player_shoot_hit_01.wav", Sound.class);
-        assets.load("Cuphead/Sound/sfx_coin_pickup_01.wav", Sound.class);
-        assets.load("Cuphead/Sound/sfx_platforming_flowergrunt_death_01.wav", Sound.class);
-        assets.load("Cuphead/Sound/sfx_player_jump_01.wav", Sound.class);
-        assets.load("Cuphead/Sound/sfx_player_weapon_charge_fire_small_001.wav", Sound.class);
-        assets.load("Cuphead/Sound/sfx_player_hit_02.wav", Sound.class);
-        assets.load("Cuphead/Sound/sfx_player_dash_01.wav", Sound.class);
+        assets.load("Sound/sfx_player_shoot_hit_01.wav", Sound.class);
+        assets.load("Sound/sfx_coin_pickup_01.wav", Sound.class);
+        assets.load("Sound/sfx_platforming_flowergrunt_death_01.wav", Sound.class);
+        assets.load("Sound/sfx_player_jump_01.wav", Sound.class);
+        assets.load("Sound/sfx_player_weapon_charge_fire_small_001.wav", Sound.class);
+        assets.load("Sound/sfx_player_hit_02.wav", Sound.class);
+        assets.load("Sound/sfx_player_dash_01.wav", Sound.class);
 
+        
         assets.load("maps/Level1/music/MUS_ForestFollies.wav", Music.class);
+        assets.load("maps/Boss1/music/MUS_Slime.wav", Music.class);
         
         //UI
         assets.load("Lives/hp3.png", Texture.class);
         assets.load("Lives/hp2.png", Texture.class);
         assets.load("Lives/hp1.png", Texture.class);
         assets.load("Lives/hp0.png", Texture.class);
+        assets.load("Lives/cuphead_death.png", Texture.class);
 
         
         

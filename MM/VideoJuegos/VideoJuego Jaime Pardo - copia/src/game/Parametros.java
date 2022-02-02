@@ -11,9 +11,11 @@ public class Parametros {
  
  public static boolean debug=false;
  
+ public static boolean nohit=false;
+ 
  //Audio;
- public static float musicVolume=1;
- public static float soundVolume=1;
+ public static float musicVolume=0.1f;
+ public static float soundVolume=0.1f;
  
  
  //public static float zoom=0.24f;
@@ -25,6 +27,7 @@ public class Parametros {
  public static float playerX = 0;
  public static float playerY = 0;
  
+ public static int vida = 0;
  
 
 

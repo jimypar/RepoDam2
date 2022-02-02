@@ -55,8 +55,8 @@ public class Player extends Element {
 	public boolean tocoSuelo;
 	public boolean direccion = true;
 	private boolean controles;
-	private boolean controlesHit;
 
+	public boolean muerto;
 
 	private float walkingSpeed = 500;
 	private float jumpSpeed = 500000;
@@ -66,11 +66,11 @@ public class Player extends Element {
 		super(x, y, s);
 		tocoSuelo = false;
 		controles = true;
+		muerto=false;
 		
 		this.maxSpeed = 1000;
 
 		cargarAnimaciones();
-		cargarSonido();
 
 		pies = new Element(0, 0, s, this.getWidth() / 2, this.getHeight() / 20);
 		pies.setRectangle();
@@ -80,10 +80,6 @@ public class Player extends Element {
 			balas.add(new Bala(0, 0, s));
 		}
 
-	}
-
-	private void cargarSonido() {
-				
 	}
 
 	public Array<Bala> getBalas() {
@@ -99,7 +95,12 @@ public class Player extends Element {
 		}
 				
 		if (controles && tiempoHit >= cooldownHit/2) {
-			controles();
+			if (Parametros.vida>0) {
+				controles();
+			}else {
+				muerto=true;
+			}
+			
 		}
 
 		colocarPies();
@@ -154,7 +155,7 @@ public class Player extends Element {
 				dashL();
 			}
 			
-			SoundManager.playSound("Cuphead/Sound/sfx_player_dash_01.wav");
+			SoundManager.playSound("Sound/sfx_player_dash_01.wav");
 		}
 
 		if (Gdx.input.isKeyJustPressed(Keys.SHIFT_LEFT) && !Gdx.input.isKeyPressed(Keys.S) && this.velocity.x != 0
@@ -166,7 +167,7 @@ public class Player extends Element {
 			}
 			
 			
-			SoundManager.playSound("Cuphead/Sound/sfx_player_dash_01.wav");
+			SoundManager.playSound("Sound/sfx_player_dash_01.wav");
 		}
 
 //		ESTATICO
@@ -329,7 +330,7 @@ public class Player extends Element {
 			this.acceleration.add(0, jumpSpeed);
 		}
 
-		SoundManager.playSound("Cuphead/Sound/sfx_player_jump_01.wav");
+		SoundManager.playSound("Sound/sfx_player_jump_01.wav");
 		this.tocoSuelo = false;
 
 	}
@@ -338,7 +339,7 @@ public class Player extends Element {
 		this.setAnimation(jumpL);
 		this.acceleration.add(0, jumpSpeed);
 		this.velocity.x=-2000;
-		SoundManager.playSound("Cuphead/Sound/sfx_player_jump_01.wav");
+		SoundManager.playSound("Sound/sfx_player_jump_01.wav");
 		this.tocoSuelo = false;
 	}
 	
@@ -346,7 +347,7 @@ public class Player extends Element {
 		this.setAnimation(jumpL);
 		this.acceleration.add(0, jumpSpeed);
 		this.velocity.x=2000;
-		SoundManager.playSound("Cuphead/Sound/sfx_player_jump_01.wav");
+		SoundManager.playSound("Sound/sfx_player_jump_01.wav");
 		this.tocoSuelo = false;
 	}
 
@@ -397,7 +398,7 @@ public class Player extends Element {
 			}
 
 		}
-		SoundManager.playSoundLoop("Cuphead/Sound/sfx_player_weapon_charge_fire_small_001.wav");
+		SoundManager.playSoundLoop("Sound/sfx_player_weapon_charge_fire_small_001.wav");
 		balaActual = (balaActual + 1) % this.totalBalas;
 		tiempoDisparo = 0;
 	}
@@ -412,10 +413,20 @@ public class Player extends Element {
 				this.setAnimation(hitL);
 			}
 			this.addAction(Actions.moveTo(Parametros.playerX, Parametros.playerY+100, 0.5f));
-			SoundManager.playSound("Cuphead/Sound/sfx_player_hit_02.wav");
+			SoundManager.playSound("Sound/sfx_player_hit_02.wav");
 			Parametros.vida-=1;	
+			if (Parametros.vida==0) {
+				die();
+			}
 			tiempoHit = 0;			
 		}
+		
+	}
+
+	private void die() {
+		
+		controles=false;
+		this.velocity.setZero();
 		
 	}
 
