@@ -110,6 +110,8 @@ public class Player extends Element {
 		// aplico graviedad
 		this.acceleration.add(0, Parametros.gravedad);
 		this.applyPhysics(delta);
+		
+		
 
 		this.tiempoDisparo += delta;
 		this.tiempoDash += delta;

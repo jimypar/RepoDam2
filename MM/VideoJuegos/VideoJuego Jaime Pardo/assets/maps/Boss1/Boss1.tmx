@@ -59,7 +59,7 @@
     <property name="name" value="Solid"/>
    </properties>
   </object>
-  <object id="39" x="-30.9935" y="7.03032" width="94.6667" height="1501.75">
+  <object id="39" x="-58.9935" y="7.03032" width="94.6667" height="1501.75">
    <properties>
     <property name="name" value="Solid"/>
    </properties>
@@ -72,12 +72,12 @@
   <object id="522" gid="4" x="-11" y="1592" width="1807.13" height="1300"/>
  </objectgroup>
  <objectgroup id="5" name="Muro">
-  <object id="37" x="51.2179" y="22.7273" width="21.5151" height="1501.75">
+  <object id="37" x="25.2179" y="24.7273" width="21.5151" height="1501.75">
    <properties>
     <property name="name" value="Wall"/>
    </properties>
   </object>
-  <object id="511" x="1685.24" y="11.125" width="21.5151" height="1501.75">
+  <object id="511" x="1687.24" y="11.125" width="21.5151" height="1501.75">
    <properties>
     <property name="name" value="Wall"/>
    </properties>
@@ -85,14 +85,14 @@
  </objectgroup>
  <objectgroup id="17" name="Zarzas"/>
  <objectgroup id="4" name="Inicio">
-  <object id="505" x="870.364" y="1166.97" width="64" height="120">
+  <object id="505" x="842.364" y="1164.97" width="64" height="120">
    <properties>
     <property name="name" value="Inicio"/>
    </properties>
   </object>
  </objectgroup>
  <objectgroup id="16" name="Enemigo">
-  <object id="469" x="1388" y="1217" width="100" height="62">
+  <object id="469" x="1320" y="815" width="100" height="62">
    <properties>
     <property name="enemy" value="boss"/>
    </properties>

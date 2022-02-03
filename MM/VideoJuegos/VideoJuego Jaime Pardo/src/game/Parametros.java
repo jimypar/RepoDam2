@@ -9,12 +9,12 @@ public class Parametros {
  private static int anchoPantalla=1920;
  private static int altoPantalla=1080;
  
- public static boolean debug=false;
+ public static boolean debug=true;
  
- public static boolean nohit=false;
+ public static boolean nohit=true;
  
  //Audio;
- public static float musicVolume=0.1f;
+ public static float musicVolume=0.0f;
  public static float soundVolume=0.1f;
  
  

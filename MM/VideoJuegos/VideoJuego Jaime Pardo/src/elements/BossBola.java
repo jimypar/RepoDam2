@@ -4,6 +4,7 @@ import com.badlogic.gdx.graphics.g2d.Animation;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.badlogic.gdx.scenes.scene2d.Stage;
 
+import game.Parametros;
 import screens.Boss1;
 import screens.Level1;
 
@@ -11,24 +12,22 @@ public class BossBola extends Boss{
 
 	private int direccion;
 	private Animation<TextureRegion> idleL;
-	private Element pie;
-	private boolean choca;
-	private boolean pisa;
+	private Animation<TextureRegion> idleR;
 	private Boss1 nivel;
+	
+	private float cooldownJump = 4f;
+	private float tiempoJump = cooldownJump * 3;
 	
 	
 	public BossBola(float x, float y, Stage s, Boss1 nivel) {
 		super(x, y, s, nivel);
 		this.nivel=nivel;
-		// TODO Auto-generated constructor stub
+		
 		idleL= loadFullAnimation("Bosses/BossBola/Phase2/idleL.png", 5, 1, 0.2f, true);
+		idleR= loadFullAnimation("Bosses/BossBola/Phase2/idleR.png", 5, 1, 0.2f, true);
 		direccion=-1;
 		
 		this.setPolygon(10, this.getWidth(), this.getHeight(), 0, 0);
-		
-		pie=new Element(0,0,s,this.getWidth()/4 ,this.getHeight()/4);
-		pie.setRectangle();
-		ajustarPie();
 		
 		velocidad=250;
 		
@@ -41,42 +40,42 @@ public class BossBola extends Boss{
 
 	@Override
 	public void act(float delta) {
-		// TODO Auto-generated method stub
 		super.act(delta);
-		choca=false;
-		pisa=false;
+		
 		for(Wall muro:nivel.muros) {
 			if(this.overlaps(muro)) {
-				choca=true;
+				this.preventOverlap(muro);
+				changeAnimation();
+				direccion*=-1;
 			}
 		}
 		
 		
 		for(Solid suelo:nivel.suelo) {
-			if(pie.overlaps(suelo)) {
-				pisa=true;
-			}
+			this.preventOverlap(suelo);
 		}
-		
-		if(choca || !pisa) {
-			changeAnimation();
-			direccion*=-1;
-		}
+			
+		System.out.println(this.direccion);
 		
 		if (!dying) {
-			moveBy(direccion*velocidad*delta,0);
+			
+			
+			if (this.getX()>850) {
+				direccion=1;
+			}else {
+				direccion*=-1;
+			}
+			
+			if (tiempoJump>=cooldownJump) {
+				this.acceleration.add(5000000*direccion, 5000000);
+				this.tiempoJump=0;
+			}
+			
 		}		
-		ajustarPie();
 		
-	}
-
-	private void ajustarPie() {
-		// TODO Auto-generated method stub
-		if(direccion==-1) {
-			pie.setPosition(this.getX(), this.getY()-this.getHeight()/8);
-		}else {
-			pie.setPosition(this.getX()+this.getWidth()*3/4, this.getY()-this.getHeight()/8);
-		}
+		this.acceleration.add(0, Parametros.gravedad);
+		this.applyPhysics(delta);
+		this.tiempoJump+= delta;
 		
 	}
 
@@ -84,9 +83,10 @@ public class BossBola extends Boss{
 	private void changeAnimation() {
 		
 		if (this.direccion>0) {
+			this.setAnimation(idleL);
 		}else {
-		}
-		
+			this.setAnimation(idleR);
+		}		
 	}
 	
 	

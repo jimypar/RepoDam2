@@ -75,6 +75,7 @@ public final class ResourceManager {
 		//BOSSES
 		
 		assets.load("Bosses/BossBola/Phase2/idleL.png", Texture.class);
+		assets.load("Bosses/BossBola/Phase2/idleR.png", Texture.class);
 				
 		//mapas
 		//assets.setLoader(TiledMap.class, new TmxMapLoader());
