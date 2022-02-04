@@ -42,6 +42,38 @@ public class BossBola extends Boss{
 	public void act(float delta) {
 		super.act(delta);
 		
+		collide();
+		
+		
+		
+		
+		if (!dying) {
+			
+			if (this.getX()>800) {
+				direccion=-1;
+			}else {
+				direccion=1;
+				
+			}
+			
+			if (tiempoJump>=cooldownJump) {
+				this.acceleration.add(10000*direccion, 100000);
+				this.tiempoJump=0;
+			}
+			
+			this.changeAnimation();
+			
+		}		
+		
+		this.acceleration.add(0, -500);
+		this.applyPhysics(delta);
+		this.tiempoJump+= delta;
+		
+	}
+
+
+	private void collide() {
+		
 		for(Wall muro:nivel.muros) {
 			if(this.overlaps(muro)) {
 				this.preventOverlap(muro);
@@ -54,38 +86,18 @@ public class BossBola extends Boss{
 		for(Solid suelo:nivel.suelo) {
 			this.preventOverlap(suelo);
 		}
-			
-		System.out.println(this.direccion);
-		
-		if (!dying) {
-			
-			
-			if (this.getX()>850) {
-				direccion=1;
-			}else {
-				direccion*=-1;
-			}
-			
-			if (tiempoJump>=cooldownJump) {
-				this.acceleration.add(5000000*direccion, 5000000);
-				this.tiempoJump=0;
-			}
-			
-		}		
-		
-		this.acceleration.add(0, Parametros.gravedad);
-		this.applyPhysics(delta);
-		this.tiempoJump+= delta;
 		
 	}
 
 
+
+
 	private void changeAnimation() {
 		
-		if (this.direccion>0) {
-			this.setAnimation(idleL);
-		}else {
+		if (Parametros.playerX>this.getX()) {
 			this.setAnimation(idleR);
+		}else {
+			this.setAnimation(idleL);
 		}		
 	}
 	

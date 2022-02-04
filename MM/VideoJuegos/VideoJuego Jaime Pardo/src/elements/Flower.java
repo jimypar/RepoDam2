@@ -25,7 +25,7 @@ public class Flower extends Enemigo{
 		walkL= loadFullAnimation("Enemies/Flower/flowerL.png", 15, 1, 0.2f, true);
 		direccion=-1;
 		
-		this.setPolygon(10, this.getWidth(), this.getHeight(), 0, 0);
+		this.setRectangle();
 		
 		pie=new Element(0,0,s,this.getWidth()/4 ,this.getHeight()/4);
 		pie.setRectangle();
@@ -49,6 +49,7 @@ public class Flower extends Enemigo{
 		for(Wall muro:nivel.muros) {
 			if(this.overlaps(muro)) {
 				choca=true;
+				this.preventOverlap(muro);
 			}
 		}
 		

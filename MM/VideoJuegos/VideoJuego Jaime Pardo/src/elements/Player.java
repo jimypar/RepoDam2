@@ -355,6 +355,7 @@ public class Player extends Element {
 
 	private void dashR() {
 
+		this.animationTime = 0;
 		this.setAnimation(dashR);
 		this.setPosition(this.getX(), this.getY());
 		this.addAction(Actions.moveTo(Parametros.playerX + 400, Parametros.playerY, 0.8f));
@@ -364,7 +365,7 @@ public class Player extends Element {
 	}
 
 	private void dashL() {
-
+		this.animationTime = 0;
 		this.setAnimation(dashL);
 		this.addAction(Actions.moveTo(Parametros.playerX - 400, Parametros.playerY, 0.8f));
 		controles = false;

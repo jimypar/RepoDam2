@@ -32,7 +32,7 @@ public class LoadScreen extends BScreen{
 		
 		if(ResourceManager.update()) {
 			
-			game.setScreen(new Boss1(game));
+			game.setScreen(new Level1(game));
 			
 		}
 		

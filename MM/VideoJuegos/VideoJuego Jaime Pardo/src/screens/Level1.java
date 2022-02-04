@@ -170,7 +170,7 @@ public class Level1 extends BScreen {
 
 			for (Enemigo e : enemigos) {
 				if (!e.dying) {
-					if (bala.overlaps(e)) {
+					if (bala.getEnabled() && bala.overlaps(e)) {
 						bala.setEnabled(false);
 						SoundManager.playSound("Sound/sfx_platforming_flowergrunt_death_01.wav");
 						e.getHit();

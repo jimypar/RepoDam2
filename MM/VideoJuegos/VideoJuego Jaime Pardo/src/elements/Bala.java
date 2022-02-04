@@ -15,6 +15,9 @@ public class Bala extends Element{
 	private Animation<TextureRegion> arribaDerecha;
 
 	private int velocidadBala;
+	
+	private float cooldownBala = 1f;
+	private float tiempoBala = cooldownBala * 2;
 
 	public Bala(float x, float y, Stage s) {
 		super(x, y, s);
@@ -35,11 +38,19 @@ public class Bala extends Element{
 	public void act(float delta) {
 		super.act(delta);
 		
+	
+		
 		this.setPolygon(4,this.getWidth(),this.getHeight(),0,0);
 		
 		if(getEnabled()) {
 			this.moveBy(this.velocity.x*delta, this.velocity.y*delta);			
 		}
+		
+		if (tiempoBala>=cooldownBala) {
+			this.setEnabled(false);
+		}
+		
+		tiempoBala+=delta;
 		
 	}
 
@@ -48,6 +59,7 @@ public class Bala extends Element{
 		this.setAnimation(derecha);
 		this.setPosition(Parametros.playerX+20, Parametros.playerY+60);
 		this.getVelocity().set(velocidadBala,0);
+		tiempoBala=0;
 	}
 	
 	public void dispararL() {
@@ -55,6 +67,7 @@ public class Bala extends Element{
 		this.setAnimation(izquierda);
 		this.setPosition(Parametros.playerX-20, Parametros.playerY+60);
 		this.getVelocity().set(-velocidadBala,0);
+		tiempoBala=0;
 	}
 	
 	public void dispararUPR() {
@@ -62,6 +75,7 @@ public class Bala extends Element{
 		this.setAnimation(arriba);
 		this.setPosition(Parametros.playerX+70, Parametros.playerY+80);
 		this.getVelocity().set(0,velocidadBala);
+		tiempoBala=0;
 	}
 	
 	public void dispararUPL() {
@@ -69,6 +83,7 @@ public class Bala extends Element{
 		this.setAnimation(arriba);
 		this.setPosition(Parametros.playerX, Parametros.playerY+80);
 		this.getVelocity().set(0,velocidadBala);
+		tiempoBala=0;
 	}
 	
 	public void dispararRUP() {
@@ -76,6 +91,7 @@ public class Bala extends Element{
 		this.setAnimation(arribaDerecha);
 		this.setPosition(Parametros.playerX+50, Parametros.playerY+60);
 		this.getVelocity().set(velocidadBala+(velocidadBala/4),velocidadBala);
+		tiempoBala=0;
 	}
 	
 	public void dispararLUP() {
@@ -83,20 +99,23 @@ public class Bala extends Element{
 		this.setAnimation(arribaIzquierda);
 		this.setPosition(Parametros.playerX-50, Parametros.playerY+60);
 		this.getVelocity().set(-velocidadBala-(velocidadBala/4),velocidadBala);
+		tiempoBala=0;
 	}
 
 	public void dispararRDOWN() {
 		this.setEnabled(true);
 		this.setAnimation(derecha);
 		this.setPosition(Parametros.playerX+70, Parametros.playerY+30);
-		this.getVelocity().set(velocidadBala,0);		
+		this.getVelocity().set(velocidadBala,0);
+		tiempoBala=0;
 	}
 
 	public void dispararLDOWN() {
 		this.setEnabled(true);
 		this.setAnimation(izquierda);
 		this.setPosition(Parametros.playerX-50, Parametros.playerY+30);
-		this.getVelocity().set(-velocidadBala,0);				
+		this.getVelocity().set(-velocidadBala,0);
+		tiempoBala=0;
 	}
 	
 	

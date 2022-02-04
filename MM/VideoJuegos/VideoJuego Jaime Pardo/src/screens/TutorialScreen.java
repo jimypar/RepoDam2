@@ -90,6 +90,7 @@ public class TutorialScreen extends BScreen {
 		player = new Player(inicioX, inicioY, mainStage);
 		player.setPolygon(10);
 		
+		Parametros.vida=3;
 		
 		music_background = Gdx.audio.newMusic(Gdx.files.internal("maps/tutorial/music/MUS_Tutorial.wav"));
 		music_background.setVolume(Parametros.musicVolume);
