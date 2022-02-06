@@ -22,15 +22,15 @@ import com.badlogic.gdx.maps.tiled.renderers.OrthogonalTiledMapRenderer;
 import com.badlogic.gdx.scenes.scene2d.Stage;
 import com.badlogic.gdx.utils.Array;
 
-import elements.Bala;
-import elements.Clock;
-import elements.Coin;
 import elements.Element;
-import elements.ImagenCapa;
-import elements.Marker;
-import elements.Player;
-import elements.Solid;
-import elements.Wall;
+import elements.objects.Coin;
+import elements.objects.ImagenCapa;
+import elements.objects.Marker;
+import elements.objects.Solid;
+import elements.objects.Wall;
+import elements.other.Clock;
+import elements.player.Bala;
+import elements.player.Player;
 import game.Demo;
 import game.Parametros;
 import managers.OrthogonalTiledMapRendererWithSprites;
@@ -74,6 +74,8 @@ public class TutorialScreen extends BScreen {
 //			e.printStackTrace();
 //		}
 		
+		
+		
 		vigneteTexture = new Texture("maps/tutorial/assets/Drawing/tutorial_room_front_layer_0001.png");
 		
 		cargarMapaTiled();
@@ -90,6 +92,7 @@ public class TutorialScreen extends BScreen {
 		player = new Player(inicioX, inicioY, mainStage);
 		player.setPolygon(10);
 		
+		Parametros.vida=3;
 		
 		music_background = Gdx.audio.newMusic(Gdx.files.internal("maps/tutorial/music/MUS_Tutorial.wav"));
 		music_background.setVolume(Parametros.musicVolume);

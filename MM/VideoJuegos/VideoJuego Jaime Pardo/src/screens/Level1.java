@@ -23,20 +23,20 @@ import com.badlogic.gdx.maps.tiled.renderers.OrthogonalTiledMapRenderer;
 import com.badlogic.gdx.scenes.scene2d.Stage;
 import com.badlogic.gdx.utils.Array;
 
-import elements.Bala;
-import elements.Blueball;
-import elements.Bramble;
-import elements.Clock;
-import elements.Coin;
 import elements.Element;
-import elements.Enemigo;
-import elements.Flower;
-import elements.FlyingPlant;
-import elements.ImagenCapa;
-import elements.Marker;
-import elements.Player;
-import elements.Solid;
-import elements.Wall;
+import elements.npc.Blueball;
+import elements.npc.Enemigo;
+import elements.npc.Flower;
+import elements.npc.FlyingPlant;
+import elements.objects.Bramble;
+import elements.objects.Coin;
+import elements.objects.ImagenCapa;
+import elements.objects.Marker;
+import elements.objects.Solid;
+import elements.objects.Wall;
+import elements.other.Clock;
+import elements.player.Bala;
+import elements.player.Player;
 import game.Demo;
 import game.Parametros;
 import managers.OrthogonalTiledMapRendererWithSprites;
@@ -68,6 +68,8 @@ public class Level1 extends BScreen {
 
 	private Coin coin;
 	public Element door;
+	public Element fin;
+
 
 	public Level1(Demo game) {
 
@@ -196,6 +198,10 @@ public class Level1 extends BScreen {
 		if (player.overlaps(door)) {
 			player.door = true;
 		}
+		
+		if (player.overlaps(fin)) {
+			game.setScreen(new Boss1(game));
+		}
 
 	}
 
@@ -268,6 +274,12 @@ public class Level1 extends BScreen {
 		door = new Element((float) props.get("x"), (float) props.get("y"), mainStage, (float) props.get("width"),
 				(float) props.get("height"));
 		door.setRectangle();
+		
+		elementos = getRectangleList("Fin");
+		props = elementos.get(0).getProperties();
+		fin = new Element((float) props.get("x"), (float) props.get("y"), mainStage, (float) props.get("width"),
+				(float) props.get("height"));
+		fin.setRectangle();
 
 		elementos = getRectangleList("Solid");
 

@@ -2,7 +2,7 @@ package screens;
 
 import com.badlogic.gdx.scenes.scene2d.Stage;
 
-import elements.Clock;
+import elements.other.Clock;
 import game.Demo;
 import managers.ResourceManager;
 
@@ -32,7 +32,7 @@ public class LoadScreen extends BScreen{
 		
 		if(ResourceManager.update()) {
 			
-			game.setScreen(new Level1(game));
+			game.setScreen(new TutorialScreen(game));
 			
 		}
 		

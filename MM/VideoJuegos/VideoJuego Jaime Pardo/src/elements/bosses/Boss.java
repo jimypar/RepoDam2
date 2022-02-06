@@ -1,0 +1,68 @@
+package elements.bosses;
+
+import com.badlogic.gdx.graphics.g2d.Animation;
+import com.badlogic.gdx.graphics.g2d.TextureRegion;
+import com.badlogic.gdx.scenes.scene2d.Stage;
+
+import elements.Element;
+import elements.player.Player;
+import screens.Boss1;
+import screens.Level1;
+
+public class Boss extends Element {
+
+	public int vida;
+	public int velocidad;
+	protected Animation<TextureRegion> die;
+	public boolean dying=false;
+	
+	private float cooldownDie = 5f;
+	private float timeDie = cooldownDie * 2;
+	public boolean boss2;
+
+	public Boss(float x, float y, Stage s, Boss1 nivel) {
+		super(x, y, s);
+
+		
+		this.setEnabled(true);		
+		
+		vida = 200;
+
+	}
+
+	@Override
+	public void act(float delta) {
+		super.act(delta);
+
+		
+		if (dying && timeDie >= cooldownDie) {
+			this.setEnabled(false);
+			System.exit(0);
+		}
+		
+		if (dying) {
+			timeDie+=delta;
+		}
+		
+
+	}
+
+	public void damage(int damage) {
+		vida -= damage;
+		if (vida <= 100) {
+			this.setEnabled(false);
+			this.boss2=true;
+		}
+		if (vida <= 0) {
+ 			this.setEnabled(false);
+ 			timeDie=0;
+			this.dying=true;
+		}
+	}
+
+	public void setP(Player player) {
+		this.setP(player);
+	}
+
+	
+}

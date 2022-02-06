@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.5" tiledversion="1.7.2" orientation="orthogonal" renderorder="right-down" width="150" height="15" tilewidth="100" tileheight="100" infinite="0" nextlayerid="16" nextobjectid="241">
+<map version="1.5" tiledversion="1.7.2" orientation="orthogonal" renderorder="right-down" width="150" height="15" tilewidth="100" tileheight="100" infinite="0" nextlayerid="19" nextobjectid="287">
  <tileset firstgid="1" name="floor1" tilewidth="320" tileheight="375" tilecount="1" columns="0">
   <grid orientation="orthogonal" width="1" height="1"/>
   <tile id="0">
@@ -28,6 +28,36 @@
   <grid orientation="orthogonal" width="1" height="1"/>
   <tile id="0">
    <image width="1523" height="780" source="images/dragon_background_sky_0001.png"/>
+  </tile>
+ </tileset>
+ <tileset firstgid="6" name="rock1" tilewidth="271" tileheight="133" tilecount="1" columns="0">
+  <grid orientation="orthogonal" width="1" height="1"/>
+  <tile id="0">
+   <image width="271" height="133" source="images/rock1.png"/>
+  </tile>
+ </tileset>
+ <tileset firstgid="7" name="rock2" tilewidth="286" tileheight="173" tilecount="1" columns="0">
+  <grid orientation="orthogonal" width="1" height="1"/>
+  <tile id="0">
+   <image width="286" height="173" source="images/rock2.png"/>
+  </tile>
+ </tileset>
+ <tileset firstgid="8" name="rock3" tilewidth="285" tileheight="148" tilecount="1" columns="0">
+  <grid orientation="orthogonal" width="1" height="1"/>
+  <tile id="0">
+   <image width="285" height="148" source="images/rock3.png"/>
+  </tile>
+ </tileset>
+ <tileset firstgid="9" name="level_world_1_exit_sign" tilewidth="133" tileheight="152" tilecount="1" columns="0">
+  <grid orientation="orthogonal" width="1" height="1"/>
+  <tile id="0">
+   <image width="133" height="152" source="images/level_world_1_exit_sign.png"/>
+  </tile>
+ </tileset>
+ <tileset firstgid="10" name="log" tilewidth="421" tileheight="154" tilecount="1" columns="0">
+  <grid orientation="orthogonal" width="1" height="1"/>
+  <tile id="0">
+   <image width="421" height="154" source="images/log.png"/>
   </tile>
  </tileset>
  <layer id="1" name="Fondo" width="150" height="15">
@@ -123,7 +153,7 @@
   <object id="130" gid="1073741825" x="6393.76" y="1142.56" width="320" height="375" rotation="180"/>
   <object id="131" gid="1" x="6393.77" y="1517.56" width="320" height="375"/>
   <object id="132" gid="1073741825" x="7033.74" y="1142.82" width="320" height="375" rotation="180"/>
-  <object id="133" gid="1" x="7033.65" y="1517.88" width="320" height="375"/>
+  <object id="133" gid="1" x="7021.65" y="1515.88" width="346" height="375"/>
   <object id="134" gid="1073741825" x="7673.61" y="1143" width="320" height="375" rotation="180"/>
   <object id="135" gid="1" x="7673.61" y="1518.07" width="320" height="375"/>
   <object id="136" gid="1073741825" x="8313.58" y="1143.33" width="320" height="375" rotation="180"/>
@@ -151,14 +181,31 @@
   <object id="158" gid="1073741825" x="15352.4" y="1145.85" width="320" height="375" rotation="180"/>
   <object id="189" gid="1" x="15352" y="1519.5" width="320" height="375"/>
  </objectgroup>
- <objectgroup id="15" name="ImgObjeto"/>
+ <objectgroup id="15" name="ImgObjeto">
+  <object id="269" gid="6" x="3523.55" y="1143.65" width="213.424" height="104.743"/>
+  <object id="270" gid="6" x="4161.29" y="969.629" width="213.424" height="104.743"/>
+  <object id="271" gid="6" x="4825.29" y="963.629" width="213.424" height="104.743"/>
+  <object id="272" gid="6" x="5525.29" y="959.629" width="213.424" height="104.743"/>
+  <object id="273" gid="6" x="6193.29" y="981.629" width="179.424" height="88.0567"/>
+  <object id="274" gid="6" x="6702.29" y="985.972" width="179.424" height="88.0567"/>
+  <object id="275" gid="6" x="7198.29" y="995.972" width="179.424" height="88.0567"/>
+  <object id="283" gid="9" x="13576" y="1366" width="133" height="152"/>
+  <object id="284" gid="10" x="2898" y="1383" width="382.727" height="140"/>
+ </objectgroup>
+ <objectgroup id="16" name="Fin">
+  <object id="241" x="14292.5" y="969.091" width="222.667" height="408">
+   <properties>
+    <property name="name" value="Fin"/>
+   </properties>
+  </object>
+ </objectgroup>
  <objectgroup id="2" name="Solid">
   <object id="10" x="-5.242" y="1364" width="14992.4" height="80">
    <properties>
     <property name="name" value="Solid"/>
    </properties>
   </object>
-  <object id="38" x="14943.2" y="18" width="88" height="1468">
+  <object id="38" x="14987.2" y="38" width="88" height="1468">
    <properties>
     <property name="name" value="Solid"/>
    </properties>
@@ -173,19 +220,49 @@
     <property name="name" value="Solid"/>
    </properties>
   </object>
-  <object id="238" x="1460" y="1270" width="152.667" height="177.334">
+  <object id="276" x="3529" y="1066.67" width="196" height="70.667">
+   <properties>
+    <property name="name" value="Solid"/>
+   </properties>
+  </object>
+  <object id="277" x="4168" y="898.667" width="196" height="70.667">
+   <properties>
+    <property name="name" value="Solid"/>
+   </properties>
+  </object>
+  <object id="278" x="4834" y="886.667" width="196" height="70.667">
+   <properties>
+    <property name="name" value="Solid"/>
+   </properties>
+  </object>
+  <object id="279" x="5530" y="880.667" width="196" height="70.667">
+   <properties>
+    <property name="name" value="Solid"/>
+   </properties>
+  </object>
+  <object id="280" x="6196" y="924.667" width="166" height="58.667">
+   <properties>
+    <property name="name" value="Solid"/>
+   </properties>
+  </object>
+  <object id="281" x="6715" y="922.667" width="162" height="54.667">
+   <properties>
+    <property name="name" value="Solid"/>
+   </properties>
+  </object>
+  <object id="282" x="7209" y="934.667" width="162" height="54.667">
+   <properties>
+    <property name="name" value="Solid"/>
+   </properties>
+  </object>
+  <object id="286" x="2997" y="1260.67" width="174" height="164.667">
    <properties>
     <property name="name" value="Solid"/>
    </properties>
   </object>
  </objectgroup>
  <objectgroup id="5" name="Muro">
-  <object id="33" x="1452.69" y="1274.51" width="167.617" height="138.252">
-   <properties>
-    <property name="name" value="Wall"/>
-   </properties>
-  </object>
-  <object id="36" x="14926.2" y="8" width="28" height="1474">
+  <object id="36" x="14970.2" y="28" width="28" height="1474">
    <properties>
     <property name="name" value="Wall"/>
    </properties>
@@ -200,6 +277,80 @@
     <property name="name" value="Wall"/>
    </properties>
   </object>
+  <object id="285" x="3004.69" y="1252.62" width="158.617" height="218.765">
+   <properties>
+    <property name="name" value="Wall"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup id="17" name="Enemigo">
+  <object id="242" x="3833.21" y="1063.52" width="208" height="90.6667">
+   <properties>
+    <property name="enemy" value="Barrel"/>
+   </properties>
+  </object>
+  <object id="244" x="10876.9" y="779.515" width="111.03" height="130.061">
+   <properties>
+    <property name="enemy" value="Dragon"/>
+   </properties>
+  </object>
+  <object id="245" x="1259.64" y="910.727" width="111.03" height="130.061">
+   <properties>
+    <property name="enemy" value="Dragon"/>
+   </properties>
+  </object>
+  <object id="251" x="4486.61" y="1064.79" width="208" height="90.6667">
+   <properties>
+    <property name="enemy" value="Barrel"/>
+   </properties>
+  </object>
+  <object id="252" x="5218.24" y="1076.79" width="208" height="90.6667">
+   <properties>
+    <property name="enemy" value="Barrel"/>
+   </properties>
+  </object>
+  <object id="253" x="5926.55" y="1068.79" width="208" height="90.6667">
+   <properties>
+    <property name="enemy" value="Barrel"/>
+   </properties>
+  </object>
+  <object id="263" x="14672.5" y="630.97" width="111.03" height="130.061">
+   <properties>
+    <property name="enemy" value="Dragon"/>
+   </properties>
+  </object>
+  <object id="264" x="6422" y="1070.67" width="208" height="90.6667">
+   <properties>
+    <property name="enemy" value="Barrel"/>
+   </properties>
+  </object>
+  <object id="265" x="6930" y="1070.67" width="208" height="90.6667">
+   <properties>
+    <property name="enemy" value="Barrel"/>
+   </properties>
+  </object>
+  <object id="266" x="7396" y="1068.67" width="208" height="90.6667">
+   <properties>
+    <property name="enemy" value="Barrel"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup id="18" name="Spawn">
+  <object id="260" x="14836.5" y="1083.48" width="114.06" height="102.788">
+   <properties>
+    <property name="name" value="Spawn"/>
+   </properties>
+  </object>
+  <object id="261" x="14835" y="1167.06" width="114.06" height="102.788">
+   <properties>
+    <property name="name" value="Spawn"/>
+   </properties>
+  </object>
+  <object id="262" x="14837" y="1243.06" width="114.06" height="102.788">
+   <properties>
+    <property name="name" value="Spawn"/>
+   </properties>
+  </object>
  </objectgroup>
  <objectgroup id="4" name="Inicio">
   <object id="93" x="614.837" y="1237.76" width="64" height="120">
@@ -208,9 +359,15 @@
    </properties>
   </object>
  </objectgroup>
- <objectgroup id="9" name="Moneda"/>
+ <objectgroup id="9" name="Moneda">
+  <object id="267" x="7759.15" y="765.576" width="112.121" height="136.364">
+   <properties>
+    <property name="name" value="Coin"/>
+   </properties>
+  </object>
+ </objectgroup>
  <objectgroup id="11" name="Puerta">
-  <object id="100" x="14300" y="1206.06" width="154.545" height="221.212">
+  <object id="100" x="13693.8" y="955.151" width="611.878" height="422.545">
    <properties>
     <property name="name" value="Door"/>
    </properties>

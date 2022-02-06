@@ -22,6 +22,9 @@ public final class ResourceManager {
 		assets.setLoader(TiledMap.class, new TmxMapLoader());
 		assets.load("maps/tutorial/tutorial.tmx", TiledMap.class);
 		assets.load("maps/Level1/Level1.tmx", TiledMap.class);
+		assets.load("maps/Level2/Level2.tmx", TiledMap.class);
+		assets.load("maps/Boss1/Boss1.tmx", TiledMap.class);
+
 	
 		assets.load("maps/tutorial/assets/Drawing/tutorial_room_front_layer_0001.png", Texture.class);
 		
@@ -67,10 +70,28 @@ public final class ResourceManager {
 		assets.load("Enemies/Blueball/bolaL.png", Texture.class);
 		
 		assets.load("Enemies/Planta/flyingPlant.png", Texture.class);
+				
+		assets.load("Enemies/Barril/down.png", Texture.class);
+		assets.load("Enemies/Barril/up.png", Texture.class);
+		
+		assets.load("Enemies/Dragon/moveL.png", Texture.class);
+		assets.load("Enemies/Dragon/moveR.png", Texture.class);
+		assets.load("Enemies/Dragon/atack.png", Texture.class);
+		assets.load("Enemies/Dragon/fireball.png", Texture.class);
+		assets.load("Enemies/Dragon/explosion.png", Texture.class);
 
 		
+		assets.load("Enemies/Bees/moveL.png", Texture.class);
+
 		
+		//BOSSES
 		
+		assets.load("Bosses/BossBola/Phase2/idleL.png", Texture.class);
+		assets.load("Bosses/BossBola/Phase2/idleR.png", Texture.class);
+		assets.load("Bosses/BossBola/Phase3/stoneR.png", Texture.class);
+		assets.load("Bosses/BossBola/Phase3/stoneL.png", Texture.class);
+		assets.load("Bosses/BossBola/Phase3/smash.png", Texture.class);
+		assets.load("Bosses/BossBola/Phase3/death.png", Texture.class);
 		//mapas
 		//assets.setLoader(TiledMap.class, new TmxMapLoader());
 		//assets.load("maps/00.tmx", TiledMap.class);
@@ -98,13 +119,16 @@ public final class ResourceManager {
         assets.load("Sound/sfx_player_hit_02.wav", Sound.class);
         assets.load("Sound/sfx_player_dash_01.wav", Sound.class);
 
+        
         assets.load("maps/Level1/music/MUS_ForestFollies.wav", Music.class);
+        assets.load("maps/Boss1/music/MUS_Slime.wav", Music.class);
         
         //UI
         assets.load("Lives/hp3.png", Texture.class);
         assets.load("Lives/hp2.png", Texture.class);
         assets.load("Lives/hp1.png", Texture.class);
         assets.load("Lives/hp0.png", Texture.class);
+        assets.load("Lives/cuphead_death.png", Texture.class);
 
         
         
