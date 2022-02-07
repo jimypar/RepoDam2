@@ -116,7 +116,7 @@ public class Level2 extends BScreen {
 	}
 
 	private void cargarMusica() {
-		// SoundManager.playMusic("maps/Level1/music/MUS_ForestFollies.wav");
+		SoundManager.playMusic("maps/Level2/music/MUS_BotanicPanic.wav");
 	}
 
 	@Override

@@ -6,11 +6,11 @@ public class Parametros {
 // private static int anchoPantalla=1200;
 // private static int altoPantalla=900;
  
-// private static int anchoPantalla=1920;
-// private static int altoPantalla=1080;
+ private static int anchoPantalla=1920;
+ private static int altoPantalla=1080;
 
-private static int anchoPantalla=3000;
-private static int altoPantalla=2000;
+//private static int anchoPantalla=3000;
+//private static int altoPantalla=2000;
  
  public static boolean debug=false;
  public static boolean nohit=false;
@@ -20,8 +20,8 @@ private static int altoPantalla=2000;
  public static float soundVolume=0.1f;
  
  
- public static float zoom=0.5f;
-// public static float zoom=0.85f;
+// public static float zoom=0.5f;
+ public static float zoom=0.85f;
  
  //variables de juego
  public static int gravedad= -3000;

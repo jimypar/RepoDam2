@@ -429,6 +429,8 @@ public class Player extends Element {
 
 	private void die() {
 		
+		SoundManager.stopCurrentMusic();
+		SoundManager.playSound("Sound/sfx_vinyl_scratch_01.wav");
 		controles=false;
 		this.velocity.setZero();
 		

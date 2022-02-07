@@ -26,7 +26,7 @@ public class BarraVida extends Element {
 		hp2=this.loadFullAnimation("Lives/hp2.png", 1, 1, 200, true);
 		hp1=this.loadFullAnimation("Lives/hp1.png", 1, 1, 200, true);
 		hp0=this.loadFullAnimation("Lives/hp0.png", 1, 1, 200, true);
-		death1=this.loadFullAnimation("Lives/cuphead_death.png", 20, 1, 0.001f, true);
+		death1=this.loadFullAnimation("Lives/cuphead_death.png", 40, 1, 0.02f, true);
 
 
 
