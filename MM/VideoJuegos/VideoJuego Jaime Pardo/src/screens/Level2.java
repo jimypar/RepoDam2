@@ -199,11 +199,11 @@ public class Level2 extends BScreen {
 		for (Bala bala : player.getBalas()) {
 
 			for (Enemigo e : enemigos) {
-				if (!e.dying) {
+				if (!e.dying && !e.inmortal) {
 					if (bala.getEnabled() && bala.overlaps(e)) {
 						bala.setEnabled(false);
 						SoundManager.playSound("Sound/sfx_platforming_flowergrunt_death_01.wav");
-						e.getHit();
+						e.damage(1);
 					}
 				}
 			}
@@ -360,7 +360,6 @@ public class Level2 extends BScreen {
 			props = spawner.getProperties();
 			spawn = new Spawn((float) props.get("x"), (float) props.get("y"), mainStage, (float) props.get("width"),
 					(float) props.get("height"),this);
-			System.out.println(spawn.getX());
 			beeSpawn.add(spawn);
 		}
 		

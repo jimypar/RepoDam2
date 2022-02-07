@@ -22,6 +22,9 @@ public class Blueball extends Enemigo {
 	public Blueball(float x, float y, Stage s, Level1 nivel) {
 		super(x, y, s, nivel);
 		this.nivel = nivel;
+		
+		this.vida=1;
+		
 		// TODO Auto-generated constructor stub
 		walkR = loadFullAnimation("Enemies/Blueball/bolaR.png", 10, 1, 0.2f, true);
 		walkL = loadFullAnimation("Enemies/Blueball/bolaL.png", 10, 1, 0.2f, true);
