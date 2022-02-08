@@ -201,6 +201,7 @@ public class TutorialScreen extends BScreen {
 		if (coin.getEnabled() && coin.overlaps(player)) {
 			if (!coin.explode) {
 				coin.getCoin();
+				Parametros.powerUpDisparo=true;
 			}
 		}
 		

@@ -127,6 +127,7 @@ public final class ResourceManager {
         assets.load("maps/Level2/music/MUS_BotanicPanic.wav", Music.class);
         
         //UI
+        assets.load("Lives/hp4.png", Texture.class);
         assets.load("Lives/hp3.png", Texture.class);
         assets.load("Lives/hp2.png", Texture.class);
         assets.load("Lives/hp1.png", Texture.class);

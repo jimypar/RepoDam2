@@ -226,6 +226,7 @@ public class Level2 extends BScreen {
 		if (coin.getEnabled() && coin.overlaps(player)) {
 			if (!coin.explode) {
 				coin.getCoin();
+				Parametros.vida+=1;
 			}
 		}
 
