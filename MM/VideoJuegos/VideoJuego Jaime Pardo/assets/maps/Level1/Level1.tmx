@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.5" tiledversion="1.7.2" orientation="orthogonal" renderorder="right-down" width="135" height="15" tilewidth="100" tileheight="100" infinite="0" nextlayerid="19" nextobjectid="511">
+<map version="1.5" tiledversion="1.7.2" orientation="orthogonal" renderorder="right-down" width="135" height="15" tilewidth="100" tileheight="100" infinite="0" nextlayerid="20" nextobjectid="525">
  <tileset firstgid="1" name="log" tilewidth="421" tileheight="154" tilecount="1" columns="0">
   <grid orientation="orthogonal" width="1" height="1"/>
   <tile id="0">
@@ -112,6 +112,12 @@
   <grid orientation="orthogonal" width="1" height="1"/>
   <tile id="0">
    <image width="133" height="152" source="images/level_world_1_exit_sign.png"/>
+  </tile>
+ </tileset>
+ <tileset firstgid="20" name="cloud" tilewidth="232" tileheight="89" tilecount="1" columns="0">
+  <grid orientation="orthogonal" width="1" height="1"/>
+  <tile id="0">
+   <image width="232" height="89" source="images/cloud.png"/>
   </tile>
  </tileset>
  <layer id="1" name="Fondo" width="135" height="15">
@@ -237,6 +243,15 @@
   <object id="464" gid="15" x="10693.3" y="1535.57" width="487.392" height="206.856"/>
   <object id="466" gid="9" x="12011.8" y="1545.53" width="684.386" height="412.947"/>
   <object id="506" gid="19" x="11482" y="1166.67" width="133" height="152"/>
+  <object id="520" gid="20" x="3472.67" y="990.065" width="179.865" height="69"/>
+  <object id="521" gid="20" x="3026.74" y="991.645" width="121.865" height="46.75"/>
+  <object id="522" gid="20" x="3972.07" y="1047.9" width="98.5167" height="37.7931"/>
+  <object id="523" gid="20" x="8573.41" y="1030.39" width="98.5167" height="37.7931"/>
+  <object id="524" x="8580.01" y="998.487" width="86" height="24">
+   <properties>
+    <property name="name" value="Cloud"/>
+   </properties>
+  </object>
  </objectgroup>
  <objectgroup id="18" name="Fin">
   <object id="508" x="12310" y="796" width="250" height="370">
@@ -329,6 +344,16 @@
   <object id="460" x="7239" y="1276.42" width="589.635" height="267.03">
    <properties>
     <property name="name" value="Solid"/>
+   </properties>
+  </object>
+  <object id="514" x="3041.46" y="955.825" width="91.072" height="30.349">
+   <properties>
+    <property name="name" value="Cloud"/>
+   </properties>
+  </object>
+  <object id="515" x="3490.46" y="940.825" width="131.072" height="38.349">
+   <properties>
+    <property name="name" value="Cloud"/>
    </properties>
   </object>
  </objectgroup>
@@ -570,7 +595,20 @@
    </properties>
   </object>
  </objectgroup>
- <objectgroup id="9" name="Moneda"/>
+ <objectgroup id="19" name="Nube">
+  <object id="517" x="3978.67" y="1016" width="86" height="24">
+   <properties>
+    <property name="name" value="Cloud"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup id="9" name="Moneda">
+  <object id="519" x="3034.67" y="852" width="92" height="108">
+   <properties>
+    <property name="name" value="Coin"/>
+   </properties>
+  </object>
+ </objectgroup>
  <objectgroup id="11" name="Puerta">
   <object id="100" x="11598.1" y="793.575" width="786.848" height="369.697">
    <properties>

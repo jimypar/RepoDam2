@@ -29,6 +29,7 @@ import elements.npc.Enemigo;
 import elements.npc.Flower;
 import elements.npc.FlyingPlant;
 import elements.objects.Bramble;
+import elements.objects.Cloud;
 import elements.objects.Coin;
 import elements.objects.ImagenCapa;
 import elements.objects.Marker;
@@ -52,6 +53,7 @@ public class Level1 extends BScreen {
 	public Array<Wall> muros;
 	public Array<Bramble> brambles;
 	public Array<Enemigo> enemigos;
+	public Array<Cloud> nubes;
 	Array<ImagenCapa> imagenes;
 	Array<Marker> markers;
 	OrthographicCamera camara;
@@ -145,6 +147,17 @@ public class Level1 extends BScreen {
 			}
 
 			if (player.pies.overlaps(s)) {
+				player.tocoSuelo = true;
+			}
+		}
+		
+		for (Cloud n : nubes) {
+			
+			if (n.getEnabled() && n.overlaps(player) && player.pies.overlaps(n)) {
+				player.preventOverlap(n);
+			}
+
+			if (player.pies.overlaps(n)) {
 				player.tocoSuelo = true;
 			}
 		}
@@ -315,6 +328,17 @@ public class Level1 extends BScreen {
 			b = new Bramble((float) props.get("x"), (float) props.get("y"), mainStage, (float) props.get("width"),
 					(float) props.get("height"));
 			brambles.add(b);
+		}
+		
+		elementos = getRectangleList("Cloud");
+		
+		Cloud n;
+		nubes = new Array<Cloud>();
+		for (MapObject nube : elementos) {
+			props = nube.getProperties();
+			n = new Cloud((float) props.get("x"), (float) props.get("y"), mainStage, (float) props.get("width"),
+					(float) props.get("height"));
+			nubes.add(n);
 		}
 
 		elementos = getEnemyList();
