@@ -38,14 +38,23 @@ public class JasperReport {
         JasperViewer viewer = new JasperViewer(informeLleno,false);
         viewer.setVisible(true);
         try {
-            JasperExportManager.exportReportToPdfFile(informeLleno, "Clientes_PardoBusqueda"+".pdf");
+            JasperExportManager.exportReportToPdfFile(informeLleno, "Clientes_PardoBusqueda.pdf");
         } catch (JRException e) {
             e.printStackTrace();
         }
     }
 
+    public static void generarBusquedaCP(String cp){
+        JasperPrint informeLleno = ReporGenerator.generarInformePorCP(cp);
 
-
+        JasperViewer viewer = new JasperViewer(informeLleno,false);
+        viewer.setVisible(true);
+        try {
+            JasperExportManager.exportReportToPdfFile(informeLleno, "ClienteCPbusqueda_Pardo.pdf");
+        } catch (JRException e) {
+            e.printStackTrace();
+        }
+    }
 
     public static class Conexion {
 
@@ -73,7 +82,6 @@ public class JasperReport {
     }
     public static class ReporGenerator {
         public static String I_P;
-        private static final String I_PARAMETRO = "Clientes_PardoBusqueda.jasper";
 
         public static JasperPrint generarInformeClientes(String nombre) {
 
@@ -100,7 +108,28 @@ public class JasperReport {
 
             try {
                 JasperPrint informeLleno = JasperFillManager.fillReport
-                        (I_PARAMETRO, parametros, Conexion.getMySQLConexion());
+                        ("Clientes_PardoBusqueda.jasper", parametros, Conexion.getMySQLConexion());
+                return informeLleno;
+            } catch (JRException e) {
+                e.printStackTrace();
+            }
+            return null;
+
+
+        }
+
+        public static JasperPrint generarInformePorCP(String cp) {
+
+            // pasamos el HasMap que contendra el parametro de tipo string
+            // y el objeto como valor
+            HashMap<String,	Object> parametros = new HashMap<>();
+            //en los parametros pongo los valores como se llama
+            //en el informe y el valor que paso
+            parametros.put("cp", cp);
+
+            try {
+                JasperPrint informeLleno = JasperFillManager.fillReport
+                        ("ClienteCPbusqueda_Pardo.jasper", parametros, Conexion.getMySQLConexion());
                 return informeLleno;
             } catch (JRException e) {
                 e.printStackTrace();

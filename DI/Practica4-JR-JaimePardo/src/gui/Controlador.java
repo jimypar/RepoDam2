@@ -2,6 +2,7 @@ package gui;
 
 import util.Util;
 
+import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import java.awt.event.*;
 import java.sql.ResultSet;
@@ -44,6 +45,10 @@ public class Controlador implements ActionListener, ItemListener, WindowListener
         vista.btnInformeOrdenado.setActionCommand("informeOrdenado");
         vista.btnInformeBuscar.addActionListener(listener);
         vista.btnInformeBuscar.setActionCommand("informeBuscar");
+        vista.btnInformeCP.addActionListener(listener);
+        vista.btnInformeCP.setActionCommand("informeCP");
+        vista.btnInformeCPbuscar.addActionListener(listener);
+        vista.btnInformeCPbuscar.setActionCommand("informeCPBuscar");
     }
 
     private void addWindowListeners(WindowListener listener) {
@@ -96,7 +101,27 @@ public class Controlador implements ActionListener, ItemListener, WindowListener
                 JasperReport.generar("ClientesOrdenados_Pardo");
                 break;
             case "informeBuscar":
-                JasperReport.generarBusquedaNombre(vista.txtCiuda.getText());
+                JTextField ciudad = new JTextField(10);
+                String[] options = new String[]{"OK", "Cancel"};
+                int option = JOptionPane.showOptionDialog(null, ciudad, "Introduce ciudad",
+                        JOptionPane.NO_OPTION, JOptionPane.PLAIN_MESSAGE,
+                        null, options, options[1]);
+                if(option == 0)
+                { JasperReport.generarBusquedaNombre(ciudad.getText());
+                }
+                break;
+            case "informeCP":
+                JasperReport.generar("ClientesCodigoPostal_Pardo");
+                break;
+            case "informeCPBuscar":
+                JTextField codigoPostal = new JTextField(10);
+                String[] options2 = new String[]{"OK", "Cancel"};
+                int option2 = JOptionPane.showOptionDialog(null, codigoPostal, "Introduce un codigo postal",
+                        JOptionPane.NO_OPTION, JOptionPane.PLAIN_MESSAGE,
+                        null, options2, options2[1]);
+                if(option2 == 0)
+                { JasperReport.generarBusquedaCP(codigoPostal.getText());
+                }
                 break;
         }
     }
@@ -147,6 +172,7 @@ public class Controlador implements ActionListener, ItemListener, WindowListener
         vista.txtApellidos.setText("");
         vista.txtDireccion.setText("");
         vista.txtCiudad.setText("");
+        vista.txtCP.setText("");
         vista.txtTelefono.setText("");
     }
 
@@ -156,6 +182,7 @@ public class Controlador implements ActionListener, ItemListener, WindowListener
                 vista.txtDireccion.getText().isEmpty() ||
                 vista.txtTelefono.getText().isEmpty()||
                 vista.txtCiudad.getText().isEmpty()||
+                vista.txtCP.getText().isEmpty() ||
                 vista.txtDni.getText().isEmpty();
     }
 

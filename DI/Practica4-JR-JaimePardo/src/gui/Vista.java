@@ -11,6 +11,7 @@ public class Vista extends JFrame {
     private JTabbedPane tabbedPane;
     private JPanel panel1;
     private JPanel JPanelAutor;
+    private JPanel JPanelInformes;
 
     //AUTORES
     JTextField txtNombre;
@@ -26,9 +27,10 @@ public class Vista extends JFrame {
     JButton btnInformeOrdenado;
     JButton btnInformeCiudad;
     JButton btnInformeBuscar;
-    private JPanel JPanelInformes;
     JTextField txtCiuda;
     JTextField txtCP;
+    JButton btnInformeCP;
+    JButton btnInformeCPbuscar;
 
     //BUSQUEDA
     JLabel etiquetaEstado;

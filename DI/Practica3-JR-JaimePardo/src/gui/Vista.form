@@ -195,8 +195,7 @@
             <colspec value="fill:d:grow"/>
             <colspec value="left:4dlu:noGrow"/>
             <colspec value="fill:d:grow"/>
-            <colspec value="left:38dlu:noGrow"/>
-            <colspec value="fill:d:grow"/>
+            <colspec value="left:41dlu:noGrow"/>
             <colspec value="left:67dlu:noGrow"/>
             <colspec value="fill:498px:noGrow"/>
             <constraints>
@@ -207,7 +206,7 @@
             <children>
               <component id="edb99" class="javax.swing.JButton" binding="btnInforme">
                 <constraints>
-                  <grid row="0" column="3" row-span="1" col-span="4" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                  <grid row="0" column="3" row-span="1" col-span="3" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
                   <forms defaultalign-horz="false" defaultalign-vert="false"/>
                 </constraints>
                 <properties>
@@ -221,7 +220,7 @@
               </component>
               <component id="e9e39" class="javax.swing.JButton" binding="btnInformeOrdenado">
                 <constraints>
-                  <grid row="2" column="3" row-span="1" col-span="4" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                  <grid row="2" column="3" row-span="1" col-span="3" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
                   <forms defaultalign-horz="false" defaultalign-vert="false"/>
                 </constraints>
                 <properties>
@@ -235,7 +234,7 @@
               </component>
               <component id="d7767" class="javax.swing.JButton" binding="btnInformeCiudad">
                 <constraints>
-                  <grid row="4" column="3" row-span="1" col-span="4" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                  <grid row="4" column="3" row-span="1" col-span="3" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
                   <forms defaultalign-horz="false" defaultalign-vert="false"/>
                 </constraints>
                 <properties>
@@ -249,7 +248,7 @@
               </component>
               <component id="4c74a" class="javax.swing.JButton" binding="btnInformeBuscar">
                 <constraints>
-                  <grid row="6" column="6" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                  <grid row="6" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                   <forms defaultalign-horz="false" defaultalign-vert="false"/>
                 </constraints>
                 <properties>
@@ -260,24 +259,6 @@
                   <preferredSize width="300" height="50"/>
                   <text value="Informe Clientes Buscar"/>
                 </properties>
-              </component>
-              <component id="fb1f9" class="javax.swing.JLabel">
-                <constraints>
-                  <grid row="6" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-                  <forms/>
-                </constraints>
-                <properties>
-                  <text value="Ciudad"/>
-                </properties>
-              </component>
-              <component id="68450" class="javax.swing.JTextField" binding="txtCiuda">
-                <constraints>
-                  <grid row="6" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
-                    <preferred-size width="150" height="-1"/>
-                  </grid>
-                  <forms defaultalign-horz="false"/>
-                </constraints>
-                <properties/>
               </component>
             </children>
           </grid>

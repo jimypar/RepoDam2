@@ -2,6 +2,7 @@ package gui;
 
 import util.Util;
 
+import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import java.awt.event.*;
 import java.sql.ResultSet;
@@ -95,7 +96,14 @@ public class Controlador implements ActionListener, ItemListener, WindowListener
                 JasperReport.generar("ClientesOrdenados_Pardo");
                 break;
             case "informeBuscar":
-                JasperReport.generarBusquedaNombre(vista.txtCiuda.getText());
+                JTextField ciudad = new JTextField(10);
+                String[] options = new String[]{"OK", "Cancel"};
+                int option = JOptionPane.showOptionDialog(null, ciudad, "Introduce ciudad",
+                        JOptionPane.NO_OPTION, JOptionPane.PLAIN_MESSAGE,
+                        null, options, options[1]);
+                if(option == 0)
+                { JasperReport.generarBusquedaNombre(ciudad.getText());
+                }
                 break;
         }
     }
