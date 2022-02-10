@@ -13,14 +13,14 @@ import java.util.Vector;
  * Created by DAM on 13/12/2021.
  */
 public class Controlador implements ActionListener, ItemListener, WindowListener {
-    private Modelo modelo;
+    private Conexion_Pardo conexionPardo;
     private Vista vista;
     boolean refrescar;
 
-    public Controlador(Vista vista, Modelo modelo) {
-        this.modelo = modelo;
+    public Controlador(Vista vista, Conexion_Pardo conexionPardo) {
+        this.conexionPardo = conexionPardo;
         this.vista = vista;
-        modelo.conectar();
+        conexionPardo.conectar();
         setOptions();
         addActionListeners(this);
         addItemListeners(this);
@@ -70,7 +70,7 @@ public class Controlador implements ActionListener, ItemListener, WindowListener
                         Util.showErrorAlert("Rellena todos los campos");
                         vista.autoresTabla.clearSelection();
                     } else {
-                        modelo.insertarAutor(vista.txtDni.getText(),
+                        conexionPardo.insertarAutor(vista.txtDni.getText(),
                                 vista.txtNombre.getText(),
                                 vista.txtApellidos.getText(),
                                 vista.txtDireccion.getText(),
@@ -92,7 +92,7 @@ public class Controlador implements ActionListener, ItemListener, WindowListener
                 JasperReport.generar("Clientes_PardoCiudad");
                 break;
             case "informeOrdenado":
-                JasperReport.generar("Clientes_PardoOrdenados");
+                JasperReport.generar("ClientesOrdenados_Pardo");
                 break;
             case "informeBuscar":
                 JasperReport.generarBusquedaNombre(vista.txtCiuda.getText());
@@ -104,7 +104,7 @@ public class Controlador implements ActionListener, ItemListener, WindowListener
 
     private void refrescarAutores() {
         try {
-            vista.autoresTabla.setModel(construirTableModeloAutores(modelo.consultarAutor()));
+            vista.autoresTabla.setModel(construirTableModeloAutores(conexionPardo.consultarAutor()));
         } catch (SQLException e) {
             e.printStackTrace();
         }

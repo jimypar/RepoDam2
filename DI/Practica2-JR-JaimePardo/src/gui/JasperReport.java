@@ -40,7 +40,7 @@ public class JasperReport {
             try {
                 Class.forName("com.mysql.jdbc.Driver");
                 Connection conn = DriverManager.getConnection(
-                        "jdbc:mysql://localhost:3307/jrJaimePardo",USER, PASSWORD);
+                        "jdbc:mysql://localhost:3306/jrJaimePardo",USER, PASSWORD);
                 return conn;
 
             } catch (ClassNotFoundException | SQLException ex ) {

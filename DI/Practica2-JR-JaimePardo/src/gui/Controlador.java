@@ -13,14 +13,14 @@ import java.util.Vector;
  * Created by DAM on 13/12/2021.
  */
 public class Controlador implements ActionListener, ItemListener, WindowListener {
-    private Modelo modelo;
+    private Conexión_Pardo conexiónPardo;
     private Vista vista;
     boolean refrescar;
 
-    public Controlador(Vista vista, Modelo modelo) {
-        this.modelo = modelo;
+    public Controlador(Vista vista, Conexión_Pardo conexiónPardo) {
+        this.conexiónPardo = conexiónPardo;
         this.vista = vista;
-        modelo.conectar();
+        conexiónPardo.conectar();
         setOptions();
         addActionListeners(this);
         addItemListeners(this);
@@ -68,7 +68,7 @@ public class Controlador implements ActionListener, ItemListener, WindowListener
                         Util.showErrorAlert("Rellena todos los campos");
                         vista.autoresTabla.clearSelection();
                     } else {
-                        modelo.insertarAutor(vista.txtDni.getText(),
+                        conexiónPardo.insertarAutor(vista.txtDni.getText(),
                                 vista.txtNombre.getText(),
                                 vista.txtApellidos.getText(),
                                 vista.txtDireccion.getText(),
@@ -99,7 +99,7 @@ public class Controlador implements ActionListener, ItemListener, WindowListener
 
     private void refrescarAutores() {
         try {
-            vista.autoresTabla.setModel(construirTableModeloAutores(modelo.consultarAutor()));
+            vista.autoresTabla.setModel(construirTableModeloAutores(conexiónPardo.consultarAutor()));
         } catch (SQLException e) {
             e.printStackTrace();
         }

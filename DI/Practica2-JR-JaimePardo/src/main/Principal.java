@@ -1,7 +1,7 @@
 package main;
 
 import gui.Controlador;
-import gui.Modelo;
+import gui.Conexión_Pardo;
 import gui.Vista;
 
 /**
@@ -10,7 +10,7 @@ import gui.Vista;
 public class Principal {
     public static void main(String[] args) {
         Vista vista = new Vista();
-        Modelo modelo = new Modelo();
-        Controlador controlador = new Controlador(vista, modelo);
+        Conexión_Pardo conexiónPardo = new Conexión_Pardo();
+        Controlador controlador = new Controlador(vista, conexiónPardo);
     }
 }
