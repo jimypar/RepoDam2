@@ -48,7 +48,7 @@ import ui.BarraVida;
 public class Level1 extends BScreen {
 
 	Stage mainStage;
-	Stage uiStage;
+	
 	public Array<Solid> suelo;
 	public Array<Wall> muros;
 	public Array<Bramble> brambles;

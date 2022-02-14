@@ -14,6 +14,7 @@ import managers.ResourceManager;
 
 public class BScreen implements Screen{
 	final Demo game;
+	public Stage uiStage;
 	public ResourceManager resourceManager;
 	public Stage actualStage;
 	public LabelStyle uiStyle;
@@ -25,6 +26,7 @@ public class BScreen implements Screen{
 		
 		this.game=game;
 		this.resourceManager=game.resourceManager;
+		
 	
 		
 	}
