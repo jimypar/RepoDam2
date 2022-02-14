@@ -2,6 +2,7 @@ package elements;
 
 import com.badlogic.gdx.graphics.g2d.Animation;
 import com.badlogic.gdx.scenes.scene2d.Stage;
+import com.badlogic.gdx.scenes.scene2d.ui.Label;
 
 import screens.GameScreen;
 
@@ -29,6 +30,10 @@ public class Blob extends Enemigo{
 		pie.setRectangle();
 		ajustarPie();
 		
+		cabeza=new Element(0,0,s,this.getWidth()/4 ,this.getHeight()/4 );
+		cabeza.setRectangle();
+		ajustarCabeza();
+		
 		velocidad=50;
 		
 		
@@ -48,9 +53,9 @@ public class Blob extends Enemigo{
 			if(pie.overlaps(solido)) {
 				pisa=true;
 			}
-			/*if(cabeza.overlaps(solido)) {
+			if(cabeza.overlaps(solido)) {
 				cabezazo=true;
-			}*/
+			}
 			
 		}
 		
@@ -60,7 +65,7 @@ public class Blob extends Enemigo{
 		
 		moveBy(direccion*velocidad*delta,0);
 		ajustarPie();
-		//ajustarCabeza();
+		ajustarCabeza();
 		
 		
 		
@@ -79,6 +84,17 @@ public class Blob extends Enemigo{
 		}
 		
 	}
+	
+	private void ajustarCabeza() {
+		// TODO Auto-generated method stub
+		if(direccion==-1) {
+			cabeza.setPosition(this.getX(), this.getY()+this.getHeight()*7/8);
+		}else {
+			cabeza.setPosition(this.getX()+this.getWidth()*3/4, this.getY()+this.getHeight()*7/8);
+		}
+		
+	}
+
 
 	
 	

@@ -1,18 +1,32 @@
 package managers;
 
 
+import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.assets.AssetManager;
 import com.badlogic.gdx.audio.Music;
 import com.badlogic.gdx.audio.Sound;
+import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.graphics.g2d.BitmapFont;
+import com.badlogic.gdx.graphics.g2d.NinePatch;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
+import com.badlogic.gdx.graphics.g2d.freetype.FreeTypeFontGenerator;
+import com.badlogic.gdx.graphics.g2d.freetype.FreeTypeFontGenerator.FreeTypeFontParameter;
 import com.badlogic.gdx.maps.tiled.TiledMap;
 import com.badlogic.gdx.maps.tiled.TmxMapLoader;
+import com.badlogic.gdx.scenes.scene2d.ui.Label.LabelStyle;
+import com.badlogic.gdx.scenes.scene2d.ui.TextButton.TextButtonStyle;
+import com.badlogic.gdx.scenes.scene2d.utils.NinePatchDrawable;
 
 public final class ResourceManager {
 	private ResourceManager() {}
 	public static AssetManager assets=new AssetManager();
+	public static LabelStyle buttonStyle;
+	public static TextButtonStyle textButtonStyle;
+	
+	
+	
 	
 	public static void loadAllResources(){
 
@@ -51,11 +65,36 @@ public final class ResourceManager {
         assets.load("ui/morado.jpg", Texture.class);
  
 	//añadir más elementos
+        
+        
+		
 	
 	}
 	
 	public static boolean update(){
 		return assets.update();
+	}
+	public static void botones() {
+		
+		//estilo para botones
+        FreeTypeFontGenerator ftfg= new FreeTypeFontGenerator(Gdx.files.internal("sans.ttf"));
+		FreeTypeFontParameter ftfp= new FreeTypeFontParameter();
+		
+		ftfp.size=36;
+		ftfp.color=Color.WHITE;
+		ftfp.borderColor=Color.BLACK;
+		ftfp.borderWidth=2;
+		
+		BitmapFont fuentePropia=ftfg.generateFont(ftfp);
+		buttonStyle=new LabelStyle();
+		buttonStyle.font=fuentePropia;
+		textButtonStyle=new TextButtonStyle();
+		Texture buttonText = ResourceManager.getTexture("maps/images/barrel.png");
+		NinePatch buttonPatch = new NinePatch(buttonText);
+		textButtonStyle.up=new NinePatchDrawable(buttonPatch);
+		textButtonStyle.font=fuentePropia;
+		
+		
 	}
 	
 	/*public static TextureAtlas getAtlas(String path){

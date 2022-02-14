@@ -8,15 +8,15 @@ public class Parametros {
  
  private static int anchoPantalla=1920;
  private static int altoPantalla=1080;
-//	
+
 //private static int anchoPantalla=3000;
 //private static int altoPantalla=2000;
  
- public static boolean debug=true;
- public static boolean nohit=true;
+ public static boolean debug=false;
+ public static boolean nohit=false;
  
  //Audio;
- public static float musicVolume=0.1f;
+ public static float musicVolume=0.0f;
  public static float soundVolume=0.1f;
  
  
@@ -30,6 +30,8 @@ public class Parametros {
  public static float playerY = 0;
  
  public static int vida = 0;
+ 
+ public static boolean powerUpDisparo = false;
  
 
 

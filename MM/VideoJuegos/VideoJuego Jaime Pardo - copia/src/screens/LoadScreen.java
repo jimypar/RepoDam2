@@ -1,6 +1,6 @@
 package screens;
 
-import com.badlogic.gdx.scenes.scene2d.Stage;
+import com.badlogic.gdx.graphics.g2d.TextureRegion;
 
 import elements.other.Clock;
 import game.Demo;
@@ -10,12 +10,15 @@ public class LoadScreen extends BScreen{
 	private float loadDelay=5;
 	private float loadCount=0;
 	private Clock clock;
+	private TextureRegion imagen;
 	
 	public LoadScreen(Demo game){
 		
 	super(game);
 		
-	//	clock = new Clock(100,100, loadingStage);
+	imagen=new TextureRegion();
+	
+	//clock = new Clock(100,100,);
 	//this.resourceManager=new ResourceManager();
 	//game.resourceManager=this.resourceManager;
 	ResourceManager.loadAllResources();
@@ -27,12 +30,10 @@ public class LoadScreen extends BScreen{
 	@Override
 	public void render(float delta) {
 		super.render(delta);
-		
-		
-		
+				
 		if(ResourceManager.update()) {
 			
-			game.setScreen(new Level2(game));
+			game.setScreen(new TutorialScreen(game));
 			
 		}
 		

@@ -28,6 +28,8 @@ public class Bee extends Enemigo {
 
 	public Bee(float x, float y, Stage s, Level2 nivel) {
 		super(x, y, s, nivel);
+		
+		this.inmortal=true;
 
 		n = nivel;
 
@@ -51,7 +53,7 @@ public class Bee extends Enemigo {
 	public void act(float delta) {
 		super.act(delta);
 
-		this.setPolygon(10, this.getWidth(), this.getHeight(), 0, 0);
+		this.setPolygon(10, this.getWidth()-15, this.getHeight(), 0, 0);
 
 		if (getEnabled()) {
 			if (!explode) {
@@ -85,6 +87,10 @@ public class Bee extends Enemigo {
 				this.setAnimation(explosion);
 				tiempoBoom=0;
 			}
+		}
+		
+		if (this.overlaps(n.player) && !Parametros.nohit && this.getX()<n.door.getX()) {
+			n.player.getHit();
 		}
 
 	}

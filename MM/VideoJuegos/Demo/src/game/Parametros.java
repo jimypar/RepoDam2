@@ -20,6 +20,9 @@ public class Parametros {
  public static float zoom=0.30f;
  
  //variables de juego
+ 
+ public static int nivel=0;
+ 
  public static int gravedad=-130;
  public static float jugadorx=0;
  public static float jugadory=0;

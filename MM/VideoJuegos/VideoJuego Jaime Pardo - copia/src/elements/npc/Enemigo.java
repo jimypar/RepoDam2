@@ -14,9 +14,11 @@ public class Enemigo extends Element {
 	public int velocidad;
 	private Animation<TextureRegion> die;
 	public boolean dying;
+	public boolean inmortal;
 	
 	private float cooldownDie = 1f;
 	private float timeDie = cooldownDie * 2;
+	
 
 	public Enemigo(float x, float y, Stage s, Level1 nivel) {
 		super(x, y, s);
@@ -52,7 +54,7 @@ public class Enemigo extends Element {
 	public void damage(int damage) {
 		vida -= damage;
 		if (vida <= 0) {
-			this.setEnabled(false);
+			this.getHit();
 		}
 
 	}

@@ -7,19 +7,24 @@ import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.maps.MapLayer;
 import com.badlogic.gdx.maps.MapObject;
 import com.badlogic.gdx.maps.MapProperties;
+import com.badlogic.gdx.maps.objects.PolygonMapObject;
 import com.badlogic.gdx.maps.objects.RectangleMapObject;
 import com.badlogic.gdx.maps.tiled.TiledMap;
 import com.badlogic.gdx.maps.tiled.TiledMapTile;
 import com.badlogic.gdx.maps.tiled.objects.TiledMapTileMapObject;
 import com.badlogic.gdx.maps.tiled.renderers.OrthogonalTiledMapRenderer;
+import com.badlogic.gdx.math.Polygon;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.scenes.scene2d.Stage;
+import com.badlogic.gdx.scenes.scene2d.ui.Label;
 import com.badlogic.gdx.utils.Array;
 
 import elements.Barril;
 import elements.Blob;
+import elements.Cuesta;
 import elements.Element;
 import elements.Enemigo;
+import elements.Fly;
 import elements.Player;
 import elements.Solid;
 import game.Demo;
@@ -31,32 +36,50 @@ import ui.BarraVida;
 public class GameScreen extends BScreen{
 	
 Stage mainStage;
-Stage uiStage;
+
 Array<Barril> barriles;
 public Array<Solid> suelo;
+public Array<Cuesta> cuestas;
 public Array<Enemigo> enemigos;
+Solid end;
 
 
 OrthographicCamera camara;
 private TiledMap map;
 private int tileWidth, tileHeight, mapWidthInTiles, mapHeightInTiles,
 mapWidthInPixels, mapHeightInPixels;
+
 private BarraVida barra;
+private Label etiquetaVida;
 
 
 
 private OrthogonalTiledMapRenderer renderer;
 	   
-private Player player;
+public Player player;
 
 	public GameScreen(Demo game) {
 	
 		super(game);
+		
+		Parametros.nivel+=1;
 		mainStage=new Stage();
 		float inicioX;
 		float inicioY;
-		//map= ResourceManager.getMap("maps/mapa0.tmx");
+		
+		switch(Parametros.nivel) {
+		case 1:
+		map= ResourceManager.getMap("maps/mapa0.tmx");
+		break;
+		case 2:
+		
 		map= ResourceManager.getMap("maps/mapa2.tmx");
+		break;
+		default: 
+			map= ResourceManager.getMap("maps/mapa0.tmx");
+			
+			
+			break;}
 		
 		
 		
@@ -84,10 +107,18 @@ private Player player;
 		inicioY=(float)props.get("y");
 		
 		
+		
+		elementos=getRectangleList("Final");
+		props=elementos.get(0).getProperties();
+		end=new Solid((float)props.get("x"),(float)props.get("y"), mainStage,
+				(float)props.get("width"),(float)props.get("height"));
+		
+		
 		elementos=getRectangleList("Solid");
 		
 		Solid solido;
 		suelo=new Array<Solid>();
+		cuestas=new Array<Cuesta>();
 		for(MapObject solid:elementos) {
 			props=solid.getProperties();
 			solido=new Solid((float)props.get("x"),(float)props.get("y"), mainStage,
@@ -96,6 +127,14 @@ private Player player;
 			suelo.add(solido);
 			
 		}
+		
+		for(Polygon poly: getPolygonList("cuesta")) {
+			System.out.println("cuesta");
+			cuestas.add(new Cuesta(poly.getX(),poly.getY(),mainStage, poly));
+			
+			
+		}
+		
 		
 		
 		enemigos=new Array<Enemigo>();
@@ -106,7 +145,9 @@ private Player player;
 				Blob blob=new Blob((float)props.get("x"), (float)props.get("y"), mainStage, this);
 				enemigos.add(blob);
 				break;
-			
+			case "Mosca":
+				enemigos.add(new Fly((float)props.get("x"), (float)props.get("y"), mainStage, this));
+			break;
 			
 			}
 			
@@ -126,7 +167,9 @@ private Player player;
 		
 		uiStage=new Stage();
 		barra= new BarraVida(Parametros.getAnchoPantalla()/50,Parametros.getAltoPantalla()*9/10,this.uiStage);
-		
+		etiquetaVida=new Label("Vida: "+Parametros.vida,uiStyle);
+		etiquetaVida.setPosition(Parametros.getAnchoPantalla()/20, Parametros.getAltoPantalla()/20);
+		uiStage.addActor(etiquetaVida);
 		
 		
 	}
@@ -145,6 +188,8 @@ private Player player;
 	    centrarCamara();
 	    renderer.setView(camara);
 	    renderer.render();
+	    
+	    actualizarInterfaz();
 	    
 	        mainStage.draw();
 	        uiStage.draw();
@@ -170,6 +215,8 @@ private Player player;
 				
 			}
 			
+			
+		
 		}
 		
 for(Solid b:suelo) {
@@ -188,6 +235,32 @@ for(Solid b:suelo) {
 			}
 			
 		}
+
+
+for(Cuesta b:cuestas) {
+	
+	
+	if(b.getEnabled() && b.overlaps(player)) {
+		player.preventOverlap(b);
+		
+		//b.preventOverlap(player);
+		
+	}
+	
+	
+	if(player.pies.overlaps(b)) {
+		player.tocoSuelo=true;
+	}
+	
+}
+
+if(player.overlaps(end) ) {
+	
+
+	this.dispose();
+	game.setScreen(new GameScreen(game));
+	
+}
 		
 	}
 	
@@ -217,6 +290,35 @@ for(Solid b:suelo) {
 		
 		return list;
 	}
+	
+	public ArrayList<Polygon> getPolygonList(String propertyName){
+		
+		Polygon poly;
+		ArrayList<Polygon> list =new ArrayList<Polygon>();
+		for(MapLayer layer: map.getLayers()) {
+			for(MapObject obj: layer.getObjects()) {
+				
+				
+				if(!(obj instanceof PolygonMapObject))
+					continue;
+				MapProperties props= obj.getProperties();
+				if(props.containsKey("name") &&  props.get("name").equals(propertyName))
+				{
+					
+					poly=((PolygonMapObject)obj).getPolygon();
+					list.add(poly);
+				}
+				
+			}
+			
+		}
+		
+		return list;
+	}
+	
+	
+	
+	
 	
 	public ArrayList<MapObject> getEnemyList(){
 		ArrayList<MapObject> list =new ArrayList<MapObject>();
@@ -256,6 +358,17 @@ for(Solid b:suelo) {
 		
 		return list;
 	}
+	
+	
+	private void actualizarInterfaz() {
+		etiquetaVida.setText("Vida: "+Parametros.vida);
+		
+		
+		
+	}
+	
+	
+	
 	
 	
 }

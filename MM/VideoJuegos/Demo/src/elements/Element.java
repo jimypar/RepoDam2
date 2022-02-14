@@ -243,10 +243,11 @@ public class Element extends Actor{
 	        // keep speed within set bounds
 	        speed = MathUtils.clamp(speed, 0, maxSpeed);
 
-	        // update velocity
+	      // update velocity
+	        /*
 	        if (velocity.len() == 0)
 	            velocity.set(speed, 0);
-	        else
+	        else*/
 	            velocity.setLength(speed);
 	    
 

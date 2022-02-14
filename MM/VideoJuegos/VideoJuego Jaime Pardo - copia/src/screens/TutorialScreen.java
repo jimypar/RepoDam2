@@ -12,6 +12,9 @@ import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.Batch;
 import com.badlogic.gdx.graphics.g2d.Sprite;
+import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.badlogic.gdx.graphics.g3d.Shader;
+import com.badlogic.gdx.graphics.glutils.ShaderProgram;
 import com.badlogic.gdx.maps.MapLayer;
 import com.badlogic.gdx.maps.MapObject;
 import com.badlogic.gdx.maps.MapProperties;
@@ -44,9 +47,13 @@ public class TutorialScreen extends BScreen {
 	Array<ImagenCapa> imagenes;
 	Array<Marker> markers;	
 	OrthographicCamera camara;
+	SpriteBatch batch;
+	ShaderProgram shader;
+	float time;
 	Texture vigneteTexture;
 	Sprite vigneteSprite;
 	Music music_background;
+	
 	
 	private TiledMap map;
 	private int tileWidth, tileHeight, mapWidthInTiles, mapHeightInTiles, mapWidthInPixels, mapHeightInPixels;
@@ -74,7 +81,14 @@ public class TutorialScreen extends BScreen {
 //			e.printStackTrace();
 //		}
 		
+		batch = new SpriteBatch();
 		
+		
+		shader = new ShaderProgram(batch.getShader().getVertexShaderSource(), Gdx.files.internal("oldfilm.frag").readString());
+        if (!shader.isCompiled()){
+            System.out.println(shader.getLog());
+        }
+        
 		
 		vigneteTexture = new Texture("maps/tutorial/assets/Drawing/tutorial_room_front_layer_0001.png");
 		
@@ -110,20 +124,27 @@ public class TutorialScreen extends BScreen {
 		Parametros.playerX = player.getX();
 		Parametros.playerY = player.getY();
 
+		time+=delta;
 		
 		colide();
 
 		centrarCamara();
-
+		
 		renderer.setView(camara);
 		renderer.render();
-
+		
+		
+		shader.begin();
+		shader.setUniformf("u_time", time);		
+		mainStage.getBatch().setShader(null);
 		mainStage.draw();
-
 		mainStage.getBatch().begin();
-		mainStage.getBatch().draw(vigneteTexture, camara.position.x-(camara.viewportWidth/2), camara.position.y-(camara.viewportHeight/2), camara.viewportWidth, camara.viewportHeight);
+	
+		mainStage.getBatch().draw(vigneteTexture, camara.position.x-(camara.viewportWidth/2), camara.position.y-(camara.viewportHeight/2), camara.viewportWidth, camara.viewportHeight);  
+		
 		mainStage.getBatch().end();
-
+		mainStage.getBatch().setShader(shader);
+		
 	}
 
 	public void colide() {
@@ -180,6 +201,7 @@ public class TutorialScreen extends BScreen {
 		if (coin.getEnabled() && coin.overlaps(player)) {
 			if (!coin.explode) {
 				coin.getCoin();
+				Parametros.powerUpDisparo=true;
 			}
 		}
 		
@@ -288,6 +310,13 @@ public class TutorialScreen extends BScreen {
 		
 		
 		
+	}
+	
+	@Override
+	public void dispose() {
+		super.dispose();
+		batch.dispose();
+        shader.dispose();
 	}
 
 

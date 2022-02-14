@@ -7,8 +7,10 @@ import game.Parametros;
 public class Bala extends Element{
 	private float duracionBala=1.5f;
 	private float tiempoBala=2*duracionBala;
+	private float velocidad;
 	
-	public Bala(float x, float y, Stage s) {
+	
+	public Bala(float x, float y, Stage s, float velocidad) {
 		
 	
 		super(x, y, s);
@@ -17,6 +19,7 @@ public class Bala extends Element{
 		
 		this.loadFullAnimation("player/Bola.png", 1, 1, 209, true);
 		this.setEnabled(false);
+		this.velocidad=velocidad;
 		
 		
 	}
@@ -33,7 +36,7 @@ public class Bala extends Element{
 		}
 		
 		if(getEnabled()) {
-			this.moveBy(this.velocity.x*delta, this.velocity.y*delta);
+			this.moveBy(this.velocity.x*delta*velocidad, this.velocity.y*delta*velocidad);
 			
 			
 		}
@@ -44,10 +47,10 @@ public class Bala extends Element{
 	
 	
 	
-	public void disparar() {
+	public void disparar(float velX, float velY, float x, float y) {
 		this.setEnabled(true);
-		this.setPosition(Parametros.jugadorx, Parametros.jugadory);
-		this.getVelocity().set(150,0);
+		this.setPosition(x, y);
+		this.getVelocity().set(velX,velY);
 		tiempoBala=0;
 		
 	}

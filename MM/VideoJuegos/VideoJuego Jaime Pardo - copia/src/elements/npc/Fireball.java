@@ -85,6 +85,10 @@ public class Fireball extends Element {
 				tiempoBoom=0;
 			}
 		}
+		
+		if (this.overlaps(n.player) && !Parametros.nohit) {
+			n.player.getHit();
+		}
 
 	}
 

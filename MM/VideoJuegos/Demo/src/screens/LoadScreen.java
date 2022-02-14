@@ -24,7 +24,8 @@ public class LoadScreen extends BScreen{
 		super.render(delta);
 		if(ResourceManager.update()) {
 		
-			game.setScreen(new GameScreen(game));
+			ResourceManager.botones();
+			game.setScreen(new TitleScreen(game));
 			
 		}
 		

@@ -43,7 +43,7 @@ public class Player extends Element {
 	private Array<Bala> balas;
 	private int totalBalas = 25;
 	private int balaActual = 0;
-	private float cooldownDisparo = 0.12f;
+	private float cooldownDisparo = 0.24f;
 	private float tiempoDisparo = cooldownDisparo * 2;
 
 	private float cooldownDash = 0.5f;
@@ -65,6 +65,7 @@ public class Player extends Element {
 
 	public Player(float x, float y, Stage s) {
 		super(x, y, s);
+				
 		tocoSuelo = false;
 		controles = true;
 		muerto=false;
@@ -81,6 +82,14 @@ public class Player extends Element {
 			balas.add(new Bala(0, 0, s));
 		}
 
+	}
+
+	private void powerUpDisparo() {
+		
+		if (Parametros.powerUpDisparo) {
+			this.cooldownDisparo=0.12f;
+		}
+		
 	}
 
 	public Array<Bala> getBalas() {
@@ -113,6 +122,8 @@ public class Player extends Element {
 		}
 
 		colocarPies();
+		
+		powerUpDisparo();
 
 		this.setPolygon(10, this.getWidth(), this.getHeight(), 0, 0);
 
@@ -429,6 +440,8 @@ public class Player extends Element {
 
 	private void die() {
 		
+		SoundManager.stopCurrentMusic();
+		SoundManager.playSound("Sound/sfx_vinyl_scratch_01.wav");
 		controles=false;
 		this.velocity.setZero();
 		

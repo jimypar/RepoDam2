@@ -48,7 +48,7 @@ private float walkingSpeed=150;
 		this.setPolygon(8);
 		
 		
-		pies=new Element(0, 0, s,this.getWidth() ,this.getHeight()/10 );
+		pies=new Element(0, 0, s,this.getWidth()/4 ,this.getHeight()/10 );
 		pies.setRectangle();
 		
 		
@@ -56,7 +56,7 @@ private float walkingSpeed=150;
 		
 		balas=new Array<Bala>();
 		for(int i=0;i<this.totalBalas;i++) {
-			balas.add(new Bala(0, 0, s));
+			balas.add(new Bala(0, 0, s,1));
 			
 			
 		}
@@ -76,7 +76,7 @@ private float walkingSpeed=150;
 		this.acceleration.add(0,Parametros.gravedad);
 		this.applyPhysics(delta);
 		colocarPies();
-		System.out.println(this.velocity.y);
+	
 		this.tiempoDisparo+=delta;
 		
 	}
@@ -167,7 +167,7 @@ private float walkingSpeed=150;
 
 
 	public void colocarPies() {
-		this.pies.setPosition(this.getX(), this.getY());
+		this.pies.setPosition(this.getX()+this.getWidth()/2-this.getWidth()/8, this.getY());
 		
 		
 	}
@@ -180,11 +180,15 @@ private float walkingSpeed=150;
 	}
 	
 	private void dispara() {
-		balas.get(this.balaActual).disparar();
+		balas.get(this.balaActual).disparar(150,0, this.getX(),this.getY());
 		balaActual=(balaActual+1)%this.totalBalas;
 		tiempoDisparo=0;
 		
 		
 	}
 
+	public void recibeDano(int dano) {
+		Parametros.vida-=dano;
+		
+	}
 }

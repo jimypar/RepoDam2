@@ -14,6 +14,7 @@ import managers.ResourceManager;
 
 public class BScreen implements Screen{
 	final Demo game;
+	public Stage uiStage;
 	public ResourceManager resourceManager;
 	public Stage actualStage;
 	public LabelStyle uiStyle;
@@ -25,6 +26,7 @@ public class BScreen implements Screen{
 		
 		this.game=game;
 		this.resourceManager=game.resourceManager;
+		
 	
 		
 	}
@@ -40,7 +42,6 @@ public class BScreen implements Screen{
 		//actualStage.act(delta);
 		Gdx.gl.glClearColor(0, 0, 0, 1);
 		Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
-		
 		
 		//actualStage.draw();
 		//handleKeyboard();

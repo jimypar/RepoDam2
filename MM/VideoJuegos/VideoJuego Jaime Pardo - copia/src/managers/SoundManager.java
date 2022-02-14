@@ -43,4 +43,13 @@ public class SoundManager {
 
 	}
 
+	public static void stopCurrentMusic() {
+		
+		try {
+			currentMusic.stop();
+		} catch (Exception e) {
+		}
+		
+	}
+
 }

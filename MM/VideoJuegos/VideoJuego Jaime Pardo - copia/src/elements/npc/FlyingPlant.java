@@ -14,6 +14,9 @@ public class FlyingPlant extends Enemigo {
 	public FlyingPlant(float x, float y, Stage s, Level1 nivel) {
 		super(x, y, s, nivel);
 		this.nivel = nivel;
+		
+		this.inmortal=true;
+		
 		movement = loadFullAnimation("Enemies/Planta/flyingPlant.png", 8, 1, 0.1f, true);
 
 		this.setScale(0.75f);

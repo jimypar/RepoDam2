@@ -10,6 +10,7 @@ import game.Parametros;
 
 public class BarraVida extends Element {
 
+	private Animation<TextureRegion> hp4;	
 	private Animation<TextureRegion> hp3;	
 	private Animation<TextureRegion> hp2;	
 	private Animation<TextureRegion> hp1;	
@@ -22,13 +23,12 @@ public class BarraVida extends Element {
 		// TODO Auto-generated constructor stub
 		this.setEnabled(true);
 
+		hp4=this.loadFullAnimation("Lives/hp4.png", 1, 1, 200, true);
 		hp3=this.loadFullAnimation("Lives/hp3.png", 1, 1, 200, true);
 		hp2=this.loadFullAnimation("Lives/hp2.png", 1, 1, 200, true);
 		hp1=this.loadFullAnimation("Lives/hp1.png", 1, 1, 200, true);
 		hp0=this.loadFullAnimation("Lives/hp0.png", 1, 1, 200, true);
-		death1=this.loadFullAnimation("Lives/cuphead_death.png", 20, 1, 0.001f, true);
-
-
+		death1=this.loadFullAnimation("Lives/cuphead_death.png", 40, 1, 0.02f, true);
 
 		this.setScale(1.5f);
 		
@@ -51,6 +51,9 @@ public class BarraVida extends Element {
 	private void calcularVida() {
 		
 		switch (Parametros.vida) {
+		case 4:
+			this.setAnimation(hp4);
+			break;
 		case 3:
 			this.setAnimation(hp3);
 			break;

@@ -23,6 +23,9 @@ public class Barrel extends Enemigo {
 	public Barrel(float x, float y, Stage s, Level2 nivel) {
 		super(x, y, s, nivel);
 		this.nivel = nivel;
+		
+		this.vida=10;
+		
 		down = loadFullAnimation("Enemies/Barril/down.png", 1, 9, 0.15f, true);
 		up = loadFullAnimation("Enemies/Barril/up.png", 1, 6, 0.4f, true);
 

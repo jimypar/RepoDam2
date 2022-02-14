@@ -23,6 +23,9 @@ public class Flower extends Enemigo{
 	public Flower(float x, float y, Stage s, Level1 nivel) {
 		super(x, y, s, nivel);
 		this.nivel=nivel;
+		
+		this.vida=2;
+		
 		// TODO Auto-generated constructor stub
 		walkR= loadFullAnimation("Enemies/Flower/flowerR.png", 15, 1, 0.2f, true);
 		walkL= loadFullAnimation("Enemies/Flower/flowerL.png", 15, 1, 0.2f, true);

@@ -29,6 +29,7 @@ import elements.npc.Enemigo;
 import elements.npc.Flower;
 import elements.npc.FlyingPlant;
 import elements.objects.Bramble;
+import elements.objects.Cloud;
 import elements.objects.Coin;
 import elements.objects.ImagenCapa;
 import elements.objects.Marker;
@@ -47,11 +48,12 @@ import ui.BarraVida;
 public class Level1 extends BScreen {
 
 	Stage mainStage;
-	Stage uiStage;
+	
 	public Array<Solid> suelo;
 	public Array<Wall> muros;
 	public Array<Bramble> brambles;
 	public Array<Enemigo> enemigos;
+	public Array<Cloud> nubes;
 	Array<ImagenCapa> imagenes;
 	Array<Marker> markers;
 	OrthographicCamera camara;
@@ -148,6 +150,17 @@ public class Level1 extends BScreen {
 				player.tocoSuelo = true;
 			}
 		}
+		
+		for (Cloud n : nubes) {
+			
+			if (n.getEnabled() && n.overlaps(player) && player.pies.overlaps(n)) {
+				player.preventOverlap(n);
+			}
+
+			if (player.pies.overlaps(n)) {
+				player.tocoSuelo = true;
+			}
+		}
 
 		for (Wall w : muros) {
 
@@ -171,11 +184,11 @@ public class Level1 extends BScreen {
 		for (Bala bala : player.getBalas()) {
 
 			for (Enemigo e : enemigos) {
-				if (!e.dying) {
+				if (!e.dying && !e.inmortal) {
 					if (bala.getEnabled() && bala.overlaps(e)) {
 						bala.setEnabled(false);
 						SoundManager.playSound("Sound/sfx_platforming_flowergrunt_death_01.wav");
-						e.getHit();
+						e.damage(1);
 					}
 				}
 			}
@@ -315,6 +328,17 @@ public class Level1 extends BScreen {
 			b = new Bramble((float) props.get("x"), (float) props.get("y"), mainStage, (float) props.get("width"),
 					(float) props.get("height"));
 			brambles.add(b);
+		}
+		
+		elementos = getRectangleList("Cloud");
+		
+		Cloud n;
+		nubes = new Array<Cloud>();
+		for (MapObject nube : elementos) {
+			props = nube.getProperties();
+			n = new Cloud((float) props.get("x"), (float) props.get("y"), mainStage, (float) props.get("width"),
+					(float) props.get("height"));
+			nubes.add(n);
 		}
 
 		elementos = getEnemyList();

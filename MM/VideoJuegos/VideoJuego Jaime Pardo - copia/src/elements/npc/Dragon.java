@@ -25,6 +25,9 @@ public class Dragon extends Enemigo {
 	public Dragon(float x, float y, Stage s, Level2 nivel) {
 		super(x, y, s, nivel);
 		this.nivel = nivel;
+		
+		this.vida=30;
+		
 		left = loadFullAnimation("Enemies/Dragon/moveL.png", 1, 10, 0.1f, true);
 		right = loadFullAnimation("Enemies/Dragon/moveR.png", 1, 10, 0.1f, true);
 		attack = loadFullAnimation("Enemies/Dragon/atack.png", 2, 13, 0.05f, true);

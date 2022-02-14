@@ -1,21 +1,32 @@
 package screens;
 import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.InputMultiplexer;
+import com.badlogic.gdx.InputProcessor;
 import com.badlogic.gdx.Screen;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.scenes.scene2d.Stage;
 import com.badlogic.gdx.scenes.scene2d.ui.Label.LabelStyle;
-
 import game.Demo;
 import managers.ResourceManager;
 
-public class BScreen implements Screen{
+public class BScreen implements Screen, InputProcessor{
 	final Demo game;
+	public Stage uiStage;
 	public ResourceManager resourceManager;
 	public Stage actualStage;
 	public LabelStyle uiStyle;
+	
+	InputMultiplexer im;
+	
+	
+	
+	
 	public BScreen(Demo game){
+		
+		this.uiStage=new Stage();
+		
 		BitmapFont font=new BitmapFont();
 		font.getData().setScale(3);
 		uiStyle=new LabelStyle(font,Color.WHITE); 
@@ -24,6 +35,9 @@ public class BScreen implements Screen{
 		this.resourceManager=game.resourceManager;
 		
 		
+		
+	
+		
 	
 		
 		
@@ -31,6 +45,9 @@ public class BScreen implements Screen{
 	@Override
 	public void show() {
 		// TODO Auto-generated method stub
+		im=(InputMultiplexer)Gdx.input.getInputProcessor();
+		im.addProcessor(this);
+		im.addProcessor(this.uiStage);
 		
 	}
 
@@ -67,13 +84,55 @@ public class BScreen implements Screen{
 	@Override
 	public void hide() {
 		// TODO Auto-generated method stub
-		
+		InputMultiplexer im=(InputMultiplexer)Gdx.input.getInputProcessor();
+		im.removeProcessor(this);
+		im.removeProcessor(this.uiStage);
 	}
 
 	@Override
 	public void dispose() {
 		// TODO Auto-generated method stub
 		
+	}
+	@Override
+	public boolean keyDown(int arg0) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+	@Override
+	public boolean keyTyped(char arg0) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+	@Override
+	public boolean keyUp(int arg0) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+	@Override
+	public boolean mouseMoved(int arg0, int arg1) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+	@Override
+	public boolean scrolled(int arg0) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+	@Override
+	public boolean touchDown(int arg0, int arg1, int arg2, int arg3) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+	@Override
+	public boolean touchDragged(int arg0, int arg1, int arg2) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+	@Override
+	public boolean touchUp(int arg0, int arg1, int arg2, int arg3) {
+		// TODO Auto-generated method stub
+		return false;
 	}
 
 }

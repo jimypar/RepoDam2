@@ -33,7 +33,8 @@ public class LoadScreen extends BScreen{
 				
 		if(ResourceManager.update()) {
 			
-			game.setScreen(new TutorialScreen(game));
+			ResourceManager.botones();
+			game.setScreen(new TitleScreen(game));
 			
 		}
 		
