@@ -1,13 +1,11 @@
 
 
 import com.google.gson.Gson;
-import com.google.gson.reflect.TypeToken;
+import libreria.Libreria;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
-import java.lang.reflect.Type;
-import java.util.ArrayList;
 
 public class ClienteGUI extends JFrame implements ActionListener,WindowListener {
 
@@ -85,7 +83,15 @@ public class ClienteGUI extends JFrame implements ActionListener,WindowListener 
     //Envia mensaje cuando le das a enter
     public void actionPerformed(ActionEvent e) {
 
-        cliente.enviarMensaje(txtMensaje.getText());
+        String mensaje = "";
+
+        try {
+            mensaje = Libreria.encriptar(txtMensaje.getText());
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+
+        cliente.enviarMensaje(mensaje);
         txtMensaje.setText("");
 
     }

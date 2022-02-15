@@ -1,4 +1,5 @@
 import com.google.gson.Gson;
+import libreria.Libreria;
 
 import java.io.*;
 import java.net.*;
@@ -95,10 +96,12 @@ public class Servidor {
             while(continuar) {
                 String mensaje = "";
                 try {
-                    mensaje = entrada.readLine();
+                    mensaje = Libreria.desencriptar(entrada.readLine());
                 } catch (SocketException s){
                     continuar = false;
                 } catch (IOException e) {
+                    e.printStackTrace();
+                } catch (Exception e) {
                     e.printStackTrace();
                 }
                 //Calcula el incremento y lo devuelve.

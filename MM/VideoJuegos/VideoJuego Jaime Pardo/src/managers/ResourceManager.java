@@ -128,11 +128,14 @@ public final class ResourceManager {
 		assets.load("Sound/sfx_player_hit_02.wav", Sound.class);
 		assets.load("Sound/sfx_player_dash_01.wav", Sound.class);
 		assets.load("Sound/sfx_vinyl_scratch_01.wav", Sound.class);
-
+		
+		assets.load("maps/tutorial/music/MUS_Tutorial.wav", Music.class);
 		assets.load("maps/Level1/music/MUS_ForestFollies.wav", Music.class);
 		assets.load("maps/Boss1/music/MUS_Slime.wav", Music.class);
 		assets.load("maps/Level2/music/MUS_BotanicPanic.wav", Music.class);
 
+		
+		
 		// UI
 		assets.load("Lives/hp4.png", Texture.class);
 		assets.load("Lives/hp3.png", Texture.class);

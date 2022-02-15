@@ -16,7 +16,7 @@ public class Parametros {
  public static boolean nohit=false;
  
  //Audio;
- public static float musicVolume=0.0f;
+ public static float musicVolume=0.1f;
  public static float soundVolume=0.1f;
  
  

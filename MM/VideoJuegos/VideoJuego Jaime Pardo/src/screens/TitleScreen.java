@@ -12,6 +12,7 @@ import com.badlogic.gdx.scenes.scene2d.ui.TextButton;
 import game.Demo;
 import game.Parametros;
 import managers.ResourceManager;
+import managers.SoundManager;
 import screens.optionScreens.OptionScreen;
 
 public class TitleScreen extends BScreen{
@@ -20,7 +21,7 @@ private Texture background;
 	public TitleScreen(Demo game) {
 		super(game);
 		// TODO Auto-generated constructor stub
-		
+		SoundManager.playMusic("maps/tutorial/music/MUS_Tutorial.wav");
 		
 		tabla= new Table();
 		tabla.setFillParent(true);

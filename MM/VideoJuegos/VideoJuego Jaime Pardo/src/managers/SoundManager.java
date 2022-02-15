@@ -51,5 +51,13 @@ public class SoundManager {
 		}
 		
 	}
+	
+	public static void applyVolume() {
+		currentMusic.setVolume(Parametros.musicVolume);
+	}
+
+	public static void playDemoSound() {
+		playSound("Sound/sfx_player_shoot_hit_01.wav");
+	}
 
 }
