@@ -108,7 +108,11 @@ public class Servidor {
                 String resultado = calcularIncremento(mensaje);
                 //Se pasa el mensaje a JSON
                 String json = crearJSON(mensaje,resultado);
-                salida.println(json);
+                try {
+                    salida.println(Libreria.encriptar(json));
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
 
             }
             cerrar();

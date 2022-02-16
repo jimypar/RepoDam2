@@ -12,6 +12,8 @@ public class Parametros {
 //private static int anchoPantalla=3000;
 //private static int altoPantalla=2000;
  
+ public static boolean fullscreen=false;
+ 
  public static boolean debug=false;
  public static boolean nohit=false;
  
@@ -32,6 +34,7 @@ public class Parametros {
  public static int vida = 0;
  
  public static boolean powerUpDisparo = false;
+
  
 
 
