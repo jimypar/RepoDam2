@@ -1,4 +1,5 @@
 import com.google.gson.Gson;
+import libreria.Libreria;
 
 import java.io.*;
 import java.net.*;
@@ -94,15 +95,18 @@ public class Servidor {
                 while(continuar) {
                     String mensaje = "";
                     try {
-                        mensaje = entrada.readLine();
+                        mensaje = Libreria.desencriptar(entrada.readLine());
+                        String resultado = calcularTabla(mensaje,id);
+                        enviarTodos(Libreria.encriptar(resultado));
                     } catch (SocketException s){
                         continuar = false;
                     } catch (IOException e) {
                         e.printStackTrace();
+                    } catch (Exception e) {
+                        e.printStackTrace();
                     }
 
-                    String resultado = calcularTabla(mensaje,id);
-                    enviarTodos(resultado);
+
 
                 }
                 cerrar();
@@ -133,7 +137,7 @@ public class Servidor {
     }
 
     //Metodo que comprueba que el movimiento es valido y cambia el turno
-    private String calcularTabla(String mensaje, int id) {
+    private String calcularTabla(String mensaje, int id) throws Exception {
 
         //Se instancia el objeto GSON
         Gson gson = new Gson();
@@ -150,11 +154,11 @@ public class Servidor {
                     }
                 pintarMatriz(mensaje,id);
                 if (calcularVictoria(id)){
-                    enviarTodos(gson.toJson(m));
+                    enviarTodos(Libreria.encriptar(gson.toJson(m)));
                     m = new Mensaje(id,true,false);
                     return gson.toJson(m);
                 }else if(calcularEmpate()){
-                    enviarTodos(gson.toJson(m));
+                    enviarTodos(Libreria.encriptar(gson.toJson(m)));
                     m = new Mensaje(id,false,true);
                     return gson.toJson(m);
                 }else {

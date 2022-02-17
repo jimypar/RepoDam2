@@ -1,3 +1,5 @@
+import libreria.Libreria;
+
 import java.net.*;
 import java.io.*;
 
@@ -54,10 +56,12 @@ public class Cliente {
         public void run() {
             while(true) {
                 try {
-                    String msg = entrada.readLine();
+                    String msg = Libreria.desencriptar(entrada.readLine());
                         gui.append(msg);
                 }
                 catch(IOException e) {
+                } catch (Exception e) {
+                    e.printStackTrace();
                 }
             }
         }
