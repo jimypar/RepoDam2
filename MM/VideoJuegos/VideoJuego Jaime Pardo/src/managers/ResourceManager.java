@@ -133,7 +133,7 @@ public final class ResourceManager {
 		assets.load("maps/Level1/music/MUS_ForestFollies.wav", Music.class);
 		assets.load("maps/Boss1/music/MUS_Slime.wav", Music.class);
 		assets.load("maps/Level2/music/MUS_BotanicPanic.wav", Music.class);
-
+		assets.load("Menu/MUS_InkwellIsleOne.wav", Music.class);
 		
 		
 		// UI

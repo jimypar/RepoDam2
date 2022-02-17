@@ -2,7 +2,11 @@ package screens.optionScreens;
 
 import java.util.ArrayList;
 
+import org.lwjgl.LWJGLException;
+import org.lwjgl.opengl.Display;
+
 import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.Screen;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.maps.tiled.TiledMapTileLayer.Cell;
 import com.badlogic.gdx.scenes.scene2d.Event;
@@ -46,38 +50,34 @@ public class GraphicOptions extends BScreen {
 
 		background = new Texture("Menu/Background.png");
 
-		tabla.row().colspan(3);
-		Label musica = new Label("Resolucion", ResourceManager.buttonStyle);
-		tabla.add(musica);
-		tabla.row();
-		TextButton botonBajar = new TextButton("<-", ResourceManager.textButtonStyle2);
-		botonBajar.addListener((Event e) -> {
-			if (!(e instanceof InputEvent) || !((InputEvent) e).getType().equals(Type.touchDown))
-				return false;
-			if (i >= 0) {
-				Parametros.setAnchoPantalla(this.resWidth.get(i));
-				Parametros.setAltoPantalla(this.resHeight.get(i));
-				i--;
-			}
-			System.out.println(i);
-			return false;
-		});
-		tabla.add(botonBajar);
-		res = new Label("", ResourceManager.buttonStyle2);
-		tabla.add(res);
-		TextButton botonSubir = new TextButton("->", ResourceManager.textButtonStyle2);
-		botonSubir.addListener((Event e) -> {
-			if (!(e instanceof InputEvent) || !((InputEvent) e).getType().equals(Type.touchDown))
-				return false;
-			if (i <= this.resHeight.size()) {
-				Parametros.setAnchoPantalla(this.resWidth.get(i));
-				Parametros.setAltoPantalla(this.resHeight.get(i));
-				i++;
-			}
-			System.out.println(i);
-			return false;
-		});
-		tabla.add(botonSubir);
+//		tabla.row().colspan(3);
+//		Label musica = new Label("Resolucion", ResourceManager.buttonStyle);
+//		tabla.add(musica);
+//		tabla.row();
+//		TextButton botonBajar = new TextButton("<-", ResourceManager.textButtonStyle2);
+//		botonBajar.addListener((Event e) -> {
+//			if (!(e instanceof InputEvent) || !((InputEvent) e).getType().equals(Type.touchDown))
+//				return false;
+//			if (i >= 0) {
+//				i--;
+//			}
+//			System.out.println(i);
+//			return false;
+//		});
+//		tabla.add(botonBajar);
+//		res = new Label("", ResourceManager.buttonStyle2);
+//		tabla.add(res);
+//		TextButton botonSubir = new TextButton("->", ResourceManager.textButtonStyle2);
+//		botonSubir.addListener((Event e) -> {
+//			if (!(e instanceof InputEvent) || !((InputEvent) e).getType().equals(Type.touchDown))
+//				return false;
+//			if (i <= this.resHeight.size()-1) {
+//				i++;
+//			}
+//			System.out.println(i);
+//			return false;
+//		});
+//		tabla.add(botonSubir);
 		tabla.row().colspan(3);
 		Label efectos = new Label("Pantalla Completa", ResourceManager.buttonStyle);
 		tabla.add(efectos);
@@ -90,6 +90,9 @@ public class GraphicOptions extends BScreen {
 				Parametros.fullscreen = false;
 			} else {
 				Parametros.fullscreen = true;
+				
+				setFullScreen();
+				
 			}
 			return false;
 		});
@@ -102,8 +105,20 @@ public class GraphicOptions extends BScreen {
 				return false;
 			if (Parametros.fullscreen) {
 				Parametros.fullscreen = false;
+				
+				try {
+					Display.setFullscreen(false);
+				} catch (LWJGLException e1) {
+					e1.printStackTrace();
+				}
+				
 			} else {
 				Parametros.fullscreen = true;
+				
+				setFullScreen();
+
+				
+				
 			}
 			return false;
 		});
@@ -114,10 +129,23 @@ public class GraphicOptions extends BScreen {
 			if (!(e instanceof InputEvent) || !((InputEvent) e).getType().equals(Type.touchDown))
 				return false;
 			this.dispose();
+//			Parametros.setAltoPantalla(this.resHeight.get(i));
+//			Parametros.setAnchoPantalla(this.resWidth.get(i));
+//			this.game.resize(Parametros.getAnchoPantalla(), Parametros.getAnchoPantalla());
 			game.setScreen(new OptionScreen(game));
 			return false;
 		});
 		tabla.add(botonSalir);
+	}
+
+	private void setFullScreen() {
+		
+		try {
+			Display.setDisplayModeAndFullscreen(Display.getDesktopDisplayMode());
+		} catch (LWJGLException e1) {
+			e1.printStackTrace();
+		}
+		
 	}
 
 	@Override
@@ -130,7 +158,7 @@ public class GraphicOptions extends BScreen {
 			fullscreen.setText("NO");
 		}
 		
-		this.res.setText(Parametros.getAnchoPantalla()+" X "+Parametros.getAltoPantalla());
+//		this.res.setText(this.resWidth.get(i)+" X "+this.resHeight.get(i));
 
 		uiStage.act();
 

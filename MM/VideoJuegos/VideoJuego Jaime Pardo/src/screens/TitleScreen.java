@@ -20,8 +20,10 @@ private Table tabla;
 private Texture background;
 	public TitleScreen(Demo game) {
 		super(game);
-		// TODO Auto-generated constructor stub
-		SoundManager.playMusic("maps/tutorial/music/MUS_Tutorial.wav");
+		if (SoundManager.currentMusicName!="Menu/MUS_InkwellIsleOne.wav") {
+			SoundManager.playMusic("Menu/MUS_InkwellIsleOne.wav");
+		}
+		
 		
 		tabla= new Table();
 		tabla.setFillParent(true);

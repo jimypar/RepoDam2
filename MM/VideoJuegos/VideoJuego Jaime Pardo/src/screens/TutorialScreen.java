@@ -38,6 +38,7 @@ import game.Demo;
 import game.Parametros;
 import managers.OrthogonalTiledMapRendererWithSprites;
 import managers.ResourceManager;
+import managers.SoundManager;
 
 public class TutorialScreen extends BScreen {
 
@@ -108,10 +109,7 @@ public class TutorialScreen extends BScreen {
 		
 		Parametros.vida=3;
 		
-		music_background = Gdx.audio.newMusic(Gdx.files.internal("maps/tutorial/music/MUS_Tutorial.wav"));
-		music_background.setVolume(Parametros.musicVolume);
-		music_background.setLooping(true);
-		music_background.play();
+		SoundManager.playMusic("maps/tutorial/music/MUS_Tutorial.wav");
 	}
 
 
