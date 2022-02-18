@@ -39,6 +39,8 @@ public final class ResourceManager {
 		assets.load("maps/Boss2/Boss2.tmx", TiledMap.class);
 
 		assets.load("maps/tutorial/assets/Drawing/tutorial_room_front_layer_0001.png", Texture.class);
+		assets.load("Menu/menuInGame.png", Texture.class);
+		assets.load("Menu/menuInGameSmall.png", Texture.class);
 
 		assets.load("Cuphead/Idle/spriteIdleL.png", Texture.class);
 		assets.load("Cuphead/Idle/spriteIdleR.png", Texture.class);

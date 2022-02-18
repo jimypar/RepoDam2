@@ -34,6 +34,8 @@ public class Parametros {
  public static int vida = 0;
  
  public static boolean powerUpDisparo = false;
+ 
+ public static boolean pausa = false;
 
  
 

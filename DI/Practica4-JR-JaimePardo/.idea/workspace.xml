@@ -16,7 +16,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/practica1-ud3-jaimepardo/practica1-ud3-jaimepardo" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../PSP/Jaime_Pardo1_P7_PSP/Ejercicio5 JaimePardo" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -78,6 +78,7 @@
       <workItem from="1644517666294" duration="107000" />
       <workItem from="1644518680368" duration="360000" />
       <workItem from="1644590886237" duration="376000" />
+      <workItem from="1645173375581" duration="75000" />
     </task>
     <servers />
   </component>

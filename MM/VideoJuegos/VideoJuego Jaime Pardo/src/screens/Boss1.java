@@ -72,13 +72,6 @@ public class Boss1 extends BScreen {
 
 		super(game);
 		mainStage = new Stage();
-
-//		try {
-//			Display.setDisplayModeAndFullscreen(Display.getDesktopDisplayMode());
-//		} catch (LWJGLException e) {
-//			e.printStackTrace();
-//		}
-		
 		
 
 		cargarMapaTiled();

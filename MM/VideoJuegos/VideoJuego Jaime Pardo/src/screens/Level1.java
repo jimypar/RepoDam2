@@ -7,6 +7,7 @@ import org.lwjgl.LWJGLException;
 import org.lwjgl.opengl.Display;
 
 import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.Input.Keys;
 import com.badlogic.gdx.audio.Music;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.Texture;
@@ -43,6 +44,7 @@ import game.Parametros;
 import managers.OrthogonalTiledMapRendererWithSprites;
 import managers.ResourceManager;
 import managers.SoundManager;
+import screens.optionScreens.InGameScreen;
 import ui.BarraVida;
 
 public class Level1 extends BScreen {
@@ -72,17 +74,13 @@ public class Level1 extends BScreen {
 	public Element door;
 	public Element fin;
 
+	InGameScreen menu;
+
 
 	public Level1(Demo game) {
 
 		super(game);
 		mainStage = new Stage();
-
-//		try {
-//			Display.setDisplayModeAndFullscreen(Display.getDesktopDisplayMode());
-//		} catch (LWJGLException e) {
-//			e.printStackTrace();
-//		}
 
 		cargarMapaTiled();
 
@@ -95,12 +93,14 @@ public class Level1 extends BScreen {
 		camara.position.x = inicioX;
 		camara.position.y = 430;
 
-		Parametros.vida = 3;	
+		Parametros.vida = 3;
+		Parametros.powerUpDisparo = false;
 		
 		player = new Player(inicioX, inicioY, mainStage);
 		player.setPolygon(10);
-				
-
+		
+		Parametros.pausa = false;
+		
 		uiStage=new Stage();
 		barra= new BarraVida(Parametros.getAnchoPantalla()/50,Parametros.getAltoPantalla()/10,this.uiStage);
 		
@@ -115,27 +115,46 @@ public class Level1 extends BScreen {
 	public void render(float delta) {
 
 		super.render(delta);
-		mainStage.act();
-		uiStage.act();
 		
-		if (player.muerto) {
-			game.setScreen(new Level1(game));
+		pauseButton();
+		
+		if (!Parametros.pausa) {
+			
+			mainStage.act();
+			uiStage.act();
+			
+			if (player.muerto) {
+				game.setScreen(new Level1(game));
+			}
+			
+			Parametros.playerX = player.getX();
+			Parametros.playerY = player.getY();
+
+			colide();
+
+			centrarCamara();
+			
 		}
 		
-		Parametros.playerX = player.getX();
-		Parametros.playerY = player.getY();
-
-		colide();
-
-		centrarCamara();
-
+		
+		
 		renderer.setView(camara);
-		renderer.render();
-
-		mainStage.draw();
+		renderer.render();		
+		mainStage.draw();	
 		uiStage.draw();
 		
 
+	}
+
+	private void pauseButton() {
+		
+		if (Gdx.input.isKeyJustPressed(Keys.ESCAPE)) {
+			if (!Parametros.pausa) {
+				Parametros.pausa=true;
+				menu = new InGameScreen(0, 0, this.uiStage, game);
+			}
+		}
+		
 	}
 
 	public void colide() {
@@ -202,6 +221,13 @@ public class Level1 extends BScreen {
 
 		}
 
+		if (coin.getEnabled() && coin.overlaps(player)) {
+			if (!coin.explode) {
+				coin.getCoin();
+				Parametros.powerUpDisparo = true;
+			}
+		}
+		
 		for (Bramble bramble : brambles) {
 			if (player.overlaps(bramble)) {
 				player.setPosition(Parametros.playerX - 200, Parametros.playerY + 500);
@@ -278,9 +304,9 @@ public class Level1 extends BScreen {
 		inicioX = (float) props.get("x");
 		inicioY = (float) props.get("y");
 
-//		elementos = getRectangleList("Coin");
-//		props = elementos.get(0).getProperties();
-//		coin = new Coin((float) props.get("x"), (float) props.get("y"), mainStage);
+		elementos = getRectangleList("Coin");
+		props = elementos.get(0).getProperties();
+		coin = new Coin((float) props.get("x"), (float) props.get("y"), mainStage);
 
 		elementos = getRectangleList("Door");
 		props = elementos.get(0).getProperties();

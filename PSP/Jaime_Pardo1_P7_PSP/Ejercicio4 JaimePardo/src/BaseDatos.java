@@ -10,7 +10,7 @@ public class BaseDatos {
     //Metodo que conecta con la base de datos y envia un mensaje de error si falla.
     public boolean conectar(){
         try {
-            conexion = DriverManager.getConnection("jdbc:mysql://localhost:3307/laliga", "root", "");
+            conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/laliga", "root", "");
             return true;
         } catch (SQLException e) {
             JOptionPane.showMessageDialog(null, "ERROR AL CONECTAR");

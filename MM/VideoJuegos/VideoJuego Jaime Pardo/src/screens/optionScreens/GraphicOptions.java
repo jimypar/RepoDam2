@@ -90,9 +90,6 @@ public class GraphicOptions extends BScreen {
 				Parametros.fullscreen = false;
 			} else {
 				Parametros.fullscreen = true;
-				
-				setFullScreen();
-				
 			}
 			return false;
 		});
@@ -105,26 +102,14 @@ public class GraphicOptions extends BScreen {
 				return false;
 			if (Parametros.fullscreen) {
 				Parametros.fullscreen = false;
-				
-				try {
-					Display.setFullscreen(false);
-				} catch (LWJGLException e1) {
-					e1.printStackTrace();
-				}
-				
 			} else {
 				Parametros.fullscreen = true;
-				
-				setFullScreen();
-
-				
-				
 			}
 			return false;
 		});
 		tabla.add(botonSubir2);
 		tabla.row().colspan(3);
-		TextButton botonSalir = new TextButton("Volver", ResourceManager.textButtonStyle);
+		TextButton botonSalir = new TextButton("Aplicar", ResourceManager.textButtonStyle);
 		botonSalir.addListener((Event e) -> {
 			if (!(e instanceof InputEvent) || !((InputEvent) e).getType().equals(Type.touchDown))
 				return false;
@@ -132,6 +117,17 @@ public class GraphicOptions extends BScreen {
 //			Parametros.setAltoPantalla(this.resHeight.get(i));
 //			Parametros.setAnchoPantalla(this.resWidth.get(i));
 //			this.game.resize(Parametros.getAnchoPantalla(), Parametros.getAnchoPantalla());
+			
+			if (Parametros.fullscreen) {
+				setFullScreen();
+			}else {
+				try {
+					Display.setFullscreen(false);
+				} catch (LWJGLException e1) {
+					e1.printStackTrace();
+				}
+			}
+			
 			game.setScreen(new OptionScreen(game));
 			return false;
 		});

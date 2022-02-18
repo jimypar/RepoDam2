@@ -409,4 +409,10 @@ public class Element extends Actor{
 	public void reanimate() {
 		this.setEnabled(true);
 	}
+
+
+	public void render(float delta) {
+		// TODO Auto-generated method stub
+		
+	}
 }
