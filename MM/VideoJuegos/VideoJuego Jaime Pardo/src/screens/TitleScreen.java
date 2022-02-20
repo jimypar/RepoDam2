@@ -11,8 +11,10 @@ import com.badlogic.gdx.scenes.scene2d.ui.TextButton;
 import game.Demo;
 import game.Parametros;
 import managers.ResourceManager;
+import managers.SaveGameManager;
 import managers.SoundManager;
 import screens.optionScreens.OptionScreen;
+import screens.optionScreens.PlayScreen;
 
 public class TitleScreen extends BScreen{
 private Table tabla;
@@ -36,7 +38,7 @@ private Texture background;
 				(Event e)->{if(!(e instanceof InputEvent)|| !((InputEvent)e).getType().equals(Type.touchDown))
 					return false;
 				this.dispose();
-				game.setScreen(new Level1(game));
+				game.setScreen(new PlayScreen(game));
 				return false;
 				});
 		tabla.add(boton);
@@ -50,6 +52,17 @@ private Texture background;
 				return false;
 				});
 		tabla.add(botonOpciones);
+		tabla.row();
+		TextButton botonSave=new TextButton("Guardar",ResourceManager.textButtonStyle);
+		botonSave.addListener(
+				(Event e)->{if(!(e instanceof InputEvent)|| !((InputEvent)e).getType().equals(Type.touchDown))
+					return false;
+				this.dispose();
+				SaveGameManager.saveAllParameters();
+				botonSave.setText("Guardado");
+				return false;
+				});
+		tabla.add(botonSave);
 		tabla.row();
 		TextButton botonSalir=new TextButton("Salir", ResourceManager.textButtonStyle);
 		botonSalir.addListener(

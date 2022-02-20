@@ -8,7 +8,7 @@ import com.badlogic.gdx.scenes.scene2d.Stage;
 import elements.Element;
 import game.Parametros;
 
-public class BarraVida extends Element {
+public class Ui extends Element {
 
 	private Animation<TextureRegion> hp4;	
 	private Animation<TextureRegion> hp3;	
@@ -18,7 +18,7 @@ public class BarraVida extends Element {
 	private Animation<TextureRegion> death1;	
 
 
-	public BarraVida(float x, float y, Stage s) {
+	public Ui(float x, float y, Stage s) {
 		super(x, y, s);
 		// TODO Auto-generated constructor stub
 		this.setEnabled(true);

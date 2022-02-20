@@ -33,11 +33,17 @@ public class Parametros {
  
  public static int vida = 0;
  
+ public static float playTime = 0;
+ public static boolean pacifico = false;
+ 
  public static boolean powerUpDisparo = false;
  
  public static boolean pausa = false;
 
- 
+ public static boolean level1Unlocked = false;
+ public static boolean boss1Unlocked = false;
+ public static boolean level2Unlocked = false;
+ public static boolean boss2Unlocked = false;
 
 
 

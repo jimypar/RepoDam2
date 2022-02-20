@@ -27,6 +27,8 @@ public final class ResourceManager {
 	public static TextButtonStyle textButtonStyle;
 	public static LabelStyle buttonStyle2;
 	public static TextButtonStyle textButtonStyle2;
+	public static LabelStyle buttonStyleBlock;
+	public static TextButtonStyle textButtonStyleBlock;
 
 	public static void loadAllResources() {
 
@@ -39,7 +41,6 @@ public final class ResourceManager {
 		assets.load("maps/Boss2/Boss2.tmx", TiledMap.class);
 
 		assets.load("maps/tutorial/assets/Drawing/tutorial_room_front_layer_0001.png", Texture.class);
-		assets.load("Menu/menuInGame.png", Texture.class);
 		assets.load("Menu/menuInGameSmall.png", Texture.class);
 
 		assets.load("Cuphead/Idle/spriteIdleL.png", Texture.class);
@@ -163,15 +164,22 @@ public final class ResourceManager {
 		
 		FreeTypeFontGenerator ftfg2 = new FreeTypeFontGenerator(Gdx.files.internal("fuente/Dimbo.ttf"));
 		FreeTypeFontParameter ftfp2 = new FreeTypeFontParameter();
+		
+		FreeTypeFontGenerator ftfg3 = new FreeTypeFontGenerator(Gdx.files.internal("fuente/Dimbo.ttf"));
+		FreeTypeFontParameter ftfp3 = new FreeTypeFontParameter();
 
 		ftfp.size = 36;
 		ftfp.color = Color.WHITE;
 		ftfp.borderColor = Color.BLACK;
 		ftfp.borderWidth = 2;
-		ftfp2.size = 36;
+		ftfp2.size = 50;
 		ftfp2.color = Color.WHITE;
 		ftfp2.borderColor = Color.BLACK;
 		ftfp2.borderWidth = 2;
+		ftfp3.size = 50;
+		ftfp3.color = Color.GRAY;
+		ftfp3.borderColor = Color.BLACK;
+		ftfp3.borderWidth = 2;
 
 		BitmapFont fuentePropia = ftfg.generateFont(ftfp);
 		buttonStyle = new LabelStyle();
@@ -184,6 +192,12 @@ public final class ResourceManager {
 		buttonStyle2.font = fuentePropia2;
 		textButtonStyle2 = new TextButtonStyle();
 		textButtonStyle2.font = fuentePropia2;
+		
+		BitmapFont fuenteBlock = ftfg3.generateFont(ftfp3);
+		buttonStyleBlock = new LabelStyle();
+		buttonStyleBlock.font = fuenteBlock;
+		textButtonStyleBlock = new TextButtonStyle();
+		textButtonStyleBlock.font = fuenteBlock;
 	}
 
 	/*

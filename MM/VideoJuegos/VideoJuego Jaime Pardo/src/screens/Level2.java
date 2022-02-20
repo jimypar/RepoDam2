@@ -8,6 +8,7 @@ import org.lwjgl.LWJGLException;
 import org.lwjgl.opengl.Display;
 
 import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.Input.Keys;
 import com.badlogic.gdx.audio.Music;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.Texture;
@@ -47,7 +48,8 @@ import game.Parametros;
 import managers.OrthogonalTiledMapRendererWithSprites;
 import managers.ResourceManager;
 import managers.SoundManager;
-import ui.BarraVida;
+import screens.optionScreens.InGameScreen;
+import ui.Ui;
 
 public class Level2 extends BScreen {
 
@@ -61,7 +63,7 @@ public class Level2 extends BScreen {
 	Array<ImagenCapa> imagenes;
 	Array<Marker> markers;
 	OrthographicCamera camara;
-	private BarraVida barra;
+	private Ui barra;
 	Music music_background;
 
 	private TiledMap map;
@@ -79,7 +81,7 @@ public class Level2 extends BScreen {
 	private float cooldownSpawn = 1.5f;
 	private float tiempoSpawn = cooldownSpawn * 2;
 	
-	boolean spawnerOn=true;
+	InGameScreen menu;
 
 	public Level2(Demo game) {
 
@@ -103,7 +105,7 @@ public class Level2 extends BScreen {
 		player.setPolygon(10);
 
 		uiStage = new Stage();
-		barra = new BarraVida(Parametros.getAnchoPantalla() / 50, Parametros.getAltoPantalla() / 10, this.uiStage);
+		barra = new Ui(Parametros.getAnchoPantalla() / 50, Parametros.getAltoPantalla() / 10, this.uiStage);
 
 		tiempoSpawn = 0;
 
@@ -117,25 +119,29 @@ public class Level2 extends BScreen {
 	public void render(float delta) {
 
 		super.render(delta);
-		mainStage.act();
-		uiStage.act();
 
-		if (player.muerto) {
-			game.setScreen(new Level2(game));
+		pauseButton();
+
+		if (!Parametros.pausa) {
+
+			mainStage.act();
+			uiStage.act();
+
+			if (player.muerto) {
+				game.setScreen(new Level2(game));
+			}
+
+			Parametros.playerX = player.getX();
+			Parametros.playerY = player.getY();
+
+			colide();
+
+			centrarCamara();
+
+			spawner();
+			tiempoSpawn += delta;
+
 		}
-
-		Parametros.playerX = player.getX();
-		Parametros.playerY = player.getY();
-
-		colide();
-
-		centrarCamara();
-
-		
-		if (spawnerOn) {
-			
-		}
-		spawner();
 
 		renderer.setView(camara);
 		renderer.render();
@@ -143,7 +149,18 @@ public class Level2 extends BScreen {
 		mainStage.draw();
 		uiStage.draw();
 
-		tiempoSpawn += delta;
+		
+
+	}
+
+	private void pauseButton() {
+
+		if (Gdx.input.isKeyJustPressed(Keys.ESCAPE)) {
+			if (!Parametros.pausa) {
+				Parametros.pausa = true;
+				menu = new InGameScreen(0, 0, this.uiStage, game);
+			}
+		}
 
 	}
 
@@ -216,11 +233,11 @@ public class Level2 extends BScreen {
 				player.setPosition(Parametros.playerX - 200, Parametros.playerY + 500);
 			}
 		}
-		
+
 		if (coin.getEnabled() && coin.overlaps(player)) {
 			if (!coin.explode) {
 				coin.getCoin();
-				Parametros.vida+=1;
+				Parametros.vida += 1;
 			}
 		}
 
@@ -345,8 +362,7 @@ public class Level2 extends BScreen {
 					(float) props.get("height"));
 			brambles.add(b);
 		}
-		
-		
+
 		elementos = getRectangleList("Spawn");
 
 		Spawn spawn;
@@ -354,15 +370,12 @@ public class Level2 extends BScreen {
 		for (MapObject spawner : elementos) {
 			props = spawner.getProperties();
 			spawn = new Spawn((float) props.get("x"), (float) props.get("y"), mainStage, (float) props.get("width"),
-					(float) props.get("height"),this);
+					(float) props.get("height"), this);
 			beeSpawn.add(spawn);
 		}
-		
-		
 
 		elementos = getEnemyList();
 
-		
 		enemigos = new Array<Enemigo>();
 		for (MapObject enemy : elementos) {
 			props = enemy.getProperties();

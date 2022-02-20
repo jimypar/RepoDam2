@@ -45,7 +45,7 @@ import managers.OrthogonalTiledMapRendererWithSprites;
 import managers.ResourceManager;
 import managers.SoundManager;
 import screens.optionScreens.InGameScreen;
-import ui.BarraVida;
+import ui.Ui;
 
 public class Level1 extends BScreen {
 
@@ -59,7 +59,7 @@ public class Level1 extends BScreen {
 	Array<ImagenCapa> imagenes;
 	Array<Marker> markers;
 	OrthographicCamera camara;
-	private BarraVida barra;
+	private Ui barra;
 	Music music_background;
 
 	private TiledMap map;
@@ -102,7 +102,7 @@ public class Level1 extends BScreen {
 		Parametros.pausa = false;
 		
 		uiStage=new Stage();
-		barra= new BarraVida(Parametros.getAnchoPantalla()/50,Parametros.getAltoPantalla()/10,this.uiStage);
+		barra= new Ui(Parametros.getAnchoPantalla()/50,Parametros.getAltoPantalla()/10,this.uiStage);
 		
 
 	}

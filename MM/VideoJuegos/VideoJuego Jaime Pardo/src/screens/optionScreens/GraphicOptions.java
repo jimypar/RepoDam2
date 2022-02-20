@@ -6,6 +6,7 @@ import org.lwjgl.LWJGLException;
 import org.lwjgl.opengl.Display;
 
 import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.Input.Keys;
 import com.badlogic.gdx.Screen;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.maps.tiled.TiledMapTileLayer.Cell;
@@ -20,6 +21,7 @@ import com.badlogic.gdx.scenes.scene2d.ui.TextButton;
 import game.Demo;
 import game.Parametros;
 import managers.ResourceManager;
+import managers.SaveGameManager;
 import managers.SoundManager;
 import screens.BScreen;
 import screens.TitleScreen;
@@ -132,6 +134,10 @@ public class GraphicOptions extends BScreen {
 			return false;
 		});
 		tabla.add(botonSalir);
+		
+		
+		
+		
 	}
 
 	private void setFullScreen() {
@@ -154,6 +160,10 @@ public class GraphicOptions extends BScreen {
 			fullscreen.setText("NO");
 		}
 		
+		if (Gdx.input.isKeyJustPressed(Keys.P)) {
+			SaveGameManager.resetAllParameters();
+		}
+		
 //		this.res.setText(this.resWidth.get(i)+" X "+this.resHeight.get(i));
 
 		uiStage.act();
@@ -163,6 +173,8 @@ public class GraphicOptions extends BScreen {
 		uiStage.getBatch().end();
 
 		uiStage.draw();
+		
+		
 
 	}
 
