@@ -41,6 +41,20 @@ private Texture background;
 				game.setScreen(new PlayScreen(game));
 				return false;
 				});
+		boton.addListener(
+				(Event e)->{if(!(e instanceof InputEvent)|| !((InputEvent)e).getType().equals(Type.enter))
+					return false;
+				boton.setStyle(ResourceManager.textButtonStylePressed);
+				SoundManager.playSound("Sound/Menu_Move.wav");
+				return false;
+				});
+		boton.addListener(
+				(Event e)->{if(!(e instanceof InputEvent)|| !((InputEvent)e).getType().equals(Type.exit))
+					return false;
+				boton.setStyle(ResourceManager.textButtonStyle);
+				SoundManager.playSound("Sound/Menu_Move.wav");
+				return false;
+				});
 		tabla.add(boton);
 		tabla.row();
 		TextButton botonOpciones=new TextButton("Opciones",ResourceManager.textButtonStyle);
@@ -49,6 +63,20 @@ private Texture background;
 					return false;
 				this.dispose();
 				game.setScreen(new OptionScreen(game));
+				return false;
+				});
+		botonOpciones.addListener(
+				(Event e)->{if(!(e instanceof InputEvent)|| !((InputEvent)e).getType().equals(Type.enter))
+					return false;
+				botonOpciones.setStyle(ResourceManager.textButtonStylePressed);
+				SoundManager.playSound("Sound/Menu_Move.wav");
+				return false;
+				});
+		botonOpciones.addListener(
+				(Event e)->{if(!(e instanceof InputEvent)|| !((InputEvent)e).getType().equals(Type.exit))
+					return false;
+				botonOpciones.setStyle(ResourceManager.textButtonStyle);
+				SoundManager.playSound("Sound/Menu_Move.wav");
 				return false;
 				});
 		tabla.add(botonOpciones);
@@ -62,6 +90,20 @@ private Texture background;
 				botonSave.setText("Guardado");
 				return false;
 				});
+		botonSave.addListener(
+				(Event e)->{if(!(e instanceof InputEvent)|| !((InputEvent)e).getType().equals(Type.enter))
+					return false;
+				botonSave.setStyle(ResourceManager.textButtonStylePressed);
+				SoundManager.playSound("Sound/Menu_Move.wav");
+				return false;
+				});
+		botonSave.addListener(
+				(Event e)->{if(!(e instanceof InputEvent)|| !((InputEvent)e).getType().equals(Type.exit))
+					return false;
+				botonSave.setStyle(ResourceManager.textButtonStyle);
+				SoundManager.playSound("Sound/Menu_Move.wav");
+				return false;
+				});
 		tabla.add(botonSave);
 		tabla.row();
 		TextButton botonSalir=new TextButton("Salir", ResourceManager.textButtonStyle);
@@ -70,6 +112,20 @@ private Texture background;
 					return false;
 				this.dispose();
 			Gdx.app.exit();
+				return false;
+				});
+		botonSalir.addListener(
+				(Event e)->{if(!(e instanceof InputEvent)|| !((InputEvent)e).getType().equals(Type.enter))
+					return false;
+				botonSalir.setStyle(ResourceManager.textButtonStylePressed);
+				SoundManager.playSound("Sound/Menu_Move.wav");
+				return false;
+				});
+		botonSalir.addListener(
+				(Event e)->{if(!(e instanceof InputEvent)|| !((InputEvent)e).getType().equals(Type.exit))
+					return false;
+				botonSalir.setStyle(ResourceManager.textButtonStyle);
+				SoundManager.playSound("Sound/Menu_Move.wav");
 				return false;
 				});
 		tabla.add(botonSalir);

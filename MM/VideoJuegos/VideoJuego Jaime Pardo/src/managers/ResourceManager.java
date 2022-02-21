@@ -14,6 +14,7 @@ import com.badlogic.gdx.graphics.g2d.freetype.FreeTypeFontGenerator;
 import com.badlogic.gdx.graphics.g2d.freetype.FreeTypeFontGenerator.FreeTypeFontParameter;
 import com.badlogic.gdx.maps.tiled.TiledMap;
 import com.badlogic.gdx.maps.tiled.TmxMapLoader;
+import com.badlogic.gdx.scenes.scene2d.ui.Button.ButtonStyle;
 import com.badlogic.gdx.scenes.scene2d.ui.Label.LabelStyle;
 import com.badlogic.gdx.scenes.scene2d.ui.TextButton.TextButtonStyle;
 import com.badlogic.gdx.scenes.scene2d.utils.NinePatchDrawable;
@@ -29,6 +30,8 @@ public final class ResourceManager {
 	public static TextButtonStyle textButtonStyle2;
 	public static LabelStyle buttonStyleBlock;
 	public static TextButtonStyle textButtonStyleBlock;
+	public static TextButtonStyle textButtonStylePressed;
+	public static TextButtonStyle textButtonStylePressed2;
 
 	public static void loadAllResources() {
 
@@ -131,13 +134,15 @@ public final class ResourceManager {
 		assets.load("Sound/sfx_player_hit_02.wav", Sound.class);
 		assets.load("Sound/sfx_player_dash_01.wav", Sound.class);
 		assets.load("Sound/sfx_vinyl_scratch_01.wav", Sound.class);
+		assets.load("Sound/Menu_Move.wav", Sound.class);
+
 		
 		assets.load("maps/tutorial/music/MUS_Tutorial.wav", Music.class);
 		assets.load("maps/Level1/music/MUS_ForestFollies.wav", Music.class);
 		assets.load("maps/Boss1/music/MUS_Slime.wav", Music.class);
 		assets.load("maps/Level2/music/MUS_BotanicPanic.wav", Music.class);
 		assets.load("Menu/MUS_InkwellIsleOne.wav", Music.class);
-		
+		assets.load("WinScreen/MUS_VictoryScreen.wav", Music.class);
 		
 		// UI
 		assets.load("Lives/hp4.png", Texture.class);
@@ -167,19 +172,39 @@ public final class ResourceManager {
 		
 		FreeTypeFontGenerator ftfg3 = new FreeTypeFontGenerator(Gdx.files.internal("fuente/Dimbo.ttf"));
 		FreeTypeFontParameter ftfp3 = new FreeTypeFontParameter();
+		
+		FreeTypeFontGenerator ftfg4 = new FreeTypeFontGenerator(Gdx.files.internal("fuente/CupheadFelix-Regular.otf"));
+		FreeTypeFontParameter ftfp4 = new FreeTypeFontParameter();
+		
+		FreeTypeFontGenerator ftfg5 = new FreeTypeFontGenerator(Gdx.files.internal("fuente/Dimbo.ttf"));
+		FreeTypeFontParameter ftfp5 = new FreeTypeFontParameter();
 
 		ftfp.size = 36;
 		ftfp.color = Color.WHITE;
 		ftfp.borderColor = Color.BLACK;
 		ftfp.borderWidth = 2;
+		
 		ftfp2.size = 50;
 		ftfp2.color = Color.WHITE;
 		ftfp2.borderColor = Color.BLACK;
 		ftfp2.borderWidth = 2;
+		
 		ftfp3.size = 50;
 		ftfp3.color = Color.GRAY;
 		ftfp3.borderColor = Color.BLACK;
 		ftfp3.borderWidth = 2;
+
+		ftfp4.size = 40;
+		ftfp4.color = Color.GOLDENROD;
+		ftfp4.borderColor = Color.BLACK;
+		ftfp4.borderWidth = 2;
+		
+
+		ftfp5.size = 60;
+		ftfp5.color = Color.GOLDENROD;
+		ftfp5.borderColor = Color.BLACK;
+		ftfp5.borderWidth = 2;
+
 
 		BitmapFont fuentePropia = ftfg.generateFont(ftfp);
 		buttonStyle = new LabelStyle();
@@ -198,6 +223,15 @@ public final class ResourceManager {
 		buttonStyleBlock.font = fuenteBlock;
 		textButtonStyleBlock = new TextButtonStyle();
 		textButtonStyleBlock.font = fuenteBlock;
+		
+		BitmapFont fuentePressed = ftfg4.generateFont(ftfp4);
+		textButtonStylePressed = new TextButtonStyle();
+		textButtonStylePressed.font = fuentePressed;
+		
+		BitmapFont fuentePressed2 = ftfg5.generateFont(ftfp5);
+		textButtonStylePressed2 = new TextButtonStyle();
+		textButtonStylePressed2.font = fuentePressed2;
+		
 	}
 
 	/*

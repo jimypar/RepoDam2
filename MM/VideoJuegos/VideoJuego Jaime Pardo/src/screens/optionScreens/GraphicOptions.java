@@ -95,6 +95,20 @@ public class GraphicOptions extends BScreen {
 			}
 			return false;
 		});
+		botonBajar2.addListener(
+				(Event e)->{if(!(e instanceof InputEvent)|| !((InputEvent)e).getType().equals(Type.enter))
+					return false;
+				botonBajar2.setStyle(ResourceManager.textButtonStylePressed2);
+				SoundManager.playSound("Sound/Menu_Move.wav");
+				return false;
+				});
+		botonBajar2.addListener(
+				(Event e)->{if(!(e instanceof InputEvent)|| !((InputEvent)e).getType().equals(Type.exit))
+					return false;
+				botonBajar2.setStyle(ResourceManager.textButtonStyle2);
+				SoundManager.playSound("Sound/Menu_Move.wav");
+				return false;
+				});
 		tabla.add(botonBajar2);
 		fullscreen = new Label("", ResourceManager.buttonStyle2);
 		tabla.add(fullscreen);
@@ -109,6 +123,20 @@ public class GraphicOptions extends BScreen {
 			}
 			return false;
 		});
+		botonSubir2.addListener(
+				(Event e)->{if(!(e instanceof InputEvent)|| !((InputEvent)e).getType().equals(Type.enter))
+					return false;
+				botonSubir2.setStyle(ResourceManager.textButtonStylePressed2);
+				SoundManager.playSound("Sound/Menu_Move.wav");
+				return false;
+				});
+		botonSubir2.addListener(
+				(Event e)->{if(!(e instanceof InputEvent)|| !((InputEvent)e).getType().equals(Type.exit))
+					return false;
+				botonSubir2.setStyle(ResourceManager.textButtonStyle2);
+				SoundManager.playSound("Sound/Menu_Move.wav");
+				return false;
+				});
 		tabla.add(botonSubir2);
 		tabla.row().colspan(3);
 		TextButton botonSalir = new TextButton("Aplicar", ResourceManager.textButtonStyle);
@@ -133,6 +161,20 @@ public class GraphicOptions extends BScreen {
 			game.setScreen(new OptionScreen(game));
 			return false;
 		});
+		botonSalir.addListener(
+				(Event e)->{if(!(e instanceof InputEvent)|| !((InputEvent)e).getType().equals(Type.enter))
+					return false;
+				botonSalir.setStyle(ResourceManager.textButtonStylePressed);
+				SoundManager.playSound("Sound/Menu_Move.wav");
+				return false;
+				});
+		botonSalir.addListener(
+				(Event e)->{if(!(e instanceof InputEvent)|| !((InputEvent)e).getType().equals(Type.exit))
+					return false;
+				botonSalir.setStyle(ResourceManager.textButtonStyle);
+				SoundManager.playSound("Sound/Menu_Move.wav");
+				return false;
+				});
 		tabla.add(botonSalir);
 		
 		

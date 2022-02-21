@@ -12,6 +12,7 @@ import com.badlogic.gdx.utils.Align;
 import game.Demo;
 import game.Parametros;
 import managers.ResourceManager;
+import managers.SoundManager;
 import screens.BScreen;
 import screens.TitleScreen;
 
@@ -30,6 +31,8 @@ private float tiempo3;
 
 	public WinScreen(Demo game, int level) {
 		super(game);
+		
+		SoundManager.playMusic("WinScreen/MUS_VictoryScreen.wav");
 				
 		this.notaNum=100;
 		

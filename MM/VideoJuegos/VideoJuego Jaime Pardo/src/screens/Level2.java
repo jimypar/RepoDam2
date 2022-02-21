@@ -55,7 +55,6 @@ import ui.Ui;
 public class Level2 extends BScreen {
 
 	Stage mainStage;
-	Stage uiStage;
 	public Array<Solid> suelo;
 	public Array<Wall> muros;
 	public Array<Bramble> brambles;

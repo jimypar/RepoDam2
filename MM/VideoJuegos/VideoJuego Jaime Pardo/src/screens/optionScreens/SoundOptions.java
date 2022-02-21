@@ -52,6 +52,20 @@ Label vol2;
 				SoundManager.applyVolume();
 				return false;
 				});
+		botonBajar.addListener(
+				(Event e)->{if(!(e instanceof InputEvent)|| !((InputEvent)e).getType().equals(Type.enter))
+					return false;
+				botonBajar.setStyle(ResourceManager.textButtonStylePressed2);
+				SoundManager.playSound("Sound/Menu_Move.wav");
+				return false;
+				});
+		botonBajar.addListener(
+				(Event e)->{if(!(e instanceof InputEvent)|| !((InputEvent)e).getType().equals(Type.exit))
+					return false;
+				botonBajar.setStyle(ResourceManager.textButtonStyle2);
+				SoundManager.playSound("Sound/Menu_Move.wav");
+				return false;
+				});
 		tabla.add(botonBajar);
 		vol1=new Label("", ResourceManager.buttonStyle2);
 		tabla.add(vol1);
@@ -63,6 +77,20 @@ Label vol2;
 					Parametros.musicVolume += 0.1f;
 				}
 				SoundManager.applyVolume();
+				return false;
+				});
+		botonSubir.addListener(
+				(Event e)->{if(!(e instanceof InputEvent)|| !((InputEvent)e).getType().equals(Type.enter))
+					return false;
+				botonSubir.setStyle(ResourceManager.textButtonStylePressed2);
+				SoundManager.playSound("Sound/Menu_Move.wav");
+				return false;
+				});
+		botonSubir.addListener(
+				(Event e)->{if(!(e instanceof InputEvent)|| !((InputEvent)e).getType().equals(Type.exit))
+					return false;
+				botonSubir.setStyle(ResourceManager.textButtonStyle2);
+				SoundManager.playSound("Sound/Menu_Move.wav");
 				return false;
 				});
 		tabla.add(botonSubir);
@@ -80,6 +108,20 @@ Label vol2;
 				SoundManager.playDemoSound();
 				return false;
 				});
+		botonBajar2.addListener(
+				(Event e)->{if(!(e instanceof InputEvent)|| !((InputEvent)e).getType().equals(Type.enter))
+					return false;
+				botonBajar2.setStyle(ResourceManager.textButtonStylePressed2);
+				SoundManager.playSound("Sound/Menu_Move.wav");
+				return false;
+				});
+		botonBajar2.addListener(
+				(Event e)->{if(!(e instanceof InputEvent)|| !((InputEvent)e).getType().equals(Type.exit))
+					return false;
+				botonBajar2.setStyle(ResourceManager.textButtonStyle2);
+				SoundManager.playSound("Sound/Menu_Move.wav");
+				return false;
+				});
 		tabla.add(botonBajar2);
 		vol2=new Label("", ResourceManager.buttonStyle2);
 		tabla.add(vol2);
@@ -93,6 +135,20 @@ Label vol2;
 				SoundManager.playDemoSound();
 				return false;
 				});
+		botonSubir2.addListener(
+				(Event e)->{if(!(e instanceof InputEvent)|| !((InputEvent)e).getType().equals(Type.enter))
+					return false;
+				botonSubir2.setStyle(ResourceManager.textButtonStylePressed2);
+				SoundManager.playSound("Sound/Menu_Move.wav");
+				return false;
+				});
+		botonSubir2.addListener(
+				(Event e)->{if(!(e instanceof InputEvent)|| !((InputEvent)e).getType().equals(Type.exit))
+					return false;
+				botonSubir2.setStyle(ResourceManager.textButtonStyle2);
+				SoundManager.playSound("Sound/Menu_Move.wav");
+				return false;
+				});
 		tabla.add(botonSubir2);
 		tabla.row().colspan(3);
 		TextButton botonSalir=new TextButton("Volver", ResourceManager.textButtonStyle);
@@ -101,6 +157,20 @@ Label vol2;
 					return false;
 				this.dispose();
 				game.setScreen(new OptionScreen(game));
+				return false;
+				});
+		botonSalir.addListener(
+				(Event e)->{if(!(e instanceof InputEvent)|| !((InputEvent)e).getType().equals(Type.enter))
+					return false;
+				botonSalir.setStyle(ResourceManager.textButtonStylePressed);
+				SoundManager.playSound("Sound/Menu_Move.wav");
+				return false;
+				});
+		botonSalir.addListener(
+				(Event e)->{if(!(e instanceof InputEvent)|| !((InputEvent)e).getType().equals(Type.exit))
+					return false;
+				botonSalir.setStyle(ResourceManager.textButtonStyle);
+				SoundManager.playSound("Sound/Menu_Move.wav");
 				return false;
 				});
 		tabla.add(botonSalir);

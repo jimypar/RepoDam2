@@ -12,6 +12,7 @@ import com.badlogic.gdx.scenes.scene2d.ui.TextButton;
 import game.Demo;
 import game.Parametros;
 import managers.ResourceManager;
+import managers.SoundManager;
 import screens.BScreen;
 import screens.Boss1;
 import screens.Boss2;
@@ -42,6 +43,20 @@ private Texture background;
 				game.setScreen(new TutorialScreen(game));
 				return false;
 				});
+		boton.addListener(
+				(Event e)->{if(!(e instanceof InputEvent)|| !((InputEvent)e).getType().equals(Type.enter))
+					return false;
+				boton.setStyle(ResourceManager.textButtonStylePressed2);
+				SoundManager.playSound("Sound/Menu_Move.wav");
+				return false;
+				});
+		boton.addListener(
+				(Event e)->{if(!(e instanceof InputEvent)|| !((InputEvent)e).getType().equals(Type.exit))
+					return false;
+				boton.setStyle(ResourceManager.textButtonStyle2);
+				SoundManager.playSound("Sound/Menu_Move.wav");
+				return false;
+				});
 		tabla.add(boton).colspan(2);
 		tabla.row();	
 		TextButton boton2=new TextButton("Nivel 1   ",ResourceManager.textButtonStyle2);
@@ -56,6 +71,20 @@ private Texture background;
 				game.setScreen(new Level1(game));
 				return false;
 				});
+		boton2.addListener(
+				(Event e)->{if(!(e instanceof InputEvent)|| !((InputEvent)e).getType().equals(Type.enter))
+					return false;
+				boton2.setStyle(ResourceManager.textButtonStylePressed2);
+				SoundManager.playSound("Sound/Menu_Move.wav");
+				return false;
+				});
+		boton2.addListener(
+				(Event e)->{if(!(e instanceof InputEvent)|| !((InputEvent)e).getType().equals(Type.exit))
+					return false;
+				boton2.setStyle(ResourceManager.textButtonStyle2);
+				SoundManager.playSound("Sound/Menu_Move.wav");
+				return false;
+				});
 		tabla.add(boton2);
 		TextButton boton3=new TextButton(" Jefe 1",ResourceManager.textButtonStyle2);
 		if (!Parametros.boss1Unlocked) {
@@ -67,6 +96,20 @@ private Texture background;
 					return false;
 				this.dispose();
 				game.setScreen(new Boss1(game));
+				return false;
+				});
+		boton3.addListener(
+				(Event e)->{if(!(e instanceof InputEvent)|| !((InputEvent)e).getType().equals(Type.enter))
+					return false;
+				boton3.setStyle(ResourceManager.textButtonStylePressed2);
+				SoundManager.playSound("Sound/Menu_Move.wav");
+				return false;
+				});
+		boton3.addListener(
+				(Event e)->{if(!(e instanceof InputEvent)|| !((InputEvent)e).getType().equals(Type.exit))
+					return false;
+				boton3.setStyle(ResourceManager.textButtonStyle2);
+				SoundManager.playSound("Sound/Menu_Move.wav");
 				return false;
 				});
 		tabla.add(boton3);
@@ -83,6 +126,20 @@ private Texture background;
 				game.setScreen(new Level2(game));
 				return false;
 				});
+		boton4.addListener(
+				(Event e)->{if(!(e instanceof InputEvent)|| !((InputEvent)e).getType().equals(Type.enter))
+					return false;
+				boton4.setStyle(ResourceManager.textButtonStylePressed2);
+				SoundManager.playSound("Sound/Menu_Move.wav");
+				return false;
+				});
+		boton4.addListener(
+				(Event e)->{if(!(e instanceof InputEvent)|| !((InputEvent)e).getType().equals(Type.exit))
+					return false;
+				boton4.setStyle(ResourceManager.textButtonStyle2);
+				SoundManager.playSound("Sound/Menu_Move.wav");
+				return false;
+				});
 		tabla.add(boton4);
 		TextButton boton5=new TextButton(" Jefe 2",ResourceManager.textButtonStyle2);
 		if (!Parametros.boss2Unlocked) {
@@ -96,6 +153,20 @@ private Texture background;
 				game.setScreen(new Boss2(game));
 				return false;
 				});
+		boton5.addListener(
+				(Event e)->{if(!(e instanceof InputEvent)|| !((InputEvent)e).getType().equals(Type.enter))
+					return false;
+				boton5.setStyle(ResourceManager.textButtonStylePressed2);
+				SoundManager.playSound("Sound/Menu_Move.wav");
+				return false;
+				});
+		boton5.addListener(
+				(Event e)->{if(!(e instanceof InputEvent)|| !((InputEvent)e).getType().equals(Type.exit))
+					return false;
+				boton5.setStyle(ResourceManager.textButtonStyle2);
+				SoundManager.playSound("Sound/Menu_Move.wav");
+				return false;
+				});
 		tabla.add(boton5);
 		tabla.row();
 		TextButton botonSalir=new TextButton("Volver", ResourceManager.textButtonStyle);
@@ -104,6 +175,20 @@ private Texture background;
 					return false;
 				this.dispose();
 				game.setScreen(new TitleScreen(game));
+				return false;
+				});
+		botonSalir.addListener(
+				(Event e)->{if(!(e instanceof InputEvent)|| !((InputEvent)e).getType().equals(Type.enter))
+					return false;
+				botonSalir.setStyle(ResourceManager.textButtonStylePressed);
+				SoundManager.playSound("Sound/Menu_Move.wav");
+				return false;
+				});
+		botonSalir.addListener(
+				(Event e)->{if(!(e instanceof InputEvent)|| !((InputEvent)e).getType().equals(Type.exit))
+					return false;
+				botonSalir.setStyle(ResourceManager.textButtonStyle);
+				SoundManager.playSound("Sound/Menu_Move.wav");
 				return false;
 				});
 		tabla.add(botonSalir).colspan(2);

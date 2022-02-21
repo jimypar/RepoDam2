@@ -1,5 +1,9 @@
 package screens.optionScreens;
 
+
+
+import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.Input.Keys;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.Batch;
 import com.badlogic.gdx.scenes.scene2d.Event;
@@ -21,6 +25,7 @@ public class InGameScreen extends Element{
 public Table tabla;
 private Texture background;
 private Stage uiStage;
+public FondoMenu fondo;
 
 	public InGameScreen(float x, float y, Stage s, Demo game) {
 		super(x,y,s);
@@ -32,7 +37,7 @@ private Stage uiStage;
 		tabla= new Table();
 		tabla.setFillParent(true);
 		
-		FondoMenu fondo = new FondoMenu((Parametros.getAnchoPantalla()/2),Parametros.getAltoPantalla()/4, s);
+		fondo = new FondoMenu((Parametros.getAnchoPantalla()/2),Parametros.getAltoPantalla()/4, s);
 		
 		this.uiStage.addActor(tabla);
 		
@@ -74,9 +79,17 @@ private Stage uiStage;
 	@Override
 	public void render(float delta) {
 	    
+		 if (Gdx.input.isKeyJustPressed(Keys.ESCAPE)) {
+	    	 this.tabla.setVisible(false);
+	    	 fondo.setEnabled(false);
+	    	 Parametros.pausa=false;
+		}
+		
 	     uiStage.act();
 	     
 	     uiStage.draw();
+	     
+	    
 
 	}
 
