@@ -45,6 +45,7 @@ import game.Parametros;
 import managers.OrthogonalTiledMapRendererWithSprites;
 import managers.ResourceManager;
 import managers.SoundManager;
+import screens.endScreens.WinScreen;
 import screens.optionScreens.InGameScreen;
 import ui.Ui;
 
@@ -58,6 +59,7 @@ public class Boss1 extends BScreen {
 	Array<ImagenCapa> imagenes;
 	OrthographicCamera camara;
 	private Ui barra;
+	float time;
 
 	private TiledMap map;
 	private int tileWidth, tileHeight, mapWidthInTiles, mapHeightInTiles, mapWidthInPixels, mapHeightInPixels;
@@ -88,7 +90,9 @@ public class Boss1 extends BScreen {
 		camara.position.y = 430;
 
 		Parametros.vida = 3;
-
+		Parametros.pausa = false;
+		Parametros.pacifico=true;
+		
 		player = new Player(inicioX, inicioY, mainStage);
 		player.setPolygon(10);
 
@@ -96,6 +100,8 @@ public class Boss1 extends BScreen {
 
 		uiStage = new Stage();
 		barra = new Ui(Parametros.getAnchoPantalla() / 50, Parametros.getAltoPantalla() / 10, this.uiStage);
+		
+		time=0;
 
 	}
 
@@ -110,10 +116,10 @@ public class Boss1 extends BScreen {
 
 		pauseButton();
 
-		mainStage.act();
-		uiStage.act();
-
 		if (!Parametros.pausa) {
+			
+			mainStage.act();
+			uiStage.act();
 
 			if (player.muerto) {
 				game.setScreen(new Boss1(game));
@@ -125,12 +131,14 @@ public class Boss1 extends BScreen {
 			colide();
 
 			centrarCamara();
+			
+			time+=delta;
 
 		}
 
+		
 		renderer.setView(camara);
 		renderer.render();
-
 		mainStage.draw();
 		uiStage.draw();
 
@@ -175,6 +183,12 @@ public class Boss1 extends BScreen {
 						player.getHit();
 					}
 				}
+				
+				if (b.dead) {
+					Parametros.playTime=time;
+					Parametros.level2Unlocked=true;
+					game.setScreen(new WinScreen(game, 2));
+				}
 
 			}
 		}
@@ -197,6 +211,7 @@ public class Boss1 extends BScreen {
 			}
 
 		}
+		
 
 	}
 

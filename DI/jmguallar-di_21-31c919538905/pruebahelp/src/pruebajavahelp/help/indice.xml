@@ -1,0 +1,5 @@
+<index version="1.0">
+		<indexitem text="Ejemlo JavaHelp" target="aplicacion"/>
+        <indexitem text="Manual"    target="manual"/>
+        <indexitem text="Instalar"    target="instalar"/>
+</index>

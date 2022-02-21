@@ -46,7 +46,7 @@ private float tiempo3;
 		Label txt1=new Label("Tiempo: ",ResourceManager.buttonStyle2);
 		tabla.add(txt1);
 		
-		Label tiempo=new Label(String.format("%.2f", Parametros.playTime),ResourceManager.buttonStyle2);
+		Label tiempo=new Label(makeReadable((int) Parametros.playTime),ResourceManager.buttonStyle2);
 		tabla.add(tiempo);
 		
 		tabla.row();
@@ -116,27 +116,27 @@ private float tiempo3;
 			this.maxVidas=3;
 			break;
 		case 1:
-			this.tiempo1=15;
-			this.tiempo2=20;
-			this.tiempo3=30;
+			this.tiempo1=40;
+			this.tiempo2=100;
+			this.tiempo3=150;
 			this.maxVidas=3;
 			break;
 		case 2:
-			this.tiempo1=15;
-			this.tiempo2=20;
-			this.tiempo3=30;
+			this.tiempo1=100;
+			this.tiempo2=150;
+			this.tiempo3=200;
 			this.maxVidas=3;
 			break;
 		case 3:
-			this.tiempo1=15;
-			this.tiempo2=20;
-			this.tiempo3=30;
-			this.maxVidas=3;
+			this.tiempo1=45;
+			this.tiempo2=120;
+			this.tiempo3=200;
+			this.maxVidas=4;
 			break;
 		case 4:
-			this.tiempo1=15;
-			this.tiempo2=20;
-			this.tiempo3=30;
+			this.tiempo1=45;
+			this.tiempo2=120;
+			this.tiempo3=200;
 			this.maxVidas=3;
 			break;
 		default:
@@ -174,13 +174,13 @@ private float tiempo3;
 		if (this.notaNum<25) {
 			this.nota="D";
 		}
-		if (this.notaNum>25 && this.notaNum<50) {
+		if (this.notaNum>25 && this.notaNum<=50) {
 			this.nota="C";
 		}
-		if (this.notaNum>50 && this.notaNum<75) {
+		if (this.notaNum>50 && this.notaNum<=75) {
 			this.nota="B";
 		}
-		if (this.notaNum>75 && this.notaNum<100) {
+		if (this.notaNum>75 && this.notaNum<=100) {
 			this.nota="A";
 		}
 		if (this.notaNum>100) {
@@ -188,6 +188,12 @@ private float tiempo3;
 		}
 		
 	}
+	
+	public static String makeReadable(int seconds) {
+	    
+	    return String.format("%02d:%02d", (seconds % 3600) / 60, (seconds % 60));
+	    
+	  }
 	
 	
 }

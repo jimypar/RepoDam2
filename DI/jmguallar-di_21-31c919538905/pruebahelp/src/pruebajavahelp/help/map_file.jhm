@@ -1,0 +1,5 @@
+<map version="1.0">
+   <mapID target="aplicacion" url="html/main.html" />
+   <mapID target="manual" url="html/manual.html" />
+   <mapID target="instalar" url="html/instalar.html" />
+</map>

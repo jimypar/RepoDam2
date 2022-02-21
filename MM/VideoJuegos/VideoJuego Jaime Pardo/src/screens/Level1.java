@@ -44,6 +44,7 @@ import game.Parametros;
 import managers.OrthogonalTiledMapRendererWithSprites;
 import managers.ResourceManager;
 import managers.SoundManager;
+import screens.endScreens.WinScreen;
 import screens.optionScreens.InGameScreen;
 import ui.Ui;
 
@@ -59,8 +60,9 @@ public class Level1 extends BScreen {
 	Array<ImagenCapa> imagenes;
 	Array<Marker> markers;
 	OrthographicCamera camara;
-	private Ui barra;
+	private Ui vida;
 	Music music_background;
+	float time;
 
 	private TiledMap map;
 	private int tileWidth, tileHeight, mapWidthInTiles, mapHeightInTiles, mapWidthInPixels, mapHeightInPixels;
@@ -100,11 +102,12 @@ public class Level1 extends BScreen {
 		player.setPolygon(10);
 		
 		Parametros.pausa = false;
-		
+		Parametros.pacifico=true;
+				
 		uiStage=new Stage();
-		barra= new Ui(Parametros.getAnchoPantalla()/50,Parametros.getAltoPantalla()/10,this.uiStage);
-		
+		vida= new Ui(Parametros.getAnchoPantalla()/50,Parametros.getAltoPantalla()/10,this.uiStage);
 
+		time=0;
 	}
 
 	private void cargarMusica() {
@@ -134,15 +137,15 @@ public class Level1 extends BScreen {
 
 			centrarCamara();
 			
+			time+=delta;
+			
 		}
-		
 		
 		
 		renderer.setView(camara);
 		renderer.render();		
 		mainStage.draw();	
 		uiStage.draw();
-		
 
 	}
 
@@ -207,6 +210,7 @@ public class Level1 extends BScreen {
 					if (bala.getEnabled() && bala.overlaps(e)) {
 						bala.setEnabled(false);
 						SoundManager.playSound("Sound/sfx_platforming_flowergrunt_death_01.wav");
+						Parametros.pacifico=false;
 						e.damage(1);
 					}
 				}
@@ -239,7 +243,9 @@ public class Level1 extends BScreen {
 		}
 		
 		if (player.overlaps(fin)) {
-			game.setScreen(new Boss1(game));
+			Parametros.playTime=time;
+			Parametros.boss1Unlocked=true;
+			game.setScreen(new WinScreen(game, 1));
 		}
 
 	}

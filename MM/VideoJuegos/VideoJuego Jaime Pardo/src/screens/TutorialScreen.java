@@ -95,6 +95,7 @@ public class TutorialScreen extends BScreen {
 		
 		Parametros.vida=3;
 		Parametros.pausa=false;
+		Parametros.pacifico=true;
 		
 		uiStage=new Stage();
 		
