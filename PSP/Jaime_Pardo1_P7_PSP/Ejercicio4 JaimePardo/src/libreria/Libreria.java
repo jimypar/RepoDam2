@@ -13,7 +13,7 @@ public class Libreria {
 
         //Generamos un par de claves
         //Admite claves de 512, 1024, 2048 y 4096 bits
-        rsa.genKeyPair(2048);
+        rsa.genKeyPair(4096);
 
         //Las guardamos asi podemos usarlas despues
         //a lo largo del tiempo

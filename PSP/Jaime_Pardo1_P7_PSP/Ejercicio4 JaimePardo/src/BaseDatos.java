@@ -1,8 +1,8 @@
 import com.google.gson.Gson;
+import libreria.Libreria;
 
 import javax.swing.*;
 import java.sql.*;
-import java.time.LocalDateTime;
 
 public class BaseDatos {
     private Connection conexion;
@@ -26,13 +26,14 @@ public class BaseDatos {
     //Metodo que consulta si un usuario existe o no y devuelve si es admin o no
     public int consultarUsuario(String usuario, String password){
         try {
+
             String SQL = "SELECT * FROM usuario";
             Statement stmt = conexion.createStatement();
             ResultSet rs = stmt.executeQuery(SQL);
 
             while (rs.next()) {
                 if (rs.getString("email").equals(usuario)){
-                    if (rs.getString("password").equals(password)){
+                    if (Libreria.verificarHash(password,rs.getString("password"))){
                         return rs.getInt("es_administrador");
                     }
                 }
@@ -46,6 +47,21 @@ public class BaseDatos {
         }
 
         return -1;
+    }
+
+    public void registrarUsuario(String usuario, String password) {
+
+        try {
+            PreparedStatement st = conexion.prepareStatement("INSERT INTO usuario (`nombre`, `email`, `password`, `es_administrador`) VALUES ('', ?, ?, '0');");
+            st.setString(1, usuario);
+            st.setString(2, Libreria.hashear(password));
+            st.executeUpdate();
+            st.close();
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+        }
+
     }
 
     //Metodo que consulta los entrenadores segun su nombre.
@@ -256,4 +272,6 @@ public class BaseDatos {
             e.printStackTrace();
         }
     }
+
+
 }

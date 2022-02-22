@@ -7,6 +7,8 @@ public class Main {
 
         String hash = Libreria.hashear(contraseña);
 
+        System.out.println(hash);
+
         System.out.println(Libreria.verificarHash(contraseña,hash));
 
         String encriptado = Libreria.encriptar(contraseña);

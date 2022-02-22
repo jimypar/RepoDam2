@@ -46,7 +46,11 @@ public class Cliente {
 
     //Metodo que envia un mensaje al servidor
     void enviarMensaje(String msg) {
-        salida.println(msg);
+        try {
+            salida.println(Libreria.encriptar(msg));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
 

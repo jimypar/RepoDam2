@@ -96,8 +96,8 @@ public class Servidor {
                     String mensaje = "";
                     try {
                         mensaje = Libreria.desencriptar(entrada.readLine());
-                        String resultado = calcularTabla(mensaje,id);
-                        enviarTodos(Libreria.encriptar(resultado));
+                        String resultado = Libreria.encriptar(calcularTabla(mensaje,id));
+                        enviarTodos(resultado);
                     } catch (SocketException s){
                         continuar = false;
                     } catch (IOException e) {

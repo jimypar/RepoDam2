@@ -47,7 +47,6 @@ public class Servidor {
                     break;
                 }
 
-
                 HiloCliente hiloCliente = new HiloCliente(socket);
                 clientes.add(hiloCliente);
                 hiloCliente.start();
@@ -196,11 +195,16 @@ public class Servidor {
     //Comprueba que el usuairo es valido y que permisos tiene
     private int conectarUsuario(String mensaje) {
 
-        String[] partes = mensaje.split(":");
+        Gson gson = new Gson();
+        MensajeInicioSesion m = gson.fromJson(mensaje, MensajeInicioSesion.class);
+
         int resultado = -1;
-        try {
-            resultado =  bd.consultarUsuario(partes[0],partes[1]);
-        }catch (ArrayIndexOutOfBoundsException e){}
+        if (m.getTipoconsulta()==1)
+            resultado =  bd.consultarUsuario(m.getUsuario(),m.getPassword());
+
+        if (m.getTipoconsulta()==2) {
+            bd.registrarUsuario(m.getUsuario(), m.getPassword());
+        }
 
         return resultado;
 

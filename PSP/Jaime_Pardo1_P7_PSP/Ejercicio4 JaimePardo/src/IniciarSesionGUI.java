@@ -1,3 +1,5 @@
+import com.google.gson.Gson;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
@@ -6,6 +8,7 @@ import java.io.IOException;
 public class IniciarSesionGUI extends JFrame implements ActionListener,WindowListener {
 
     private JLabel usuario,password;
+    private JButton entrar,registrar;
     private JTextField txtUser,txtPassword;
     private JPanel panel;
     private Cliente cliente;
@@ -25,7 +28,6 @@ public class IniciarSesionGUI extends JFrame implements ActionListener,WindowLis
         panel.add(usuario);
 
         txtUser = new JTextField();
-        txtUser.addActionListener(this);
         panel.add(txtUser);
 
         password = new JLabel();
@@ -33,8 +35,15 @@ public class IniciarSesionGUI extends JFrame implements ActionListener,WindowLis
         panel.add(password);
 
         txtPassword = new JTextField();
-        txtPassword.addActionListener(this);
         panel.add(txtPassword);
+
+        entrar = new JButton("Entrar");
+        entrar.addActionListener(this);
+        panel.add(entrar);
+
+        registrar = new JButton("Registrar");
+        registrar.addActionListener(this);
+        panel.add(registrar);
 
         add(panel);
 
@@ -82,7 +91,20 @@ public class IniciarSesionGUI extends JFrame implements ActionListener,WindowLis
     //Cuando se hace click al enter se envia la info al server.
     public void actionPerformed(ActionEvent e) {
 
-        cliente.enviarMensaje(txtUser.getText()+":"+txtPassword.getText());
+        Gson gson = new Gson();
+        MensajeInicioSesion m;
+
+        switch (e.getActionCommand()){
+            case "Entrar":
+                m = new MensajeInicioSesion(1,txtUser.getText(),txtPassword.getText());
+                cliente.enviarMensaje(gson.toJson(m));
+                break;
+            case "Registrar":
+                m = new MensajeInicioSesion(2,txtUser.getText(),txtPassword.getText());
+                cliente.enviarMensaje(gson.toJson(m));
+                break;
+        }
+
 
     }
 
