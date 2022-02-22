@@ -45,7 +45,7 @@ import game.Parametros;
 import managers.OrthogonalTiledMapRendererWithSprites;
 import managers.ResourceManager;
 import managers.SoundManager;
-import ui.BarraVida;
+import ui.Ui;
 
 public class Boss2 extends BScreen {
 
@@ -56,7 +56,7 @@ public class Boss2 extends BScreen {
 	public Array<Boss> boss;
 	Array<ImagenCapa> imagenes;
 	OrthographicCamera camara;
-	private BarraVida barra;
+	private Ui barra;
 
 	private TiledMap map;
 	private int tileWidth, tileHeight, mapWidthInTiles, mapHeightInTiles, mapWidthInPixels, mapHeightInPixels;
@@ -101,7 +101,7 @@ public class Boss2 extends BScreen {
 		boss.get(0).setP(player);
 
 		uiStage=new Stage();
-		barra= new BarraVida(Parametros.getAnchoPantalla()/50,Parametros.getAltoPantalla()/10,this.uiStage);
+		barra= new Ui(Parametros.getAnchoPantalla()/50,Parametros.getAltoPantalla()/10,this.uiStage);
 		
 
 	}

@@ -16,6 +16,7 @@ public class Boss extends Element {
 	public int velocidad;
 	protected Animation<TextureRegion> die;
 	public boolean dying = false;
+	public boolean dead = false;
 
 	private float cooldownDie = 5f;
 	private float timeDie = cooldownDie * 2;
@@ -44,7 +45,7 @@ public class Boss extends Element {
 
 		if (dying && timeDie >= cooldownDie) {
 			this.setEnabled(false);
-			System.exit(0);
+			this.dead=true;
 		}
 
 		if (dying) {

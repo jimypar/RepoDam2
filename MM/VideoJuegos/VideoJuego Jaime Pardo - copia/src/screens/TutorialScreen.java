@@ -7,6 +7,7 @@ import org.lwjgl.LWJGLException;
 import org.lwjgl.opengl.Display;
 
 import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.Input.Keys;
 import com.badlogic.gdx.audio.Music;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.Texture;
@@ -38,6 +39,9 @@ import game.Demo;
 import game.Parametros;
 import managers.OrthogonalTiledMapRendererWithSprites;
 import managers.ResourceManager;
+import managers.SoundManager;
+import screens.endScreens.WinScreen;
+import screens.optionScreens.InGameScreen;
 
 public class TutorialScreen extends BScreen {
 
@@ -47,13 +51,10 @@ public class TutorialScreen extends BScreen {
 	Array<ImagenCapa> imagenes;
 	Array<Marker> markers;	
 	OrthographicCamera camara;
-	SpriteBatch batch;
-	ShaderProgram shader;
 	float time;
 	Texture vigneteTexture;
 	Sprite vigneteSprite;
 	Music music_background;
-	
 	
 	private TiledMap map;
 	private int tileWidth, tileHeight, mapWidthInTiles, mapHeightInTiles, mapWidthInPixels, mapHeightInPixels;
@@ -66,29 +67,14 @@ public class TutorialScreen extends BScreen {
 	private Coin coin;
 	public Element door;
 	
-	
+	InGameScreen menu;
 	
 
 	public TutorialScreen(Demo game) {
 		
 
 		super(game);
-		mainStage = new Stage();
-		
-//		try {
-//			Display.setDisplayModeAndFullscreen(Display.getDesktopDisplayMode());
-//		} catch (LWJGLException e) {
-//			e.printStackTrace();
-//		}
-		
-		batch = new SpriteBatch();
-		
-		
-		shader = new ShaderProgram(batch.getShader().getVertexShaderSource(), Gdx.files.internal("oldfilm.frag").readString());
-        if (!shader.isCompiled()){
-            System.out.println(shader.getLog());
-        }
-        
+		mainStage = new Stage();		
 		
 		vigneteTexture = new Texture("maps/tutorial/assets/Drawing/tutorial_room_front_layer_0001.png");
 		
@@ -106,12 +92,16 @@ public class TutorialScreen extends BScreen {
 		player = new Player(inicioX, inicioY, mainStage);
 		player.setPolygon(10);
 		
-		Parametros.vida=3;
 		
-		music_background = Gdx.audio.newMusic(Gdx.files.internal("maps/tutorial/music/MUS_Tutorial.wav"));
-		music_background.setVolume(Parametros.musicVolume);
-		music_background.setLooping(true);
-		music_background.play();
+		Parametros.vida=3;
+		Parametros.pausa=false;
+		Parametros.pacifico=true;
+		
+		uiStage=new Stage();
+		
+		SoundManager.playMusic("maps/tutorial/music/MUS_Tutorial.wav");
+		
+		time=0;
 	}
 
 
@@ -119,33 +109,46 @@ public class TutorialScreen extends BScreen {
 	public void render(float delta) {
 
 		super.render(delta);
-		mainStage.act();
-
-		Parametros.playerX = player.getX();
-		Parametros.playerY = player.getY();
-
-		time+=delta;
 		
-		colide();
+		pauseButton();
+		
+		if (!Parametros.pausa) {
+			
+			mainStage.act();
+			uiStage.act();
 
-		centrarCamara();
+			Parametros.playerX = player.getX();
+			Parametros.playerY = player.getY();
+
+			time+=delta;
+			
+			colide();
+
+			centrarCamara();
+			
+		}		
 		
 		renderer.setView(camara);
-		renderer.render();
-		
-		
-		shader.begin();
-		shader.setUniformf("u_time", time);		
-		mainStage.getBatch().setShader(null);
+		renderer.render();		
 		mainStage.draw();
+		uiStage.draw();
 		mainStage.getBatch().begin();
-	
 		mainStage.getBatch().draw(vigneteTexture, camara.position.x-(camara.viewportWidth/2), camara.position.y-(camara.viewportHeight/2), camara.viewportWidth, camara.viewportHeight);  
-		
 		mainStage.getBatch().end();
-		mainStage.getBatch().setShader(shader);
 		
 	}
+
+	private void pauseButton() {
+		
+		if (Gdx.input.isKeyJustPressed(Keys.ESCAPE)) {
+			if (!Parametros.pausa) {
+				Parametros.pausa=true;
+				menu = new InGameScreen(0, 0, this.uiStage, game);
+			}
+		}
+		
+	}
+
 
 	public void colide() {
 
@@ -201,13 +204,14 @@ public class TutorialScreen extends BScreen {
 		if (coin.getEnabled() && coin.overlaps(player)) {
 			if (!coin.explode) {
 				coin.getCoin();
-				Parametros.powerUpDisparo=true;
 			}
 		}
 		
 		if (player.overlaps(door)) {
 			player.door=true;
-			game.setScreen(new Level1(game));
+			Parametros.playTime=time;
+			Parametros.level1Unlocked=true;
+			game.setScreen(new WinScreen(game, 0));
 		}
 		
 
@@ -315,8 +319,6 @@ public class TutorialScreen extends BScreen {
 	@Override
 	public void dispose() {
 		super.dispose();
-		batch.dispose();
-        shader.dispose();
 	}
 
 

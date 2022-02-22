@@ -134,8 +134,10 @@ public final class ResourceManager {
 		assets.load("Sound/sfx_player_hit_02.wav", Sound.class);
 		assets.load("Sound/sfx_player_dash_01.wav", Sound.class);
 		assets.load("Sound/sfx_vinyl_scratch_01.wav", Sound.class);
+		assets.load("Bosses/BossBola/sfx_slime_jump.wav", Sound.class);
+		assets.load("Bosses/BossBola/sfx_slime_tombstone_splat.wav", Sound.class);
 		assets.load("Sound/Menu_Move.wav", Sound.class);
-
+		
 		
 		assets.load("maps/tutorial/music/MUS_Tutorial.wav", Music.class);
 		assets.load("maps/Level1/music/MUS_ForestFollies.wav", Music.class);
@@ -143,6 +145,7 @@ public final class ResourceManager {
 		assets.load("maps/Level2/music/MUS_BotanicPanic.wav", Music.class);
 		assets.load("Menu/MUS_InkwellIsleOne.wav", Music.class);
 		assets.load("WinScreen/MUS_VictoryScreen.wav", Music.class);
+		
 		
 		// UI
 		assets.load("Lives/hp4.png", Texture.class);

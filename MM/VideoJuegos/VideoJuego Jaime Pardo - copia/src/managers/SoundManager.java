@@ -7,14 +7,16 @@ import game.Parametros;
 
 public class SoundManager {
 	static Music currentMusic=null;
-	static String currentMusicName="";
+	public static String currentMusicName="";
 	static Sound sound;
 
 	static public void playMusic(String path) {
-		try {
-			currentMusic.stop();
-		} catch (Exception e) {
-		}
+		if (currentMusicName!=path) {
+			try {
+				currentMusic.stop();
+			} catch (Exception e) {
+			}
+		}		
 		currentMusicName = path;
 		currentMusic = ResourceManager.getMusic(path);
 		currentMusic.setVolume(Parametros.musicVolume);
@@ -50,6 +52,14 @@ public class SoundManager {
 		} catch (Exception e) {
 		}
 		
+	}
+	
+	public static void applyVolume() {
+		currentMusic.setVolume(Parametros.musicVolume);
+	}
+
+	public static void playDemoSound() {
+		playSound("Sound/sfx_player_shoot_hit_01.wav");
 	}
 
 }

@@ -170,7 +170,7 @@ private float tiempo3;
 			this.notaNum-=20;
 		}
 		
-		if (Parametros.pacifico=true) {
+		if (Parametros.pacifico==true) {
 			this.pacifico="SI";
 		}else {
 			this.notaNum-=20;

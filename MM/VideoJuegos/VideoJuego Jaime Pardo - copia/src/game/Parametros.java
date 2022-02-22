@@ -12,11 +12,13 @@ public class Parametros {
 //private static int anchoPantalla=3000;
 //private static int altoPantalla=2000;
  
+ public static boolean fullscreen=false;
+ 
  public static boolean debug=false;
  public static boolean nohit=false;
  
  //Audio;
- public static float musicVolume=0.0f;
+ public static float musicVolume=0.1f;
  public static float soundVolume=0.1f;
  
  
@@ -31,8 +33,17 @@ public class Parametros {
  
  public static int vida = 0;
  
+ public static float playTime = 0;
+ public static boolean pacifico = false;
+ 
  public static boolean powerUpDisparo = false;
  
+ public static boolean pausa = false;
+
+ public static boolean level1Unlocked = false;
+ public static boolean boss1Unlocked = false;
+ public static boolean level2Unlocked = false;
+ public static boolean boss2Unlocked = false;
 
 
 

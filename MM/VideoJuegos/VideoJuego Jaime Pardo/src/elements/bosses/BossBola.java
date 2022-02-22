@@ -9,6 +9,7 @@ import elements.objects.Wall;
 import elements.other.Hitbox;
 import elements.player.Player;
 import game.Parametros;
+import managers.SoundManager;
 import screens.Boss1;
 import screens.Level1;
 
@@ -93,6 +94,7 @@ public class BossBola extends Boss {
 
 					hitbox=new Hitbox(getX(), 0, s, 0, 0);
 					
+					SoundManager.playSound("Bosses/BossBola/sfx_slime_tombstone_splat.wav");
 					this.setRectangle(1, 1, 1, 1);
 					this.setY(100);
 					this.setScale(2);
@@ -100,6 +102,7 @@ public class BossBola extends Boss {
 					this.setAnimation(smash);
 					this.tiempoToSmash = 0;
 					this.tiempoSmash = 0;
+					
 					
 				} else if (tiempoSmash >= cooldownSmash) {
 					this.setY(250);
@@ -124,6 +127,7 @@ public class BossBola extends Boss {
 				}
 
 				if (tiempoJump >= cooldownJump && tiempoInicio > cooldownInicio + 1) {
+					SoundManager.playSound("Bosses/BossBola/sfx_slime_jump.wav");
 					this.acceleration.add(10000 * direccion, 30000);
 					this.tiempoJump = 0;
 				} else if (tocoSuelo) {

@@ -5,6 +5,7 @@ import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import elements.other.Clock;
 import game.Demo;
 import managers.ResourceManager;
+import managers.SaveGameManager;
 
 public class LoadScreen extends BScreen{
 	private float loadDelay=5;
@@ -22,6 +23,7 @@ public class LoadScreen extends BScreen{
 	//this.resourceManager=new ResourceManager();
 	//game.resourceManager=this.resourceManager;
 	ResourceManager.loadAllResources();
+	SaveGameManager.loadAllParameters();
 	//while(!ResourceManager.update()){}
 	
 	
@@ -33,7 +35,8 @@ public class LoadScreen extends BScreen{
 				
 		if(ResourceManager.update()) {
 			
-			game.setScreen(new TutorialScreen(game));
+			ResourceManager.botones();
+			game.setScreen(new TitleScreen(game));
 			
 		}
 		
