@@ -10,6 +10,11 @@ public class MensajeInicioSesion {
         this.password = password;
     }
 
+    public MensajeInicioSesion(Integer tipoconsulta) {
+        this.tipoconsulta = tipoconsulta;
+    }
+
+
     public int getTipoconsulta() {
         return tipoconsulta;
     }

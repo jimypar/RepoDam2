@@ -118,11 +118,15 @@ public class Servidor {
                         continuar = false;
                     }
                 }else {
-                    String resultado = "";
-                    if (conectarUsuario(mensaje)!=-1){conectado=true;}
-                    resultado = conectarUsuario(mensaje)+"";
-                    System.out.println(resultado);
-                    salida.println(resultado);
+                    int resultado;
+
+                    resultado = conectarUsuario(mensaje);
+                    if (resultado!=-1){conectado=true;}
+                    Gson gson = new Gson();
+                    MensajeInicioSesion m = new MensajeInicioSesion(resultado);
+                    String envio = gson.toJson(m,MensajeInicioSesion.class);
+                    System.out.println(envio);
+                    salida.println(envio);
                 }
             }
             cerrar();
@@ -203,7 +207,7 @@ public class Servidor {
             resultado =  bd.consultarUsuario(m.getUsuario(),m.getPassword());
 
         if (m.getTipoconsulta()==2) {
-            bd.registrarUsuario(m.getUsuario(), m.getPassword());
+            resultado = bd.registrarUsuario(m.getUsuario(), m.getPassword());
         }
 
         return resultado;

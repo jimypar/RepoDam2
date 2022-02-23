@@ -47,7 +47,7 @@
             <colspec value="left:4dlu:noGrow"/>
             <colspec value="fill:d:grow"/>
             <constraints>
-              <tabbedpane title="Autor"/>
+              <tabbedpane title="Clientes"/>
             </constraints>
             <properties/>
             <border type="none"/>

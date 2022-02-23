@@ -71,18 +71,27 @@ public class IniciarSesionGUI extends JFrame implements ActionListener,WindowLis
             }catch (Exception e){}
 
         }else {
-            if (str.equals("-1")){
-                JOptionPane.showMessageDialog(null,"Usuario incorrecto","Usuario incorrecto",JOptionPane.ERROR_MESSAGE);
-            }else if (str.equals("0")){
-                JOptionPane.showMessageDialog(null,"Sesion iniciada","Usuario correcto",JOptionPane.INFORMATION_MESSAGE);
-                conectado = true;
-                this.dispose();
-                guiu = new GUIusuario(cliente);
-            }else if ((str.equals("1"))){
-                JOptionPane.showMessageDialog(null,"Sesion iniciada","Usuario correcto",JOptionPane.INFORMATION_MESSAGE);
-                conectado=true;
-                this.dispose();
-                guia = new GUIadmin(cliente);
+            Gson gson = new Gson();
+            MensajeInicioSesion m =  gson.fromJson(str,MensajeInicioSesion.class);
+            switch (m.getTipoconsulta()){
+                case -1:
+                    JOptionPane.showMessageDialog(null,"Usuario incorrecto","Usuario incorrecto",JOptionPane.ERROR_MESSAGE);
+                    break;
+                case 0:
+                    JOptionPane.showMessageDialog(null,"Sesion iniciada","Usuario correcto",JOptionPane.INFORMATION_MESSAGE);
+                    conectado = true;
+                    this.dispose();
+                    guiu = new GUIusuario(cliente);
+                    break;
+                case 1:
+                    JOptionPane.showMessageDialog(null,"Sesion iniciada","Usuario correcto",JOptionPane.INFORMATION_MESSAGE);
+                    conectado=true;
+                    this.dispose();
+                    guia = new GUIadmin(cliente);
+                    break;
+                case 2:
+                    JOptionPane.showMessageDialog(null,"Usuario Creado","Usuario creado",JOptionPane.INFORMATION_MESSAGE);
+                    break;
             }
         }
 

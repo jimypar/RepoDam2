@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="4eb4cb88-7835-4171-a655-a2871420b106" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../Practica5-JR-JaimePardo/Grafico1.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../Practica5-JR-JaimePardo/Grafico1.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Practica5-JR-JaimePardo/Grafico2.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../Practica5-JR-JaimePardo/Grafico2.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Practica5-JR-JaimePardo/Grafico3.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../Practica5-JR-JaimePardo/Grafico3.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Practica5-JR-JaimePardo/out/production/PracticaJRJaimePardo/gui/Vista.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Practica5-JR-JaimePardo/out/production/PracticaJRJaimePardo/gui/Vista.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Practica5-JR-JaimePardo/src/gui/Vista.form" beforeDir="false" afterPath="$PROJECT_DIR$/../Practica5-JR-JaimePardo/src/gui/Vista.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Practica5-JR-JaimePardo/src/gui/Vista.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Practica5-JR-JaimePardo/src/gui/Vista.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PSP/Jaime_Pardo1_P7_PSP/Ejercicio4 JaimePardo/out/production/Ejercicio3 Sockets2/BaseDatos.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../PSP/Jaime_Pardo1_P7_PSP/Ejercicio4 JaimePardo/out/production/Ejercicio3 Sockets2/BaseDatos.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PSP/Jaime_Pardo1_P7_PSP/Ejercicio4 JaimePardo/out/production/Ejercicio3 Sockets2/IniciarSesionGUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../PSP/Jaime_Pardo1_P7_PSP/Ejercicio4 JaimePardo/out/production/Ejercicio3 Sockets2/IniciarSesionGUI.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PSP/Jaime_Pardo1_P7_PSP/Ejercicio4 JaimePardo/out/production/Ejercicio3 Sockets2/MensajeInicioSesion.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../PSP/Jaime_Pardo1_P7_PSP/Ejercicio4 JaimePardo/out/production/Ejercicio3 Sockets2/MensajeInicioSesion.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PSP/Jaime_Pardo1_P7_PSP/Ejercicio4 JaimePardo/out/production/Ejercicio3 Sockets2/Servidor$HiloCliente.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../PSP/Jaime_Pardo1_P7_PSP/Ejercicio4 JaimePardo/out/production/Ejercicio3 Sockets2/Servidor$HiloCliente.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PSP/Jaime_Pardo1_P7_PSP/Ejercicio4 JaimePardo/out/production/Ejercicio3 Sockets2/Servidor.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../PSP/Jaime_Pardo1_P7_PSP/Ejercicio4 JaimePardo/out/production/Ejercicio3 Sockets2/Servidor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PSP/Jaime_Pardo1_P7_PSP/Ejercicio4 JaimePardo/src/BaseDatos.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../PSP/Jaime_Pardo1_P7_PSP/Ejercicio4 JaimePardo/src/BaseDatos.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PSP/Jaime_Pardo1_P7_PSP/Ejercicio4 JaimePardo/src/IniciarSesionGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../PSP/Jaime_Pardo1_P7_PSP/Ejercicio4 JaimePardo/src/IniciarSesionGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PSP/Jaime_Pardo1_P7_PSP/Ejercicio4 JaimePardo/src/MensajeInicioSesion.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../PSP/Jaime_Pardo1_P7_PSP/Ejercicio4 JaimePardo/src/MensajeInicioSesion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PSP/Jaime_Pardo1_P7_PSP/Ejercicio4 JaimePardo/src/Servidor.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../PSP/Jaime_Pardo1_P7_PSP/Ejercicio4 JaimePardo/src/Servidor.java" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="25VkkJYEXYmfPPPP89KKr9bfKo2" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Practica1-JH-JaimePardo" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4eb4cb88-7835-4171-a655-a2871420b106" name="Default Changelist" comment="" />
+      <created>1645619782860</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1645619782860</updated>
+      <workItem from="1645619790675" duration="489000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

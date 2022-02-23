@@ -49,7 +49,7 @@ public class BaseDatos {
         return -1;
     }
 
-    public void registrarUsuario(String usuario, String password) {
+    public int registrarUsuario(String usuario, String password) {
 
         try {
             PreparedStatement st = conexion.prepareStatement("INSERT INTO usuario (`nombre`, `email`, `password`, `es_administrador`) VALUES ('', ?, ?, '0');");
@@ -57,9 +57,11 @@ public class BaseDatos {
             st.setString(2, Libreria.hashear(password));
             st.executeUpdate();
             st.close();
+            return 2;
         }
         catch (Exception e) {
             e.printStackTrace();
+            return -2;
         }
 
     }
