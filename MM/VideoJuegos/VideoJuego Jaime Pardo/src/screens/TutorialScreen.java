@@ -86,7 +86,7 @@ public class TutorialScreen extends BScreen {
 		camara.setToOrtho(false, Parametros.getAnchoPantalla() * Parametros.zoom,
 				Parametros.getAltoPantalla() * Parametros.zoom);
 		camara.position.x = inicioX;
-		camara.position.y = 400;
+		camara.position.y = 380;
 
 	
 		player = new Player(inicioX, inicioY, mainStage);
