@@ -1,0 +1,5 @@
+<index version="1.0">
+		<indexitem text="Ejemlo JavaHelp" target="aplicacion"/>
+        <indexitem text="Clientes"    target="clientes"/>
+        <indexitem text="Informes"    target="informes"/>
+</index>

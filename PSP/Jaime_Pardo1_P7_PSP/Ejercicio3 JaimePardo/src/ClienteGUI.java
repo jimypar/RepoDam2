@@ -80,6 +80,7 @@ public class ClienteGUI extends JFrame implements ActionListener,WindowListener 
     public void actionPerformed(ActionEvent e) {
 
         try {
+            //Enviamos el mensaje encriptado
             cliente.enviarMensaje(Libreria.encriptar(txtMensaje.getText()));
         } catch (Exception ex) {
             ex.printStackTrace();

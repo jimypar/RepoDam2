@@ -1,3 +1,5 @@
+import libreria.Libreria;
+
 import java.net.*;
 import java.io.*;
 
@@ -48,7 +50,11 @@ public class Cliente {
 
     //Metodo que envia un mensaje al servidor.
     void enviarMensaje(String msg) {
-        salida.println(msg);
+        try {
+            salida.println(Libreria.encriptar(msg));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     //Hilo que esta escuchando la entrada de un mensaje y lo manda a la GUI
@@ -57,10 +63,12 @@ public class Cliente {
         public void run() {
             while(true) {
                 try {
-                    String msg = entrada.readLine();
+                    String msg = Libreria.desencriptar(entrada.readLine());
                     gui.recibir(msg);
                 }
                 catch(IOException e) {
+                } catch (Exception e) {
+                    e.printStackTrace();
                 }
             }
         }

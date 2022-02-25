@@ -1,4 +1,5 @@
 import com.google.gson.Gson;
+import libreria.Libreria;
 
 import java.io.*;
 import java.net.*;
@@ -102,31 +103,40 @@ public class Servidor {
             while(continuar) {
                 String mensaje = "";
                 try {
-                    mensaje = entrada.readLine();
+                    mensaje = Libreria.desencriptar(entrada.readLine());
                 } catch (SocketException s){
                     continuar = false;
                 } catch (IOException e) {
+                    e.printStackTrace();
+                } catch (Exception e) {
                     e.printStackTrace();
                 }
 
                 if (conectado){
 
                     String resultado = consulta(mensaje);
-                    salida.println(resultado);
+                    try {
+                        salida.println(Libreria.encriptar(resultado));
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
 
                     if (mensaje.equals("$$$DESCONECTARR$$$")) {
                         continuar = false;
                     }
                 }else {
                     int resultado;
-
                     resultado = conectarUsuario(mensaje);
                     if (resultado!=-1){conectado=true;}
                     Gson gson = new Gson();
                     MensajeInicioSesion m = new MensajeInicioSesion(resultado);
                     String envio = gson.toJson(m,MensajeInicioSesion.class);
                     System.out.println(envio);
-                    salida.println(envio);
+                    try {
+                        salida.println(Libreria.encriptar(envio));
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
                 }
             }
             cerrar();

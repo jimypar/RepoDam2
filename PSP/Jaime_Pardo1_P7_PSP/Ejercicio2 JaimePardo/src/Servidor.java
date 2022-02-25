@@ -96,6 +96,7 @@ public class Servidor {
             while(continuar) {
                 String mensaje = "";
                 try {
+                    //Leemos el mensaje recibido desencriptado
                     mensaje = Libreria.desencriptar(entrada.readLine());
                 } catch (SocketException s){
                     continuar = false;
@@ -109,6 +110,7 @@ public class Servidor {
                 //Se pasa el mensaje a JSON
                 String json = crearJSON(mensaje,resultado);
                 try {
+                    //Enviamos el mensaje encriptado
                     salida.println(Libreria.encriptar(json));
                 } catch (Exception e) {
                     e.printStackTrace();

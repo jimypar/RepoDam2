@@ -31,6 +31,7 @@ public class BaseDatos {
             Statement stmt = conexion.createStatement();
             ResultSet rs = stmt.executeQuery(SQL);
 
+            //Comprobamos la contraseña con la contraseña hasheada de la base de datos
             while (rs.next()) {
                 if (rs.getString("email").equals(usuario)){
                     if (Libreria.verificarHash(password,rs.getString("password"))){

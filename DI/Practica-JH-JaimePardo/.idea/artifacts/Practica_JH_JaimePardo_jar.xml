@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Practica-JH-JaimePardo:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/Practica_JH_JaimePardo_jar</output-path>
+    <root id="archive" name="Practica-JH-JaimePardo_jar.jar">
+      <element id="archive" name="Practica-JH-JaimePardo.jar">
+        <element id="module-output" name="Practica-JH-JaimePardo" />
+      </element>
+      <element id="library" level="project" name="com.lowagie.text-2.1.7" />
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/out/artifacts/META-INF/MANIFEST.MF" />
+      </element>
+    </root>
+  </artifact>
+</component>

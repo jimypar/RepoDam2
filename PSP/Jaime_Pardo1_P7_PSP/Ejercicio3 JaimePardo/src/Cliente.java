@@ -65,6 +65,7 @@ public class Cliente {
         public void run() {
             while(true) {
                 try {
+                    //Leemos el mensaje desencriptado
                     String msg = Libreria.desencriptar(entrada.readLine());
                         gui.append(msg+"\n");
                 }

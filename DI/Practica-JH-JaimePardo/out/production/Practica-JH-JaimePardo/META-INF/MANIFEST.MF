@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Main-Class: main
+Class-Path: com.lowagie.text-2.1.7.jar commons-beanutils-1.9.3.jar commo
+ ns-collections-3.2.1-1.0.0.jar commons-collections-3.2.2.jar commons-co
+ llections4-4.4-tests.jar commons-collections4-4.4.jar commons-digester-
+ 2.1.jar commons-logging-1.2.jar jasperreports-6.16.0.jar jasperreports-
+ functions-6.3.1.jar jcommon-1.0.23.jar jcommon-xml-1.0.23.jar jfreechar
+ t-1.0.19.jar jgoodies-common-1.8.1.jar jgoodies-forms-1.8.0.jar jhall.j
+ ar joda-time-2.9.9.jar LGoodDatePicker-10.3.1.jar mysql-connector-java-
+ 5.1.47.jar
+

@@ -1,0 +1,6 @@
+<toc version="1.0"> 
+	<tocitem text="Ejemplo JavaHelp" target="aplicacion">
+		<tocitem text="Clientes"    target="clientes" />
+		<tocitem text="Informes"    target="informes"/>
+	</tocitem>
+</toc>
