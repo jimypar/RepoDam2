@@ -150,7 +150,7 @@ private Texture background;
 				(Event e)->{if(!(e instanceof InputEvent)|| !((InputEvent)e).getType().equals(Type.touchDown))
 					return false;
 				this.dispose();
-				game.setScreen(new Boss2(game));
+				LevelBlocked l = new LevelBlocked(0, 0, uiStage, game);
 				return false;
 				});
 		boton5.addListener(

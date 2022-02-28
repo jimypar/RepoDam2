@@ -89,6 +89,7 @@ public class Boss1 extends BScreen {
 		camara.position.x = inicioX;
 		camara.position.y = 450;
 
+		Parametros.powerUpVida = false;
 		Parametros.vida = 3;
 		Parametros.pausa = false;
 		Parametros.pacifico=true;
@@ -106,7 +107,7 @@ public class Boss1 extends BScreen {
 	}
 
 	private void cargarMusica() {
-		SoundManager.playMusic("maps/Boss1/music/MUS_Slime.wav");
+		SoundManager.playMusic("maps/Boss1/music/MUS_Slime.ogg");
 	}
 
 	@Override

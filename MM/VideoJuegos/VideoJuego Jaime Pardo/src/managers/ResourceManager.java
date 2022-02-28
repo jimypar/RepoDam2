@@ -35,6 +35,8 @@ public final class ResourceManager {
 
 	public static void loadAllResources() {
 
+		
+		
 		// mapas
 		assets.setLoader(TiledMap.class, new TmxMapLoader());
 		assets.load("maps/tutorial/tutorial.tmx", TiledMap.class);
@@ -139,12 +141,12 @@ public final class ResourceManager {
 		assets.load("Sound/Menu_Move.wav", Sound.class);
 		
 		
-		assets.load("maps/tutorial/music/MUS_Tutorial.wav", Music.class);
-		assets.load("maps/Level1/music/MUS_ForestFollies.wav", Music.class);
-		assets.load("maps/Boss1/music/MUS_Slime.wav", Music.class);
-		assets.load("maps/Level2/music/MUS_BotanicPanic.wav", Music.class);
-		assets.load("Menu/MUS_InkwellIsleOne.wav", Music.class);
-		assets.load("WinScreen/MUS_VictoryScreen.wav", Music.class);
+		assets.load("maps/tutorial/music/MUS_Tutorial.ogg", Music.class);
+		assets.load("maps/Level1/music/MUS_ForestFollies.ogg", Music.class);
+		assets.load("maps/Boss1/music/MUS_Slime.ogg", Music.class);
+		assets.load("maps/Level2/music/MUS_BotanicPanic.ogg", Music.class);
+		assets.load("Menu/MUS_InkwellIsleOne.ogg", Music.class);
+		assets.load("WinScreen/MUS_VictoryScreen.ogg", Music.class);
 		
 		
 		// UI
@@ -155,6 +157,10 @@ public final class ResourceManager {
 		assets.load("Lives/hp0.png", Texture.class);
 		assets.load("Lives/cuphead_death.png", Texture.class);
 
+		assets.load("Lives/powerUpEmpty.png", Texture.class);
+		assets.load("Lives/powerUp1.png", Texture.class);
+		assets.load("Lives/powerUp2.png", Texture.class);
+		
 		// añadir más elementos
 		
 

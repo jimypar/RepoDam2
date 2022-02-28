@@ -97,6 +97,7 @@ public class Level1 extends BScreen {
 
 		Parametros.vida = 3;
 		Parametros.powerUpDisparo = false;
+		Parametros.powerUpVida = false;
 		
 		player = new Player(inicioX, inicioY, mainStage);
 		player.setPolygon(10);
@@ -111,7 +112,7 @@ public class Level1 extends BScreen {
 	}
 
 	private void cargarMusica() {
-		SoundManager.playMusic("maps/Level1/music/MUS_ForestFollies.wav");
+		SoundManager.playMusic("maps/Level1/music/MUS_ForestFollies.ogg");
 	}
 
 	@Override

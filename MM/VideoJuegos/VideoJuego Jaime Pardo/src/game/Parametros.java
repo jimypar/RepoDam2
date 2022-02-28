@@ -37,6 +37,7 @@ public class Parametros {
  public static boolean pacifico = false;
  
  public static boolean powerUpDisparo = false;
+ public static boolean powerUpVida = false;
  
  public static boolean pausa = false;
 
@@ -44,6 +45,7 @@ public class Parametros {
  public static boolean boss1Unlocked = false;
  public static boolean level2Unlocked = false;
  public static boolean boss2Unlocked = false;
+
 
 
 

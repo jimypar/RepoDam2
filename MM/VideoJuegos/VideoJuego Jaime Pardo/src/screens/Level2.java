@@ -100,6 +100,8 @@ public class Level2 extends BScreen {
 		camara.position.x = inicioX+200;
 		camara.position.y = 447;
 
+		Parametros.powerUpVida = false;
+		Parametros.powerUpDisparo=false;
 		Parametros.vida = 3;
 		Parametros.pausa = false;
 		Parametros.pacifico=true;
@@ -118,7 +120,7 @@ public class Level2 extends BScreen {
 	}
 
 	private void cargarMusica() {
-		SoundManager.playMusic("maps/Level2/music/MUS_BotanicPanic.wav");
+		SoundManager.playMusic("maps/Level2/music/MUS_BotanicPanic.ogg");
 	}
 
 	@Override
@@ -246,6 +248,7 @@ public class Level2 extends BScreen {
 			if (!coin.explode) {
 				coin.getCoin();
 				Parametros.vida += 1;
+				Parametros.powerUpVida=true;
 			}
 		}
 

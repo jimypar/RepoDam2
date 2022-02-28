@@ -67,7 +67,7 @@ public class Boss2 extends BScreen {
 	private float inicioY;
 	
 	private float cooldownInicio = 5f;
-
+	
 
 	public Boss2(Demo game) {
 
@@ -107,7 +107,7 @@ public class Boss2 extends BScreen {
 	}
 
 	private void cargarMusica() {
-		SoundManager.playMusic("maps/Boss1/music/MUS_Slime.wav");
+		SoundManager.playMusic("maps/Boss1/music/MUS_Slime.ogg");
 	}
 
 	@Override

@@ -99,7 +99,7 @@ public class TutorialScreen extends BScreen {
 		
 		uiStage=new Stage();
 		
-		SoundManager.playMusic("maps/tutorial/music/MUS_Tutorial.wav");
+		SoundManager.playMusic("maps/tutorial/music/MUS_Tutorial.ogg");
 		
 		time=0;
 	}

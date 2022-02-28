@@ -127,7 +127,7 @@ public class Player extends Element {
 
 		this.setPolygon(10, this.getWidth(), this.getHeight(), 0, 0);
 
-		// aplico graviedad
+		// aplico gravedad
 		this.acceleration.add(0, Parametros.gravedad);
 		this.applyPhysics(delta);
 		

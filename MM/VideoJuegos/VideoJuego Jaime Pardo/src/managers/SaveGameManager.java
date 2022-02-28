@@ -10,11 +10,11 @@ public class SaveGameManager {
 	public static void loadAllParameters() {
 		
 		//This will get your preferences from storage
-		Preferences prefs = Gdx.app.getPreferences("GameData");
+		Preferences prefs = Gdx.app.getPreferences("SaveGame");
 		
-		//Get value from a preference key "key" (must not be empty)
 		Parametros.musicVolume = prefs.getFloat("musicVolume"); 
 		Parametros.soundVolume = prefs.getFloat("soundVolume");
+		Parametros.fullscreen = prefs.getBoolean("fullscreen");
 		Parametros.level1Unlocked = prefs.getBoolean("level1Unlocked");
 		Parametros.boss1Unlocked = prefs.getBoolean("boss1Unlocked");
 		Parametros.level2Unlocked = prefs.getBoolean("level2Unlocked");
@@ -26,7 +26,7 @@ public class SaveGameManager {
 
 	public static void saveAllParameters() {
 		
-		Preferences prefs = Gdx.app.getPreferences("GameData");
+		Preferences prefs = Gdx.app.getPreferences("SaveGame");
 				
 		prefs.putFloat("musicVolume", Parametros.musicVolume);
 		prefs.putFloat("soundVolume", Parametros.soundVolume);
@@ -42,7 +42,7 @@ public class SaveGameManager {
 	
 		public static void resetAllParameters() {
 		
-		Preferences prefs = Gdx.app.getPreferences("GameData");
+		Preferences prefs = Gdx.app.getPreferences("SaveGame");
 				
 		prefs.remove("musicVolume");
 		prefs.remove("soundVolume");

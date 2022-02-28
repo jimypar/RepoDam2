@@ -31,7 +31,7 @@ public class Flower extends Enemigo{
 		walkL= loadFullAnimation("Enemies/Flower/flowerL.png", 15, 1, 0.2f, true);
 		direccion=-1;
 		
-		this.setRectangle(this.getWidth(),this.getHeight(),0,0);
+		this.setRectangle(this.getWidth()-10,this.getHeight(),10,0);
 		
 		pie=new Element(0,0,s,this.getWidth()/4 ,this.getHeight()/4);
 		pie.setRectangle();

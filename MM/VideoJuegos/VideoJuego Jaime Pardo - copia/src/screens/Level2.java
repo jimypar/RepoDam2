@@ -97,8 +97,8 @@ public class Level2 extends BScreen {
 		camara = (OrthographicCamera) mainStage.getCamera();
 		camara.setToOrtho(false, Parametros.getAnchoPantalla() * Parametros.zoom,
 				Parametros.getAltoPantalla() * Parametros.zoom);
-		camara.position.x = inicioX;
-		camara.position.y = 430;
+		camara.position.x = inicioX+200;
+		camara.position.y = 447;
 
 		Parametros.vida = 3;
 		Parametros.pausa = false;
@@ -255,13 +255,14 @@ public class Level2 extends BScreen {
 
 		if (player.overlaps(fin)) {
 			Parametros.playTime=time;
+			Parametros.boss2Unlocked=true;
 			game.setScreen(new WinScreen(game, 3));
 		}
 
 	}
 
 	public void centrarCamara() {
-		if (this.player.getX() > inicioX && this.player.getX() < 14000) {
+		if (this.player.getX() > inicioX+200 && this.player.getX() < 14000) {
 			this.camara.position.x = player.getX();
 			camara.update();
 		}

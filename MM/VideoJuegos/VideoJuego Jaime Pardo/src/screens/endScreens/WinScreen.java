@@ -32,7 +32,7 @@ private float tiempo3;
 	public WinScreen(Demo game, int level) {
 		super(game);
 		
-		SoundManager.playMusic("WinScreen/MUS_VictoryScreen.wav");
+		SoundManager.playMusic("WinScreen/MUS_VictoryScreen.ogg");
 				
 		this.notaNum=100;
 		

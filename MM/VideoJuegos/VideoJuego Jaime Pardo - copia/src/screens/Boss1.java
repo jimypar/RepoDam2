@@ -87,7 +87,7 @@ public class Boss1 extends BScreen {
 		camara.setToOrtho(false, Parametros.getAnchoPantalla() * Parametros.zoom,
 				Parametros.getAltoPantalla() * Parametros.zoom);
 		camara.position.x = inicioX;
-		camara.position.y = 430;
+		camara.position.y = 450;
 
 		Parametros.vida = 3;
 		Parametros.pausa = false;
